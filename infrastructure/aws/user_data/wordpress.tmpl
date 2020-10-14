@@ -8,9 +8,3 @@ users:
     shell: /bin/bash
     ssh-authorized-keys:
       - ${admin_1_public_key}
-  - name: admin2
-    groups:  wheel
-    sudo: ALL=(ALL) NOPASSWD:ALL
-    shell: /bin/bash
-    ssh-authorized-keys:
-      - ${admin_2_public_key}

@@ -23,15 +23,16 @@ variable "codename" {
 }
 
 variable "database_password" {
-  type    = string
+  type = string
 }
 
 variable "admin_1_public_key" {
   type    = string
 }
 
-variable "admin_2_public_key" {
+variable "https_certificate" {
   type    = string
+  default = "arn:aws:acm:eu-west-1:313370994665:certificate/ff41ce0d-7743-481b-b0ce-166edf008faf"
 }
 
 provider "aws" {
@@ -116,78 +117,52 @@ resource "aws_security_group" "default-private-sg" {
   name        = "${var.codename}-private-sg"
   description = "Default private security group"
   vpc_id      = aws_vpc.vpc.id
-}
 
-resource "aws_security_group_rule" "inbound-private-rule" {
-  from_port         = 0
-  protocol          = "All"
-  security_group_id = aws_security_group.default-private-sg.id
-  to_port           = 65535
-  type              = "ingress"
-  cidr_blocks       = [
-    "10.0.0.0/16"
-  ]
-}
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [
+      "10.0.0.0/16"]
+  }
 
-resource "aws_security_group_rule" "outbound-private-rule" {
-  from_port         = 0
-  protocol          = "All"
-  security_group_id = aws_security_group.default-private-sg.id
-  to_port           = 65535
-  type              = "egress"
-  cidr_blocks       = [
-    "0.0.0.0/0"
-  ]
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [
+      "0.0.0.0/0"]
+  }
 }
 
 resource "aws_security_group" "wordpress-sg" {
   name        = "${var.codename}-wordpress-sg"
   description = "Security group for Wordpress"
   vpc_id      = aws_vpc.vpc.id
-}
 
-resource "aws_security_group_rule" "inbound-ssh-rule" {
-  from_port         = 22
-  protocol          = "All"
-  security_group_id = aws_security_group.wordpress-sg.id
-  to_port           = 22
-  type              = "ingress"
-  cidr_blocks       = [
-    "0.0.0.0/0"
-  ]
-}
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [
+      "10.0.0.0/16"]
+  }
 
-resource "aws_security_group_rule" "inbound-http-rule" {
-  from_port         = 80
-  protocol          = "All"
-  security_group_id = aws_security_group.wordpress-sg.id
-  to_port           = 80
-  type              = "ingress"
-  cidr_blocks       = [
-    "0.0.0.0/0"
-  ]
-}
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = [
+      "0.0.0.0/0"]
+  }
 
-resource "aws_security_group_rule" "inbound-https-rule" {
-  from_port         = 443
-  protocol          = "All"
-  security_group_id = aws_security_group.wordpress-sg.id
-  to_port           = 443
-  type              = "ingress"
-  cidr_blocks       = [
-    "0.0.0.0/0"
-  ]
-}
-
-resource "aws_security_group_rule" "outbound-wordpress-rule" {
-  from_port         = 0
-  protocol          = "All"
-  security_group_id = aws_security_group.wordpress-sg.id
-  to_port           = 65535
-  type              = "egress"
-  cidr_blocks       = [
-    "0.0.0.0/0"
-  ]
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [
+      "0.0.0.0/0"]
+  }
 }
 
 # -------
@@ -240,7 +215,7 @@ resource aws_network_interface eth1 {
   subnet_id         = aws_subnet.private.id
   source_dest_check = false
   security_groups   = [
-    aws_security_group.default-private-sg.id
+    aws_security_group.wordpress-sg.id
   ]
 }
 
@@ -253,11 +228,9 @@ resource aws_instance wordpress {
 
   ami           = "ami-0bb3fad3c0286ebd5"
   instance_type = "t2.micro"
-  key_name      = "mwenisch-ireland"
 
   user_data_base64 = base64encode(templatefile("user_data/wordpress.tmpl", {
-    admin_1_public_key = var.admin_1_public_key,
-    admin_2_public_key = var.admin_2_public_key
+    admin_1_public_key = var.admin_1_public_key
   }))
 
   network_interface {
@@ -275,6 +248,82 @@ resource aws_instance wordpress {
   }
 }
 
+# -----------
+# Elastic Load balancers
+# -----------
+resource "aws_lb" "nedluzimstatu-elb" {
+  name               = "nedluzimstatu-elb"
+  internal           = false
+  load_balancer_type = "application"
+  subnets            = [
+    aws_subnet.public.id,
+    aws_subnet.db-private.id
+  ]
+  security_groups    = [
+    aws_security_group.wordpress-sg.id
+  ]
+
+  idle_timeout = 400
+
+  tags = {
+    Name = "nedluzimstatu-elb"
+  }
+}
+
+resource "aws_lb_listener" "nedluzimstatu-listener" {
+  load_balancer_arn = aws_lb.nedluzimstatu-elb.arn
+  port              = "443"
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = var.https_certificate
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.nedluzimstatu-tg.arn
+
+  }
+}
+
+resource "aws_lb_listener" "nedluzimstatu-listener-http" {
+  load_balancer_arn = aws_lb.nedluzimstatu-elb.arn
+  port              = "80"
+  protocol          = "HTTP"
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.nedluzimstatu-tg.arn
+
+  }
+
+  //  default_action {
+  //    type = "redirect"
+  //
+  //    redirect {
+  //      port        = "443"
+  //      protocol    = "HTTPS"
+  //      status_code = "HTTP_301"
+  //    }
+  //  }
+}
+
+resource "aws_lb_target_group" "nedluzimstatu-tg" {
+  name        = "nedluzimstatu-tg"
+  port        = 80
+  protocol    = "HTTP"
+  vpc_id      = aws_vpc.vpc.id
+  target_type = "ip"
+
+  stickiness {
+    enabled = false
+    type    = "lb_cookie"
+  }
+}
+
+resource "aws_lb_target_group_attachment" "nedluzimstatu-attachment" {
+  target_group_arn = aws_lb_target_group.nedluzimstatu-tg.arn
+  target_id        = aws_instance.wordpress.private_ip
+  port             = 80
+}
 
 # -----------
 # DNS
@@ -288,6 +337,12 @@ resource aws_route53_zone private {
   }
 }
 
+# Temporary public zone before we can publish it under production domain
+data "aws_route53_zone" "public-zone" {
+  name         = "ceskodigital.net."
+  private_zone = false
+}
+
 # DNS record for database
 resource aws_route53_record database {
   zone_id = aws_route53_zone.private.zone_id
@@ -298,4 +353,16 @@ resource aws_route53_record database {
   records = [
     aws_db_instance.database.address
   ]
+}
+
+resource aws_route53_record temporary-public {
+  name    = "nedluzimstatu"
+  type    = "A"
+  zone_id = data.aws_route53_zone.public-zone.id
+
+  alias {
+    name                   = aws_lb.nedluzimstatu-elb.dns_name
+    zone_id                = aws_lb.nedluzimstatu-elb.zone_id
+    evaluate_target_health = true
+  }
 }
