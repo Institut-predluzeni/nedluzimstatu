@@ -1,8 +1,8 @@
 name: 'Terraform Apply on push'
 on:
   push:
-    branches:
-      - master
+    branches-ignore:
+      - '**'
     paths:
       - 'infrastructure/aws/**'
 env:
@@ -10,7 +10,6 @@ env:
   tf_working_dir: 'infrastructure/aws'
   TF_VAR_database_password: ${{ secrets.DATABASE_PASSWORD }}
   TF_VAR_admin_1_public_key: ${{ secrets.ADMIN_1_PUBLIC_KEY }}
-  TF_VAR_admin_2_public_key: ${{ secrets.ADMIN_2_PUBLIC_KEY }}
 jobs:
   terraform:
     name: 'Terraform'
