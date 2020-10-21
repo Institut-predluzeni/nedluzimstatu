@@ -1,0 +1,71 @@
+/*
+ Theme Name:     Divi Child
+ Theme URI:      https://www.elegantthemes.com/gallery/divi/
+ Description:    Divi Child Theme
+ Author:         Elegant Themes
+ Author URI:     https://www.elegantthemes.com
+ Template:       Divi
+ Version:        1.0.0
+*/
+ 
+ 
+/* =Theme customization starts here
+------------------------------------------------------- */
+
+/* no header shadow */
+#main-header {
+	 box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+/* Main CTA styling */
+.main-cta {
+	font-weight: 600;
+	letter-spacing: 0px !important;
+	padding: 13px 0px 0px 20px !important;
+	background: linear-gradient(285.46deg, #40AB98 -42.17%, #93D8CC 74.31%) !important;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15), inset -2px -2px 0px #40AB98, inset 2px 2px 1px rgba(255, 255, 255, 0.6) !important;
+	border-radius: 6px !important;
+}
+
+/* Secondary CTA styling */
+.secondary-cta {
+	font-weight: 600;
+	letter-spacing: 0px !important;
+	padding: 13px 0px 0px 20px !important;
+	background: linear-gradient(285.46deg, #241133 -42.17%, #61288C 74.31%) !important;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15), inset -2px -2px 0px #3C1E53, inset 2px 2px 1px rgba(255, 255, 255, 0.6) !important;
+	border-radius: 6px !important;
+}
+
+/* background beige */
+.background-beige {
+	background: linear-gradient(90deg, #EFEDDB -13.2%, #F6F5EE 35.04%, #F5F4EA 69.4%, #EFEDDB 113.67%);
+}
+
+/* no moving right  */
+.et_pb_blurb_content {
+	margin: 0 0 !important;
+}
+
+/* padding change in block with Radek */
+.et_pb_column.et_pb_column_1_3.et_pb_column_7.et_pb_css_mix_blend_mode_passthrough.et_pb_row_sticky.et_pb_column_single {
+	padding-top: 0px !important;
+}
+
+/* have transparent header */
+#main-header.et-fixed-header {
+	background-color: white !important;
+}
+#main-header {
+	background-color: transparent !important;
+}
+
+/* mobile menu fixed */
+@media (max-width: 980px) {
+.et_non_fixed_nav.et_transparent_nav #main-header, .et_non_fixed_nav.et_transparent_nav #top-header, .et_fixed_nav #main-header, .et_fixed_nav #top-header {
+    position: fixed;
+	}
+}
+
