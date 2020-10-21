@@ -12,6 +12,7 @@ env:
   TF_VAR_admin_1_public_key: ${{ secrets.ADMIN_1_PUBLIC_KEY }}
 jobs:
   terraform:
+    if: github.actor != 'nedluzim-statu-deployment'
     name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
