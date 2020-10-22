@@ -29,7 +29,17 @@ variable "admin_1_public_key" {
 
 variable "https_certificate" {
   type    = string
-  default = "arn:aws:acm:eu-west-1:313370994665:certificate/ff41ce0d-7743-481b-b0ce-166edf008faf"
+  default = "arn:aws:acm:us-east-1:313370994665:certificate/f7b7ede6-6e02-4165-8880-c95b18ab567e"
+}
+
+variable "static_content_bucket_name" {
+  type = string
+  default = "nedluzim-statu-static-deployment"
+}
+
+variable "public_domain" {
+  type = string
+  default  = "stage.nedluzimstatu.cz"
 }
 
 locals {
@@ -184,19 +194,78 @@ resource aws_route53_record temporary-public {
   ]
 }
 
-resource "aws_s3_bucket" "bucket" {
-  bucket = "nedluzim-statu-static-deployment"
+resource "aws_s3_bucket" "static_content" {
+  bucket = var.static_content_bucket_name
   acl    = "private"
 
-  cors_rule {
-    allowed_headers = [
-      "Authorization"]
+  policy = templatefile("roles/s3-cloudfront-policy.tmpl", {
+    cloudfront_arn = aws_cloudfront_origin_access_identity.default.iam_arn,
+    bucket_name = var.static_content_bucket_name
+  })
+}
+
+resource "aws_cloudfront_origin_access_identity" "default" {
+  comment = "Cloudfront Origin Identity"
+}
+
+resource "aws_cloudfront_distribution" "distribution" {
+  origin {
+    domain_name = aws_s3_bucket.static_content.bucket_regional_domain_name
+    origin_id = "S3-${aws_s3_bucket.static_content.id}"
+    s3_origin_config {
+      origin_access_identity = aws_cloudfront_origin_access_identity.default.cloudfront_access_identity_path
+    }
+  }
+
+  enabled = true
+  is_ipv6_enabled = true
+  default_root_object = "index.html"
+
+  aliases = [
+    var.public_domain
+  ]
+
+  default_cache_behavior {
     allowed_methods = [
       "GET",
       "HEAD"]
-    allowed_origins = [
-      "*"]
-    expose_headers  = []
-    max_age_seconds = 3000
+    cached_methods = [
+      "GET",
+      "HEAD"]
+    target_origin_id = "S3-${aws_s3_bucket.static_content.id}"
+
+    forwarded_values {
+      query_string = false
+      cookies {
+        forward = "none"
+      }
+    }
+    min_ttl = 0
+    default_ttl = 86400
+    max_ttl = 86400
+    compress = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  price_class = "PriceClass_All"
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+
+  viewer_certificate {
+    acm_certificate_arn = var.https_certificate
+    cloudfront_default_certificate = false
+    ssl_support_method = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2018"
+  }
+
+  custom_error_response {
+    error_code = 403
+    error_caching_min_ttl = 300
+    response_code = 200
+    response_page_path = "/index.html"
   }
 }
