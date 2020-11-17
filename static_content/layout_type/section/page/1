@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="pingback" href="http://54.195.74.196/xmlrpc.php" />
+	<link rel="pingback" href="https://nedluzimstatu.ceskodigital.net/xmlrpc.php" />
 
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
@@ -39,22 +39,22 @@
 
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS zdroj" href="http://54.195.74.196/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS komentářů" href="http://54.195.74.196/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS zdroj" href="https://nedluzimstatu.ceskodigital.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS komentářů" href="https://nedluzimstatu.ceskodigital.net/comments/feed/" />
 <meta content="Divi Child v.1.0.0" name="generator"/><link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3' type='text/css' media='all' />
 <link rel='stylesheet' id='parent-style-css'  href='/wp-content/themes/Divi/style.css?ver=5.5.3' type='text/css' media='all' />
-<link rel='stylesheet' id='divi-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext&#038;display=swap' type='text/css' media='all' />
 <link rel='stylesheet' id='divi-style-css'  href='/wp-content/themes/divi-child/style.css?ver=4.7.1' type='text/css' media='all' />
-<link rel='stylesheet' id='et-builder-googlefonts-cached-css'  href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&#038;subset=latin-ext,greek,greek-ext,vietnamese,cyrillic,latin,cyrillic-ext&#038;display=swap' type='text/css' media='all' />
+<link rel='stylesheet' id='et-builder-googlefonts-cached-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&#038;subset=latin-ext,greek,greek-ext,vietnamese,cyrillic,latin,cyrillic-ext&#038;display=swap' type='text/css' media='all' />
 <link rel='stylesheet' id='dashicons-css'  href='/wp-includes/css/dashicons.min.css?ver=5.5.3' type='text/css' media='all' />
 <script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
 <script type='text/javascript' src='/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.5' id='gtm4wp-form-move-tracker-js'></script>
-<link rel="https://api.w.org/" href="http://54.195.74.196/wp-json/" /><link rel="alternate" type="application/json" href="http://54.195.74.196/wp-json/wp/v2/pages/104" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://54.195.74.196/xmlrpc.php?rsd" />
+<link rel="https://api.w.org/" href="https://nedluzimstatu.ceskodigital.net/wp-json/" /><link rel="alternate" type="application/json" href="https://nedluzimstatu.ceskodigital.net/wp-json/wp/v2/pages/104" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nedluzimstatu.ceskodigital.net/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 5.5.3" />
-<link rel='shortlink' href='http://54.195.74.196/' />
-<link rel="alternate" type="application/json+oembed" href="http://54.195.74.196/wp-json/oembed/1.0/embed?url=%2F" />
-<link rel="alternate" type="text/xml+oembed" href="http://54.195.74.196/wp-json/oembed/1.0/embed?url=%2F&#038;format=xml" />
+<link rel='shortlink' href='https://nedluzimstatu.ceskodigital.net/' />
+<link rel="alternate" type="application/json+oembed" href="https://nedluzimstatu.ceskodigital.net/wp-json/oembed/1.0/embed?url=%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://nedluzimstatu.ceskodigital.net/wp-json/oembed/1.0/embed?url=%2F&#038;format=xml" />
 
 <!-- Google Tag Manager for WordPress by gtm4wp.com -->
 <script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
@@ -89,7 +89,7 @@ body.custom-background { background-color: #ffffff; }
 		<div class="container clearfix et_menu_container">
 					<div class="logo_container">
 				<span class="logo_helper"></span>
-				<a href="http://54.195.74.196/">
+				<a href="https://nedluzimstatu.ceskodigital.net/">
 					<img src="http://54.195.74.196/wp-content/uploads/2020/10/logo.svg" alt="Nedlužím státu" id="logo" data-height-percentage="60" />
 				</a>
 			</div>
@@ -113,7 +113,7 @@ body.custom-background { background-color: #ffffff; }
 		</div> <!-- .container -->
 		<div class="et_search_outer">
 			<div class="container et_search_form_container">
-				<form role="search" method="get" class="et-search-form" action="http://54.195.74.196/">
+				<form role="search" method="get" class="et-search-form" action="https://nedluzimstatu.ceskodigital.net/">
 				<input type="search" class="et-search-field" placeholder="Hledat &hellip;" value="" name="s" title="Hledat:" />				</form>
 				<span class="et_close_search_field"></span>
 			</div>
@@ -3474,7 +3474,7 @@ Více o používání cookies na naší stránce si můžete přečíst <a href=
 			</script>
 	<script type='text/javascript' id='contact-form-7-js-extra'>
 /* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"http:\/\/54.195.74.196\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+var wpcf7 = {"apiSettings":{"root":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
 /* ]]> */
 </script>
 <script type='text/javascript' src='/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.3' id='contact-form-7-js'></script>
@@ -3482,7 +3482,7 @@ var wpcf7 = {"apiSettings":{"root":"http:\/\/54.195.74.196\/wp-json\/contact-for
 /* <![CDATA[ */
 var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
 var et_shortcodes_strings = {"previous":"P\u0159edchoz\u00ed","next":"N\u00e1sleduj\u00edc\u00ed"};
-var et_pb_custom = {"ajaxurl":"http:\/\/54.195.74.196\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/54.195.74.196\/wp-content\/themes\/Divi\/images","builder_images_uri":"http:\/\/54.195.74.196\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"f2eba21e0e","subscription_failed":"Pros\u00edm, zkontrolujte, zda pole n\u00ed\u017ee a ujist\u011bte se, \u017ee jste zadali spr\u00e1vn\u00e9 informace.","et_ab_log_nonce":"54bf4e6277","fill_message":"Vypl\u0148te pros\u00edm n\u00e1sleduj\u00edc\u00ed pol\u00ed\u010dka:","contact_error_message":"Opravte pros\u00edm n\u00e1sleduj\u00edc\u00ed chyby:","invalid":"Neplatn\u00e1 e-mailov\u00e1 adresa","captcha":"Captcha","prev":"P\u0159edchoz\u00ed","previous":"P\u0159edchoz\u00ed","next":"Dal\u0161\u00ed","wrong_captcha":"V k\u00f3du CAPTCHA jste zadali nespr\u00e1vnou \u010d\u00edslici.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"104","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"3a80fb17b4","subscription_failed":"Pros\u00edm, zkontrolujte, zda pole n\u00ed\u017ee a ujist\u011bte se, \u017ee jste zadali spr\u00e1vn\u00e9 informace.","et_ab_log_nonce":"19fff8da52","fill_message":"Vypl\u0148te pros\u00edm n\u00e1sleduj\u00edc\u00ed pol\u00ed\u010dka:","contact_error_message":"Opravte pros\u00edm n\u00e1sleduj\u00edc\u00ed chyby:","invalid":"Neplatn\u00e1 e-mailov\u00e1 adresa","captcha":"Captcha","prev":"P\u0159edchoz\u00ed","previous":"P\u0159edchoz\u00ed","next":"Dal\u0161\u00ed","wrong_captcha":"V k\u00f3du CAPTCHA jste zadali nespr\u00e1vnou \u010d\u00edslici.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"104","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
 var et_pb_box_shadow_elements = [];
 var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
 var et_pb_sticky_elements = [];
