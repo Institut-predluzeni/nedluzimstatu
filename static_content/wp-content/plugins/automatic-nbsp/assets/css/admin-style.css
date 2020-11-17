@@ -1,0 +1,8 @@
+
+.dgwt-nbsp-import-textarea {
+    display: none;
+}
+
+textarea[name="dgwt_automatic_nbsp[words]"] {
+    min-height: 250px;
+}

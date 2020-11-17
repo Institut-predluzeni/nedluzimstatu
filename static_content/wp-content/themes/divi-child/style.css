@@ -11,7 +11,13 @@
  
 /* =Theme customization starts here
 ------------------------------------------------------- */
-
+h1, h2, h3 {
+	font-weight: bold !important;
+	font-size: 30px !important;
+	line-height: 120% !important;
+	font-feature-settings: 'case' on;
+	color: #55237C !important;
+}
 /* no header shadow */
 #main-header {
 	 box-shadow: none !important;
@@ -19,14 +25,28 @@
     -webkit-box-shadow: none !important;
 }
 
+/* menu CTA styling */
+.menu-cta {
+	padding: 0 !important;
+	background: #289AA2 !important;
+	border-radius: 7px !important;
+}
+.menu-cta a {
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: 0px !important;	
+	color: #fff !important;
+	padding: 13px 20px !important;
+}
 /* Main CTA styling */
 .main-cta {
-	font-weight: 600;
+	color: #ffffff !important;
+	font-weight: bold;
+	font-size: 16px;
 	letter-spacing: 0px !important;
 	padding: 13px 0px 0px 20px !important;
-	background: linear-gradient(285.46deg, #40AB98 -42.17%, #93D8CC 74.31%) !important;
-	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15), inset -2px -2px 0px #40AB98, inset 2px 2px 1px rgba(255, 255, 255, 0.6) !important;
-	border-radius: 6px !important;
+	background: #289AA2 !important;
+	border-radius: 7px !important;
 }
 
 /* Secondary CTA styling */
@@ -41,7 +61,12 @@
 
 /* background beige */
 .background-beige {
-	background: linear-gradient(90deg, #EFEDDB -13.2%, #F6F5EE 35.04%, #F5F4EA 69.4%, #EFEDDB 113.67%);
+	background: #F1ECE7;
+}
+
+/* purple background */
+.background-purple { 
+	background: #FAF7FE;
 }
 
 /* no moving right  */
@@ -54,13 +79,13 @@
 	padding-top: 0px !important;
 }
 
-/* have transparent header */
+/* have transparent header 
 #main-header.et-fixed-header {
 	background-color: white !important;
 }
 #main-header {
 	background-color: transparent !important;
-}
+}*/
 
 /* mobile menu fixed */
 @media (max-width: 980px) {
@@ -69,3 +94,316 @@
 	}
 }
 
+/* VERTICAL TABS WITH INSTITUTIONS STARTS */
+.vertical-tabs3 {
+    border: none;
+}
+.vertical-tabs3 ul.et_pb_tabs_controls {
+    float: left;
+    width: 40%;
+    margin-right: 5%;
+    background: transparent;
+}
+.vertical-tabs3 ul.et_pb_tabs_controls:after {
+    content: none;
+}
+.vertical-tabs3 .et_pb_tabs_controls li {
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+	background: #FFFFFF;
+	border-radius: 6px;
+	line-height: 0;
+	height: auto !important;
+}
+.vertical-tabs3 .et_pb_tabs_controls li.et_pb_tab_active {
+    background: #ececec;
+	
+}
+.vertical-tabs3 .et_pb_tabs_controls li a {
+    padding: 17px 20px;
+	font-style: normal;
+	font-size: 20px;
+	line-height: 120%;
+	color: #55237C !important;
+	display: flex;
+  	align-items: center;
+}
+.vertical-tabs3 .et_pb_tabs_controls li.et_pb_tab_active a {
+	background: #FFFFFF;
+	border: 2px solid #55237C;
+	box-sizing: border-box;
+	border-radius: 7px;
+
+}
+.vertical-tabs3 .et_pb_tabs_controls li a:before {
+    padding-right: 25px;
+	width: 35px;
+	height: 35px;
+	background-size: 35px;
+	background-repeat: no-repeat;
+	content: "";
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(1) a:before {
+	background-image: url(/wp-content/uploads/2020/11/logo-fu.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(2) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-cssz.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(3) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-celni-sprava.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(4) a:before {
+    background-image: url(/wp-content/uploads/2020/10/ikona-obec.svg);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(5) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-vzp.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(6) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-ozp.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(7) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-cpzp.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(8) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-vozp.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(9) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-zps.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(10) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-rbp.png);
+}
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(11) a:before {
+    background-image: url(/wp-content/uploads/2020/11/logo-zpmv.png);
+}
+.vertical-tabs3 .et_pb_tab {
+    padding: 0;
+}
+.vertical-tabs3 .et_pb_tab_content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+	background: #FAF7FE;
+	box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.1);
+	border-radius: 6px;	
+}
+.et_pb_all_tabs {
+	background: transparent !important;
+}
+@media(max-width:767px) {    
+    .vertical-tabs3 ul.et_pb_tabs_controls {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .vertical-tabs3 .et_pb_tabs_controls li {
+        border-bottom: none;
+    }
+    .vertical-tabs3 .et_pb_tab {
+        padding: 0;
+    }    
+}
+/* VERTICAL TABS WITH INSTITUTIONS END */
+
+/* max-width */
+.max-width {
+	width: 100% !important;
+}
+
+/* STYLES FOR QUESTIONARE START */
+.question {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+	letter-spacing: 0.04em;
+}
+.every-item-except-first {
+	margin: 30px 0 6px 0;
+}
+.first-item {
+	margin: 0px 0 6px 0;
+}
+.wpcf7-form > p {
+	padding-bottom: 0px;
+}
+.span.wpcf7-list-item {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.04em;
+}
+.mt-50 {
+	margin-top: 50px;
+}
+.tooltip {
+ 	position: relative;
+    display: inline-block;
+    background: #40AB98;
+    border-radius: 50%;
+    color: white;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+	cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 250px;
+	background-color: #646464;
+	color: #fff;
+	border-radius: 10px;
+	padding: 10px;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -125px;
+	line-height: 22px;
+	text-align: left;
+	cursor: default;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #646464 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+/* STYLES FOR QUESTIONARE END */
+
+/* Links in footer white */
+footer a {
+	color: #ffffff;
+}
+a {
+	text-decoration-line: underline;
+	color: #000000;
+}
+.et_pb_button {
+	text-decoration: none;
+}
+
+/* centerize icon in blurb module next to text */
+h4.et_pb_module_header {
+	padding-bottom: 0px !important;
+}
+.et_pb_main_blurb_image {
+	vertical-align: middle;
+}
+.et_pb_blurb_position_left .et_pb_main_blurb_image, .et_pb_blurb_position_right .et_pb_main_blurb_image {
+    width: auto;
+}	
+
+/* STYLES FOR FORMS START */
+
+/* button form general */
+.btn-forms {
+	pointer-events: none;
+	padding: 2px 10px;	
+	border: none;
+	border-radius: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px !important;
+	letter-spacing: 0.04em;	
+	text-decoration: none;
+}
+/* button in forms - paid */
+.paid {
+	background: #FF946F;
+	color: #000000;
+	display: initial !important;
+}
+/* button in forms - free */
+.free {
+	background: #289AA2;
+	color: #ffffff;
+	display: initial !important;
+}
+/*styling of section with web and phones*/
+.forms-section-contacts {
+	border-bottom: 2px solid #55237C;
+}
+
+/*styling of section with tutorial*/
+.forms-section-tutorial {
+	border: 2px solid #55237C;
+	box-sizing: border-box;
+	border-radius: 6px;
+	background: #FFFFFF;
+} 
+/*contact links*/
+.contact-links .et_pb_blurb_content .et_pb_blurb_container .et_pb_module_header a {
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0.04em;
+	text-decoration-line: underline;
+	color: #000000 !important;
+}
+.contact-links .et_pb_blurb_content .et_pb_blurb_container .et_pb_module_header a:hover {
+    text-decoration: none;
+}
+
+.insurances-contacts {
+	display: inline-block;
+	width: 49%;
+	vertical-align:top;
+}
+/*download form button*/
+.btn-download-form {
+	background-size: auto;
+	line-height: 145% !important;
+    background-image: url(/wp-content/uploads/2020/11/ikona-file.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+}
+/*find office button*/
+.btn-find-office-form {
+	background-size: auto;
+	line-height: 145% !important;
+    background-image: url(/wp-content/uploads/2020/11/ikona-domek-bila.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+}
+/*remove padding next to headling in tutorials*/
+.no-left-padding .et_pb_blurb_content .et_pb_blurb_container {
+	padding-left: 0px !important;
+}
+/* dropdown styling start */
+input[type=text] {
+	border: 2px solid #55237C;
+	box-sizing: border-box;
+	box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.15);
+	border-radius: 6px;
+	width: 100%;
+	font-size: 16px;
+	line-height: 145%;
+	color: rgba(0, 0, 0, 0.5);
+	padding: 9px 15px;
+}
+.drop-down {
+	width: 70%;
+}
+.mb-10 {
+	margin-bottom: 10px;
+}
+.link-in-tutorial a {
+	color: #55237C;
+}
+/* dropdown styling end  */
+/* STYLES FOR FORMS END */
