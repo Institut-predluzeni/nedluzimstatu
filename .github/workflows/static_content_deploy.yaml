@@ -10,7 +10,6 @@ env:
   cloudFrontDeploymentId: ${{ secrets.AWS_CLOUDFRONT_DEPLOYMENT_ID }}
 jobs:
   deploy:
-    if: github.actor == 'nedluzim-statu-deployment'
     runs-on: ubuntu-latest
     steps:
       - name: 'AWS CLI'
