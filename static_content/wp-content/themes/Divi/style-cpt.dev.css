@@ -12202,8 +12202,9 @@ span.comment_date {
   .et-db #et-boc .et-l .et_pb_menu__logo {
     overflow: hidden; }
     .et-db #et-boc .et-l .et_pb_menu__logo img {
-      display: block;
-      width: 100%; }
+      display: block; }
+      .et-db #et-boc .et-l .et_pb_menu__logo img[src$=".svg"] {
+        width: 100%; }
   .et-db #et-boc .et-l .et_pb_menu__search-button:after {
     content: "\55"; }
   .et-db #et-boc .et-l .et_pb_menu__cart-button:after {

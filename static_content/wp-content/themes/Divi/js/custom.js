@@ -2338,7 +2338,7 @@ __webpack_require__.r(__webpack_exports__);
           var adminbarHeight = $wpadminbar.innerHeight(); // Adjust admin bar height for builder's preview mode zoom since admin bar is rendered on top window
 
           if (builder_scripts_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isBuilder"] && top_window.jQuery('html').is('.et-fb-preview--zoom:not(.et-fb-preview--desktop)')) {
-            adminbarHeight = adminbarHeight * 2;
+            adminbarHeight = 0;
           }
 
           et_primary_header_top += adminbarHeight;
