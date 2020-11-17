@@ -25,14 +25,14 @@
 	<meta property="og:title" content="Home - Nedlužím státu" />
 	<meta property="og:url" content="http://54.195.74.196/" />
 	<meta property="og:site_name" content="Nedlužím státu" />
-	<meta property="article:modified_time" content="2020-11-17T09:43:34+00:00" />
+	<meta property="article:modified_time" content="2020-11-17T09:52:03+00:00" />
 	<meta property="og:image" content="http://54.195.74.196/wp-content/uploads/2020/10/logo-cesko-digital-cerne.svg" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:label1" content="Written by">
 	<meta name="twitter:data1" content="Lucia Studená">
 	<meta name="twitter:label2" content="Est. reading time">
 	<meta name="twitter:data2" content="13 minut">
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"http://54.195.74.196:80/#website","url":"http://54.195.74.196:80/","name":"Nedlu\u017e\u00edm st\u00e1tu","description":"Zjistit, zda nedlu\u017e\u00edm","potentialAction":[{"@type":"SearchAction","target":"http://54.195.74.196:80/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"cs"},{"@type":"ImageObject","@id":"http://54.195.74.196/#primaryimage","inLanguage":"cs","url":"http://54.195.74.196/wp-content/uploads/2020/10/logo-cesko-digital-cerne.svg"},{"@type":"WebPage","@id":"http://54.195.74.196/#webpage","url":"http://54.195.74.196/","name":"Home - Nedlu\u017e\u00edm st\u00e1tu","isPartOf":{"@id":"http://54.195.74.196:80/#website"},"primaryImageOfPage":{"@id":"http://54.195.74.196/#primaryimage"},"datePublished":"2020-10-13T09:47:25+00:00","dateModified":"2020-11-17T09:43:34+00:00","inLanguage":"cs","potentialAction":[{"@type":"ReadAction","target":["http://54.195.74.196/"]}]}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"http://54.195.74.196:80/#website","url":"http://54.195.74.196:80/","name":"Nedlu\u017e\u00edm st\u00e1tu","description":"Zjistit, zda nedlu\u017e\u00edm","potentialAction":[{"@type":"SearchAction","target":"http://54.195.74.196:80/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"cs"},{"@type":"ImageObject","@id":"http://54.195.74.196/#primaryimage","inLanguage":"cs","url":"http://54.195.74.196/wp-content/uploads/2020/10/logo-cesko-digital-cerne.svg"},{"@type":"WebPage","@id":"http://54.195.74.196/#webpage","url":"http://54.195.74.196/","name":"Home - Nedlu\u017e\u00edm st\u00e1tu","isPartOf":{"@id":"http://54.195.74.196:80/#website"},"primaryImageOfPage":{"@id":"http://54.195.74.196/#primaryimage"},"datePublished":"2020-10-13T09:47:25+00:00","dateModified":"2020-11-17T09:52:03+00:00","inLanguage":"cs","potentialAction":[{"@type":"ReadAction","target":["http://54.195.74.196/"]}]}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -501,7 +501,7 @@ body.custom-background { background-color: #ffffff; }
 				<div class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_light">
 				
 				
-				<div class="et_pb_text_inner"><p style="text-align: center;"><strong>TADY BUDOU VLOŽENY FORMULÁŘE 21</strong></p></div>
+				<div class="et_pb_text_inner"><p style="text-align: center;"><strong>TADY BUDOU VLOŽENY FORMULÁŘE 22</strong></p></div>
 			</div> <!-- .et_pb_text -->
 			</div> <!-- .et_pb_column -->
 				
