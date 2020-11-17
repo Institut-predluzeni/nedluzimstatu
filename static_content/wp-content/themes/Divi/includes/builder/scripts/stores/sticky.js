@@ -34,7 +34,7 @@ import ETScriptDocumentStore from './document';
 import ETScriptWindowStore from './window';
 import {
   getOffsets,
-
+  isBFB,
   isBuilder,
   isDiviTheme,
   isExtraTheme,
@@ -88,7 +88,12 @@ const elementsDefaults = {
       // Admin bar doesn't have fixed position in smaller breakpoint
       const isPositionFixed = 'fixed' === top_window.jQuery(elements.wpAdminBar.selector).css('position');
 
-      return ! isTB && ! isLBB && isPositionFixed;
+      // When Responsive View's control is visible, admin bar offset becomes irrelevant. Note:
+      // At this point the `height` value might not be updated yet, so manually get the height
+      // value via `getHeight()` method.
+      const hasVbAppFramePaddingTop = elements.builderAppFramePaddingTop.getHeight() > 0;
+
+      return ! hasVbAppFramePaddingTop && ! isTB && ! isLBB && isPositionFixed;
     },
   },
   diviFixedPrimaryNav: {
@@ -216,6 +221,20 @@ const elementsDefaults = {
 
       return parseFloat(height);
     },
+  },
+  builderAppFramePaddingTop: {
+    id: 'builderAppFramePaddingTop',
+    selector: isBFB ? '#et-bfb-app-frame' : '#et-fb-app-frame',
+    exist: false,
+    height: 0,
+    window: 'top',
+    getHeight: () => {
+      const selector = elements.builderAppFramePaddingTop.selector;
+      const cssProperty = isBFB ? 'marginTop' : 'paddingTop';
+      const paddingTop = top_window.jQuery(selector).css(cssProperty);
+
+      return parseFloat(paddingTop);
+    }
   },
   tbHeader: {
     id: 'et-tb-branded-modal__header',
@@ -379,6 +398,10 @@ class ETScriptStickyStore extends EventEmitter {
       const getExtraFixedMainHeaderHeight = this.getElementProp('extraFixedPrimaryNav', 'getHeight');
 
       this.setElementProp('extraFixedPrimaryNav', 'height', getExtraFixedMainHeaderHeight());
+    }
+
+    if (this.getElementProp('builderAppFramePaddingTop', 'exist', false)) {
+      this.setElementHeight('builderAppFramePaddingTop');
     }
   }
 
