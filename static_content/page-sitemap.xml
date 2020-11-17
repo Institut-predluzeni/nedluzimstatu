@@ -1,56 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//stage.nedluzimstatu.cz/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>/</loc>
+		<loc>https://stage.nedluzimstatu.cz/</loc>
 		<lastmod>2020-11-16T15:02:37+00:00</lastmod>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
 			<image:title><![CDATA[logo-institut-prevence]]></image:title>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-fu.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-fu.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-cssz.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-cssz.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-celni-sprava.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-celni-sprava.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-vzp.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-vzp.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-ozp.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-ozp.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-cpzp.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-cpzp.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-vozp.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-vozp.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-zps.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-zps.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-rbp.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-rbp.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-zpmv.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-zpmv.png</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/form-test/</loc>
+		<loc>https://stage.nedluzimstatu.cz/form-test/</loc>
 		<lastmod>2020-10-15T10:01:43+00:00</lastmod>
 	</url>
 	<url>
-		<loc>/formulare-a-navody/</loc>
+		<loc>https://stage.nedluzimstatu.cz/formulare-a-navody/</loc>
 		<lastmod>2020-10-21T15:46:48+00:00</lastmod>
 		<image:image>
-			<image:loc>/wp-content/uploads/2020/11/logo-fu.png</image:loc>
+			<image:loc>https://stage.nedluzimstatu.cz/wp-content/uploads/2020/11/logo-fu.png</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>/dluhove-poradna/</loc>
+		<loc>https://stage.nedluzimstatu.cz/dluhove-poradna/</loc>
 		<lastmod>2020-11-16T10:57:30+00:00</lastmod>
 	</url>
 </urlset>
