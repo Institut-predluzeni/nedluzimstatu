@@ -271,7 +271,7 @@
 				if (currentPosition === slidesNum)
 					gotoSlide(1,1);
 				else
-					gotoSlide(currentPosition+1),1;
+					gotoSlide(currentPosition+1,1);
 
 				if (options.linksNav != '') changeTab();
 			}
