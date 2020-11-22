@@ -72,8 +72,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type="text/css" id="custom-background-css">
 body.custom-background { background-color: #ffffff; }
 </style>
-	<script>
-// Make module Accordion closed by default
+	<!-- Make module Accordion closed by default -->
+<script>
 jQuery(function($){
     $('.et_pb_accordion .et_pb_toggle_open').addClass('et_pb_toggle_close').removeClass('et_pb_toggle_open');
 
@@ -84,8 +84,9 @@ jQuery(function($){
       },700);
     });
 });
-
-// Make module Accordion closable
+</script>
+<!-- Make module Accordion closable -->
+<script>
 jQuery(function($){
   $('.et_pb_toggle_title').click(function(){
     var $toggle = $(this).closest('.et_pb_toggle');
@@ -105,11 +106,14 @@ jQuery(function($){
   });
 });
 
-// skryti formularu a nasledna jejich aktivace pres tlacitka
 jQuery(function($){
   $('#formulare-navody').hide();
   $('#kde-dluh').hide();
-
+  // odklik odjinud 
+  if (window.location.hash == '#navody'){
+	 $('#formulare-navody').show();
+	 document.getElementById('formulare-navody').scrollIntoView({behavior: "smooth", block: "start", inline: "start"});	  
+  }
   $('#formulare_tlacitko').click(function(){
 	 $('#formulare-navody').show();
 	 document.getElementById('formulare-navody').scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
@@ -127,6 +131,7 @@ jQuery(function($){
 	}, 700);
   
 });	
+	
 </script><link rel="icon" href="/wp-content/uploads/2020/10/cropped-favicon-32x32.png" sizes="32x32" />
 <link rel="icon" href="/wp-content/uploads/2020/10/cropped-favicon-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="/wp-content/uploads/2020/10/cropped-favicon-180x180.png" />
