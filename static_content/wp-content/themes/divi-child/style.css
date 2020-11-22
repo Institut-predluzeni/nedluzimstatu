@@ -18,6 +18,11 @@ h1, h2, h3 {
 	font-feature-settings: 'case' on;
 	color: #55237C !important;
 }
+
+#mobile_menu a {
+	text-decoration: none;
+}
+
 /* no header shadow */
 #main-header {
 	 box-shadow: none !important;
@@ -144,37 +149,38 @@ h1, h2, h3 {
 	background-repeat: no-repeat;
 	content: "";
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(1) a:before {
+/*BE AVARE - IT'S ALSO FOR MOBILE TABS*/
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(1) a:before, .accordion-layout .et_pb_toggle:nth-child(1) {
 	background-image: url(/wp-content/uploads/2020/11/logo-fu.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(2) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(2) a:before, .accordion-layout .et_pb_toggle:nth-child(2) {
     background-image: url(/wp-content/uploads/2020/11/logo-cssz.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(3) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(3) a:before, .accordion-layout .et_pb_toggle:nth-child(3) {
     background-image: url(/wp-content/uploads/2020/11/logo-celni-sprava.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(4) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(4) a:before, .accordion-layout .et_pb_toggle:nth-child(4) {
     background-image: url(/wp-content/uploads/2020/10/ikona-obec.svg);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(5) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(5) a:before, .accordion-layout .et_pb_toggle:nth-child(5) {
     background-image: url(/wp-content/uploads/2020/11/logo-vzp.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(6) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(6) a:before, .accordion-layout .et_pb_toggle:nth-child(6) {
     background-image: url(/wp-content/uploads/2020/11/logo-ozp.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(7) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(7) a:before, .accordion-layout .et_pb_toggle:nth-child(7) {
     background-image: url(/wp-content/uploads/2020/11/logo-cpzp.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(8) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(8) a:before, .accordion-layout .et_pb_toggle:nth-child(8) {
     background-image: url(/wp-content/uploads/2020/11/logo-vozp.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(9) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(9) a:before, .accordion-layout .et_pb_toggle:nth-child(9) {
     background-image: url(/wp-content/uploads/2020/11/logo-zps.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(10) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(10) a:before, .accordion-layout .et_pb_toggle:nth-child(10) {
     background-image: url(/wp-content/uploads/2020/11/logo-rbp.png);
 }
-.vertical-tabs3 .et_pb_tabs_controls li:nth-child(11) a:before {
+.vertical-tabs3 .et_pb_tabs_controls li:nth-child(11) a:before, .accordion-layout .et_pb_toggle:nth-child(11) {
     background-image: url(/wp-content/uploads/2020/11/logo-zpmv.png);
 }
 .vertical-tabs3 .et_pb_tab {
@@ -248,6 +254,9 @@ h1, h2, h3 {
     text-align: center;
     line-height: 24px;
 	cursor: pointer;
+	font-weight: 500;
+    font-size: 16px;
+    margin-left: 2px;	
 }
 
 .tooltip .tooltiptext {
@@ -331,8 +340,8 @@ h4.et_pb_module_header {
 .free {
 	background: #289AA2;
 	color: #ffffff;
-	display: initial !important;
 }
+
 /*styling of section with web and phones*/
 .forms-section-contacts {
 	border-bottom: 2px solid #55237C;
@@ -359,7 +368,6 @@ h4.et_pb_module_header {
 
 .insurances-contacts {
 	display: inline-block;
-	width: 49%;
 	vertical-align:top;
 }
 /*download form button*/
@@ -379,6 +387,38 @@ h4.et_pb_module_header {
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 10px;
+	color: #ffffff;
+    border-width: 0px;
+    border-color: #B0B0B0; 
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700!important;
+    background-color: #B0B0B0;
+	pointer-events: none;
+}
+/* button search clickable */
+.btn-find-office-form-clickable {
+	background-size: auto;
+	line-height: 145% !important;
+    background-image: url(/wp-content/uploads/2020/10/ikona-domek.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;	
+	color: #000000;
+    border-width: 0px;
+    border-color: #86d4d9;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700!important;
+    background-color: #86d4d9;
+}
+.btn-find-office-form-clickable:hover {
+	background-color: #86d4d9 !important;
+	border-width: 0px !important;
+    border-color: #86d4d9 !important;
+}
+.btn-find-office-form-clickable:after {
+	content: none!important;	
 }
 /*remove padding next to headling in tutorials*/
 .no-left-padding .et_pb_blurb_content .et_pb_blurb_container {
@@ -399,6 +439,11 @@ input[type=text] {
 .drop-down {
 	width: 70%;
 }
+@media (max-width: 980px) {
+	.drop-down {
+		width: 85%;
+	}
+}
 .mb-10 {
 	margin-bottom: 10px;
 }
@@ -407,3 +452,102 @@ input[type=text] {
 }
 /* dropdown styling end  */
 /* STYLES FOR FORMS END */
+
+/* ACCORDION STYLES - COMPONENT FOR MOBILE FORMS START */
+.accordion-layout .et_pb_toggle {
+	background: #FAF6FE;
+	border-radius: 6px;
+	margin-bottom: 10px !important;
+	border: 1px solid #55237C;
+    background-repeat: no-repeat;
+	background-size: 40px;
+    background-position: 20px 10px;	
+}
+.accordion-layout .et_pb_toggle .et_pb_toggle_title {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 120%;
+	color: #55237C;
+	padding-left: 55px;
+}
+.accordion-layout .et_pb_toggle_content {
+	padding-top: 10px;
+}
+.accordion-layout .et_pb_accordion_item .et_pb_toggle_title:before {
+    color: #55237c;
+	content: "3";
+	font-size: 25px;
+}
+.accordion-layout .et_pb_toggle_open .et_pb_toggle_title:before {
+	display: block !important;
+	content: "2";
+}
+@media (max-width: 980px) {
+.accordion-layout .et_pb_column {
+    margin-bottom: 20px;
+	}
+	.accordion-layout .forms-section-contacts .et_pb_column {
+		width: 50%;
+	}
+	
+}
+@media (max-width: 590px) {
+	.accordion-layout .forms-section-contacts .et_pb_column {
+		width: 100%;
+	}	
+}
+.accordion-layout .et_pb_blurb_content {
+	max-width: max-content;
+}
+/* ACCORDION STYLES - COMPONENT FOR MOBILE FORMS END */
+
+/* DLUHOVA PORADNA tabs and styles START */
+.tabs-poradna .et_pb_tabs_controls {
+	width: 80%;
+    max-width: 1080px;
+    margin: auto;
+	padding-bottom: 104px !important;
+}
+.tabs-poradna .et_pb_tabs_controls li {
+	border-right: 0px;
+}
+.tabs-poradna ul.et_pb_tabs_controls {
+	background-color: transparent;
+}
+.tabs-poradna .et_pb_tab {
+	padding: 0px;
+}
+.tabs-poradna li.et_pb_tab_active {
+	border-radius: 6px
+}
+.tabs-poradna ul.et_pb_tabs_controls:after {
+	border-top: none;
+}
+.tabs-poradna .et_pb_main_blurb_image {
+	vertical-align: top !important;
+}
+.poradna-instituce h4 {
+	margin-bottom: 11px;
+}
+.poradna-instituce {
+	min-height: 225px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+.tabs-poradna .et_pb_tabs_controls li {
+	border-bottom: none;
+	display: inline-block;
+	}
+}
+.poradna-link {
+	color: #289AA1;
+	font-weight: 600;
+}
+.poradna-sipka {
+	margin-left: 10px;
+    font-size: 25px;
+	color: #289AA1;
+}
+/* DLUHOVA PORADNA tabs and styles END */
