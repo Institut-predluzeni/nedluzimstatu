@@ -571,4 +571,5 @@ input[type=text] {
 /* MAKE RECAPTCHA VISIBLE */
 body .grecaptcha-badge {
 	visibility: visible !important;
+	z-index: 1;
 }
