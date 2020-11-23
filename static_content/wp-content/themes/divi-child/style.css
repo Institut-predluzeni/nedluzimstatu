@@ -551,3 +551,24 @@ input[type=text] {
 	color: #289AA1;
 }
 /* DLUHOVA PORADNA tabs and styles END */
+
+/* TYPO NAZZI QUESTIONARE new line vs space*/
+@media (min-width: 446px) {
+	.new-line {
+		display:none;
+	}
+}
+@media (max-width: 445px) {	
+	.normal-space {
+		display:none;
+	}
+}
+
+.ml-10 {
+	margin-left: 10px;
+}
+
+/* MAKE RECAPTCHA VISIBLE */
+body .grecaptcha-badge {
+	visibility: visible !important;
+}
