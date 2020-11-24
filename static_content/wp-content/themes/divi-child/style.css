@@ -573,3 +573,12 @@ body .grecaptcha-badge {
 	visibility: visible !important;
 	z-index: 1;
 }
+
+/* styles for section dluhova poradna when the forms are visible start */
+.display-none {
+	display: none;
+}
+.background-white {
+	background: #fff !important;	
+}
+/* end */
