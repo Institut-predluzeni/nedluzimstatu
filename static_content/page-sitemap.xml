@@ -2,7 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://nedluzimstatu.cz/</loc>
-		<lastmod>2020-11-23T18:14:42+00:00</lastmod>
+		<lastmod>2020-11-24T02:54:59+00:00</lastmod>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/nedluzim-satu.jpg</image:loc>
+			<image:caption><![CDATA[nedlužím sátu]]></image:caption>
+		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ilustrace-muz.svg</image:loc>
 			<image:title><![CDATA[ilustrace-muz]]></image:title>
@@ -836,7 +840,11 @@
 	</url>
 	<url>
 		<loc>https://nedluzimstatu.cz/dluhove-poradny/</loc>
-		<lastmod>2020-11-23T07:52:28+00:00</lastmod>
+		<lastmod>2020-11-24T02:57:08+00:00</lastmod>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/nedluzim-satu.jpg</image:loc>
+			<image:caption><![CDATA[nedlužím sátu]]></image:caption>
+		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/Telefon.svg</image:loc>
 		</image:image>
