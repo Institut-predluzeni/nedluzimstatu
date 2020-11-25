@@ -582,3 +582,9 @@ body .grecaptcha-badge {
 	background: #fff;	
 }
 /* end */
+
+@media (max-width: 980px) {
+	#row-institution {
+		width: 95%;
+	}
+}
