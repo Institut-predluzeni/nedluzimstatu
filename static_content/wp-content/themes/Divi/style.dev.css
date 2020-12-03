@@ -1,7 +1,7 @@
 /*!
 Theme Name: Divi
 Theme URI: http://www.elegantthemes.com/gallery/divi/
-Version: 4.7.3
+Version: 4.7.4
 Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
 Author: Elegant Themes
 Author URI: http://www.elegantthemes.com
@@ -1325,6 +1325,7 @@ table.cart td.actions .checkout-button {
   background-color: #ececec;
   border: none;
   border-radius: 3px;
+  border-width: 0;
   color: #666 !important;
   font-size: 12px;
   padding: 4px 8px;
@@ -1599,6 +1600,9 @@ figure.woocommerce-product-gallery__wrapper {
 /* Project + Page Builder */
 .et_pb_pagebuilder_layout .project .entry-content {
   padding-top: 0; }
+
+.single .et_pb_post.project.type-project {
+  margin-bottom: 0; }
 
 /* Fullwidth Projects */
 .et_full_width_portfolio_page .et_project_meta {
@@ -9951,7 +9955,8 @@ p.et_pb_gallery_caption {
   min-height: 0;
   min-height: initial; }
 
-.post-password-required .et_password_protected_form h1 {
+body:not(.et_pb_pagebuilder_layout) .post-password-required .et_password_protected_form h1,
+body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_password_protected_form h1 {
   display: none; }
 
 /* Blog Module Inner Modules */
@@ -14562,7 +14567,7 @@ article.et_pb_has_overlay {
   .et_pb_wc_add_to_cart form.cart .variations td .label {
     font-weight: 700; }
   .et_pb_wc_add_to_cart form.cart .variations td select {
-    border-style: solid;
+    border-style: solid !important;
     border-width: 0;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -14582,6 +14587,9 @@ article.et_pb_has_overlay {
       -webkit-transform: translateY(-145%);
               transform: translateY(-145%);
       width: 0; }
+    .et_pb_wc_add_to_cart form.cart .variations td.value .reset_variations {
+      float: right;
+      margin-top: 1em; }
 
 .et_pb_wc_add_to_cart.et_pb_hide_input_quantity .quantity,
 .et_pb_wc_add_to_cart.et_pb_hide_input_quantity .woocommerce-grouped-product-list-item__quantity {
@@ -15428,10 +15436,17 @@ body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_image
   /* Sections and Rows */
   .et_pb_section {
     padding: 4% 0; }
+    body:not(.et_pb_pagebuilder_layout) .post-password-required .et_pb_section,
+    body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_pb_section {
+      padding-top: 0; }
   .et_pb_fullwidth_section {
     padding: 0; }
   .et_pb_row {
     padding: 2% 0; }
+    body:not(.et_pb_pagebuilder_layout) .post-password-required .et_pb_row,
+    body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_pb_row {
+      padding: 0;
+      width: 100%; }
   .et_pb_column_3_4 .et_pb_row_inner {
     padding: 3.735% 0; }
   .et_pb_column_2_3 .et_pb_row_inner {
@@ -15799,6 +15814,9 @@ body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_image
   /* Rows and Sections */
   .et_pb_section {
     padding: 50px 0; }
+    body:not(.et_pb_pagebuilder_layout) .post-password-required .et_pb_section,
+    body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_pb_section {
+      padding-top: 0; }
   .et_pb_fullwidth_section {
     padding: 0; }
   .et_pb_row,
@@ -15910,6 +15928,10 @@ body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_image
       margin-right: 0; }
   .et_pb_row_1-6_1-6_1-6_1-6:nth-last-child(-n+3) {
     margin-bottom: 0; }
+  body:not(.et_pb_pagebuilder_layout) .post-password-required .et_pb_row,
+  body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_pb_row {
+    padding: 0;
+    width: 100%; }
   .et_pb_space.et-hide-mobile {
     display: none; }
   /* Filterable Portfolio Module */
