@@ -336,7 +336,6 @@ h4.et_pb_module_header {
 .paid {
 	background: #FF946F;
 	color: #000000;
-	display: initial !important;
 }
 /* button in forms - free */
 .free {
