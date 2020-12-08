@@ -243,6 +243,7 @@ h1, h2, h3 {
 .mt-50 {
 	margin-top: 50px;
 }
+
 .tooltip {
  	position: relative;
     display: inline-block;
@@ -270,7 +271,7 @@ h1, h2, h3 {
 	z-index: 1;
 	bottom: 150%;
 	left: 50%;
-	margin-left: -125px;
+	margin-left: -100px;
 	line-height: 22px;
 	text-align: left;
 	cursor: default;
@@ -280,7 +281,7 @@ h1, h2, h3 {
 	content: "";
 	position: absolute;
 	top: 100%;
-	left: 50%;
+	left: 40%;
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
@@ -290,6 +291,7 @@ h1, h2, h3 {
 .tooltip:hover .tooltiptext {
 	visibility: visible;
 }
+
 /* STYLES FOR QUESTIONARE END */
 
 /* Links in footer white */
