@@ -697,12 +697,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="tooltip">i<span class="tooltiptext">Možná dlužíte obci na nájmu. Ale pozor, v daném bytě musíte být opravdu nájemce, tedy stále jste, nebo jste byl/a uvedený/á v nájemní smlouvě.</span></div>
 </div>
 <p><span class="wpcf7-form-control-wrap radio-byt"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="radio-byt" value="ano" /><span class="wpcf7-list-item-label">ano</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-byt" value="ne" /><span class="wpcf7-list-item-label">ne</span></label></span><span class="wpcf7-list-item last"><label><input type="radio" name="radio-byt" value="nechci odpovídat" /><span class="wpcf7-list-item-label">nechci odpovídat</span></label></span></span></span></p>
-<p><!-- DOČASNĚ ZAKOMENTOVÁNO - PRO HONZU - ČEKÁ NA DOKONČENÍ</p>
 <div class="question every-item-except-first">Vlastnil/a jste někdy nemovitost?
 <div class="tooltip">i<span class="tooltiptext">Pak vám mohl vzniknout dluh u finančního úřadu kvůli nedoplatku na dani z nemovitosti.</span></div>
 </div>
-<p><span class="wpcf7-form-control-wrap radio-nemovitost"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="radio-nemovitost" value="ano" /><span class="wpcf7-list-item-label">ano</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-nemovitost" value="ne" /><span class="wpcf7-list-item-label">ne</span></label></span><span class="wpcf7-list-item last"><label><input type="radio" name="radio-nemovitost" value="nechci odpovídat" /><span class="wpcf7-list-item-label">nechci odpovídat</span></label></span></span></span><br />
---></p>
+<p><span class="wpcf7-form-control-wrap radio-nemovitost"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><label><input type="radio" name="radio-nemovitost" value="ano" /><span class="wpcf7-list-item-label">ano</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-nemovitost" value="ne" /><span class="wpcf7-list-item-label">ne</span></label></span><span class="wpcf7-list-item last"><label><input type="radio" name="radio-nemovitost" value="nechci odpovídat" /><span class="wpcf7-list-item-label">nechci odpovídat</span></label></span></span></span></p>
 <div class="question every-item-except-first">Podával/a jste někdy daňové přiznání?
 <div class="tooltip">i<span class="tooltiptext">Podnikáte? Dlužit můžete nejen za pozdní nebo špatné podání daňového přiznání, ale i za nedoplatek daně z příjmu.</span></div>
 </div>
@@ -754,8 +752,9 @@ if (radio_auto == 'ne') {
 */
 var radio_dp = document.forms.dotaznik['radio-dp'].value;
 var radio_osvc = document.forms.dotaznik['radio-osvc'].value;
+var radio_nemovitost = document.forms.dotaznik['radio-nemovitost'].value;
 // FU 
-if (radio_dp == 'ne' && radio_osvc == 'ne') {
+if (radio_dp == 'ne' && radio_osvc == 'ne' && radio_nemovitost == 'ne') {
   jQuery('.et_pb_tab_0').hide();
   jQuery('.et_pb_accordion_item_0').hide();
 } else {
@@ -6345,7 +6344,7 @@ var wpcf7_recaptcha = {"sitekey":"6Ld-VeoZAAAAAAIrNW74N2EYnEvFeWZSgJeomQT5","act
 /* <![CDATA[ */
 var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
 var et_shortcodes_strings = {"previous":"P\u0159edchoz\u00ed","next":"N\u00e1sleduj\u00edc\u00ed"};
-var et_pb_custom = {"ajaxurl":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-admin\/admin-ajax.php","images_uri":"\/wp-content\/themes\/Divi\/images","builder_images_uri":"\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"394a8101ef","subscription_failed":"Pros\u00edm, zkontrolujte, zda pole n\u00ed\u017ee a ujist\u011bte se, \u017ee jste zadali spr\u00e1vn\u00e9 informace.","et_ab_log_nonce":"ed0f00b073","fill_message":"Vypl\u0148te pros\u00edm n\u00e1sleduj\u00edc\u00ed pol\u00ed\u010dka:","contact_error_message":"Opravte pros\u00edm n\u00e1sleduj\u00edc\u00ed chyby:","invalid":"Neplatn\u00e1 e-mailov\u00e1 adresa","captcha":"Captcha","prev":"P\u0159edchoz\u00ed","previous":"P\u0159edchoz\u00ed","next":"Dal\u0161\u00ed","wrong_captcha":"V k\u00f3du CAPTCHA jste zadali nespr\u00e1vnou \u010d\u00edslici.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"104","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-admin\/admin-ajax.php","images_uri":"\/wp-content\/themes\/Divi\/images","builder_images_uri":"\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"8a7d0885c5","subscription_failed":"Pros\u00edm, zkontrolujte, zda pole n\u00ed\u017ee a ujist\u011bte se, \u017ee jste zadali spr\u00e1vn\u00e9 informace.","et_ab_log_nonce":"b8f549fd63","fill_message":"Vypl\u0148te pros\u00edm n\u00e1sleduj\u00edc\u00ed pol\u00ed\u010dka:","contact_error_message":"Opravte pros\u00edm n\u00e1sleduj\u00edc\u00ed chyby:","invalid":"Neplatn\u00e1 e-mailov\u00e1 adresa","captcha":"Captcha","prev":"P\u0159edchoz\u00ed","previous":"P\u0159edchoz\u00ed","next":"Dal\u0161\u00ed","wrong_captcha":"V k\u00f3du CAPTCHA jste zadali nespr\u00e1vnou \u010d\u00edslici.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"104","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
 var et_pb_box_shadow_elements = [];
 var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
 var et_pb_sticky_elements = [];
