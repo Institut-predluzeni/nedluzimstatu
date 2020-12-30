@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://nedluzimstatu.cz/</loc>
-		<lastmod>2020-12-08T15:31:40+00:00</lastmod>
+		<lastmod>2020-12-22T19:07:36+00:00</lastmod>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/favicon.png</image:loc>
 			<image:title><![CDATA[favicon]]></image:title>
@@ -78,16 +78,31 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-web.svg</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-cssz.png</image:loc>
@@ -111,16 +126,19 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-celni-sprava.png</image:loc>
@@ -132,16 +150,25 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-obec.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-web.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/12/ikona-obec.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
@@ -150,16 +177,31 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-vrstvy.svg</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-vzp.png</image:loc>
@@ -186,25 +228,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -234,25 +267,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -282,28 +306,19 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-vozp.png</image:loc>
@@ -330,25 +345,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -369,25 +375,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -408,25 +405,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -447,25 +435,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -477,16 +456,31 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-web.svg</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-cssz.png</image:loc>
@@ -510,16 +504,19 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-celni-sprava.png</image:loc>
@@ -531,16 +528,25 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-obec.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-web.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/12/ikona-obec.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
@@ -549,16 +555,31 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-vrstvy.svg</image:loc>
 		</image:image>
 		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+		</image:image>
+		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-trojuhelnik-varovani.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-kosoctverec.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-vzp.png</image:loc>
@@ -585,25 +606,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -633,25 +645,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -681,28 +684,19 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-vozp.png</image:loc>
@@ -729,25 +723,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -768,25 +753,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -807,25 +783,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>
@@ -846,25 +813,16 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-stazeni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalkadomek.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-otaznik.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-datovka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-email.svg</image:loc>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/ikona-obalka.svg</image:loc>
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/10/ikona-domek.svg</image:loc>

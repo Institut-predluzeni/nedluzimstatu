@@ -3606,7 +3606,7 @@ __webpack_require__.r(__webpack_exports__);
     });
   }
 
-  $(document).ready(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     var $et_top_menu = $('ul.nav, ul.menu'),
         $et_search_icon = $('#et_search_icon'),
         et_parent_menu_longpress_limit = 300,
@@ -4593,7 +4593,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
 
-    $('a[href*="#"]:not([href="#"])').click(function () {
+    $('a[href*="#"]:not([href="#"])').on('click', function () {
       var $this_link = $(this),
           has_closest_smooth_scroll_disabled = $this_link.closest('.et_smooth_scroll_disabled').length,
           has_closest_woocommerce_tabs = $this_link.closest('.woocommerce-tabs').length && $this_link.closest('.tabs').length,
@@ -4906,7 +4906,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       $(window).on('et_fb_section_content_change', et_fb_side_nav_page_init);
     } else {
-      $(window).load(et_all_elements_loaded);
+      window.addEventListener('load', et_all_elements_loaded);
     }
   }); // Fixing logo size transition in tricky header style
 
