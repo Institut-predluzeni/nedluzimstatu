@@ -20,8 +20,7 @@
 	<!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Nedlužím státu – Víte jistě, zda nedlužíte státu?</title>
 	<meta name="description" content="Díky přehledným návodům a formulářům vám pomůžeme zjistit, zda a u které instituce (ne)máte dluh. Srozumitelně, anonymně a zdarma." />
-	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<link rel="canonical" href="https://54.195.74.196:443/" />
+	<meta name="robots" content="noindex, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 	<meta property="og:locale" content="cs_CZ" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Nedlužím státu – Víte jistě, zda nedlužíte státu?" />
