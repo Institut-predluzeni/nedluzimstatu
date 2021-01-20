@@ -29,7 +29,7 @@ variable "admin_1_public_key" {
 
 variable "https_certificate" {
   type    = string
-  default = "arn:aws:acm:us-east-1:313370994665:certificate/f7b7ede6-6e02-4165-8880-c95b18ab567e"
+  default = "arn:aws:acm:us-east-1:313370994665:certificate/1eb30f1c-0b56-4bae-8530-ace418b8637a"
 }
 
 variable "static_content_bucket_name" {
@@ -39,7 +39,7 @@ variable "static_content_bucket_name" {
 
 variable "public_domain" {
   type = string
-  default  = "stage.nedluzimstatu.cz"
+  default  = "nedluzimstatu.cz"
 }
 
 locals {
@@ -202,6 +202,11 @@ resource "aws_s3_bucket" "static_content" {
     cloudfront_arn = aws_cloudfront_origin_access_identity.default.iam_arn,
     bucket_name = var.static_content_bucket_name
   })
+
+  website {
+    index_document = "index.html"
+    error_document = "index.html"
+  }
 }
 
 resource "aws_cloudfront_origin_access_identity" "default" {
@@ -209,6 +214,22 @@ resource "aws_cloudfront_origin_access_identity" "default" {
 }
 
 resource "aws_cloudfront_distribution" "distribution" {
+  origin {
+    domain_name = "${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
+    origin_id = "S3-Website-${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
+
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = [
+        "TLSv1",
+        "TLSv1.1",
+        "TLSv1.2"
+      ]
+    }
+  }
+
   origin {
     domain_name = aws_s3_bucket.static_content.bucket_regional_domain_name
     origin_id = "S3-${aws_s3_bucket.static_content.id}"
@@ -222,7 +243,8 @@ resource "aws_cloudfront_distribution" "distribution" {
   default_root_object = "index.html"
 
   aliases = [
-    var.public_domain
+    var.public_domain,
+    "www.${var.public_domain}"
   ]
 
   default_cache_behavior {
@@ -232,10 +254,10 @@ resource "aws_cloudfront_distribution" "distribution" {
     cached_methods = [
       "GET",
       "HEAD"]
-    target_origin_id = "S3-${aws_s3_bucket.static_content.id}"
+    target_origin_id = "S3-Website-${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
 
     forwarded_values {
-      query_string = false
+      query_string = true
       cookies {
         forward = "none"
       }
@@ -260,12 +282,5 @@ resource "aws_cloudfront_distribution" "distribution" {
     cloudfront_default_certificate = false
     ssl_support_method = "sni-only"
     minimum_protocol_version = "TLSv1.2_2018"
-  }
-
-  custom_error_response {
-    error_code = 403
-    error_caching_min_ttl = 300
-    response_code = 200
-    response_page_path = "/index.html"
   }
 }
