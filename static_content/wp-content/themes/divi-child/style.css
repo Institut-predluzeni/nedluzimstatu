@@ -586,3 +586,27 @@ body .grecaptcha-badge {
 .purple-text {
 	color: #55237c!important;
 }
+.wider {
+	width: 400px !important;
+    margin-left: -160px !important;
+}
+span.wpcf7-list-item {
+	margin-left: 0px !important;
+	margin-right: 21px !important;	
+}
+span.wpcf7-list-item-label::before, span.wpcf7-list-item-label::after {
+	content: none !important;
+}
+.wpcf7-list-item-label {
+	margin-left: 15px;
+}
+span.wpcf7-list-item.last {
+	margin-right: 0px !important;
+}
+
+@media (max-width: 767px) {
+	.wpcf7-checkbox > .wpcf7-list-item:not(:last-child)  {
+		width: 25%;
+		margin-bottom: 20px;
+	}
+}
