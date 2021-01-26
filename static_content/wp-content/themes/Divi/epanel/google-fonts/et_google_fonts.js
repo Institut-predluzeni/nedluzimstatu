@@ -46,7 +46,7 @@
 			if ( $selected_option.length < 1 ) {
 				$selected_option = $et_google_font_main_select.find( 'option[value="none"]' );
 			}
-			
+
 			if ( $selected_option.length ) {
 				this.custom_select_link.find('.et_filter_text').text( $selected_option.text() );
 
@@ -125,14 +125,14 @@
 			var font_class = this.fontname_to_class(font_name);
 
 			// process custom user fonts
-			if ('undefined' !== typeof et_google_fonts_data.user_fonts && 'undefined' !== typeof et_google_fonts_data.user_fonts[font_name]) {
+			if ('undefined' !== typeof et_google_fonts_data && 'undefined' !== typeof et_google_fonts_data.user_fonts && 'undefined' !== typeof et_google_fonts_data.user_fonts[font_name]) {
 				if ($head.find('style#' + font_class).length > 0) {
 					return;
 				}
 
 				var savedFontFiles = 'undefined' !== typeof et_google_fonts_data.user_fonts[font_name]['font_url'] ? et_google_fonts_data.user_fonts[font_name]['font_url'] : '';
 				var fontSrc        = 'string' === typeof savedFontFiles ? "src: url('" + savedFontFiles + "');" : '';
-		  
+
 				// generate the @font-face src from the uploaded font files
 				// all the font formats have to be added in certain order to provide the best browser support
 				if ('' === fontSrc && 'string' !== typeof savedFontFiles) {
@@ -158,11 +158,11 @@
 					  'format' : 'opentype',
 					},
 				  };
-		  
+
 				  if (allFontFiles['eot']['url']) {
 					fontSrc = "src: url('" + allFontFiles['eot']['url'] + "'); src: url('" + allFontFiles['eot']['url'] + "?#iefix') format('embedded-opentype')";
 				  }
-		  
+
 				  jQuery.each(allFontFiles, function(extension, fontData) {
 					if ('eot' !== extension && fontData.url) {
 					  fontSrc += '' === fontSrc ? 'src: ' : ', ';
@@ -170,7 +170,7 @@
 					}
 				  });
 				}
-		  
+
 				$head.append('<style id="' + font_class + '">@font-face{font-family:"' + font_name + '"; ' +  fontSrc + ';}</style>');
 
 				return;

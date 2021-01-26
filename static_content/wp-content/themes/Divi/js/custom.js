@@ -3739,30 +3739,31 @@ __webpack_require__.r(__webpack_exports__);
 
     function et_change_primary_nav_position(delay) {
       setTimeout(function () {
-        var $body = $('body'),
-            $wpadminbar = builder_scripts_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isBuilder"] ? top_window.jQuery('#wpadminbar') : $('#wpadminbar'),
-            $top_header = $('#top-header'),
-            et_primary_header_top = 0;
+        var etPrimaryHeaderTop = 0;
+        var $body = $('body');
+        var $wpadminbar = builder_scripts_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isBuilder"] ? top_window.jQuery('#wpadminbar') : $('#wpadminbar');
+        var $topHTML = top_window.jQuery('html');
+        var $topHeader = $('#top-header');
+        var isPreviewMode = $topHTML.is('.et-fb-preview--zoom:not(.et-fb-preview--desktop)');
+        isPreviewMode = isPreviewMode || $topHTML.is('.et-fb-preview--tablet');
+        isPreviewMode = isPreviewMode || $topHTML.is('.et-fb-preview--phone');
 
-        if ($wpadminbar.length) {
-          var adminbarHeight = $wpadminbar.innerHeight(); // Adjust admin bar height for builder's preview mode zoom since admin bar is rendered on top window
+        if ($wpadminbar.length && !Number.isNaN($wpadminbar.innerHeight())) {
+          var adminbarHeight = parseFloat($wpadminbar.innerHeight()); // Adjust admin bar height for builder's preview mode
+          // since admin bar is rendered on top window in these modes.
 
-          if (builder_scripts_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isBuilder"] && top_window.jQuery('html').is('.et-fb-preview--zoom:not(.et-fb-preview--desktop)')) {
-            adminbarHeight = 0;
-          }
-
-          et_primary_header_top += adminbarHeight;
+          etPrimaryHeaderTop += builder_scripts_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isBuilder"] && isPreviewMode ? 0 : adminbarHeight;
         }
 
-        if ($top_header.length && $top_header.is(':visible')) {
-          et_primary_header_top += $top_header.innerHeight();
+        if ($topHeader.length && $topHeader.is(':visible')) {
+          etPrimaryHeaderTop += $topHeader.innerHeight();
         }
 
         var isFixedNav = $body.hasClass('et_fixed_nav');
         var isAbsolutePrimaryNav = !isFixedNav && $body.hasClass('et_transparent_nav') && $body.hasClass('et_secondary_nav_enabled');
 
         if (!window.et_is_vertical_nav && (isFixedNav || isAbsolutePrimaryNav)) {
-          $('#main-header').css('top', et_primary_header_top);
+          $('#main-header').css('top', etPrimaryHeaderTop);
         }
       }, delay);
     }
@@ -3837,6 +3838,13 @@ __webpack_require__.r(__webpack_exports__);
 
       if ($map_container.length) {
         google.maps.event.trigger($map[0], 'resize');
+      } // Workaround for reviews tab in woo tabs.
+
+
+      if ($target.parents().hasClass('commentlist')) {
+        $('.reviews_tab').click().animate({
+          scrollTop: $target.offset().top
+        }, 700);
       } // Allow the header sizing functions enough time to finish before scrolling the page
 
 
@@ -4593,7 +4601,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
 
-    $('a[href*="#"]:not([href="#"])').on('click', function () {
+    $('a[href*="#"]:not([href="#"]), .mobile_nav').on('click', function (e) {
       var $this_link = $(this),
           has_closest_smooth_scroll_disabled = $this_link.closest('.et_smooth_scroll_disabled').length,
           has_closest_woocommerce_tabs = $this_link.closest('.woocommerce-tabs').length && $this_link.closest('.tabs').length,
@@ -4605,11 +4613,23 @@ __webpack_require__.r(__webpack_exports__);
           disable_scroll = has_closest_smooth_scroll_disabled || has_closest_ee_cart_link || has_closest_woocommerce_tabs || has_closest_eab_cal_link || has_acomment_reply || is_woocommerce_review_link || has_closest_timetable_tab;
 
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname && !disable_scroll) {
-        var target = $(this.hash);
+        var target = $(this.hash); // Workaround for empty target in mobile menu.
+
+        if ($this_link.hasClass('mobile_nav')) {
+          target = $('#' + e.target.hash.slice(1));
+        }
+
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
         if (target.length) {
-          // automatically close fullscreen menu if clicked from there
+          // Workaround for reviews tab in woo tabs.
+          if ($(this).parents().hasClass('widget_recent_reviews')) {
+            $('.reviews_tab').click().animate({
+              scrollTop: target.offset().top
+            }, 700);
+          } // automatically close fullscreen menu if clicked from there
+
+
           if ($this_link.closest('.et_pb_fullscreen_menu_opened').length > 0) {
             et_pb_toggle_fullscreen_menu();
           }
