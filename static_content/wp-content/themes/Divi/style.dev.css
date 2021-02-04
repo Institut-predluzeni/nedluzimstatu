@@ -1,7 +1,7 @@
 /*!
 Theme Name: Divi
 Theme URI: http://www.elegantthemes.com/gallery/divi/
-Version: 4.8.1
+Version: 4.8.2
 Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
 Author: Elegant Themes
 Author URI: http://www.elegantthemes.com
@@ -8482,6 +8482,10 @@ body #main-content .et_builder_inner_content > p {
   left: 30px !important;
   right: 30px !important; }
 
+/* Menu module Module */
+.et_pb_fullwidth_section .et_pb_fullwidth_menu {
+  position: relative; }
+
 /* Mobile Menu */
 .et_mobile_menu {
   position: absolute;
@@ -8631,8 +8635,10 @@ body #main-content .et_builder_inner_content > p {
   position: relative;
   border: 2px solid;
   border-radius: 3px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: all !important;
+  transition-property: all !important; }
 
 .et_pb_button_inner {
   position: relative; }
@@ -9383,7 +9389,7 @@ p.et_pb_gallery_caption {
     margin-left: 20px; }
   /* Reset Position Left & Right - Tablet */
   .et_pb_blurb_position_top_tablet .et_pb_main_blurb_image {
-    display: inline-block;
+    display: block;
     width: auto;
     width: initial; }
   .et_pb_blurb_position_top_tablet .et-pb-icon {
@@ -9394,6 +9400,7 @@ p.et_pb_gallery_caption {
     font-size: 48px;
     padding: 25px; }
   .et_pb_blurb_position_top_tablet .et_pb_blurb_container {
+    display: block;
     padding-left: 0;
     padding-left: initial;
     padding-right: 0;
@@ -9445,7 +9452,7 @@ p.et_pb_gallery_caption {
     margin-left: 20px; }
   /* Reset Position Left & Right of Tablet - Phone */
   .et_pb_blurb_position_top_phone .et_pb_main_blurb_image {
-    display: inline-block;
+    display: block;
     width: auto;
     width: initial; }
   .et_pb_blurb_position_top_phone .et-pb-icon {
@@ -9456,6 +9463,7 @@ p.et_pb_gallery_caption {
     font-size: 48px;
     padding: 25px; }
   .et_pb_blurb_position_top_phone .et_pb_blurb_container {
+    display: block;
     padding-left: 0;
     padding-left: initial;
     padding-right: 0;
@@ -11240,6 +11248,9 @@ h1.et_pb_contact_main_title {
 .et_pb_contact p input[type="checkbox"] ~ input[type="text"],
 .et_pb_subscribe .et_pb_contact_field input[type="checkbox"] ~ input[type="text"] {
   display: none !important; }
+
+.et_pb_contact_field[data-type="booleancheckbox"] .et_pb_contact_field_options_title {
+  display: inline-block; }
 
 .et_pb_contact_field[data-type="select"] {
   position: relative; }
@@ -13418,7 +13429,9 @@ ul.et_pb_social_media_follow {
   background-repeat-y: no-repeat;
   position: absolute;
   pointer-events: none;
-  width: 100%; }
+  width: 100%;
+  left: 0;
+  right: 0; }
   .et_pb_top_inside_divider.et-no-transition,
   .et_pb_bottom_inside_divider.et-no-transition {
     -webkit-transition: none !important;
@@ -16279,6 +16292,9 @@ body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_image
   /* Post Title Module */
   .et_pb_fullwidth_section .et_pb_post_title {
     padding: 80px 0; }
+  /* Menu module Module */
+  .et_pb_fullwidth_section .et_pb_fullwidth_menu {
+    position: relative; }
   /* Map Module */
   .et_pb_map_container > .et_pb_map {
     height: 350px; }

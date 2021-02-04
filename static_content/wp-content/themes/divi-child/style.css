@@ -500,7 +500,7 @@ input[type=text] {
 	width: 80%;
     max-width: 1080px;
     margin: auto;
-	padding-bottom: 104px !important;
+	padding-bottom: 90px !important;
 }
 .tabs-poradna .et_pb_tabs_controls li {
 	border-right: 0px;
@@ -609,4 +609,23 @@ span.wpcf7-list-item.last {
 		width: 25%;
 		margin-bottom: 20px;
 	}
+}
+.kdo-jsme-nadpis {
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 120%;
+	font-feature-settings: 'case' on;
+	color: #000000;
+	padding-bottom: 0px;
+}
+.kdo-jsme-podnadpis {
+	font-size: 16px;
+	line-height: 145%;
+	color: #4B4B4B;
+}
+.formulare-podnadpis{
+	font-style: normal;
+	font-size: 20px;
+	line-height: 145%;
+	color: #000000;
 }
