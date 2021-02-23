@@ -269,6 +269,7 @@
 					action: 'et_core_portability_export',
 					content: content.shortcode,
 					global_presets: content.global_presets,
+					global_colors: content.global_colors,
 					timestamp: timestamp !== undefined ? timestamp : 0,
 					nonce: $this.nonces.export,
 					post: postId,
