@@ -1,0 +1,279 @@
+﻿/* Style stylesheet */
+
+.ssba-admin-wrap {
+	background-color: #fff!important;
+	margin-left:-20px;
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: #333333;
+	font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container {
+	width: 100%;
+}
+
+.ssba a {
+	text-decoration: none!important;
+}
+
+.ssba-float-right-btn {
+	float:right;
+	margin: 20px 0 0 20px;
+}
+
+.ssba-form-wrap {
+	padding: 20px;
+}
+
+.ssba-admin-wrap .tab-pane {
+	padding-top:15px;
+}
+
+.tab-pane .input-div {
+	margin-bottom: 15px;
+}
+
+#ssbasort2, #ssbasort4, #ssbasort6 {
+	width: 100%;
+}
+
+.ssba-logo-img {
+	width: 165px;
+	height: 47px;
+}
+.ssba-admin-wrap .navbar {
+	border-radius: 0;
+}
+.ssba-admin-wrap .modal-dialog {
+	margin-top: 60px;
+}
+.ssba-btn-inactive {
+	margin-top: 12px;
+}
+
+.ssba-admin-wrap .btn a:hover {
+	text-decoration: none !important;
+}
+
+.ssba-admin-wrap .form-control:not(textarea) {
+	height: 40px !important;
+}
+
+.checkbox-inline {
+	padding-left:0;
+	font-size:14px;
+}
+
+.ssba-video-container {
+	margin-top:15px;
+	margin-bottom: 15px;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.ssba-video-container iframe,
+.ssba-video-container object,
+.ssba-video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95%;
+	height: 100%;
+}
+
+.ssbp-wrap .ssbp-list {
+	min-height: 55px;
+	min-width: 200px;
+}
+
+.ssba-include-list {
+	border: 1px dashed #ADADAD;
+}
+
+#ssbasort2 li, #ssbasort4 li, #ssbasort6 li {
+	margin-top: 6px;
+}
+
+.ssba-well-instruction {
+	text-align: center;
+	color: #ADADAD;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.ssba-admin-wrap .code-font {
+	font-family:Menlo,Monaco,Consolas,"Courier New",monospace !important;
+	font-size: 12px;
+}
+
+.ssbp--theme-4 .ssbp-list li {
+	margin-left: 5px;
+}
+
+.ssbp--theme-4 .ssbp-btn {
+	width: 2.5em;
+	height: 2.5em;
+	line-height: 2.5em;
+}
+
+.ssbp-btn:before {
+	font-size: 18px;
+}
+
+.ssba-btn-save-success {
+	display: none;
+}
+
+.ssba-btn-save, .ssba-btn-save-success {
+	width:65px;
+	border-radius: 5px 0 0 5px;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	top: 130px;
+}
+
+.ssba-btn-thank-you {
+	margin-top: -10px;
+}
+
+.ssba-admin-wrap footer {
+	margin-top: 40px;
+	padding: 20px 0 15px 0;
+	border-top: 1px solid #dddddd;
+}
+
+.ssbp-float-right-btn {
+	float: right;
+	margin: 20px 0 0 20px;
+}
+
+.ssba-navlink-blue {
+	color: #fff !important;
+}
+
+.ssba-navlink-blue:hover, .ssba-navlink-blue:focus {
+	color: #4582ec !important;
+}
+
+.margin-bottom {
+	margin-bottom: 10px;
+}
+
+.ssba-responsive-img {
+	width: 100%;
+	height: auto;
+}
+
+.ssba-spacer {
+	margin-top: 20px;
+}
+
+.text-20 {
+	font-size: 20px;
+}
+
+#ssba-preview-2.left {
+	position: fixed;
+	left: 160px;
+	top: 35vh;
+	z-index: 10000;
+}
+
+#ssba-preview-2.right {
+	position: fixed;
+	right: 0;
+	top: 35vh;
+	z-index: 10000;
+}
+
+#ssba-preview-2.left .ssbp-list {
+	max-width: 84px;
+	text-align: left;
+	min-width: auto;
+}
+
+#ssba-preview-2.right .ssbp-list {
+	max-width: 84px;
+	text-align: right;
+	min-width: auto;
+}
+
+#ssba-preview-2 .ssbp-bar-list li {
+	margin: 0;
+}
+
+#ssba-preview-2 ul li a {
+	max-width: 84px;
+}
+
+.ssba-tab-container {
+	padding: 0 8rem;
+}
+
+#ssba-preview-1, #ssba-preview {
+	width: 100%;
+	margin: .7rem .7rem 1.5rem;
+}
+
+.master-ssba-prev-wrap.ssba-sticky, .master-ssba-prev-wrap2.ssba-sticky {
+	background: #ffffff;
+	width:100%;
+	position: fixed;
+	top: 32px;
+	left: 160px;
+	z-index: 5;
+	box-shadow: #cccccc 5px 5px 5px;
+}
+
+#ssba-preview-1.ssba-sticky, #ssba-preview.ssba-sticky {
+	width: 75.6%;
+	text-align: left;
+	margin: .7rem 9.5rem;
+}
+
+#ssba-preview.ssba-sticky {
+	margin: 1.5rem 10rem 2.5rem;
+}
+
+#ssba-preview-1 ul, #ssba-preview ul {
+	width: auto;
+	display: table-header-group;
+}
+
+#ssba-preview-1 ul li img{
+	font-size: 12px;
+}
+
+#ssba-preview-1 .ssba-preview-content, #ssba-preview .ssba-preview-content {
+	display: inline-block;
+}
+
+#ssba-preview-1 .ssba-hide-button, #ssba-preview .ssba-hide-button, #ssba-preview-2 .ssba-hide-button {
+	display: none;
+}
+
+.ssba-new-icon {
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	font-size: 10px;
+	color: #fff;
+	background: #e00000;
+	padding: .1rem .3rem;
+	z-index: 1;
+	border-radius: 3px;
+}
+
+.ssbp-list li img {
+	box-sizing: unset;
+}
+
+.right li .ssbp-each-share {
+	left: unset;
+	right: 100%;
+	margin-right: -12px;
+	margin-left: 0;
+}

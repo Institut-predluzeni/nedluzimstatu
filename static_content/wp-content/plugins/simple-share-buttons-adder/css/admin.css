@@ -1,0 +1,248 @@
+/* Block styles */
+.simpleshare-button-block img {
+    max-width: 42px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.simpleshare-button-block {
+    font-size: 20px;
+    font-family: sans-serif;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    padding: 10px;
+    color: #000;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.ssba-review-us {
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    background: #fff;
+    border: solid 1px #4583ee;
+    border-radius: 10px;
+    padding: 15px;
+    width: 295px;
+    text-align: center;
+}
+
+.ssba-review-us #close-review-us {
+    cursor: pointer;
+}
+
+.ssba-review-us h3 {
+    color: #353535;
+}
+
+.ssba-review-us h3 a {
+    color: #4583ee;
+}
+
+#sharethis-form-color {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 50%;
+}
+
+#sharethis-form-color .color {
+    box-shadow: 1px 1px 4px 1px #cdcdcd;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#sharethis-form-color .color.selected{
+    box-shadow: 0px 0px 3px 5px #4583ee;
+}
+
+#publisher-purpose .purpose-item {
+    margin-bottom: 25px;
+}
+
+#publisher-purpose .purpose-item div.title {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+}
+
+#publisher-purpose .purpose-item label {
+    display: inline-block;
+    width: 21%;
+}
+
+.gdpr-platform #publisher-purpose .purpose-item label:first-of-type {
+    width: 14%;
+}
+
+.gdpr-platform .switch label input[type=radio]:checked+.lever {
+    background: #4583ee;
+    border: 2px solid #4583ee;
+    box-shadow: none;
+}
+
+.gdpr-platform input[type="text"] {
+    line-height: 40px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.gdpr-platform select {
+    margin-bottom: 10px;
+    line-height: 40px;
+    width: 300px;
+}
+
+.gdpr-platform .switch label input[type=radio]:checked+.lever:before {
+    content:"✓";
+    position: absolute;
+    top:0;
+    left:3px;
+    color: #fff;
+}
+
+.gdpr-platform .switch label {
+    font-size: 12px;
+    display: block;
+    margin-top: 10px;
+}
+
+.gdpr-platform .switch label .lever {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+    border-radius: 0;
+    margin-right: 10px;
+    transition: background .3s ease;
+    vertical-align: middle;
+    margin: 0 16px;
+}
+
+.gdpr-platform .switch label .lever:after {
+    border-radius: 0;
+    content: unset;
+    position: unset;
+}
+
+
+.gdpr-platform [type=radio].filled-in+label:before {
+    content: "";
+    left: 0;
+    position: absolute;
+    transition: border .25s,background-color .25s,width .2s .1s,height .2s .1s,top .2s .1s,left .2s .1s;
+    z-index: 1;
+}
+
+p.form-color {
+    float: left;
+    width: 100%;
+    padding-top: 15px;
+}
+
+#sharethis-form-color {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 50%;
+}
+
+#sharethis-form-color .color {
+    box-shadow: 1px 1px 4px 1px #cdcdcd;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#sharethis-form-color .color.selected{
+    box-shadow: 0px 0px 3px 5px #4583ee;
+}
+
+.empty-choices {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity .6s;
+}
+
+a.st-rc-link {
+    margin: 20px 0 0 10px;
+}
+
+.gdpr-platform a.st-rc-link {
+    background: #4583ee;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: .8em auto .5em;
+    display: inline-block;
+    padding: 15px 60px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out
+}
+
+.empty-choices a {
+    padding: 10px;
+    min-width: 250px;
+}
+
+.empty-choices a.st-rc-link {
+    margin: 20px 0 20px 10px;
+}
+
+.gdpr-platform .purpose-item input[type="checkbox"],
+.gdpr-platform .purpose-item input[type="radio"]
+{
+    display: none;
+}
+
+.gdpr-platform h2 {
+    text-align: center;
+}
+
+.gdpr-platform .error-message {
+    display: block;
+    text-align: left;
+}
+
+.gdpr-platform .gdpr-landing img {
+    margin: auto;
+    width: 600px;
+    display: block;
+}
+
+.register-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.register-section button {
+    background-color: #5BAC4D;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.gdpr-platform .vendor-table-body {
+    border: solid 1px #cdcdcd;
+    padding: 10px;
+    max-height: 600px;
+    overflow: scroll;
+}
+
+.gdpr-platform .vendor-table-cell {
+    padding: 20px 0;
+    border-bottom: solid 1px #cdcdcd;
+}
