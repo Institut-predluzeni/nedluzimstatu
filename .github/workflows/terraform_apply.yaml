@@ -14,8 +14,6 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
-      - name: 'AWS CLI'
-        uses: chrislennon/action-aws-cli@v1.1
       - name: 'Checkout'
         uses: actions/checkout@master
       - name: 'Terraform Init'
