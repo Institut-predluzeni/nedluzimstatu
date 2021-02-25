@@ -1,15 +1,13 @@
 name: 'Terraform Apply on push'
 on:
   push:
-    branches-ignore:
-      - '**'
+    branches:
+      - master
     paths:
       - 'infrastructure/aws/**'
 env:
-  tf_version: 'latest'
+  tf_version: '0.12.28'
   tf_working_dir: 'infrastructure/aws'
-  TF_VAR_database_password: ${{ secrets.DATABASE_PASSWORD }}
-  TF_VAR_admin_1_public_key: ${{ secrets.ADMIN_1_PUBLIC_KEY }}
 jobs:
   terraform:
     if: github.actor != 'nedluzim-statu-deployment'
