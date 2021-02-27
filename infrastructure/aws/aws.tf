@@ -47,7 +47,6 @@ locals {
 }
 
 provider "aws" {
-  version = "~> 2.0"
   region  = var.aws_region
 }
 
@@ -62,6 +61,16 @@ resource "aws_vpc" "vpc" {
 
   tags = {
     Name = var.codename
+  }
+}
+
+resource "aws_subnet" "private" {
+  cidr_block        = "10.0.0.0/20"
+  vpc_id            = aws_vpc.vpc.id
+  availability_zone = "${var.aws_region}a"
+
+  tags = {
+    Name = "${var.codename}-private"
   }
 }
 
@@ -98,6 +107,99 @@ resource "aws_route_table" "public-routes" {
 resource "aws_route_table_association" "public-subnet" {
   route_table_id = aws_route_table.public-routes.id
   subnet_id      = aws_subnet.public.id
+}
+
+# ----------
+# ECR (Docker repositories)
+# ----------
+
+resource "aws_ecr_repository" "service-transformation" {
+  name                 = "service-transformation"
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
+
+# --------
+# service-transformation
+# --------
+
+resource "aws_ecs_cluster" "service-transformation" {
+  name = "service-transformation"
+}
+
+resource "aws_ecs_task_definition" "service-transformation" {
+  family                = "service-transformation"
+  container_definitions = templatefile("service-transformation.tmpl", {
+    aws-region     = var.aws_region,
+    aws-repository = aws_ecr_repository.service-transformation.repository_url,
+  })
+  network_mode          = "awsvpc"
+  #execution_role_arn    = aws_iam_role.ecs-task-execution-role.arn
+  #task_role_arn         = aws_iam_role.ecs-task-execution-role.arn
+  memory                = "1"
+  cpu                   = "128"
+}
+
+resource "aws_ecs_service" "service-transformation" {
+  name                               = "service-transformation"
+  cluster                            = aws_ecs_cluster.service-transformation.id
+  task_definition                    = aws_ecs_task_definition.service-transformation.arn
+  launch_type                        = "FARGATE"
+  desired_count                      = 1
+  deployment_minimum_healthy_percent = 100
+  deployment_maximum_percent         = 200
+  health_check_grace_period_seconds  = 20
+
+  network_configuration {
+    subnets          = [
+      aws_subnet.private.id
+    ]
+  }
+
+  load_balancer {
+    target_group_arn = aws_lb_target_group.service-transformation-tg.arn
+    container_name   = "service-transformation"
+    container_port   = 8080
+  }
+}
+
+resource "aws_cloudwatch_log_group" "service-transformation-lg" {
+  name = "/ecs/service-transformation"
+}
+
+# --------------
+# Load Balancers
+# --------------
+
+resource "aws_lb" "service-transformation-lb" {
+  name               = "service-transformation-lb"
+  internal           = false
+  load_balancer_type = "application"
+  subnets            = aws_subnet.public.*.id
+
+  enable_deletion_protection = true
+}
+
+resource "aws_lb_listener" "service-transformation-elb-listener" {
+  load_balancer_arn = aws_lb.service-transformation-lb.arn
+  port              = "8080"
+  protocol          = "TCP"
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.service-transformation-tg.arn
+  }
+}
+
+resource "aws_lb_target_group" "service-transformation-tg" {
+  name        = "service-transformation-tg"
+  port        = 8080
+  protocol    = "TCP"
+  vpc_id      = aws_vpc.vpc.id
+  target_type = "ip"
 }
 
 # -----------
