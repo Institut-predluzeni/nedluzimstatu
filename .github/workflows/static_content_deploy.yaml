@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@master
       - name: 'Deploy to AWS'
         run: |
+          cp -a ../public/psc2ovm .
           aws s3 sync --acl public-read --delete . s3://${{ env.bucketName }}
           aws cloudfront create-invalidation --distribution-id ${{ env.cloudFrontDeploymentId }} --paths "/*"
         working-directory: 'static_content'
