@@ -47,8 +47,33 @@ locals {
 }
 
 provider "aws" {
-  version = "~> 2.0"
   region  = var.aws_region
+}
+
+# ----------------
+# NAT Gateway Section
+# ----------------
+resource "aws_nat_gateway" "gw" {
+  allocation_id = aws_eip.nat.id
+  subnet_id     = aws_subnet.public.id
+}
+
+resource "aws_eip" "nat" {
+  vpc      = true
+}
+
+resource "aws_route_table" "private-routes" {
+  vpc_id = aws_vpc.vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.gw.id
+  }
+}
+
+resource "aws_route_table_association" "private-subnet" {
+  route_table_id = aws_route_table.private-routes.id
+  subnet_id      = aws_subnet.private.id
 }
 
 # ----------------
@@ -65,6 +90,16 @@ resource "aws_vpc" "vpc" {
   }
 }
 
+resource "aws_subnet" "private" {
+  cidr_block        = "10.0.0.0/20"
+  vpc_id            = aws_vpc.vpc.id
+  availability_zone = "${var.aws_region}a"
+
+  tags = {
+    Name = "${var.codename}-private"
+  }
+}
+
 resource "aws_subnet" "public" {
   cidr_block        = "10.0.16.0/20"
   vpc_id            = aws_vpc.vpc.id
@@ -72,6 +107,16 @@ resource "aws_subnet" "public" {
 
   tags = {
     Name = "${var.codename}-public"
+  }
+}
+
+resource "aws_subnet" "public-c" {
+  cidr_block        = "10.0.32.0/20"
+  vpc_id            = aws_vpc.vpc.id
+  availability_zone = "${var.aws_region}c"
+
+  tags = {
+    Name = "${var.codename}-public-c"
   }
 }
 
@@ -100,9 +145,169 @@ resource "aws_route_table_association" "public-subnet" {
   subnet_id      = aws_subnet.public.id
 }
 
+resource "aws_route_table_association" "public-subnet-c" {
+  route_table_id = aws_route_table.public-routes.id
+  subnet_id      = aws_subnet.public-c.id
+}
+
+# ----------
+# ECR (Docker repositories)
+# ----------
+
+resource "aws_ecr_repository" "service-transformation" {
+  name                 = "service-transformation"
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
+
+# -------------
+# IAM roles
+# -------------
+
+resource "aws_iam_role" "ecs-task-execution-role-transformation-service" {
+  name = "ecs-task-execution-role-transformation-service"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Action = "sts:AssumeRole",
+        Principal = {
+          Service = "ecs-tasks.amazonaws.com"
+        }
+        Effect = "Allow",
+        Sid = ""
+      },
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "ecs-task-execution-policy-attachment" {
+  role       = aws_iam_role.ecs-task-execution-role-transformation-service.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+
+resource "aws_iam_role_policy_attachment" "secrets-manager-policy-attachment" {
+  role       = aws_iam_role.ecs-task-execution-role-transformation-service.name
+  policy_arn = "arn:aws:iam::aws:policy/SecretsManagerReadWrite"
+}
+
+# --------
+# service-transformation
+# --------
+
+resource "aws_ecs_cluster" "service-transformation" {
+  name = "service-transformation"
+}
+
+resource "aws_ecs_task_definition" "service-transformation" {
+  family                = "service-transformation"
+  container_definitions = templatefile("service-transformation.tmpl", {
+    aws-region     = var.aws_region,
+    aws-repository = aws_ecr_repository.service-transformation.repository_url,
+  })
+  network_mode          = "awsvpc"
+  execution_role_arn    = aws_iam_role.ecs-task-execution-role-transformation-service.arn
+  task_role_arn         = aws_iam_role.ecs-task-execution-role-transformation-service.arn
+  memory                = "1024"
+  cpu                   = "512"
+}
+
+resource "aws_ecs_service" "service-transformation" {
+  name                               = "service-transformation"
+  cluster                            = aws_ecs_cluster.service-transformation.id
+  task_definition                    = aws_ecs_task_definition.service-transformation.arn
+  launch_type                        = "FARGATE"
+  desired_count                      = 1
+  deployment_minimum_healthy_percent = 100
+  deployment_maximum_percent         = 200
+  health_check_grace_period_seconds  = 20
+
+  network_configuration {
+    security_groups = [aws_security_group.transformation-service-sg.id]
+    subnets          = [
+      aws_subnet.private.id
+    ]
+  }
+
+  load_balancer {
+    target_group_arn = aws_lb_target_group.service-transformation-tg.arn
+    container_name   = "service-transformation"
+    container_port   = 8080
+  }
+}
+
+resource "aws_cloudwatch_log_group" "service-transformation-lg" {
+  name = "/ecs/service-transformation"
+}
+
+# --------------
+# Load Balancers
+# --------------
+
+resource "aws_lb" "service-transformation-lb" {
+  name               = "service-transformation-lb"
+  internal           = false
+  load_balancer_type = "application"
+
+  enable_deletion_protection = true
+
+  subnets = [aws_subnet.public.id, aws_subnet.public-c.id ]
+  security_groups = [aws_security_group.transformation-service-sg.id]
+}
+
+resource "aws_lb_listener" "service-transformation-elb-listener" {
+  load_balancer_arn = aws_lb.service-transformation-lb.arn
+  port              = "8080"
+  protocol          = "HTTP"
+
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.service-transformation-tg.arn
+  }
+}
+
+resource "aws_lb_target_group" "service-transformation-tg" {
+  name        = "service-transformation-tg"
+  port        = 8080
+  protocol    = "HTTP"
+  vpc_id      = aws_vpc.vpc.id
+  target_type = "ip"
+  health_check {
+    enabled = true
+    port = 8080
+    matcher = "200,404"
+  }
+}
+
 # -----------
 # Security Groups
 # -----------
+
+resource "aws_security_group" "transformation-service-sg" {
+  name        = "${var.codename}-transformation-service-sg"
+  description = "Security group for Transformation Service"
+  vpc_id      = aws_vpc.vpc.id
+
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [
+      "0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [
+      "0.0.0.0/0"]
+  }
+}
 
 resource "aws_security_group" "development-sg" {
   name        = "${var.codename}-wordpress-sg"

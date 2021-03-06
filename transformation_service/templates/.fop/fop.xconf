@@ -1,0 +1,16 @@
+<fop version="1.0">
+	<strict-configuration>true</strict-configuration>
+	<strict-validation>true</strict-validation>
+	<base>./</base>
+	<!--<font-base>fonts</font-base>-->
+	<source-resolution>72</source-resolution>
+	<target-resolution>72</target-resolution>
+	<default-page-settings height="297mm" width="210mm"/>
+	<renderers>
+		<renderer mime="application/pdf">
+			<fonts>
+				<directory>data/.fop/fonts</directory>
+			</fonts>
+		</renderer>
+	</renderers>
+</fop>
