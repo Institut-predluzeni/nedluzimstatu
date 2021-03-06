@@ -28,9 +28,9 @@ jobs:
         run: |
           docker tag ${{ env.serviceName }}:latest ${{ env.repository }}/${{ env.serviceName }}:latest
           docker push ${{ env.repository }}/${{ env.serviceName }}:latest
-      #- name: 'Redeploy to ECS'
-        #run: |
-          #aws --region ${{ env.region }} ecs update-service --cluster ${{ env.serviceName }} --service ${{ env.serviceName }} --force-new-deployment
+      - name: 'Redeploy to ECS'
+        run: |
+          aws --region ${{ env.region }} ecs update-service --cluster ${{ env.serviceName }} --service ${{ env.serviceName }} --force-new-deployment
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
