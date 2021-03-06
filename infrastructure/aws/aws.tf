@@ -489,3 +489,4 @@ resource "aws_cloudfront_distribution" "distribution" {
     minimum_protocol_version = "TLSv1.2_2018"
   }
 }
+
