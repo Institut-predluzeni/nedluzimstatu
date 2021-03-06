@@ -1,8 +1,8 @@
 terraform {
-  required_version = ">= 0.12.25"
+  required_version = "= 0.14.7"
 
   required_providers {
-    aws = ">= 2.61.0"
+    aws = ">= 3.28.0"
   }
 
   backend "s3" {
@@ -33,13 +33,13 @@ variable "https_certificate" {
 }
 
 variable "static_content_bucket_name" {
-  type = string
+  type    = string
   default = "nedluzim-statu-static-deployment"
 }
 
 variable "public_domain" {
-  type = string
-  default  = "nedluzimstatu.cz"
+  type    = string
+  default = "nedluzimstatu.cz"
 }
 
 locals {
@@ -47,7 +47,7 @@ locals {
 }
 
 provider "aws" {
-  region  = var.aws_region
+  region = var.aws_region
 }
 
 # ----------------
@@ -59,14 +59,14 @@ resource "aws_nat_gateway" "gw" {
 }
 
 resource "aws_eip" "nat" {
-  vpc      = true
+  vpc = true
 }
 
 resource "aws_route_table" "private-routes" {
   vpc_id = aws_vpc.vpc.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block     = "0.0.0.0/0"
     nat_gateway_id = aws_nat_gateway.gw.id
   }
 }
@@ -171,15 +171,15 @@ resource "aws_iam_role" "ecs-task-execution-role-transformation-service" {
   name = "ecs-task-execution-role-transformation-service"
 
   assume_role_policy = jsonencode({
-    Version = "2012-10-17",
+    Version   = "2012-10-17",
     Statement = [
       {
-        Action = "sts:AssumeRole",
+        Action    = "sts:AssumeRole",
         Principal = {
           Service = "ecs-tasks.amazonaws.com"
         }
-        Effect = "Allow",
-        Sid = ""
+        Effect    = "Allow",
+        Sid       = ""
       },
     ]
   })
@@ -227,8 +227,9 @@ resource "aws_ecs_service" "service-transformation" {
   health_check_grace_period_seconds  = 20
 
   network_configuration {
-    security_groups = [aws_security_group.transformation-service-sg.id]
-    subnets          = [
+    security_groups = [
+      aws_security_group.transformation-service-sg.id]
+    subnets         = [
       aws_subnet.private.id
     ]
   }
@@ -255,8 +256,11 @@ resource "aws_lb" "service-transformation-lb" {
 
   enable_deletion_protection = true
 
-  subnets = [aws_subnet.public.id, aws_subnet.public-c.id ]
-  security_groups = [aws_security_group.transformation-service-sg.id]
+  subnets         = [
+    aws_subnet.public.id,
+    aws_subnet.public-c.id]
+  security_groups = [
+    aws_security_group.transformation-service-sg.id]
 }
 
 resource "aws_lb_listener" "service-transformation-elb-listener" {
@@ -278,7 +282,7 @@ resource "aws_lb_target_group" "service-transformation-tg" {
   target_type = "ip"
   health_check {
     enabled = true
-    port = 8080
+    port    = 8080
     matcher = "200,404"
   }
 }
@@ -405,7 +409,7 @@ resource "aws_s3_bucket" "static_content" {
 
   policy = templatefile("roles/s3-cloudfront-policy.tmpl", {
     cloudfront_arn = aws_cloudfront_origin_access_identity.default.iam_arn,
-    bucket_name = var.static_content_bucket_name
+    bucket_name    = var.static_content_bucket_name
   })
 
   website {
@@ -421,7 +425,7 @@ resource "aws_cloudfront_origin_access_identity" "default" {
 resource "aws_cloudfront_distribution" "distribution" {
   origin {
     domain_name = "${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
-    origin_id = "S3-Website-${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
+    origin_id   = "S3-Website-${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
 
     custom_origin_config {
       http_port              = 80
@@ -437,14 +441,14 @@ resource "aws_cloudfront_distribution" "distribution" {
 
   origin {
     domain_name = aws_s3_bucket.static_content.bucket_regional_domain_name
-    origin_id = "S3-${aws_s3_bucket.static_content.id}"
+    origin_id   = "S3-${aws_s3_bucket.static_content.id}"
     s3_origin_config {
       origin_access_identity = aws_cloudfront_origin_access_identity.default.cloudfront_access_identity_path
     }
   }
 
-  enabled = true
-  is_ipv6_enabled = true
+  enabled             = true
+  is_ipv6_enabled     = true
   default_root_object = "index.html"
 
   aliases = [
@@ -453,10 +457,10 @@ resource "aws_cloudfront_distribution" "distribution" {
   ]
 
   default_cache_behavior {
-    allowed_methods = [
+    allowed_methods  = [
       "GET",
       "HEAD"]
-    cached_methods = [
+    cached_methods   = [
       "GET",
       "HEAD"]
     target_origin_id = "S3-Website-${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
@@ -467,10 +471,10 @@ resource "aws_cloudfront_distribution" "distribution" {
         forward = "none"
       }
     }
-    min_ttl = 0
-    default_ttl = 86400
-    max_ttl = 86400
-    compress = true
+    min_ttl                = 0
+    default_ttl            = 86400
+    max_ttl                = 86400
+    compress               = true
     viewer_protocol_policy = "redirect-to-https"
   }
 
@@ -483,10 +487,10 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   viewer_certificate {
-    acm_certificate_arn = var.https_certificate
+    acm_certificate_arn            = var.https_certificate
     cloudfront_default_certificate = false
-    ssl_support_method = "sni-only"
-    minimum_protocol_version = "TLSv1.2_2018"
+    ssl_support_method             = "sni-only"
+    minimum_protocol_version       = "TLSv1.2_2018"
   }
 }
 

@@ -13,7 +13,8 @@ Wiki Nedluzim statu: https://wiki.cesko.digital/display/NS
 - `static_content` Staticky web generovany z Wordpressove instance pomoci WP2Static pluginu. 
   Deployuje se pri kazde zmene v masteru na AWS S3 pomoci workflow `static_content_deploy.yaml`.
   
-- `infrastructure` Terraform definice infrastruktury. Pri kazde zmene v masteru se deployuje na AWS Cesko.Digital.
+- `infrastructure` Terraform definice infrastruktury. Pri kazde zmene v masteru se deployuje na AWS Cesko.Digital. 
+  Pipeline pouziva verzi Terraformu 0.14.7, pro lokalni switch verzi pouzijte nastroj `tfenv` (https://github.com/tfutils/tfenv)
 
 - `.github/workflows` Github Actions definice pro deployment.
 
