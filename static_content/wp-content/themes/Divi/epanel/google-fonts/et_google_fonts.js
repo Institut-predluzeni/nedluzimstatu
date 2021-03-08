@@ -25,7 +25,7 @@
 
 			$et_google_font_main_select.hide().addClass( 'et_google_font_main_select' );
 
-			$et_google_font_main_select.change( $.proxy( self.change_font, self ) );
+			$et_google_font_main_select.on('change', self.change_font.bind(self));
 
 			$et_google_font_main_select.find( 'option' ).each( function() {
 				var $this_option = $(this),
@@ -57,9 +57,9 @@
 				$dropdown_selected_option.addClass( 'et_google_font_active' );
 			}
 
-			this.custom_select_link.click( $.proxy( self.open_dropdown, self ) );
+			this.custom_select_link.on('click', self.open_dropdown.bind(self));
 
-			this.custom_dropdown.find('li').click( $.proxy( self.select_option, self ) );
+			this.custom_dropdown.find('li').on('click', self.select_option.bind(self));
 		},
 
 		open_dropdown: function(event) {
@@ -235,7 +235,7 @@
 		return this;
 	};
 
-	$(document).ready( function() {
+	$(function() {
 		var et_heading_font_option_name = '[heading_font]',
 			et_body_font_option_name = '[body_font]',
 			et_buttons_font_option_name = '[all_buttons_font]',

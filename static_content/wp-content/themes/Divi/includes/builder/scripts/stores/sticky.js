@@ -327,7 +327,7 @@ class ETScriptStickyStore extends EventEmitter {
         this.setElementsProps();
       });
     } else {
-      $(document).ready(() => {
+      $(() => {
         this.setElementsProps();
       });
     }

@@ -2,10 +2,10 @@
 	var initLayout = function() {
 		var hash = window.location.hash.replace('#', '');
 		var currentTab = $('ul.navigationTabs a')
-							.bind('click', showTab)
+							.on('click', showTab)
 							.filter('a[rel=' + hash + ']');
-		if (currentTab.size() == 0) {
-			currentTab = $('ul.navigationTabs a:first');
+		if (0 === currentTab.length) {
+			currentTab = $('ul.navigationTabs a').first();
 		}
 		showTab.apply(currentTab.get(0));
 		$('#colorpickerHolder').ColorPicker({flat: true});
@@ -26,7 +26,7 @@
 							.index(this);
 		$(this)
 			.addClass('active')
-			.blur();
+			.trigger('blur');
 		$('div.tab')
 			.hide()
 				.eq(tabIndex)

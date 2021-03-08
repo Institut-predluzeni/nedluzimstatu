@@ -79,7 +79,7 @@ window.etCore.versionRollback = {
   }
 };
 
-$(document).ready(function() {
+$(function() {
   window.etCore.versionRollback.boot();
 });
 

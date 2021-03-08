@@ -162,9 +162,9 @@ export const getStickyStyles = (id, $module, $placeholder) => {
   // it, recreate the image by getting actual width and height then recreate the image using SVG
   $stickyStyleDom.find('img').each(function(index) {
     const $img           = $(this);
-    const $measuredImg   = $module.find(`img:eq(${index})`);
-    const measuredWidth  = get($measuredImg, [0, 'naturalWidth'], $module.find(`img:eq(${index})`).outerWidth());
-    const measuredHeight = get($measuredImg, [0, 'naturalHeight'], $module.find(`img:eq(${index})`).outerHeight());
+    const $measuredImg   = $module.find('img').eq(index);
+    const measuredWidth  = get($measuredImg, [0, 'naturalWidth'], $module.find('img').eq(index).outerWidth());
+    const measuredHeight = get($measuredImg, [0, 'naturalHeight'], $module.find('img').eq(index).outerHeight());
 
     $img.attr({
       // Remove scrse to force DOM to use src

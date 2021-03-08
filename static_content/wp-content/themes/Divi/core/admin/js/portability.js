@@ -28,20 +28,20 @@
 		listen: function( $el ) {
 			var $this = this;
 
-			$el.find( '[data-et-core-portability-export]' ).click( function( e ) {
+			$el.find('[data-et-core-portability-export]').on('click', function(e){
 				e.preventDefault();
 
 				if ( ! $this.actionsDisabled() ) {
 					$this.disableActions();
 					$this.export();
 				}
-			} );
+			});
 
 
 			$el.find( '.et-core-portability-export-form input[type="text"]' ).on( 'keydown', function( e ) {
 				if ( 13 === e.keyCode ) {
 					e.preventDefault();
-					$el.find( '[data-et-core-portability-export]' ).click();
+					$el.find('[data-et-core-portability-export]').trigger('click');
 				}
 			} );
 
@@ -50,26 +50,26 @@
 				$this.populateImport( $( this ).get( 0 ).files[0] );
 			} );
 
-			$el.find( '.et-core-portability-import' ).click( function( e ) {
+			$el.find('.et-core-portability-import').on('click', function(e){
 				e.preventDefault();
 
 				if ( ! $this.actionsDisabled() ) {
 					$this.disableActions();
 					$this.import();
 				}
-			} );
+			});
 
 			// Trigger file window.
-			$el.find( '.et-core-portability-import-form button' ).click( function( e ) {
+			$el.find('.et-core-portability-import-form button').on('click', function(e){
 				e.preventDefault();
 				$this.instance( 'input[type="file"]' ).trigger( 'click' );
-			} );
+			});
 
 			// Cancel request.
-			$el.find( '[data-et-core-portability-cancel]' ).click( function( e ) {
+			$el.find('[data-et-core-portability-cancel]').on('click', function(e){
 				e.preventDefault();
 				$this.cancel();
-			} );
+			});
 		},
 
 		validateImportFile: function( file, noOutput ) {
@@ -150,9 +150,9 @@
 							if ( 'undefined' !== typeof window.tinyMCE && window.tinyMCE.get( 'content' ) && ! window.tinyMCE.get( 'content' ).isHidden() ) {
 								var editor = window.tinyMCE.get( 'content' );
 
-								editor.setContent( $.trim( response.data.postContent ), { format: 'html'  } );
+								editor.setContent(response.data.postContent.trim(), { format: 'html' });
 							} else {
-								$( '#content' ).val( $.trim( response.data.postContent ) );
+								$('#content').val(response.data.postContent.trim());
 							}
 
 							save.trigger( 'click' );
@@ -163,7 +163,7 @@
 						} else {
 							$( 'body' ).fadeOut( 500, function() {
 								// Remove confirmation popup before relocation.
-								$( window ).unbind( 'beforeunload' );
+								$( window ).off( 'beforeunload' );
 
 								window.location = window.location.href.replace(/reset\=true\&|\&reset\=true/,'');
 							} )
@@ -234,7 +234,7 @@
 					} );
 
 					// Remove confirmation popup before relocation.
-					$( window ).unbind( 'beforeunload' );
+					$( window ).off( 'beforeunload' );
 
 					window.location.assign( encodeURI( downloadURL ) );
 
@@ -350,7 +350,7 @@
 					} );
 
 					// Remove confirmation popup before relocation.
-					$( window ).unbind( 'beforeunload' );
+					$( window ).off( 'beforeunload' );
 
 					// Update progress bar's global variables
 					window.et_fb_export_progress = 100;
@@ -417,10 +417,10 @@
 					replace: options.replace ? '1' : '0',
 					context: 'et_builder'
 				};
-			
+
 			/**
 			 * Max size set on server is exceeded.
-			 * 
+			 *
 			 * 0 indicating "unlimited" according to php specs
 			 * https://www.php.net/manual/en/ini.core.php#ini.post-max-size
 			 **/
@@ -435,7 +435,7 @@
 
 			$.each(requestData, function(name, value) {
 				if ('file' === name) {
-				  // Explicitly set the file name. 
+				  // Explicitly set the file name.
 				  // Otherwise it'll be set to 'Blob' in case of Blob type, but we need actual filename here.
 				  formData.append('file', value, value.name);
 				} else {
@@ -637,7 +637,7 @@
 
 				/**
 				 * Max size set on server is exceeded.
-				 * 
+				 *
 				 * 0 indicating "unlimited" according to php specs
 				 * https://www.php.net/manual/en/ini.core.php#ini.post-max-size
 				 **/
@@ -674,7 +674,7 @@
 					wp.customize.unbind( 'saved', saveCallback );
 				}
 
-				$( '#save' ).click();
+				$('#save').trigger('click');
 
 				wp.customize.bind( 'saved', saveCallback );
 			} else {
@@ -743,7 +743,7 @@
 
 	} );
 
-	$( document ).ready( function() {
+	$(function() {
 		window.etCore.portability.boot();
 	});
 

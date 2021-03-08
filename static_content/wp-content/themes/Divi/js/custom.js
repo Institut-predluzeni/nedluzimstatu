@@ -3489,11 +3489,11 @@ __webpack_require__.r(__webpack_exports__);
   var top_window = builder_scripts_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isBuilder"] ? ET_Builder.Frames.top : window;
 
   function et_get_first_section() {
-    return $('.et-l:not(.et-l--footer) .et_pb_section:visible:first');
+    return $('.et-l:not(.et-l--footer) .et_pb_section:visible').first();
   }
 
   function et_get_first_module() {
-    return $('.et-l .et_pb_module:visible:first');
+    return $('.et-l .et_pb_module:visible').first();
   }
 
   var $et_pb_post_fullwidth = $('.single.et_pb_pagebuilder_layout.et_full_width_page'),
@@ -3510,9 +3510,9 @@ __webpack_require__.r(__webpack_exports__);
       $main_header = $('#main-header'),
       $main_container_wrapper = $('#page-container'),
       $et_main_content_first_row = $('#main-content .container:first-child'),
-      $et_main_content_first_row_meta_wrapper = $et_main_content_first_row.find('.et_post_meta_wrapper:first'),
+      $et_main_content_first_row_meta_wrapper = $et_main_content_first_row.find('.et_post_meta_wrapper').first(),
       $et_main_content_first_row_meta_wrapper_title = $et_main_content_first_row_meta_wrapper.find('h1.entry-title'),
-      $et_main_content_first_row_content = $et_main_content_first_row.find('.entry-content:first'),
+      $et_main_content_first_row_content = $et_main_content_first_row.find('.entry-content').first(),
       $et_single_post = $('body.single'),
       $et_window = $(window),
       etRecalculateOffset = false,
@@ -3618,7 +3618,7 @@ __webpack_require__.r(__webpack_exports__);
     function et_header_menu_split() {
       var $logo_container = $('#main-header > .container > .logo_container'),
           $logo_container_splitted = $('.centered-inline-logo-wrap > .logo_container'),
-          et_top_navigation_li_size = $et_top_navigation.children('nav').children('ul').children('li').size(),
+          et_top_navigation_li_size = $et_top_navigation.children('nav').children('ul').children('li').length,
           et_top_navigation_li_break_index = Math.round(et_top_navigation_li_size / 2) - 1,
           window_width = window.innerWidth || $et_window.width();
 
@@ -3642,14 +3642,14 @@ __webpack_require__.r(__webpack_exports__);
         header_offset = 0 > header_offset ? 0 : header_offset;
         $('#main-header').addClass('et_vertical_menu_set').css({
           'left': '',
-          'right': header_offset
+          'right': header_offset + 'px'
         });
       }
     }
 
     if ($et_header_style_split.length && !window.et_is_vertical_nav || is_customize_preview) {
       et_header_menu_split();
-      $(window).resize(function () {
+      $(window).on('resize', function () {
         et_header_menu_split();
       });
     }
@@ -3668,7 +3668,7 @@ __webpack_require__.r(__webpack_exports__);
           admin_bar_height = $('#wpadminbar').length ? parseInt($('#wpadminbar').innerHeight()) : 0,
           $slide_menu_container = $('.et_header_style_slide .et_slide_in_menu_container'),
           is_rtl = $('body').hasClass('rtl');
-      et_header_height = parseInt($('#main-header').innerHeight()) + secondary_nav_height;
+      et_header_height = parseInt($('#main-header').length ? $('#main-header').innerHeight() : 0) + secondary_nav_height;
       et_header_modifier = et_header_height <= 90 ? et_header_height - 29 : et_header_height - 56;
       et_header_offset = et_header_modifier + admin_bar_height;
       et_primary_header_top = secondary_nav_height + admin_bar_height;
@@ -3704,7 +3704,7 @@ __webpack_require__.r(__webpack_exports__);
 
     var $comment_form = $('#commentform');
     et_pb_form_placeholders_init($comment_form);
-    $comment_form.submit(function () {
+    $comment_form.on('submit', function () {
       et_pb_remove_placeholder_text($comment_form);
     });
     et_duplicate_menu($('#et-top-navigation ul.nav'), $('#et-top-navigation .mobile_nav'), 'mobile_menu', 'et_mobile_menu');
@@ -3763,7 +3763,7 @@ __webpack_require__.r(__webpack_exports__);
         var isAbsolutePrimaryNav = !isFixedNav && $body.hasClass('et_transparent_nav') && $body.hasClass('et_secondary_nav_enabled');
 
         if (!window.et_is_vertical_nav && (isFixedNav || isAbsolutePrimaryNav)) {
-          $('#main-header').css('top', etPrimaryHeaderTop);
+          $('#main-header').css('top', etPrimaryHeaderTop + 'px');
         }
       }, delay);
     }
@@ -3842,7 +3842,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
       if ($target.parents().hasClass('commentlist')) {
-        $('.reviews_tab').click().animate({
+        $('.reviews_tab').trigger('click').animate({
           scrollTop: $target.offset().top
         }, 700);
       } // Allow the header sizing functions enough time to finish before scrolling the page
@@ -3877,12 +3877,12 @@ __webpack_require__.r(__webpack_exports__);
           header_height,
           et_pb_first_row_padding_top;
       var $mainHeaderClone = $main_header.clone().addClass('et-disabled-animations main-header-clone').css({
-        opacity: 0,
+        opacity: '0px',
         position: 'fixed',
         top: 'auto',
-        right: 0,
-        bottom: 0,
-        left: 0
+        right: '0px',
+        bottom: '0px',
+        left: '0px'
       }).appendTo($('body')); // Replace previous resize cycle's adjustment
 
       if (!$('body').hasClass('et-bfb')) {
@@ -3920,7 +3920,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
       if (et_window_width <= 980) {
-        header_height = parseInt($main_header.innerHeight()) + secondary_nav_height - ($('body').hasClass('et-fb') ? 0 : 1); // If transparent is detected, #main-content .container's padding-top needs to be added to header_height
+        header_height = parseInt($main_header.length ? $main_header.innerHeight() : 0) + secondary_nav_height - ($('body').hasClass('et-fb') ? 0 : 1); // If transparent is detected, #main-content .container's padding-top needs to be added to header_height
         // And NOT a pagebuilder page
 
         if (window.et_is_transparent_nav && !$et_pb_first_row.length) {
@@ -3956,7 +3956,7 @@ __webpack_require__.r(__webpack_exports__);
           wooNoticeMargin = $main_header.attr('data-height-onload');
         }
 
-        $wooCommerceNotice.css('marginTop', parseFloat(wooNoticeMargin));
+        $wooCommerceNotice.css('marginTop', parseFloat(wooNoticeMargin) + 'px');
         $wooCommerceNotice.animate({
           'opacity': '1'
         });
@@ -4018,14 +4018,14 @@ __webpack_require__.r(__webpack_exports__);
           if (is_pb_fullwidth_section_first) {
             // If the first section is fullwidth, restore the padding-top modified area at first section
             $et_pb_first_row.css({
-              'paddingTop': '0'
+              'paddingTop': '0px'
             });
           }
 
           if (is_post_pb_full_layout_has_title) {
             // Add header height to post meta wrapper as padding top
             $et_main_content_first_row_meta_wrapper.css({
-              'paddingTop': header_height
+              'paddingTop': header_height + 'px'
             });
           } else if (is_post_pb_full_layout_no_title) {
             // Save current styling for the next resize cycle
@@ -4043,12 +4043,12 @@ __webpack_require__.r(__webpack_exports__);
             et_save_initial_page_container_style($et_main_content_first_row, 'paddingTop'); // Add header height to first row content as padding top
 
             $et_main_content_first_row.css({
-              'paddingTop': header_height
+              'paddingTop': header_height + 'px'
             });
           }
         } else if (is_pb_fullwidth_section_first) {
           /* Desktop / Mobile + Pagebuilder + Fullwidth Section */
-          var $et_pb_first_row_first_module = $et_pb_first_row.children('.et_pb_module:visible:first'); // Quirks: If this is post with fullwidth layout + no title + fullwidth section at first row,
+          var $et_pb_first_row_first_module = $et_pb_first_row.children('.et_pb_module:visible').first(); // Quirks: If this is post with fullwidth layout + no title + fullwidth section at first row,
           // Remove the added height at line 2656
 
           if (is_post_pb_full_layout_no_title && is_pb_fullwidth_section_first && et_window_width > 980) {
@@ -4068,7 +4068,7 @@ __webpack_require__.r(__webpack_exports__);
             et_save_initial_page_container_style($et_pb_first_row_first_module_slide, 'paddingTop'); // Adding padding top to each slide so the transparency become useful
 
             $et_pb_first_row_first_module_slide.css({
-              'paddingTop': header_height
+              'paddingTop': header_height + 'px'
             }); // delete container's min-height
 
             $et_pb_first_row_first_module_slide_container.css({
@@ -4078,13 +4078,13 @@ __webpack_require__.r(__webpack_exports__);
             et_save_initial_page_container_style($et_pb_first_row_first_module_slide_image, 'marginTop'); // Adjusting slider's image, considering additional top padding of slideshow
 
             $et_pb_first_row_first_module_slide_image.css({
-              'marginTop': et_pb_slide_image_margin_top
+              'marginTop': et_pb_slide_image_margin_top + 'px'
             }); // Save current styling for the next resize cycle
 
             et_save_initial_page_container_style($et_pb_first_row_first_module_slider_arrow, 'marginTop'); // Adjusting slider's arrow, considering additional top padding of slideshow
 
             $et_pb_first_row_first_module_slider_arrow.css({
-              'marginTop': header_height / 2 - et_pb_first_row_slider_arrow_height / 2
+              'marginTop': header_height / 2 - et_pb_first_row_slider_arrow_height / 2 + 'px'
             }); // Looping the slide and get the highest height of slide
 
             var et_pb_first_row_slide_container_height_new = 0;
@@ -4112,7 +4112,7 @@ __webpack_require__.r(__webpack_exports__);
             et_save_initial_page_container_style($et_pb_first_row_first_module_slide_container, 'min-height'); // Setting appropriate min-height, considering additional top padding of slideshow
 
             $et_pb_first_row_first_module_slide_container.css({
-              'min-height': et_pb_first_row_slide_container_height_new
+              'min-height': et_pb_first_row_slide_container_height_new + 'px'
             });
           } else if ($et_pb_first_row_first_module.is('.et_pb_fullwidth_header')) {
             /* Desktop / Mobile + Pagebuilder + Fullwidth header */
@@ -4124,14 +4124,14 @@ __webpack_require__.r(__webpack_exports__);
             et_save_initial_page_container_style($et_pb_first_row_first_module, 'paddingTop'); // Implement stylesheet's padding-top + header_height
 
             $et_pb_first_row_first_module.css({
-              'paddingTop': header_height + et_pb_first_row_first_module_fullwidth_header_padding_top
+              'paddingTop': header_height + et_pb_first_row_first_module_fullwidth_header_padding_top + 'px'
             });
           } else if ($et_pb_first_row_first_module.is('.et_pb_fullwidth_portfolio')) {
             /* Desktop / Mobile + Pagebuilder + Fullwidth Portfolio */
             // Save current styling for the next resize cycle
             et_save_initial_page_container_style($et_pb_first_row_first_module, 'paddingTop');
             $et_pb_first_row_first_module.css({
-              'paddingTop': header_height
+              'paddingTop': header_height + 'px'
             });
           } else if ($et_pb_first_row_first_module.is('.et_pb_map_container')) {
             /* Desktop / Mobile + Pagebuilder + Fullwidth Map */
@@ -4142,7 +4142,7 @@ __webpack_require__.r(__webpack_exports__);
             }); // Implement map height + header height
 
             $et_pb_first_row_first_module.find('.et_pb_map').css({
-              'height': header_height + parseInt($et_pb_first_row_map.css('height'))
+              'height': header_height + parseInt($et_pb_first_row_map.css('height')) + 'px'
             }); // Adding specific class to mark the map as first row section element
 
             $et_pb_first_row_first_module.addClass('et_beneath_transparent_nav');
@@ -4151,7 +4151,7 @@ __webpack_require__.r(__webpack_exports__);
             // Save current styling for the next resize cycle
             et_save_initial_page_container_style($et_pb_first_row_first_module, 'marginTop');
             $et_pb_first_row_first_module.css({
-              'marginTop': header_height
+              'marginTop': header_height + 'px'
             });
           } else if ($et_pb_first_row_first_module.is('.et_pb_fullwidth_code')) {
             /* Desktop / Mobile + Pagebuilder + Fullwidth code */
@@ -4163,7 +4163,7 @@ __webpack_require__.r(__webpack_exports__);
 
             et_save_initial_page_container_style($et_pb_first_row_first_module_code, 'paddingTop');
             $et_pb_first_row_first_module_code.css({
-              'paddingTop': header_height + et_pb_first_row_first_module_code_padding_top
+              'paddingTop': header_height + et_pb_first_row_first_module_code_padding_top + 'px'
             });
           } else if ($et_pb_first_row_first_module.is('.et_pb_post_title')) {
             /* Desktop / Mobile + Pagebuilder + Fullwidth Post Title */
@@ -4171,7 +4171,7 @@ __webpack_require__.r(__webpack_exports__);
 
             et_save_initial_page_container_style($et_pb_first_row_first_module_title, 'paddingTop');
             $et_pb_first_row_first_module.css({
-              'paddingTop': header_height + 50
+              'paddingTop': header_height + 50 + 'px'
             });
           } else if (!$et_pb_first_row_first_module.length) {
             // Get current padding top
@@ -4183,7 +4183,7 @@ __webpack_require__.r(__webpack_exports__);
 
             if (!$et_pb_first_row.data('is_hide_nav')) {
               $et_pb_first_row.css({
-                'paddingTop': et_pb_first_row_padding_top + header_height
+                'paddingTop': et_pb_first_row_padding_top + header_height + 'px'
               });
             } // Use timeout to avoid flickering padding top when window is resized vertically
             // and hidden nav is transitioned to visible nav, vice versa.
@@ -4202,7 +4202,7 @@ __webpack_require__.r(__webpack_exports__);
                 });
               } else {
                 $et_pb_first_row.css({
-                  'paddingTop': et_pb_first_row_padding_top + header_height
+                  'paddingTop': et_pb_first_row_padding_top + header_height + 'px'
                 });
               } // Save current nav state for next cycle assessment
 
@@ -4230,15 +4230,15 @@ __webpack_require__.r(__webpack_exports__);
             // Applies padding top to first section to automatically convert saved unit into px
             if (et_window_width > 980 && saved_custom_padding_top) {
               $et_pb_first_row.css({
-                paddingTop: saved_custom_padding_top
+                paddingTop: 'number' === typeof saved_custom_padding_top ? saved_custom_padding_top + 'px' : saved_custom_padding_top
               });
             } else if (et_window_width > 767 && saved_custom_padding_tablet_top) {
               $et_pb_first_row.css({
-                paddingTop: saved_custom_padding_tablet_top
+                paddingTop: 'number' === typeof saved_custom_padding_tablet_top ? saved_custom_padding_tablet_top + 'px' : saved_custom_padding_tablet_top
               });
             } else if (saved_custom_padding_phone_top) {
               $et_pb_first_row.css({
-                paddingTop: saved_custom_padding_phone_top
+                paddingTop: 'number' === typeof saved_custom_padding_phone_top ? saved_custom_padding_phone_top + 'px' : saved_custom_padding_phone_top
               });
             } // Get converted custom padding top value
 
@@ -4246,7 +4246,7 @@ __webpack_require__.r(__webpack_exports__);
             applied_saved_custom_padding = parseInt($et_pb_first_row.css('paddingTop')); // Implemented saved & converted padding top + header height
 
             $et_pb_first_row.css({
-              paddingTop: header_height + applied_saved_custom_padding
+              paddingTop: header_height + applied_saved_custom_padding + 'px'
             });
           } else {
             // Pagebuilder ignores #main-content .container's fixed height and uses its row's padding
@@ -4256,17 +4256,17 @@ __webpack_require__.r(__webpack_exports__);
             et_save_initial_page_container_style($et_pb_first_row, 'paddingTop'); // Implementing padding-top + header_height
 
             $et_pb_first_row.css({
-              'paddingTop': et_pb_first_row_padding_top
+              'paddingTop': et_pb_first_row_padding_top + 'px'
             });
           }
         } else if (is_no_pb_mobile) {
           // Mobile + not pagebuilder
           $et_main_content_first_row.css({
-            'paddingTop': header_height
+            'paddingTop': header_height + 'px'
           });
         } else {
           $('#main-content .container:first-child').css({
-            'paddingTop': header_height
+            'paddingTop': header_height + 'px'
           });
         } // Set #page-container's padding-top to zero after inline styling first row's content has been added
 
@@ -4282,9 +4282,9 @@ __webpack_require__.r(__webpack_exports__);
         // primary nav
 
 
-        var $firstSection = $('.et_pb_section:visible:first');
-        var $firstRow = $firstSection.find('.et_pb_row:visible:first');
-        var $firstModule = $firstSection.find('.et_pb_module:visible:first');
+        var $firstSection = $('.et_pb_section:visible').first();
+        var $firstRow = $firstSection.find('.et_pb_row:visible').first();
+        var $firstModule = $firstSection.find('.et_pb_module:visible').first();
         var firstSectionHasParallax = $firstSection.hasClass('et_pb_section_parallax');
         var firstRowHasParallax = $firstRow.hasClass('et_pb_section_parallax');
         var firstModuleHasParallax = $firstModule.hasClass('et_pb_section_parallax');
@@ -4293,7 +4293,7 @@ __webpack_require__.r(__webpack_exports__);
           $(window).trigger('resize.etTrueParallaxBackground');
         }
       } else if (et_is_fixed_nav) {
-        $main_container_wrapper.css('paddingTop', header_height);
+        $main_container_wrapper.css('paddingTop', header_height + 'px');
       }
 
       $mainHeaderClone.remove();
@@ -4311,7 +4311,7 @@ __webpack_require__.r(__webpack_exports__);
         et_fix_fullscreen_section();
       }
     }, 200);
-    $(window).resize(function () {
+    $(window).on('resize', function () {
       var window_width = parseInt($et_window.width()),
           has_container = $et_container.length > 0,
           et_container_previous_width = !has_container ? 0 : parseInt($et_container.data('previous-width')) || 0,
@@ -4404,7 +4404,7 @@ __webpack_require__.r(__webpack_exports__);
       if ($slide_menu_container.length && $('body').hasClass('et_header_style_fullscreen')) {
         var top_bar_height = parseInt($slide_menu_container.find('.et_slide_menu_top').innerHeight());
         $slide_menu_container.css({
-          'padding-top': top_bar_height + 20
+          'padding-top': top_bar_height + 20 + 'px'
         });
       }
 
@@ -4412,10 +4412,10 @@ __webpack_require__.r(__webpack_exports__);
     });
 
     if (builder_scripts_utils_utils__WEBPACK_IMPORTED_MODULE_0__["isBuilder"] && jQuery('.et_header_style_fullscreen .et_slide_in_menu_container').length > 0) {
-      jQuery(window).resize(et_pb_resize_fullscreen_menu);
+      jQuery(window).on('resize', et_pb_resize_fullscreen_menu);
     }
 
-    $(window).ready(function () {
+    $(function () {
       if ($.fn.fitVids) {
         $('#main-content').fitVids({
           customSelector: "iframe[src^='http://www.hulu.com'], iframe[src^='http://www.dailymotion.com'], iframe[src^='http://www.funnyordie.com'], iframe[src^='https://embed-ssl.ted.com'], iframe[src^='http://embed.revision3.com'], iframe[src^='https://flickr.com'], iframe[src^='http://blip.tv'], iframe[src^='http://www.collegehumor.com']"
@@ -4448,15 +4448,15 @@ __webpack_require__.r(__webpack_exports__);
         var $logo_width = parseInt($('#logo').width());
 
         if (et_is_rtl) {
-          $et_top_navigation.css('padding-right', $logo_width + 30);
+          $et_top_navigation.css('padding-right', $logo_width + 30 + 'px');
         } else {
-          $et_top_navigation.css('padding-left', $logo_width + 30);
+          $et_top_navigation.css('padding-left', $logo_width + 30 + 'px');
         }
       }
 
       if ($('p.demo_store').length && $('p.demo_store').is(':visible')) {
-        $('#footer-bottom').css('margin-bottom', $('p.demo_store').innerHeight());
-        $('.woocommerce-store-notice__dismiss-link').click(function () {
+        $('#footer-bottom').css('margin-bottom', $('p.demo_store').innerHeight() + 'px');
+        $('.woocommerce-store-notice__dismiss-link').on('click', function () {
           $('#footer-bottom').css('margin-bottom', '');
         });
       }
@@ -4491,9 +4491,9 @@ __webpack_require__.r(__webpack_exports__);
           if (isFirstRowOnTop && window.et_is_transparent_nav && !window.et_is_vertical_nav && $et_pb_first_row.length) {
             // Fullscreen section at the first row requires specific adjustment
             if ($et_pb_first_row.is('.et_pb_fullwidth_section')) {
-              $waypoint_selector = $et_pb_first_row.children('.et_pb_module:visible:first');
+              $waypoint_selector = $et_pb_first_row.children('.et_pb_module:visible').first();
             } else {
-              $waypoint_selector = $et_pb_first_row.find('.et_pb_row:visible:first');
+              $waypoint_selector = $et_pb_first_row.find('.et_pb_row:visible').first();
             } // Fallback for a less likely but possible scenario: a) fullwidth section
             // has no module OR b) other section has no row. When this happened,
             // the safest option is look for the first visible module and use it
@@ -4564,7 +4564,7 @@ __webpack_require__.r(__webpack_exports__);
 
                   if (!window.et_is_vertical_nav) {
                     fix_padding = parseInt($main_container_wrapper.css('padding-top')) - clone_header_height - secondary_nav_height + 1;
-                    $main_container_wrapper.css('margin-top', -fix_padding);
+                    $main_container_wrapper.css('margin-top', -fix_padding + 'px');
                   }
 
                   $('.et_header_clone').remove();
@@ -4573,7 +4573,7 @@ __webpack_require__.r(__webpack_exports__);
                 fix_padding = 1;
                 $main_header.removeClass('et-fixed-header');
                 $top_header.removeClass('et-fixed-header');
-                $main_container_wrapper.css('margin-top', -fix_padding);
+                $main_container_wrapper.css('margin-top', -fix_padding + 'px');
               } // Dispatch event when fixed header height transition starts
 
 
@@ -4612,19 +4612,38 @@ __webpack_require__.r(__webpack_exports__);
           is_woocommerce_review_link = $this_link.hasClass('woocommerce-review-link'),
           disable_scroll = has_closest_smooth_scroll_disabled || has_closest_ee_cart_link || has_closest_woocommerce_tabs || has_closest_eab_cal_link || has_acomment_reply || is_woocommerce_review_link || has_closest_timetable_tab;
 
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname && !disable_scroll) {
+      if (($this_link.hasClass('mobile_nav') || location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) && !disable_scroll) {
         var target = $(this.hash); // Workaround for empty target in mobile menu.
 
         if ($this_link.hasClass('mobile_nav')) {
-          target = $('#' + e.target.hash.slice(1));
+          target = $('#' + e.target.hash.slice(1)); // Workaround for Popup Maker plugin not working in mobile.
+
+          if ($(e.target).parent().hasClass('pum-trigger')) {
+            e.preventDefault();
+            var temp_classes = $(e.target).parent().attr('class').split(' ');
+            var pop_make_classes = temp_classes.filter(function (pop_make_class) {
+              return pop_make_class.includes('popmake');
+            });
+            var id_slug = pop_make_classes[0].split('-')[1];
+            $("#pum-".concat(id_slug)).css({
+              'opacity': '1',
+              'display': 'block'
+            });
+            $("#popmake-".concat(id_slug)).css({
+              'opacity': '1',
+              'display': 'block'
+            });
+          }
         }
 
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (!target.length && this.hash) {
+          target = $('[name=' + this.hash.slice(1) + ']');
+        }
 
         if (target.length) {
           // Workaround for reviews tab in woo tabs.
           if ($(this).parents().hasClass('widget_recent_reviews')) {
-            $('.reviews_tab').click().animate({
+            $('.reviews_tab').trigger('click').animate({
               scrollTop: target.offset().top
             }, 700);
           } // automatically close fullscreen menu if clicked from there
@@ -4744,7 +4763,7 @@ __webpack_require__.r(__webpack_exports__);
         });
         $('ul.et_pb_side_nav').css('marginTop', '-' + side_nav_offset + 'px');
         $('.et_pb_side_nav').addClass('et-visible');
-        $('.et_pb_side_nav a').click(function () {
+        $('.et_pb_side_nav a').on('click', function () {
           // We use the index position of the sections to locate them instead of custom classes so
           // that we have the same implementation for the frontend website and the Visual Builder.
           var index = parseInt($(this).text());
@@ -4772,7 +4791,7 @@ __webpack_require__.r(__webpack_exports__);
     et_pb_side_nav_page_init();
 
     if ($('.et_pb_scroll_top').length) {
-      $(window).scroll(function () {
+      $(window).on('scroll', function () {
         if ($(this).scrollTop() > 800) {
           $('.et_pb_scroll_top').show().removeClass('et-hidden').addClass('et-visible');
         } else {
@@ -4780,7 +4799,7 @@ __webpack_require__.r(__webpack_exports__);
         }
       }); //Click event to scroll to top
 
-      $('.et_pb_scroll_top').click(function () {
+      $('.et_pb_scroll_top').on('click', function () {
         $('html, body').animate({
           scrollTop: 0
         }, 800);
@@ -4791,7 +4810,7 @@ __webpack_require__.r(__webpack_exports__);
       $('.comment-reply-link').addClass('et_pb_button');
     }
 
-    $('#et_top_search').click(function () {
+    $('#et_top_search').on('click', function () {
       var $search_container = $('.et_search_form_container');
 
       if ($search_container.hasClass('et_pb_is_animating')) {
@@ -4804,7 +4823,7 @@ __webpack_require__.r(__webpack_exports__);
         $('.et_menu_container').addClass('et_pb_no_animation');
         $search_container.addClass('et_pb_no_animation').removeClass('et_pb_is_animating');
       }, 1000);
-      $search_container.find('input').focus();
+      $search_container.find('input').trigger('focus');
       et_set_search_form_css();
     });
 
@@ -4835,17 +4854,17 @@ __webpack_require__.r(__webpack_exports__);
         $search_container.find('input').css('font-size', font_size);
 
         if (!$body.hasClass('et_header_style_left')) {
-          $search_container.css('max-width', menu_width + 60);
+          $search_container.css('max-width', menu_width + 60 + 'px');
         } else {
-          $search_container.find('form').css('max-width', menu_width + 60);
+          $search_container.find('form').css('max-width', menu_width + 60 + 'px');
         }
       }
     }
 
-    $('.et_close_search_field').click(function () {
+    $('.et_close_search_field').on('click', function () {
       et_hide_search();
     });
-    $(document).mouseup(function (e) {
+    $(document).on('mouseup', function (e) {
       var $header = $('#main-header');
 
       if ($('.et_menu_container').hasClass('et_pb_menu_hidden')) {
@@ -4970,7 +4989,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
       $('.et_header_style_split .centered-inline-logo-wrap').css({
-        'width': logo_wrapper_width
+        'width': logo_wrapper_width + 'px'
       });
     }
   }
@@ -4996,14 +5015,14 @@ __webpack_require__.r(__webpack_exports__);
           left: '-' + slide_container_width + 'px'
         });
         $page_container.css({
-          right: '0'
+          right: '0px'
         });
       } else {
         $slide_menu_container.css({
           right: '-' + slide_container_width + 'px'
         });
         $page_container.css({
-          left: '0'
+          left: '0px'
         });
       }
 
@@ -5033,14 +5052,14 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(function () {
         if (is_rtl) {
           $slide_menu_container.css({
-            left: '0'
+            left: '0px'
           });
           $page_container.css({
             right: '-' + (slide_container_width - page_container_margin) + 'px'
           });
         } else {
           $slide_menu_container.css({
-            right: '0'
+            right: '0px'
           });
           $page_container.css({
             left: '-' + (slide_container_width - page_container_margin) + 'px'
@@ -5081,7 +5100,7 @@ __webpack_require__.r(__webpack_exports__);
       return;
     }
 
-    var headerHeight = parseInt($('#main-header').innerHeight()); // scroll to the top of checkout form taking into account fixed header height
+    var headerHeight = parseInt($('#main-header').length ? $('#main-header').innerHeight() : 0); // scroll to the top of checkout form taking into account fixed header height
 
     $('html, body').animate({
       scrollTop: $('form.checkout').offset().top - 100 - headerHeight
@@ -5126,7 +5145,7 @@ __webpack_require__.r(__webpack_exports__);
       $menu_container.addClass('et_pb_fullscreen_menu_animated'); // adjust the padding in fullscreen menu
 
       $menu_container.css({
-        'padding-top': top_bar_height + 20
+        'padding-top': top_bar_height + 20 + 'px'
       });
     } else {
       setTimeout(function () {
@@ -5148,12 +5167,12 @@ __webpack_require__.r(__webpack_exports__);
           height -= 32;
         }
 
-        $menu.find('.et_pb_fullscreen_nav_container').css('max-height', height);
+        $menu.find('.et_pb_fullscreen_nav_container').css('max-height', height + 'px');
       }
     }
   }
 
-  $(window).unload(function () {
+  $(window).on('unload', function () {
     /**
      * Fix the issue with Fullscreen menu, that remains open,
      * when back button is clicked in Firefox
@@ -5187,7 +5206,7 @@ __webpack_require__.r(__webpack_exports__);
     if ($menu_container.length) {
       var top_bar_height = $menu_container.find('.et_slide_menu_top').innerHeight();
       $menu_container.css({
-        'padding-top': top_bar_height + 20
+        'padding-top': top_bar_height + 20 + 'px'
       });
     }
   } // adjust the scrolling position on Woocommerce checkout page in case of error

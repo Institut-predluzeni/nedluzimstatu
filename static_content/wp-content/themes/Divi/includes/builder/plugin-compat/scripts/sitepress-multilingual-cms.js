@@ -1,5 +1,5 @@
 (function($) {
-  $(document).ready($ => {
+  $(() => {
     $('body').on('click', '.js-wpml-translate-link', function() {
       const $this = $(this);
       const url   = $this.attr('href');

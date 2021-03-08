@@ -156,9 +156,9 @@
 					$content.stop().fadeOut( 200, function() {
 						$( this ).before( '<div class="et-core-modal-temp-content"><div>' + text + '</div></div>' );
 						$modal.find( tempContent ).height( contentHeight ).hide().fadeIn( 200 );
-						$modal.find( '.et-core-modal-remove-temp-content' ).click( function( e ) {
-							removeContent( 0 );
-						} );
+						$modal.find('.et-core-modal-remove-temp-content').on('click', function(e) {
+							removeContent(0);
+						});
 					} );
 
 					if ( $.isNumeric( remove ) ) {
@@ -201,11 +201,11 @@
 			etCore.applyMaxHeight();
 		});
 
-		$(document).ready(function() {
+		$(function() {
 			etCore.init();
 		});
 
-		$(window).resize(function() {
+		$(window).on('resize', function() {
 			etCore.applyMaxHeight();
 		});
 	});
