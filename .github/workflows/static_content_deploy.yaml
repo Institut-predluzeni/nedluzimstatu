@@ -5,6 +5,7 @@ on:
       - master
     paths:
       - 'static_content/**'
+      - 'public/**'
 env:
   bucketName: ${{ secrets.AWS_STATIC_CONTENT_BUCKET_NAME }}
   cloudFrontDeploymentId: ${{ secrets.AWS_CLOUDFRONT_DEPLOYMENT_ID }}
@@ -16,7 +17,7 @@ jobs:
         uses: actions/checkout@master
       - name: 'Deploy to AWS'
         run: |
-          cp -a ../public/psc2ovm .
+          cp -a ../public .
           aws s3 sync --acl public-read --delete . s3://${{ env.bucketName }}
           aws cloudfront create-invalidation --distribution-id ${{ env.cloudFrontDeploymentId }} --paths "/*"
         working-directory: 'static_content'

@@ -17,6 +17,9 @@ Wiki Nedluzim statu: https://wiki.cesko.digital/display/NS
 
 - `.github/workflows` Github Actions definice pro deployment.
 
+- `public` Dalsi staticke soubory mimo wordpress. Deployuje se pri kazde zmene v masteru na AWS S3 pomoci workflow `static_content_deploy.yaml`. Pozor na mozny problem s funkcionalitou pri aktualizaci `public` a ponechani puvodni, mozna nekompatibilni, verze `static_content` z Wordpressu.
+  - `public/psc2ovm` Preklad PSC a nazvu obce na kontaktni udaje jednotlivych uradu. `psc_obce_*.json` seznam psc, obci (bez casti), kod_obce a kod_momc z https://www.ceskaposta.cz/ke-stazeni/zakaznicke-vystupy (Seznam casti obci a obci s adresnim PSC, csv)
+
 ### Wordpress instance
 
 Development instance wordpressu muze byt provozovana kdekoli, neni efektivne nijak propojena se samotnou produkci.
