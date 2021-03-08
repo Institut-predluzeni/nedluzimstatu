@@ -1,7 +1,7 @@
-jQuery(document).ready(function() {
+jQuery(function() {
 	var et_file_frame;
 
-	jQuery( '.et-upload-image-button' ).click(function( event ) {
+	jQuery('.et-upload-image-button').on('click', function(event) {
 		var this_el = jQuery( this ),
 			use_for = this_el.parents( '.et-epanel-box' ).find( '.et-box-title > h3' ).text(),
 			button_text = this_el.data( 'button_text' ),
@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
 		return false;
 	});
 
-	jQuery( '.et-upload-image-reset' ).click( function() {
+	jQuery('.et-upload-image-reset').on('click', function() {
 		jQuery(this).parent().prev( 'input.et-upload-field' ).val( '' );
 	});
 });

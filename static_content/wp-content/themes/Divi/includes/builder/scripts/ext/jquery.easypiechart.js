@@ -4,6 +4,9 @@
 *
 * @author Robert Fleischmann <rendro87@gmail.com> (http://robert-fleischmann.de)
 * @version 2.1.5
+*
+* Modified to adapt the latest jQuery version (v3 above) included on WordPress 5.6:
+* - (2020-12-15) - jQuery isFunction method is deprecated.
 */
 
 (function(root, factory) {
@@ -275,7 +278,7 @@ var EasyPieChart = function(el, opts) {
 		}
 
 		// check for jQuery easing
-		if (typeof(options.easing) === 'string' && typeof(jQuery) !== 'undefined' && jQuery.isFunction(jQuery.easing[options.easing])) {
+		if (typeof(options.easing) === 'string' && typeof(jQuery) !== 'undefined' && 'function' === typeof jQuery.easing[options.easing]) {
 			options.easing = jQuery.easing[options.easing];
 		} else {
 			options.easing = defaultOptions.easing;

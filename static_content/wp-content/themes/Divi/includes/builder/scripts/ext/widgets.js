@@ -1,13 +1,13 @@
 ( function($) {
 
-	$( document ).ready( function() {
+	$(function() {
 		$( '.widget-liquid-right' ).append( et_pb_options.widget_info );
 
 		var $create_box = $( '#et_pb_widget_area_create' ),
 			$widget_name_input = $create_box.find( '#et_pb_new_widget_area_name' ),
 			$et_pb_sidebars = $( 'div[id^=et_pb_widget_area_]' );
 
-		$create_box.find( '.et_pb_create_widget_area' ).click( function( event ) {
+		$create_box.find('.et_pb_create_widget_area').on('click', function(event) {
 			var $this_el = $(this);
 
 			event.preventDefault();
@@ -27,14 +27,14 @@
 					$this_el.closest( '#et_pb_widget_area_create' ).find( '.et_pb_widget_area_result' ).hide().html( data ).slideToggle();
 				}
 			} );
-		} );
+		});
 
 		$et_pb_sidebars.each( function() {
 			if ( $(this).is( '#et_pb_widget_area_create' ) || $(this).closest( '.inactive-sidebar' ).length ) return true;
 
 			$(this).closest('.widgets-holder-wrap').find('.sidebar-name h2, .sidebar-name h3').before( '<a href="#" class="et_pb_widget_area_remove">' + et_pb_options.delete_string + '</a>' );
 
-			$( '.et_pb_widget_area_remove' ).click( function( event ) {
+			$('.et_pb_widget_area_remove').on('click', function(event) {
 				var $this_el = $(this);
 
 				event.preventDefault();
@@ -54,7 +54,7 @@
 				} );
 
 				return false;
-			} );
+			});
 		} );
 	} );
 

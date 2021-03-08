@@ -5,6 +5,9 @@
 * Copyright (c) 2010 "Cowboy" Ben Alman
 * Dual licensed under the MIT and GPL licenses.
 * http://benalman.com/about/license/
+*
+* Modified to adapt the latest jQuery version (v3 above) included on WordPress 5.6:
+* - (2021-02-03) - jQuery bind method is deprecated.
 */
 
 // Script: jQuery hashchange event
@@ -123,7 +126,7 @@
   //
   //  handler - (Function) Optional handler to be bound to the hashchange
   //    event. This is a "shortcut" for the more verbose form:
-  //    jQuery(window).bind( 'hashchange', handler ). If handler is omitted,
+  //    jQuery(window).on( 'hashchange', handler ). If handler is omitted,
   //    all bound window.onhashchange event handlers will be triggered. This
   //    is a shortcut for the more verbose
   //    jQuery(window).trigger( 'hashchange' ). These forms are described in
@@ -136,7 +139,7 @@
   // Allow the "shortcut" format $(elem).hashchange( fn ) for binding and
   // $(elem).hashchange() for triggering, like jQuery does for built-in events.
   $.fn[ str_hashchange ] = function( fn ) {
-    return fn ? this.bind( str_hashchange, fn ) : this.trigger( str_hashchange );
+    return fn ? this.on( str_hashchange, fn ) : this.trigger( str_hashchange );
   };
 
   // Property: jQuery.fn.hashchange.delay
@@ -203,7 +206,7 @@
   // A more verbose usage that allows for event namespacing:
   //
   // > // Bind an event handler.
-  // > jQuery(window).bind( 'hashchange', function(e) {
+  // > jQuery(window).on( 'hashchange', function(e) {
   // >   var hash = location.hash;
   // >   ...
   // > });
