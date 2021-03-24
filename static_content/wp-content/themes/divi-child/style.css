@@ -629,3 +629,7 @@ span.wpcf7-list-item.last {
 	line-height: 145%;
 	color: #000000;
 }
+/* HIDE FB COUNTER IN SOCIAL ICONS */
+.ssbp-each-share, #ssba-bar-2 li .ssbp-each-share {
+	display: none !important;
+}
