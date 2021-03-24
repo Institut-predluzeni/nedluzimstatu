@@ -9,7 +9,14 @@
 		document.documentElement.className = 'js';
 	</script>
 	
-	
+	<script>(function(d, s, id){
+				 var js, fjs = d.getElementsByTagName(s)[0];
+				 if (d.getElementById(id)) {return;}
+				 js = d.createElement(s); js.id = id;
+				 js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+				 fjs.parentNode.insertBefore(js, fjs);
+			   }(document, 'script', 'facebook-jssdk'));</script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
 <!-- Google Tag Manager for WordPress by gtm4wp.com -->
 <script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
 	var gtm4wp_datalayer_name = "dataLayer";
@@ -17,16 +24,15 @@
 //]]>
 </script>
 <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
-	<!-- This site is optimized with the Yoast SEO plugin v15.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<!-- This site is optimized with the Yoast SEO plugin v16.0.2 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Nedlužím státu – Víte jistě, zda nedlužíte státu?</title>
 	<meta name="description" content="Díky přehledným návodům a formulářům vám pomůžeme zjistit, zda a u které instituce (ne)máte dluh. Srozumitelně, anonymně a zdarma." />
-	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-	<link rel="canonical" href="https://nedluzimstatu.ceskodigital.net/" />
+	<link rel="canonical" href="https://54.195.74.196:443/" />
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Nedlužím státu – Víte jistě, zda nedlužíte státu?" />
 	<meta property="og:description" content="Díky přehledným návodům a formulářům vám pomůžeme zjistit, zda a u které instituce (ne)máte dluh. Srozumitelně, anonymně a zdarma." />
-	<meta property="og:url" content="https://nedluzimstatu.ceskodigital.net/" />
+	<meta property="og:url" content="https://54.195.74.196:443/" />
 	<meta property="og:site_name" content="Nedlužím státu" />
 	<meta property="article:modified_time" content="2021-03-08T16:37:16+00:00" />
 	<meta property="og:image" content="https://nedluzimstatu.ceskodigital.net/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg" />
@@ -34,26 +40,28 @@
 	<meta property="og:image:height" content="628" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:image" content="https://nedluzimstatu.ceskodigital.net/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nedluzimstatu.ceskodigital.net/#organization","name":"Nedlu\u017e\u00edm st\u00e1tu","url":"https://nedluzimstatu.ceskodigital.net/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://nedluzimstatu.ceskodigital.net/#logo","inLanguage":"cs","url":"/wp-content/uploads/2020/10/logo.svg","caption":"Nedlu\u017e\u00edm st\u00e1tu"},"image":{"@id":"https://nedluzimstatu.ceskodigital.net/#logo"}},{"@type":"WebSite","@id":"https://nedluzimstatu.ceskodigital.net/#website","url":"https://nedluzimstatu.ceskodigital.net/","name":"Nedlu\u017e\u00edm st\u00e1tu","description":"","publisher":{"@id":"https://nedluzimstatu.ceskodigital.net/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://nedluzimstatu.ceskodigital.net/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"cs"},{"@type":"ImageObject","@id":"https://nedluzimstatu.ceskodigital.net/#primaryimage","inLanguage":"cs","url":"/wp-content/uploads/2020/10/favicon.png","width":512,"height":512},{"@type":"WebPage","@id":"https://nedluzimstatu.ceskodigital.net/#webpage","url":"https://nedluzimstatu.ceskodigital.net/","name":"Nedlu\u017e\u00edm st\u00e1tu \u2013 V\u00edte jist\u011b, zda nedlu\u017e\u00edte st\u00e1tu?","isPartOf":{"@id":"https://nedluzimstatu.ceskodigital.net/#website"},"about":{"@id":"https://nedluzimstatu.ceskodigital.net/#organization"},"primaryImageOfPage":{"@id":"https://nedluzimstatu.ceskodigital.net/#primaryimage"},"datePublished":"2020-10-13T09:47:25+00:00","dateModified":"2021-03-08T16:37:16+00:00","description":"D\u00edky p\u0159ehledn\u00fdm n\u00e1vod\u016fm a formul\u00e1\u0159\u016fm v\u00e1m pom\u016f\u017eeme zjistit, zda a u kter\u00e9 instituce (ne)m\u00e1te dluh. Srozumiteln\u011b, anonymn\u011b a zdarma.","breadcrumb":{"@id":"https://nedluzimstatu.ceskodigital.net/#breadcrumb"},"inLanguage":"cs","potentialAction":[{"@type":"ReadAction","target":["https://nedluzimstatu.ceskodigital.net/"]}]},{"@type":"BreadcrumbList","@id":"https://nedluzimstatu.ceskodigital.net/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://nedluzimstatu.ceskodigital.net/","url":"https://nedluzimstatu.ceskodigital.net/","name":"Dom\u016f"}}]}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://nedluzimstatu.ceskodigital.net/#organization","name":"Nedlu\u017e\u00edm st\u00e1tu","url":"https://nedluzimstatu.ceskodigital.net/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://nedluzimstatu.ceskodigital.net/#logo","inLanguage":"cs","url":"/wp-content/uploads/2020/10/logo.svg","caption":"Nedlu\u017e\u00edm st\u00e1tu"},"image":{"@id":"https://nedluzimstatu.ceskodigital.net/#logo"}},{"@type":"WebSite","@id":"https://nedluzimstatu.ceskodigital.net/#website","url":"https://nedluzimstatu.ceskodigital.net/","name":"Nedlu\u017e\u00edm st\u00e1tu","description":"","publisher":{"@id":"https://nedluzimstatu.ceskodigital.net/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://nedluzimstatu.ceskodigital.net/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"cs"},{"@type":"ImageObject","@id":"https://54.195.74.196:443/#primaryimage","inLanguage":"cs","url":"/wp-content/uploads/2020/10/favicon.png","width":512,"height":512},{"@type":"WebPage","@id":"https://54.195.74.196:443/#webpage","url":"https://54.195.74.196:443/","name":"Nedlu\u017e\u00edm st\u00e1tu \u2013 V\u00edte jist\u011b, zda nedlu\u017e\u00edte st\u00e1tu?","isPartOf":{"@id":"https://nedluzimstatu.ceskodigital.net/#website"},"about":{"@id":"https://nedluzimstatu.ceskodigital.net/#organization"},"primaryImageOfPage":{"@id":"https://54.195.74.196:443/#primaryimage"},"datePublished":"2020-10-13T09:47:25+00:00","dateModified":"2021-03-08T16:37:16+00:00","description":"D\u00edky p\u0159ehledn\u00fdm n\u00e1vod\u016fm a formul\u00e1\u0159\u016fm v\u00e1m pom\u016f\u017eeme zjistit, zda a u kter\u00e9 instituce (ne)m\u00e1te dluh. Srozumiteln\u011b, anonymn\u011b a zdarma.","breadcrumb":{"@id":"https://54.195.74.196:443/#breadcrumb"},"inLanguage":"cs","potentialAction":[{"@type":"ReadAction","target":["https://54.195.74.196:443/"]}]},{"@type":"BreadcrumbList","@id":"https://54.195.74.196:443/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://54.195.74.196:443/","url":"https://54.195.74.196:443/","name":"Dom\u016f"}}]}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
+<link rel='dns-prefetch' href='//ws.sharethis.com' />
 <link rel='dns-prefetch' href='//www.google.com' />
 <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS zdroj" href="https://nedluzimstatu.ceskodigital.net/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS komentářů" href="https://nedluzimstatu.ceskodigital.net/comments/feed/" />
-<meta content="Divi Child v.1.0.0" name="generator"/><link rel='stylesheet' id='wp-block-library-css'  href='https://nedluzimstatu.ceskodigital.net/wp-includes/css/dist/block-library/style.min.css?ver=5.6.2' type='text/css' media='all' />
+<meta content="Divi Child v.1.0.0" name="generator"/><link rel='stylesheet' id='wp-block-library-css'  href='https://nedluzimstatu.ceskodigital.net/wp-includes/css/dist/block-library/style.min.css?ver=5.7' type='text/css' media='all' />
 <link rel='stylesheet' id='contact-form-7-css'  href='/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4' type='text/css' media='all' />
-<link rel='stylesheet' id='simple-share-buttons-adder-font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=5.6.2' type='text/css' media='all' />
-<link rel='stylesheet' id='parent-style-css'  href='/wp-content/themes/Divi/style.css?ver=5.6.2' type='text/css' media='all' />
-<link rel='stylesheet' id='divi-style-css'  href='/wp-content/themes/divi-child/style.css?ver=4.9.1' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='https://nedluzimstatu.ceskodigital.net/wp-includes/css/dashicons.min.css?ver=5.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-share-buttons-adder-font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='/wp-content/themes/Divi/style.css?ver=5.7' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='/wp-content/themes/divi-child/style.css?ver=4.9.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://nedluzimstatu.ceskodigital.net/wp-includes/css/dashicons.min.css?ver=5.7' type='text/css' media='all' />
+<script id='st_insights_js' type='text/javascript' src='https://ws.sharethis.com/button/st_insights.js?publisher=4d48b7c5-0ae3-43d4-bfbe-3ff8c17a8ae6&#038;product=simpleshare' id='ssba-sharethis-js'></script>
 <script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
 <script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <script type='text/javascript' src='/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.6' id='gtm4wp-form-move-tracker-js'></script>
 <link rel="https://api.w.org/" href="https://nedluzimstatu.ceskodigital.net/wp-json/" /><link rel="alternate" type="application/json" href="https://nedluzimstatu.ceskodigital.net/wp-json/wp/v2/pages/104" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nedluzimstatu.ceskodigital.net/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 5.6.2" />
+<meta name="generator" content="WordPress 5.7" />
 <link rel='shortlink' href='https://nedluzimstatu.ceskodigital.net/' />
 <link rel="alternate" type="application/json+oembed" href="https://nedluzimstatu.ceskodigital.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnedluzimstatu.ceskodigital.net%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://nedluzimstatu.ceskodigital.net/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnedluzimstatu.ceskodigital.net%2F&#038;format=xml" />
@@ -158,7 +166,7 @@ function vsechnyNavody() {
 <link rel="icon" href="/wp-content/uploads/2020/10/cropped-favicon-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="/wp-content/uploads/2020/10/cropped-favicon-180x180.png" />
 <meta name="msapplication-TileImage" content="/wp-content/uploads/2020/10/cropped-favicon-270x270.png" />
-<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:16px}.et_pb_slide_content,.et_pb_best_value{font-size:18px}body{color:#000000}h1,h2,h3,h4,h5,h6{color:#55237c}body{line-height:1.9em}.woocommerce #respond input#submit,.woocommerce-page #respond input#submit,.woocommerce #content input.button,.woocommerce-page #content input.button,.woocommerce-message,.woocommerce-error,.woocommerce-info{background:#289aa2!important}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et_pb_pricing li a,.et_pb_pricing_table_button,.et_overlay:before,.entry-summary p.price ins,.woocommerce div.product span.price,.woocommerce-page div.product span.price,.woocommerce #content div.product span.price,.woocommerce-page #content div.product span.price,.woocommerce div.product p.price,.woocommerce-page div.product p.price,.woocommerce #content div.product p.price,.woocommerce-page #content div.product p.price,.et_pb_member_social_links a:hover,.woocommerce .star-rating span:before,.woocommerce-page .star-rating span:before,.et_pb_widget li a:hover,.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.tagged_as a,.posted_in a{color:#289aa2}.et_pb_contact_submit,.et_password_protected_form .et_submit_button,.et_pb_bg_layout_light .et_pb_newsletter_button,.comment-reply-link,.form-submit .et_pb_button,.et_pb_bg_layout_light .et_pb_promo_button,.et_pb_bg_layout_light .et_pb_more_button,.woocommerce a.button.alt,.woocommerce-page a.button.alt,.woocommerce button.button.alt,.woocommerce button.button.alt.disabled,.woocommerce-page button.button.alt,.woocommerce-page button.button.alt.disabled,.woocommerce input.button.alt,.woocommerce-page input.button.alt,.woocommerce #respond input#submit.alt,.woocommerce-page #respond input#submit.alt,.woocommerce #content input.button.alt,.woocommerce-page #content input.button.alt,.woocommerce a.button,.woocommerce-page a.button,.woocommerce button.button,.woocommerce-page button.button,.woocommerce input.button,.woocommerce-page input.button,.et_pb_contact p input[type="checkbox"]:checked+label i:before,.et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#289aa2}.footer-widget h4{color:#289aa2}.et-search-form,.nav li ul,.et_mobile_menu,.footer-widget li:before,.et_pb_pricing li:before,blockquote{border-color:#289aa2}.et_pb_counter_amount,.et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et_link_content,.et_audio_content,.et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#289aa2}a{color:}.nav li ul{border-color:#55237c}#top-header,#et-secondary-nav li ul{background-color:#289aa2}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:#55237c}.et_search_form_container input::-moz-placeholder{color:#55237c}.et_search_form_container input::-webkit-input-placeholder{color:#55237c}.et_search_form_container input:-ms-input-placeholder{color:#55237c}#top-menu li a{font-size:16px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:16px!important}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a,.et_color_scheme_red #top-menu li.current-menu-ancestor>a,.et_color_scheme_red #top-menu li.current-menu-item>a,.et_color_scheme_red #top-menu li.current_page_item>a,.et_color_scheme_pink #top-menu li.current-menu-ancestor>a,.et_color_scheme_pink #top-menu li.current-menu-item>a,.et_color_scheme_pink #top-menu li.current_page_item>a,.et_color_scheme_orange #top-menu li.current-menu-ancestor>a,.et_color_scheme_orange #top-menu li.current-menu-item>a,.et_color_scheme_orange #top-menu li.current_page_item>a,.et_color_scheme_green #top-menu li.current-menu-ancestor>a,.et_color_scheme_green #top-menu li.current-menu-item>a,.et_color_scheme_green #top-menu li.current_page_item>a{color:#55237c}#footer-widgets .footer-widget a,#footer-widgets .footer-widget li a,#footer-widgets .footer-widget li a:hover{color:#ffffff}.footer-widget{color:#ffffff}#main-footer .footer-widget h4{color:#289aa2}.footer-widget li:before{border-color:#289aa2}#footer-widgets .footer-widget li:before{top:10.6px}body .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover{background-color:;border-color:!important}.woocommerce a.button.alt:hover,.woocommerce-page a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce button.button.alt.disabled:hover,.woocommerce-page button.button.alt:hover,.woocommerce-page button.button.alt.disabled:hover,.woocommerce input.button.alt:hover,.woocommerce-page input.button.alt:hover,.woocommerce #respond input#submit.alt:hover,.woocommerce-page #respond input#submit.alt:hover,.woocommerce #content input.button.alt:hover,.woocommerce-page #content input.button.alt:hover,.woocommerce a.button:hover,.woocommerce-page a.button:hover,.woocommerce button.button:hover,.woocommerce-page button.button:hover,.woocommerce input.button:hover,.woocommerce-page input.button:hover,.woocommerce #respond input#submit:hover,.woocommerce-page #respond input#submit:hover,.woocommerce #content input.button:hover,.woocommerce-page #content input.button:hover{background-color:!important;border-color:!important}h1,h2,h3,h4,h5,h6,.et_quote_content blockquote p,.et_pb_slide_description .et_pb_slide_title{line-height:1.6em}.et_slide_in_menu_container,.et_slide_in_menu_container .et-search-field{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-moz-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-webkit-input-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field:-ms-input-placeholder{letter-spacing:px}@media only screen and (min-width:981px){.et_header_style_left #et-top-navigation,.et_header_style_split #et-top-navigation{padding:38px 0 0 0}.et_header_style_left #et-top-navigation nav>ul>li>a,.et_header_style_split #et-top-navigation nav>ul>li>a{padding-bottom:38px}.et_header_style_split .centered-inline-logo-wrap{width:76px;margin:-76px 0}.et_header_style_split .centered-inline-logo-wrap #logo{max-height:76px}.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo{height:76px}.et_header_style_centered #top-menu>li>a{padding-bottom:14px}.et_header_style_slide #et-top-navigation,.et_header_style_fullscreen #et-top-navigation{padding:29px 0 29px 0!important}.et_header_style_centered #main-header .logo_container{height:76px}.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:13.68px}.et_header_style_left .et-fixed-header #et-top-navigation,.et_header_style_split .et-fixed-header #et-top-navigation{padding:38px 0 0 0}.et_header_style_left .et-fixed-header #et-top-navigation nav>ul>li>a,.et_header_style_split .et-fixed-header #et-top-navigation nav>ul>li>a{padding-bottom:38px}.et_header_style_centered header#main-header.et-fixed-header .logo_container{height:76px}.et_header_style_split #main-header.et-fixed-header .centered-inline-logo-wrap{width:76px;margin:-76px 0}.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{max-height:76px}.et_pb_svg_logo.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{height:76px}.et_header_style_slide .et-fixed-header #et-top-navigation,.et_header_style_fullscreen .et-fixed-header #et-top-navigation{padding:29px 0 29px 0!important}.et-fixed-header#top-header,.et-fixed-header#top-header #et-secondary-nav li ul{background-color:#289aa2}.et-fixed-header #top-menu a,.et-fixed-header #et_search_icon:before,.et-fixed-header #et_top_search .et-search-form input,.et-fixed-header .et_search_form_container input,.et-fixed-header .et_close_search_field:after,.et-fixed-header #et-top-navigation .et-cart-info{color:!important}.et-fixed-header .et_search_form_container input::-moz-placeholder{color:!important}.et-fixed-header .et_search_form_container input::-webkit-input-placeholder{color:!important}.et-fixed-header .et_search_form_container input:-ms-input-placeholder{color:!important}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:!important}}@media only screen and (min-width:1350px){.et_pb_row{padding:27px 0}.et_pb_section{padding:54px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:81px}.et_pb_fullwidth_section{padding:0}}h1,h1.et_pb_contact_main_title,.et_pb_title_container h1{font-size:40px}h2,.product .related h2,.et_pb_column_1_2 .et_quote_content blockquote p{font-size:34px}h3{font-size:29px}h4,.et_pb_circle_counter h3,.et_pb_number_counter h3,.et_pb_column_1_3 .et_pb_post h2,.et_pb_column_1_4 .et_pb_post h2,.et_pb_blog_grid h2,.et_pb_column_1_3 .et_quote_content blockquote p,.et_pb_column_3_8 .et_quote_content blockquote p,.et_pb_column_1_4 .et_quote_content blockquote p,.et_pb_blog_grid .et_quote_content blockquote p,.et_pb_column_1_3 .et_link_content h2,.et_pb_column_3_8 .et_link_content h2,.et_pb_column_1_4 .et_link_content h2,.et_pb_blog_grid .et_link_content h2,.et_pb_column_1_3 .et_audio_content h2,.et_pb_column_3_8 .et_audio_content h2,.et_pb_column_1_4 .et_audio_content h2,.et_pb_blog_grid .et_audio_content h2,.et_pb_column_3_8 .et_pb_audio_module_content h2,.et_pb_column_1_3 .et_pb_audio_module_content h2,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2{font-size:24px}h5{font-size:21px}h6{font-size:18px}.et_pb_slide_description .et_pb_slide_title{font-size:61px}.woocommerce ul.products li.product h3,.woocommerce-page ul.products li.product h3,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,.et_pb_column_1_4 .et_pb_audio_module_content h2{font-size:21px}</style></head>
+<div id="ssba-bar-2" class="right ssbp-wrap ssbp--theme-6" ><div class="ssbp-container"><ul class="ssbp-bar-list"><li class="ssbp-li--facebook"><a data-site="" class="ssba_facebook_share ssbp-facebook ssbp-btn" href="http://www.facebook.com/sharer.php?u=https://nedluzimstatu.ceskodigital.net"  target="_blank" ><div title="Facebook" class="ssbp-text">Facebook</div></a><span class=" ssbp-each-share">0</span></li><li class="ssbp-li--twitter"><a data-site="" class="ssba_twitter_share ssbp-twitter ssbp-btn" href="http://twitter.com/share?url=https://nedluzimstatu.ceskodigital.net&amp;text=Home%20"  target=&quot;_blank&quot; ><div title="Twitter" class="ssbp-text">Twitter</div></a></li><li class="ssbp-li--linkedin"><a data-site="linkedin" class="ssba_linkedin_share ssba_share_link ssbp-linkedin ssbp-btn" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://nedluzimstatu.ceskodigital.net"  target=&quot;_blank&quot; ><div title="Linkedin" class="ssbp-text">Linkedin</div></a></li><li class="ssbp-li--email"><a data-site="email" class="ssba_email_share ssbp-email ssbp-btn" href="mailto:?subject=Home&#038;body=%20https://nedluzimstatu.ceskodigital.net"><div title="email" class="ssbp-text">email</div></a></li></div></ul></div><style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:16px}.et_pb_slide_content,.et_pb_best_value{font-size:18px}body{color:#000000}h1,h2,h3,h4,h5,h6{color:#55237c}body{line-height:1.9em}.woocommerce #respond input#submit,.woocommerce-page #respond input#submit,.woocommerce #content input.button,.woocommerce-page #content input.button,.woocommerce-message,.woocommerce-error,.woocommerce-info{background:#289aa2!important}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et_pb_pricing li a,.et_pb_pricing_table_button,.et_overlay:before,.entry-summary p.price ins,.woocommerce div.product span.price,.woocommerce-page div.product span.price,.woocommerce #content div.product span.price,.woocommerce-page #content div.product span.price,.woocommerce div.product p.price,.woocommerce-page div.product p.price,.woocommerce #content div.product p.price,.woocommerce-page #content div.product p.price,.et_pb_member_social_links a:hover,.woocommerce .star-rating span:before,.woocommerce-page .star-rating span:before,.et_pb_widget li a:hover,.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.tagged_as a,.posted_in a{color:#289aa2}.et_pb_contact_submit,.et_password_protected_form .et_submit_button,.et_pb_bg_layout_light .et_pb_newsletter_button,.comment-reply-link,.form-submit .et_pb_button,.et_pb_bg_layout_light .et_pb_promo_button,.et_pb_bg_layout_light .et_pb_more_button,.woocommerce a.button.alt,.woocommerce-page a.button.alt,.woocommerce button.button.alt,.woocommerce button.button.alt.disabled,.woocommerce-page button.button.alt,.woocommerce-page button.button.alt.disabled,.woocommerce input.button.alt,.woocommerce-page input.button.alt,.woocommerce #respond input#submit.alt,.woocommerce-page #respond input#submit.alt,.woocommerce #content input.button.alt,.woocommerce-page #content input.button.alt,.woocommerce a.button,.woocommerce-page a.button,.woocommerce button.button,.woocommerce-page button.button,.woocommerce input.button,.woocommerce-page input.button,.et_pb_contact p input[type="checkbox"]:checked+label i:before,.et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#289aa2}.footer-widget h4{color:#289aa2}.et-search-form,.nav li ul,.et_mobile_menu,.footer-widget li:before,.et_pb_pricing li:before,blockquote{border-color:#289aa2}.et_pb_counter_amount,.et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et_link_content,.et_audio_content,.et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#289aa2}a{color:}.nav li ul{border-color:#55237c}#top-header,#et-secondary-nav li ul{background-color:#289aa2}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:#55237c}.et_search_form_container input::-moz-placeholder{color:#55237c}.et_search_form_container input::-webkit-input-placeholder{color:#55237c}.et_search_form_container input:-ms-input-placeholder{color:#55237c}#top-menu li a{font-size:16px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:16px!important}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a,.et_color_scheme_red #top-menu li.current-menu-ancestor>a,.et_color_scheme_red #top-menu li.current-menu-item>a,.et_color_scheme_red #top-menu li.current_page_item>a,.et_color_scheme_pink #top-menu li.current-menu-ancestor>a,.et_color_scheme_pink #top-menu li.current-menu-item>a,.et_color_scheme_pink #top-menu li.current_page_item>a,.et_color_scheme_orange #top-menu li.current-menu-ancestor>a,.et_color_scheme_orange #top-menu li.current-menu-item>a,.et_color_scheme_orange #top-menu li.current_page_item>a,.et_color_scheme_green #top-menu li.current-menu-ancestor>a,.et_color_scheme_green #top-menu li.current-menu-item>a,.et_color_scheme_green #top-menu li.current_page_item>a{color:#55237c}#footer-widgets .footer-widget a,#footer-widgets .footer-widget li a,#footer-widgets .footer-widget li a:hover{color:#ffffff}.footer-widget{color:#ffffff}#main-footer .footer-widget h4{color:#289aa2}.footer-widget li:before{border-color:#289aa2}#footer-widgets .footer-widget li:before{top:10.6px}body .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover{background-color:;border-color:!important}.woocommerce a.button.alt:hover,.woocommerce-page a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce button.button.alt.disabled:hover,.woocommerce-page button.button.alt:hover,.woocommerce-page button.button.alt.disabled:hover,.woocommerce input.button.alt:hover,.woocommerce-page input.button.alt:hover,.woocommerce #respond input#submit.alt:hover,.woocommerce-page #respond input#submit.alt:hover,.woocommerce #content input.button.alt:hover,.woocommerce-page #content input.button.alt:hover,.woocommerce a.button:hover,.woocommerce-page a.button:hover,.woocommerce button.button:hover,.woocommerce-page button.button:hover,.woocommerce input.button:hover,.woocommerce-page input.button:hover,.woocommerce #respond input#submit:hover,.woocommerce-page #respond input#submit:hover,.woocommerce #content input.button:hover,.woocommerce-page #content input.button:hover{background-color:!important;border-color:!important}h1,h2,h3,h4,h5,h6,.et_quote_content blockquote p,.et_pb_slide_description .et_pb_slide_title{line-height:1.6em}.et_slide_in_menu_container,.et_slide_in_menu_container .et-search-field{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-moz-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-webkit-input-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field:-ms-input-placeholder{letter-spacing:px}@media only screen and (min-width:981px){.et_header_style_left #et-top-navigation,.et_header_style_split #et-top-navigation{padding:38px 0 0 0}.et_header_style_left #et-top-navigation nav>ul>li>a,.et_header_style_split #et-top-navigation nav>ul>li>a{padding-bottom:38px}.et_header_style_split .centered-inline-logo-wrap{width:76px;margin:-76px 0}.et_header_style_split .centered-inline-logo-wrap #logo{max-height:76px}.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo{height:76px}.et_header_style_centered #top-menu>li>a{padding-bottom:14px}.et_header_style_slide #et-top-navigation,.et_header_style_fullscreen #et-top-navigation{padding:29px 0 29px 0!important}.et_header_style_centered #main-header .logo_container{height:76px}.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:13.68px}.et_header_style_left .et-fixed-header #et-top-navigation,.et_header_style_split .et-fixed-header #et-top-navigation{padding:38px 0 0 0}.et_header_style_left .et-fixed-header #et-top-navigation nav>ul>li>a,.et_header_style_split .et-fixed-header #et-top-navigation nav>ul>li>a{padding-bottom:38px}.et_header_style_centered header#main-header.et-fixed-header .logo_container{height:76px}.et_header_style_split #main-header.et-fixed-header .centered-inline-logo-wrap{width:76px;margin:-76px 0}.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{max-height:76px}.et_pb_svg_logo.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{height:76px}.et_header_style_slide .et-fixed-header #et-top-navigation,.et_header_style_fullscreen .et-fixed-header #et-top-navigation{padding:29px 0 29px 0!important}.et-fixed-header#top-header,.et-fixed-header#top-header #et-secondary-nav li ul{background-color:#289aa2}.et-fixed-header #top-menu a,.et-fixed-header #et_search_icon:before,.et-fixed-header #et_top_search .et-search-form input,.et-fixed-header .et_search_form_container input,.et-fixed-header .et_close_search_field:after,.et-fixed-header #et-top-navigation .et-cart-info{color:!important}.et-fixed-header .et_search_form_container input::-moz-placeholder{color:!important}.et-fixed-header .et_search_form_container input::-webkit-input-placeholder{color:!important}.et-fixed-header .et_search_form_container input:-ms-input-placeholder{color:!important}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:!important}}@media only screen and (min-width:1350px){.et_pb_row{padding:27px 0}.et_pb_section{padding:54px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:81px}.et_pb_fullwidth_section{padding:0}}h1,h1.et_pb_contact_main_title,.et_pb_title_container h1{font-size:40px}h2,.product .related h2,.et_pb_column_1_2 .et_quote_content blockquote p{font-size:34px}h3{font-size:29px}h4,.et_pb_circle_counter h3,.et_pb_number_counter h3,.et_pb_column_1_3 .et_pb_post h2,.et_pb_column_1_4 .et_pb_post h2,.et_pb_blog_grid h2,.et_pb_column_1_3 .et_quote_content blockquote p,.et_pb_column_3_8 .et_quote_content blockquote p,.et_pb_column_1_4 .et_quote_content blockquote p,.et_pb_blog_grid .et_quote_content blockquote p,.et_pb_column_1_3 .et_link_content h2,.et_pb_column_3_8 .et_link_content h2,.et_pb_column_1_4 .et_link_content h2,.et_pb_blog_grid .et_link_content h2,.et_pb_column_1_3 .et_audio_content h2,.et_pb_column_3_8 .et_audio_content h2,.et_pb_column_1_4 .et_audio_content h2,.et_pb_blog_grid .et_audio_content h2,.et_pb_column_3_8 .et_pb_audio_module_content h2,.et_pb_column_1_3 .et_pb_audio_module_content h2,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2{font-size:24px}h5{font-size:21px}h6{font-size:18px}.et_pb_slide_description .et_pb_slide_title{font-size:61px}.woocommerce ul.products li.product h3,.woocommerce-page ul.products li.product h3,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,.et_pb_column_1_4 .et_pb_audio_module_content h2{font-size:21px}</style></head>
 <body data-rsssl=1 class="home page-template-default page page-id-104 custom-background et-tb-has-template et-tb-has-footer et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_smooth_scroll et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css">
 	
 <!-- Google Tag Manager (noscript) --><div id="page-container">
@@ -6976,17 +6984,128 @@ Více o používání cookies na naší stránce si můžete přečíst <a href=
 				<script type="text/javascript">
 				var et_link_options_data = [{"class":"et_pb_blurb_43","url":"tel:800050248","target":"_self"},{"class":"et_pb_blurb_96","url":"tel:952222222","target":"_self"},{"class":"et_pb_blurb_113","url":"tel:261105555","target":"_self"},{"class":"et_pb_blurb_130","url":"tel:810800000","target":"_self"},{"class":"et_pb_blurb_147","url":"tel:222929199","target":"_self"},{"class":"et_pb_blurb_165","url":"tel:800209000","target":"_self"},{"class":"et_pb_blurb_182","url":"tel:800213213","target":"_self"},{"class":"et_pb_blurb_199","url":"tel:844211211","target":"_self"},{"class":"et_pb_blurb_232","url":"tel:800050248","target":"_self"},{"class":"et_pb_blurb_285","url":"tel:952222222","target":"_self"},{"class":"et_pb_blurb_302","url":"tel:261105555","target":"_self"},{"class":"et_pb_blurb_319","url":"tel:810800000","target":"_self"},{"class":"et_pb_blurb_336","url":"tel:222929199","target":"_self"},{"class":"et_pb_blurb_354","url":"tel:800209000","target":"_self"},{"class":"et_pb_blurb_371","url":"tel:800213213","target":"_self"},{"class":"et_pb_blurb_388","url":"tel:844211211","target":"_self"},{"class":"et_pb_text_3_tb_footer","url":"https:\/\/nedluzimstatu.ceskodigital.net\/","target":"_self"}];
 			</script>
-	<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
+	<link rel='stylesheet' id='simple-share-buttons-adder-ssba-css'  href='/wp-content/plugins/simple-share-buttons-adder/css/ssba.css?ver=5.7' type='text/css' media='all' />
+<style id='simple-share-buttons-adder-ssba-inline-css' type='text/css'>
+	.ssba {
+									
+									
+									
+									
+								}
+								.ssba img
+								{
+									width: 35px !important;
+									padding: 6px;
+									border:  0;
+									box-shadow: none !important;
+									display: inline !important;
+									vertical-align: middle;
+									box-sizing: unset;
+								}
+
+								.ssba-classic-2 .ssbp-text {
+									display: none!important;
+								}
+
+								.ssba .fb-save
+								{
+								padding: 6px;
+								line-height: 30px; }
+								.ssba, .ssba a
+								{
+									text-decoration:none;
+									background: none;
+									
+									font-size: 12px;
+									
+									font-weight: normal;
+								}
+								 .ssba_sharecount:after, .ssba_sharecount:before {
+									right: 100%;
+									border: solid transparent;
+									content: " ";
+									height: 0;
+									width: 0;
+									position: absolute;
+									pointer-events: none;
+								}
+								.ssba_sharecount:after {
+									border-color: rgba(224, 221, 221, 0);
+									border-right-color: #f5f5f5;
+									border-width: 5px;
+									top: 50%;
+									margin-top: -5px;
+								}
+								.ssba_sharecount:before {
+									border-color: rgba(85, 94, 88, 0);
+									border-right-color: #e0dddd;
+									border-width: 6px;
+									top: 50%;
+									margin-top: -6px;
+								}
+								.ssba_sharecount {
+									font: 11px Arial, Helvetica, sans-serif;
+
+									padding: 5px;
+									-khtml-border-radius: 6px;
+									-o-border-radius: 6px;
+									-webkit-border-radius: 6px;
+									-moz-border-radius: 6px;
+									border-radius: 6px;
+									position: relative;
+									border: 1px solid #e0dddd;color: #555e58;
+										background: #f5f5f5;
+									}
+									.ssba_sharecount:after {
+										border-right-color: #f5f5f5;
+									}
+
+			   #ssba-bar-2 .ssbp-bar-list {
+					max-width: 48px!important;;
+			   }
+			   #ssba-bar-2 .ssbp-bar-list li a {height: 48px!important; width: 48px!important; 
+				}
+				#ssba-bar-2 .ssbp-bar-list li a:hover {
+				}
+
+				#ssba-bar-2 .ssbp-bar-list li a::before {line-height: 48px!important;; font-size: 18px;}
+				#ssba-bar-2 .ssbp-bar-list li a:hover::before {}
+				#ssba-bar-2 .ssbp-bar-list li {
+				margin: 5px 0!important;
+				}@media only screen and ( max-width: 750px ) {
+				#ssba-bar-2 {
+				display: block;
+				}
+			}
+@font-face {
+				font-family: 'ssbp';
+				src:url('/wp-content/plugins/simple-share-buttons-adder/fonts/ssbp.eot?xj3ol1');
+				src:url('/wp-content/plugins/simple-share-buttons-adder/fonts/ssbp.eot?#iefixxj3ol1') format('embedded-opentype'),
+					url('/wp-content/plugins/simple-share-buttons-adder/fonts/ssbp.woff?xj3ol1') format('woff'),
+					url('/wp-content/plugins/simple-share-buttons-adder/fonts/ssbp.ttf?xj3ol1') format('truetype'),
+					url('/wp-content/plugins/simple-share-buttons-adder/fonts/ssbp.svg?xj3ol1#ssbp') format('svg');
+				font-weight: normal;
+				font-style: normal;
+
+				/* Better Font Rendering =========== */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+</style>
+<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4' id='wp-polyfill-js'></script>
 <script type='text/javascript' id='wp-polyfill-js-after'>
-( 'fetch' in window ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );
+( 'fetch' in window ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
 </script>
-<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/i18n.min.js?ver=ac389435e7fd4ded01cf603f3aaba6a6' id='wp-i18n-js'></script>
+<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/hooks.min.js?ver=50e23bed88bcb9e6e14023e9961698c1' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/i18n.min.js?ver=db9a9a37da262883343e941c3731bc67' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
 <script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.19' id='lodash-js'></script>
 <script type='text/javascript' id='lodash-js-after'>
 window.lodash = _.noConflict();
 </script>
-<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/url.min.js?ver=98645f0502e5ed8dadffd161e39072d2' id='wp-url-js'></script>
-<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/hooks.min.js?ver=84b89ab09cbfb4469f02183611cc0939' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/url.min.js?ver=0ac7e0472c46121366e7ce07244be1ac' id='wp-url-js'></script>
 <script type='text/javascript' id='wp-api-fetch-js-translations'>
 ( function( domain, translations ) {
 	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
@@ -6994,10 +7113,10 @@ window.lodash = _.noConflict();
 	wp.i18n.setLocaleData( localeData, domain );
 } )( "default", { "locale_data": { "messages": { "": {} } } } );
 </script>
-<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/api-fetch.min.js?ver=4dec825c071b87c57f687eb90f7c23c3' id='wp-api-fetch-js'></script>
+<script type='text/javascript' src='https://nedluzimstatu.ceskodigital.net/wp-includes/js/dist/api-fetch.min.js?ver=a783d1f442d2abefc7d6dbd156a44561' id='wp-api-fetch-js'></script>
 <script type='text/javascript' id='wp-api-fetch-js-after'>
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://nedluzimstatu.ceskodigital.net/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "69835002c8" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "cb94c85060" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://nedluzimstatu.ceskodigital.net/wp-admin/admin-ajax.php?action=rest-nonce";
@@ -7008,7 +7127,7 @@ var wpcf7 = [];
 /* ]]> */
 </script>
 <script type='text/javascript' src='/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4' id='contact-form-7-js'></script>
-<script type='text/javascript' src='/wp-content/plugins/simple-share-buttons-adder/js/ssba.js?ver=5.6.2' id='simple-share-buttons-adder-ssba-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/simple-share-buttons-adder/js/ssba.js?ver=5.7' id='simple-share-buttons-adder-ssba-js'></script>
 <script type='text/javascript' id='simple-share-buttons-adder-ssba-js-after'>
 Main.boot( [] );
 </script>
@@ -7016,14 +7135,14 @@ Main.boot( [] );
 /* <![CDATA[ */
 var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
 var et_shortcodes_strings = {"previous":"Previous","next":"Next"};
-var et_pb_custom = {"ajaxurl":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-admin\/admin-ajax.php","images_uri":"\/wp-content\/themes\/Divi\/images","builder_images_uri":"\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"2e0ebea561","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"cdf2a0d1e9","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"104","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/nedluzimstatu.ceskodigital.net\/wp-admin\/admin-ajax.php","images_uri":"\/wp-content\/themes\/Divi\/images","builder_images_uri":"\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"f3bd3ced32","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"afa2bdf59c","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"104","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
 var et_pb_box_shadow_elements = [];
 var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
 var et_pb_sticky_elements = [];
 /* ]]> */
 </script>
-<script type='text/javascript' src='/wp-content/themes/Divi/js/custom.unified.js?ver=4.9.1' id='divi-custom-script-js'></script>
-<script type='text/javascript' src='/wp-content/themes/Divi/core/admin/js/common.js?ver=4.9.1' id='et-core-common-js'></script>
+<script type='text/javascript' src='/wp-content/themes/Divi/js/custom.unified.js?ver=4.9.2' id='divi-custom-script-js'></script>
+<script type='text/javascript' src='/wp-content/themes/Divi/core/admin/js/common.js?ver=4.9.2' id='et-core-common-js'></script>
 <script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Ld-VeoZAAAAAAIrNW74N2EYnEvFeWZSgJeomQT5&#038;ver=3.0' id='google-recaptcha-js'></script>
 <script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
 /* <![CDATA[ */
