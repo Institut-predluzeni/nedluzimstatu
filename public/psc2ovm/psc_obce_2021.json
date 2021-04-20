@@ -1,3 +1,4 @@
+psc_callback(
 [
 ["10000","554782","Praha","Hlavní město Praha","Hlavní město Praha","500089","Praha 2"],
 ["10000","554782","Praha","Hlavní město Praha","Hlavní město Praha","500097","Praha 3"],
@@ -8101,3 +8102,4 @@
 ["79861","589977","Rozstání","Prostějov","Olomoucký",null,null],
 ["79862","589977","Rozstání","Prostějov","Olomoucký",null,null],
 []]
+);
