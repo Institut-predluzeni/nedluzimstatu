@@ -6,9 +6,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "production-nedluzim-statu-terraform-backend-eu-west-1"
+    bucket = "production-nedluzim-statu-terraform-backend-eu-central-1"
     key    = "terraform.tfstate"
-    region = "eu-west-1"
+    region = "eu-central-1"
   }
 }
 
