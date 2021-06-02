@@ -71,7 +71,7 @@ var adminsubtabs = {
 		},
 		"int-wc": {
 			tabtext: gtm4wp.wctabtitle,
-			numitems: 15
+			numitems: 17
 		},
 		"int-google-optimize": {
 			tabtext: gtm4wp.gotabtitle,
@@ -79,6 +79,10 @@ var adminsubtabs = {
 		},
 		"int-amp": {
 			tabtext: gtm4wp.amptabtitle,
+			numitems: 1
+		},
+		"int-cookiebot": {
+			tabtext: gtm4wp.cookiebottabtitle,
 			numitems: 1
 		}
 	}

@@ -7,7 +7,7 @@ function gtm4wp_map_eec_to_ga4( productdata ) {
 	}
 
 	var category_path  = productdata.category ? productdata.category : '';
-	var category_parts = category_path.split('/');
+	var category_parts = category_path.toString().split('/');
 
 	// default, required parameters
 	var ga4_product = {
@@ -43,6 +43,9 @@ function gtm4wp_map_eec_to_ga4( productdata ) {
 	if ( productdata.coupon ) {
 		ga4_product.coupon = productdata.coupon;
 	}
+
+	ga4_product.google_business_vertical = window.gtm4wp_business_vertical;
+	ga4_product[ window.gtm4wp_business_vertical_id ] = gtm4wp_id_prefix + ga4_product[ "item_id" ];
 
 	return ga4_product;
 }
@@ -528,6 +531,11 @@ jQuery(function() {
 			},
 			'eventCallback': function() {
 
+				// do not fire this event multiple times
+				if ( window[ "gtm4wp_select_item_" + product_data.id ] ) {
+					return;
+				}
+
 				// fire ga4 version
 				window[ gtm4wp_datalayer_name ].push({
 					'event': 'select_item',
@@ -546,6 +554,8 @@ jQuery(function() {
 					},
 					'eventTimeout': 2000
 				});
+
+				window[ "gtm4wp_select_item_" + product_data.id ] = true;
 
 			},
 			'eventTimeout': 2000
@@ -894,7 +904,7 @@ jQuery(function() {
 					'event': 'view_cart',
 					'ecommerce': {
 						'currency': gtm4wp_currency,
-						'value': sum_value,
+						'value': sum_value.toFixed(2),
 						'items': ga4_products
 					}
 				});
