@@ -4666,10 +4666,6 @@ __webpack_require__.r(__webpack_exports__);
           return false;
         }
       }
-    }); // Marking elements which has attached event already
-
-    $('a[href*="#"]:not([href="#"])').each(function (index, element) {
-      $(element).attr('data-et-has-event-already', 'true');
     });
 
     var et_pb_window_side_nav_get_sections = function et_pb_window_side_nav_get_sections() {
