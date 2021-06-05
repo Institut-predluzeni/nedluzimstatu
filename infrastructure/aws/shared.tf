@@ -239,3 +239,16 @@ resource "aws_security_group" "development-sg" {
       "0.0.0.0/0"]
   }
 }
+
+resource "aws_iam_user" "github_deployment" {
+  name = "github_deployment"
+}
+
+resource "aws_iam_access_key" "github_deployment" {
+  user = aws_iam_user.github_deployment.name
+}
+
+resource "aws_iam_user_policy_attachment" "github_deployment_static_deploy" {
+  user       = aws_iam_user.github_deployment.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+}
