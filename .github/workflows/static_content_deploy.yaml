@@ -9,6 +9,8 @@ on:
 env:
   bucketName: ${{ secrets.AWS_STATIC_CONTENT_BUCKET_NAME }}
   cloudFrontDeploymentId: ${{ secrets.AWS_CLOUDFRONT_DEPLOYMENT_ID }}
+  bucketNameIprp: ${{ secrets.AWS_STATIC_CONTENT_BUCKET_NAME_IPRP }}
+  cloudFrontDeploymentIdIprp: ${{ secrets.AWS_CLOUDFRONT_DEPLOYMENT_ID_IPRP }}
 jobs:
   deploy:
     runs-on: ubuntu-18.04
@@ -24,3 +26,12 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: 'Deploy to AWS - IPRP'
+        run: |
+          cp -a ../public .
+          aws s3 sync --acl public-read --delete . s3://${{ env.bucketNameIprp }}
+          aws cloudfront create-invalidation --distribution-id ${{ env.cloudFrontDeploymentIdIprp }} --paths "/*"
+        working-directory: 'static_content'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_IPRP }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_IPRP }}
