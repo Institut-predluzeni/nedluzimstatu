@@ -48,8 +48,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   default_root_object = "index.html"
 
   aliases = [
-    var.public_domain,
-    "www.${var.public_domain}"
+    "iprp.${var.public_domain}"
   ]
 
   default_cache_behavior {

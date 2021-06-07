@@ -36,23 +36,3 @@ resource "aws_s3_bucket" "static_content" {
     error_document = "index.html"
   }
 }
-
-data "aws_route53_zone" "public-zone" {
-  name         = "ceskodigital.net."
-  private_zone = false
-}
-
-resource aws_route53_record temporary-public {
-  depends_on = [
-    aws_instance.wordpress,
-    aws_eip.wordpress-ip
-  ]
-  name       = "nedluzimstatu"
-  type       = "A"
-  zone_id    = data.aws_route53_zone.public-zone.id
-  ttl        = "300"
-
-  records = [
-    aws_instance.wordpress.public_ip
-  ]
-}

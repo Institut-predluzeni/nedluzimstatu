@@ -6,9 +6,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "production-nedluzim-statu-terraform-backend-eu-west-1"
+    bucket = "production-nedluzim-statu-terraform-backend-eu-central-1"
     key    = "terraform.tfstate"
-    region = "eu-west-1"
+    region = "eu-central-1"
   }
 }
 
@@ -238,4 +238,17 @@ resource "aws_security_group" "development-sg" {
     cidr_blocks = [
       "0.0.0.0/0"]
   }
+}
+
+resource "aws_iam_user" "github_deployment" {
+  name = "github_deployment"
+}
+
+resource "aws_iam_access_key" "github_deployment" {
+  user = aws_iam_user.github_deployment.name
+}
+
+resource "aws_iam_user_policy_attachment" "github_deployment_static_deploy" {
+  user       = aws_iam_user.github_deployment.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 }
