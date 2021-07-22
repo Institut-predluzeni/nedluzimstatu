@@ -38,7 +38,7 @@
   var _colorValue       = 'Color value';
   var _selectColor      = 'Select Color';
 
-  if ('undefined' !== typeof wp && 'undefined' !== typeof wp.i18n) {
+  if ('undefined' !== typeof wp && 'undefined' !== typeof wp.i18n && 'undefined' !== typeof wp.i18n.__) {
     // Directly use wp.i18n if it exists. wp.i18n is added on 5.0.
     var __ = wp.i18n.__;
     _defaultString    = __( 'Default' );
