@@ -989,10 +989,11 @@ Více o používání cookies na naší stránce si můžete přečíst <a href=
   jQuery(function($){
 	  if (window.location.hash.startsWith('#hledanipobocky')){ // tmp, remove
 	  	$('.hledani_pobocky').show();
+		$('.hledani-formular').show();
+	    $('.et_pb_module .hledani-formular').parent().parent().prev().hide();
+	    $('.et_pb_module .hledani-formular').parent().parent().prev().prev().hide();
 	  }
-      $('.hledani-formular').show();
-	  $('.et_pb_module .hledani-formular').parent().parent().prev().hide();
-	  $('.et_pb_module .hledani-formular').parent().parent().prev().prev().hide();
+      
 	  
   var psc = [];// "psc","kodobce","nazobce","nazokresu","nazevkraj","kodmomc","nazmomc";
   var availableTags = [];
