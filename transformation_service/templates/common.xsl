@@ -25,7 +25,7 @@
                     <xsl:apply-templates select="/json"/>
 
                     <p>
-                        <xsl:text>Potvrzení je vydáváno za účelem </xsl:text>
+                        <xsl:text>Potvrzení je vydáváno za účelem: </xsl:text>
                         <xsl:apply-templates select="/json/reason/*"/>
                         <xsl:text>.</xsl:text>
                     </p>
