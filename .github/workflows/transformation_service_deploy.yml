@@ -5,6 +5,8 @@ on:
       - master
     paths:
       - 'transformation_service/**'
+  workflow_dispatch:
+
 env:
   region: ${{ secrets.AWS_REGION }}
   repository: ${{ secrets.AWS_REPOSITORY }}
