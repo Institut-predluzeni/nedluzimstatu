@@ -25,7 +25,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: 'Build Docker image'
         run: |
-          docker build -t ${{ env.serviceName }} -f ./${{ env.serviceName }}/Dockerfile ./transformation_service
+          docker build -t ${{ env.serviceName }} -f ./transformation_service/Dockerfile ./transformation_service
       - name: 'Push Docker image to repository'
         run: |
           docker tag ${{ env.serviceName }}:latest ${{ env.repository }}/${{ env.serviceName }}:latest
