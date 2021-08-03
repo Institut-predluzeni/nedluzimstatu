@@ -8,7 +8,7 @@ on:
 env:
   region: ${{ secrets.AWS_REGION }}
   repository: ${{ secrets.AWS_REPOSITORY }}
-  serviceName: 'transformation_service'
+  serviceName: 'service-transformation'
 jobs:
   deploy:
     runs-on: ubuntu-latest
