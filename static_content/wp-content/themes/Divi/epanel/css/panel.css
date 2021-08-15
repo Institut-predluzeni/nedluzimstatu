@@ -1505,13 +1505,13 @@ left: 0px;
 	transition: background-color 200ms ease;
 }
 .et-box-content .wp-color-result { display: none; }
-.et-box-content .iris-picker { display: block !important; }
+.et-box-content .iris-picker { display: block !important;}
 .et-box-content .colorpalette-item:last-child { margin-right: 0; }
 .et-box-content .colorpalette-colorpicker { display: none; }
 .et-box-content .colorpalette-colorpicker.active { display: block; }
 .et-box-content .wp-picker-holder { margin-top: 50px; }
 .et-box-content input.input-colorpalette-colorpicker.wp-color-picker { display: block !important; width: 316px !important; }
-
+.et-box-content .iris-picker .iris-strip { margin-left: 9px !important; }
 .et-clearfix { clear: both; }
 
 /* Portability Integration */

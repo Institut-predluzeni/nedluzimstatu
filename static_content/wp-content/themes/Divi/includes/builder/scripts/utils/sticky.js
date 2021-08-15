@@ -313,3 +313,33 @@ export const getClosestStickyModuleOffsetTop = $target => {
 
   return closestStickyOffsetTop;
 };
+
+/**
+ * Determine if the target is in sticky state.
+ *
+ * @since 4.9.5
+ *
+ * @param {object} $target
+ *
+ * @returns {bool}
+ */
+export const isTargetStickyState = $target => {
+  const stickyModules = get(window.ET_FE, 'stores.sticky.modules', {});
+
+  let isStickyState = false;
+
+  forEach(stickyModules, stickyModule => {
+    const isTarget             = $target.is(get(stickyModule, 'selector'));
+    const {isSticky, isPaused} = stickyModule;
+
+    // If the target is in sticky state and not paused, set isStickyState to true and exit iteration.
+    // Elements can have a sticky limit (ex: section) in which case they can be sticky but paused.
+    if (isTarget && isSticky && !isPaused) {
+      isStickyState = true;
+
+      return false; // Exit iteration.
+    }
+  });
+
+  return isStickyState;
+};

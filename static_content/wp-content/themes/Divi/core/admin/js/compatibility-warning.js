@@ -6,7 +6,7 @@
  *
  * @see {ET_Core_Compatibility_Warning()}
  */
-(function($) {
+ (function($) {
   'use strict';
 
   // Bail early if there is no compatibility warning data.
@@ -42,11 +42,22 @@
   if (data.customizer_data) {
     // Active Theme - Disable publish button.
     if (true !== data.customizer_data.compatible_wp || true !== data.customizer_data.compatible_php) {
-      $('#customize-save-button-wrapper #save').remove();
-      $('#customize-save-button-wrapper #publish-settings')
-        .removeAttr('id')
-        .attr('class', 'button button-primary disabled')
-        .text(data.customizer_data.disabled_text);
+      var $save            = $('#customize-controls #save');
+      var $publishSettings = $('#customize-controls #publish-settings');
+
+      if ($publishSettings.length > 0) {
+        $save.remove();
+        $publishSettings
+          .removeAttr('id')
+          .attr('class', 'button button-primary disabled')
+          .text(data.customizer_data.disabled_text);
+      } else {
+        $save
+          .removeAttr('id')
+          .attr('class', 'button button-primary disabled')
+          .attr('value', data.customizer_data.disabled_text)
+          .text(data.customizer_data.disabled_text);
+      }
     }
 
     // Themes List & Details - Remove default templates, so we can replace them later.
