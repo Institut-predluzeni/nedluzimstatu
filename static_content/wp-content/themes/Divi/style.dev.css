@@ -1,7 +1,7 @@
 /*!
 Theme Name: Divi
 Theme URI: http://www.elegantthemes.com/gallery/divi/
-Version: 4.9.4
+Version: 4.9.11
 Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
 Author: Elegant Themes
 Author URI: http://www.elegantthemes.com
@@ -774,6 +774,7 @@ body.admin-bar.et_non_fixed_nav.et_transparent_nav.et_header_style_slide #main-h
 
 /* Logo */
 #logo {
+  width: auto;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   margin-bottom: 0;
@@ -2057,10 +2058,10 @@ img#about-image {
   margin: 3px 8px 8px 0px; }
 
 /* Search Widget */
-.widget_search .screen-reader-text {
+.widget_search .screen-reader-text, .et_pb_widget .wp-block-search__label {
   display: none; }
 
-.widget_search input#s, .widget_search input#searchsubmit {
+.widget_search input#s, .widget_search input#searchsubmit, .et_pb_widget .wp-block-search__input, .et_pb_widget .wp-block-search__button {
   padding: .7em;
   height: 40px !important;
   margin: 0;
@@ -2069,14 +2070,14 @@ img#about-image {
   border: 1px solid #ddd;
   color: #666; }
 
-.widget_search #s {
+.widget_search #s, .et_pb_widget .wp-block-search__input {
   width: 100%;
   border-radius: 3px; }
 
-.widget_search #searchform {
+.widget_search #searchform, .et_pb_widget .wp-block-search {
   position: relative; }
 
-.widget_search #searchsubmit {
+.widget_search #searchsubmit, .et_pb_widget .wp-block-search__button {
   background-color: #ddd;
   width: 70px;
   -webkit-border-top-right-radius: 3px;
@@ -2089,7 +2090,7 @@ img#about-image {
   right: 0;
   top: 0; }
 
-#searchsubmit {
+#searchsubmit, .et_pb_widget .wp-block-search__button {
   cursor: pointer; }
 
 /* WordPress Calendar */
@@ -2133,8 +2134,18 @@ img#about-image {
   padding-left: 10px;
   text-align: left; }
 
+.et_pb_widget .wp-block-calendar th, .et_pb_widget .wp-block-calendar td {
+  border: 0; }
+
+.et_pb_widget .wp-block-calendar table th {
+  font-weight: bold;
+  background: none; }
+
+.et_pb_widget .wp-block-calendar {
+  text-align: left; }
+
 /* Tag Cloud */
-.tagcloud a {
+.tagcloud a, .wp-block-tag-cloud a {
   font-size: 12px !important;
   padding: 2px 8px;
   background: rgba(0, 0, 0, 0.05);
@@ -2144,8 +2155,20 @@ img#about-image {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
 
-.tagcloud a:hover {
+.tagcloud a:hover, .wp-block-tag-cloud a:hover {
   background: rgba(0, 0, 0, 0.15); }
+
+/* Block-Based Widgets */
+.et_pb_widget {
+  /* Widget Title (Heading in Group) */ }
+  .et_pb_widget .wp-block-group__inner-container > h2,
+  .et_pb_widget .wp-block-group__inner-container > h3 {
+    font-size: 18px; }
+    .footer-widget .et_pb_widget .wp-block-group__inner-container > h2, .footer-widget
+    .et_pb_widget .wp-block-group__inner-container > h3 {
+      color: #2ea3f2; }
+  .et_pb_widget .wp-block-latest-comments__comment {
+    line-height: 1.7em; }
 
 /* Color Schemes */
 .et_color_scheme_green a {
@@ -4290,6 +4313,10 @@ body #main-content .et_builder_inner_content > p {
  * - In the Divi Builder plugin, these styles are wrapped to increase specificity.
  * - In the Divi Theme, these styles are not wrapped since wrapping body classes would break the selector.
  */
+@media all and (min-width: 981px) {
+  .et_pb_row [class*="et_pb_gutters"] .et_pb_gallery .et_pb_gallery_items .et_pb_gallery_item.et_pb_grid_item.last_in_row {
+    margin-right: 0; } }
+
 /* Gutters */
 /* Responsive Styles Desktop Only */
 @media all and (min-width: 981px) {
@@ -8559,10 +8586,10 @@ body #main-content .et_builder_inner_content > p {
 .et_pb_widget li a:hover {
   color: #82c0c7; }
 
-.et_pb_widget ul li {
+.et_pb_widget ul li, .et_pb_widget ol li {
   margin-bottom: .5em; }
 
-.et_pb_widget ul li ul li {
+.et_pb_widget ul li ul li, .et_pb_widget ol li ol li {
   margin-left: 15px; }
 
 .et_pb_widget select {
@@ -11234,13 +11261,15 @@ h1.et_pb_contact_main_title {
 
 .et_pb_contact p input[type="checkbox"]:checked + label i:before,
 .et_pb_subscribe .et_pb_contact_field input[type="checkbox"]:checked + label i:before {
-  content: '\f147';
-  font-family: 'dashicons';
+  content: 'N';
+  font-family: 'ETmodules';
   color: #2EA3F2;
   width: 17px;
   height: 17px;
-  font-size: 17px;
-  line-height: 17px; }
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17px;
+  text-align: center; }
 
 .et_pb_contact p input[type="radio"]:checked + label i:before,
 .et_pb_subscribe .et_pb_contact_field input[type="radio"]:checked + label i:before {
@@ -13033,6 +13062,7 @@ body.rtl.et-db:not(.et-fb-no-rtl) .et_audio_container .mejs-controls div.mejs-ti
   animation-name: fadeLeft; }
 
 .et_pb_slide_image img {
+  width: auto;
   vertical-align: bottom; }
 
 .et_pb_slide_image,
@@ -15434,6 +15464,10 @@ body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_image
 
 /* Animation - Tablet */
 @media all and (max-width: 980px) {
+  .et_pb_animation_off_tablet, .et-waypoint.et_pb_animation_off_tablet {
+    opacity: 1;
+    -webkit-animation: none;
+            animation: none; }
   .et_pb_animation_left_tablet.et-animated {
     opacity: 1;
     -webkit-animation: fadeLeft 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
@@ -15457,6 +15491,10 @@ body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_image
 
 /* Animation - Phone */
 @media all and (max-width: 767px) {
+  .et_pb_animation_off_phone, .et-waypoint.et_pb_animation_off_phone {
+    opacity: 1;
+    -webkit-animation: none;
+            animation: none; }
   .et_pb_animation_left_phone.et-animated {
     opacity: 1;
     -webkit-animation: fadeLeft 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
@@ -17210,6 +17248,7 @@ body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_image
   .et_pb_slide_image,
   .et_pb_slide_video {
     position: relative;
+    top: auto;
     margin: 50px auto 0;
     padding: 0; }
   .et_pb_slide_image img {

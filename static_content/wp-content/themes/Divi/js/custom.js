@@ -870,6 +870,36 @@ module.exports = baseToString;
 
 /***/ }),
 
+/***/ "./includes/builder/node_modules/lodash/_baseTrim.js":
+/*!***********************************************************!*\
+  !*** ./includes/builder/node_modules/lodash/_baseTrim.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var trimmedEndIndex = __webpack_require__(/*! ./_trimmedEndIndex */ "./includes/builder/node_modules/lodash/_trimmedEndIndex.js");
+
+/** Used to match leading whitespace. */
+var reTrimStart = /^\s+/;
+
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */
+function baseTrim(string) {
+  return string
+    ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '')
+    : string;
+}
+
+module.exports = baseTrim;
+
+
+/***/ }),
+
 /***/ "./includes/builder/node_modules/lodash/_baseUnary.js":
 /*!************************************************************!*\
   !*** ./includes/builder/node_modules/lodash/_baseUnary.js ***!
@@ -2098,6 +2128,36 @@ module.exports = toSource;
 
 /***/ }),
 
+/***/ "./includes/builder/node_modules/lodash/_trimmedEndIndex.js":
+/*!******************************************************************!*\
+  !*** ./includes/builder/node_modules/lodash/_trimmedEndIndex.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/** Used to match a single whitespace character. */
+var reWhitespace = /\s/;
+
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */
+function trimmedEndIndex(string) {
+  var index = string.length;
+
+  while (index-- && reWhitespace.test(string.charAt(index))) {}
+  return index;
+}
+
+module.exports = trimmedEndIndex;
+
+
+/***/ }),
+
 /***/ "./includes/builder/node_modules/lodash/eq.js":
 /*!****************************************************!*\
   !*** ./includes/builder/node_modules/lodash/eq.js ***!
@@ -2995,14 +3055,12 @@ module.exports = toInteger;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(/*! ./isObject */ "./includes/builder/node_modules/lodash/isObject.js"),
+var baseTrim = __webpack_require__(/*! ./_baseTrim */ "./includes/builder/node_modules/lodash/_baseTrim.js"),
+    isObject = __webpack_require__(/*! ./isObject */ "./includes/builder/node_modules/lodash/isObject.js"),
     isSymbol = __webpack_require__(/*! ./isSymbol */ "./includes/builder/node_modules/lodash/isSymbol.js");
 
 /** Used as references for various `Number` constants. */
 var NAN = 0 / 0;
-
-/** Used to match leading and trailing whitespace. */
-var reTrim = /^\s+|\s+$/g;
 
 /** Used to detect bad signed hexadecimal string values. */
 var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
@@ -3053,7 +3111,7 @@ function toNumber(value) {
   if (typeof value != 'string') {
     return value === 0 ? value : +value;
   }
-  value = value.replace(reTrim, '');
+  value = baseTrim(value);
   var isBinary = reIsBinary.test(value);
   return (isBinary || reIsOctal.test(value))
     ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
@@ -4871,8 +4929,7 @@ __webpack_require__.r(__webpack_exports__);
     }); // Detect actual logo dimension, used for tricky fixed navigation transition
 
     function et_define_logo_dimension() {
-      var $logo = $('#logo'),
-          logo_src = $logo.attr('src'),
+      var logo_src = $logo.is('img') ? $logo.attr('src') : $logo.find('img').attr('src'),
           is_svg = logo_src.substr(-3, 3) === 'svg' ? true : false,
           $logo_wrap,
           logo_width,
@@ -4907,10 +4964,11 @@ __webpack_require__.r(__webpack_exports__);
       et_fix_logo_transition(true);
     }
 
-    if ($('#logo').length) {
-      // Wait until logo is loaded before performing logo dimension fix
+    if ($logo.length) {
+      var logo_src = $logo.is('img') ? $logo.attr('src') : $logo.find('img').attr('src'); // Wait until logo is loaded before performing logo dimension fix
       // This comes handy when the page is heavy due to the use of images or other assets
-      et_preload_image($('#logo').attr('src'), et_define_logo_dimension);
+
+      et_preload_image(logo_src, et_define_logo_dimension);
     } // Set width for adsense in footer widget
 
 
@@ -5168,7 +5226,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 
-  $(window).on('unload', function () {
+  $(window).on('visibilitychange', function () {
     /**
      * Fix the issue with Fullscreen menu, that remains open,
      * when back button is clicked in Firefox
