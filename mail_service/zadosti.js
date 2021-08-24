@@ -130,4 +130,5 @@ function sendMail(data) {
     }
 }
 
+//GraalVM aktuálně neumí ESM exporty, místo toho je exportován poslední výraz skriptu.
 sendMail;
