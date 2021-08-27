@@ -1,0 +1,4 @@
+mail-service:
+  repositories:
+    default:
+      api-key: SENDGRID_API_TOKEN
