@@ -11,6 +11,7 @@ env:
   region: ${{ secrets.AWS_REGION_IPRP }}
   repository: ${{ secrets.AWS_REPOSITORY_IPRP }}
   serviceName: 'service-mail'
+  clusterName: 'service-transformation'
   sendgridApiKey: ${{ secrets.SENDGRID_API_KEY }}
 jobs:
   deploy:
