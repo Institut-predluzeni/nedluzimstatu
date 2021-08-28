@@ -43,7 +43,7 @@ function sendMail(data) {
     if (data.recipients["financni-urad"]) {
         attachments.push(
             HTTP.post(
-                `${baseURL}financni-urad`, {
+                `${baseURL}/financni-urad`, {
                     headers: defaultHeaders,
                     data: JSON.stringify({
                         recipient: data.recipients["financni-urad"],
@@ -116,7 +116,7 @@ function sendMail(data) {
     return {
         from: {
             name: "Nedlužím státu",
-            email: "info@nedluzimstatu.cz"
+            email: "notifications@cesko.digital"
         },
         to: {
             email: data.recipientEmail,
