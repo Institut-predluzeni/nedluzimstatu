@@ -119,7 +119,8 @@ function sendMail(data) {
             email: "info@nedluzimstatu.cz"
         },
         to: {
-            email: data.recipientEmail
+            email: data.recipientEmail,
+	    name: data.recipientName
         },
         subject: "Žádosti o potvrzení bezdlužnosti",
         content: [

@@ -4,8 +4,8 @@ WORKDIR /home/app
 
 ARG SENDGRID_API_KEY    
 
-COPY ./zadosti.html /home/app/data/
 COPY ./zadosti.js /home/app/data/
+COPY ./zadost.html /home/app/data/
 COPY ./zadost.txt /home/app/data/
 
 ADD ./application.yaml /home/app/application-tmp.yaml
