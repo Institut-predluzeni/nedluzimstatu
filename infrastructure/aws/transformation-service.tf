@@ -132,7 +132,7 @@ resource "aws_ecs_service" "service-mail" {
   load_balancer {
     target_group_arn = aws_lb_target_group.service-mail-tg.arn
     container_name   = "service-mail"
-    container_port   = 8081
+    container_port   = 8080
   }
 }
 
@@ -195,13 +195,13 @@ resource "aws_lb_target_group" "service-transformation-tg" {
 
 resource "aws_lb_target_group" "service-mail-tg" {
   name        = "service-mail-tg"
-  port        = 8081
+  port        = 8080
   protocol    = "HTTP"
   vpc_id      = aws_vpc.vpc.id
   target_type = "ip"
   health_check {
     enabled = true
-    port    = 8081
+    port    = 8080
     matcher = "200,404"
   }
 }

@@ -43,6 +43,22 @@ resource "aws_cloudfront_distribution" "distribution" {
     }
   }
 
+  origin {
+    domain_name = aws_lb.service-transformation-lb.dns_name
+    origin_id   = "service-mail"
+
+    custom_origin_config {
+      http_port              = 8081
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = [
+        "TLSv1",
+        "TLSv1.1",
+        "TLSv1.2"
+      ]
+    }
+  }
+
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
@@ -87,6 +103,44 @@ resource "aws_cloudfront_distribution" "distribution" {
       "GET",
       "HEAD"]
     target_origin_id = "service-transformation"
+
+    forwarded_values {
+      query_string = true
+      cookies {
+        forward = "none"
+      }
+    }
+    min_ttl                = 0
+    default_ttl            = 86400
+    max_ttl                = 86400
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+
+    lambda_function_association {
+      event_type = "origin-request"
+      lambda_arn = aws_lambda_function.lambda_edge_request.qualified_arn
+    }
+
+    lambda_function_association {
+      event_type = "viewer-response"
+      lambda_arn = aws_lambda_function.lambda_edge_response.qualified_arn
+    }
+  }
+
+  ordered_cache_behavior {
+    path_pattern     = "/mail-service/*"
+    allowed_methods  = [
+      "GET",
+      "POST",
+      "DELETE",
+      "OPTIONS",
+      "PUT",
+      "PATCH",
+      "HEAD"]
+    cached_methods   = [
+      "GET",
+      "HEAD"]
+    target_origin_id = "service-mail"
 
     forwarded_values {
       query_string = true

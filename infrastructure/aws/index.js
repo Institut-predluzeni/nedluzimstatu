@@ -26,6 +26,7 @@ exports.request_handler = (event, context, callback) => {
     return callback(null, response);
 	}
 	request.uri = request.uri.replace(/^\/transformation-service/, "");
+	request.uri = request.uri.replace(/^\/mail-service/, "");
 	callback(null, request);
 };
 
