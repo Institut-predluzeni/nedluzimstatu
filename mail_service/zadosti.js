@@ -96,21 +96,29 @@ function sendMail(data) {
     }
 
     if (data.recipients["pojistovna"]) {
-        attachments.push(
-            HTTP.post(
-                `${baseURL}/pojistovna`, {
-                    headers: defaultHeaders,
-                    data: JSON.stringify({
-                        recipient: data.recipients["pojistovna"],
-                        applicant: data.applicant,
-                        reply_to: data.reply_to,
-                        reason: data.reason
+        const createPojistovnaAttachment = (pojistovna) => {
+            attachments.push(
+                HTTP.post(
+                    `${baseURL}/pojistovna`, {
+                        headers: defaultHeaders,
+                        data: JSON.stringify({
+                            recipient: pojistovnaData,
+                            applicant: data.applicant,
+                            reply_to: data.reply_to,
+                            reason: data.reason
+                        })
+                    }, {
+                        filename: `${pojistovna.name}.pdf`,
+                        type: "application/pdf"
                     })
-                }, {
-                    filename: "pojistovna.pdf",
-                    type: "application/pdf"
-                })
-        );
+            );
+        }
+        const pojistovnaData = data.recipients["pojistovna"]
+        if (Array.isArray(pojistovnaData)) {
+            pojistovnaData.forEach(createPojistovnaAttachment)
+        } else {
+            createPojistovnaAttachment(pojistovnaData)
+        }
     }
 
     return {
