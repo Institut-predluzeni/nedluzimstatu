@@ -5,7 +5,14 @@
 
     <xsl:import href="common.xsl"/>
 
-    <xsl:template match="/json"> /items <p>
+    <xsl:template match="/json/items[empty(*)]">
+        <p>
+            <xsl:text>žádám tímto o vystavení potvrzení, že magistrát/městský/obecní úřad neevidují vůči mé osobě žádné nedoplatky, případně žádám o jejich výpis.</xsl:text>
+        </p>
+    </xsl:template>
+
+    <xsl:template match="/json/items[exists(*)]">
+        <p>
             <xsl:text>žádám tímto o vystavení potvrzení, že magistrát/městský/obecní úřad neevidují vůči mé osobě žádné nedoplatky, případně žádám o jejich výpis, a to za: </xsl:text>
         </p>
         <ul>
