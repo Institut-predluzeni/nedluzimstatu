@@ -13,7 +13,7 @@
                 <xsl:apply-templates select="/json/recipient"/>
                 <section class="datum-misto">
                     <div>
-                        <xsl:value-of select="/json/applicant/address/city"/>
+                        <xsl:value-of select="replace(/json/applicant/address/city, ' \d+', '')"/>
                         <xsl:text> </xsl:text>
                         <xsl:value-of select="format-date(current-date(), '[D].&#x2009;[M].&#x2009;[Y]')"/>
                     </div>
