@@ -5,13 +5,24 @@
 
     <xsl:import href="common.xsl"/>
 
-    <xsl:template match="/json"> /items <p>
-            <xsl:text>žádám tímto o vystavení potvrzení, že magistrát/městský/obecní úřad neevidují vůči mé osobě žádné nedoplatky, případně žádám o jejich výpis, a to za: </xsl:text>
-        </p>
-        <ul>
-            <xsl:apply-templates select="items/*"/>
-        </ul>
+    <xsl:template match="/json">
+        <xsl:choose>
+            <xsl:when test="exists(items/*)">
+                <p>
+                    <xsl:text>žádám tímto o vystavení potvrzení, že magistrát/městský/obecní úřad neevidují vůči mé osobě žádné nedoplatky, případně žádám o jejich výpis, a to za: </xsl:text>
+                </p>
+                <ul>
+                    <xsl:apply-templates select="items/*"/>
+                </ul>
+            </xsl:when>
+            <xsl:otherwise>
+                <p>
+                    <xsl:text>žádám tímto o vystavení potvrzení, že magistrát/městský/obecní úřad neevidují vůči mé osobě žádné nedoplatky, případně žádám o jejich výpis.</xsl:text>
+                </p>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
+
 
     <xsl:template match="items/dog">
         <xsl:if test="xs:boolean(.)">
