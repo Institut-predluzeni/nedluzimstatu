@@ -199,7 +199,9 @@ function odeslatFormular(pdfDotaznik) {
     	return false;
   }
   jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = true;
-  jQuery('#pdf-dotaznik-02 .button-pdf-form').addClass('et_pb_preload');
+  jQuery('#pdf-dotaznik-02 .button-pdf-form').addClass('btn-loading');
+  jQuery('#pdf-dotaznik-02 .button-pdf-form .desktop-label').text('Generujeme žádosti');
+  jQuery('#pdf-dotaznik-02 .button-pdf-form .mobile-label').text('Generujeme žádosti');  
   jQuery('#pdf-dotaznik-error').addClass('d-none');
   console.log('submit pdfdotaznik via js');
   
@@ -292,7 +294,7 @@ function odeslatFormular(pdfDotaznik) {
     xhrOverride.responseType = 'arraybuffer';
 
   jQuery.ajax({
-    url: 'https://iprp.nedluzimstatu.cz/mail-service/zadosti',
+    url: 'https://www.nedluzimstatu.cz/mail-service/zadosti',
     //dev:
     //url: 'https://nedluzimstatu.cz/transformation-service/financni-urad',
     type: 'POST',
@@ -314,7 +316,9 @@ function odeslatFormular(pdfDotaznik) {
       // dev:
         201: function(data){
           jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = false;
-          jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('et_pb_preload');
+          jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('btn-loading');
+  	      jQuery('#pdf-dotaznik-02 .button-pdf-form .desktop-label').text('Vygenerovat a poslat na e-mail');
+  		  jQuery('#pdf-dotaznik-02 .button-pdf-form .mobile-label').text('Vygenerovat žádosti');           
           var blob = new Blob([data], {type: 'application/pdf'});
           var fileName = 'output.pdf';
           var link=document.createElement('a');
@@ -327,7 +331,9 @@ function odeslatFormular(pdfDotaznik) {
     	jQuery('#pdf-dotaznik-error').removeClass('d-none');
       	document.getElementById('seznam-kroku-02').scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
         jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = false;
-    	jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('et_pb_preload');
+    	jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('btn-loading');
+  	    jQuery('#pdf-dotaznik-02 .button-pdf-form .desktop-label').text('Vygenerovat a poslat na e-mail');
+  		jQuery('#pdf-dotaznik-02 .button-pdf-form .mobile-label').text('Vygenerovat žádosti');        
     },
   });
 	return false; // do not submit form via html
@@ -400,7 +406,7 @@ function zobrazitKrok(cislo) {
 }</script>
 <!-- end Simple Custom CSS and JS -->
 
-<link rel='stylesheet' id='3362-css' href='/wp-content/uploads/custom-css-js/3362.css?v=1965' type="text/css" media='all' />
+<link rel='stylesheet' id='3362-css' href='/wp-content/uploads/custom-css-js/3362.css?v=3491' type="text/css" media='all' />
 
 <!-- Google Tag Manager for WordPress by gtm4wp.com -->
 <script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
@@ -986,7 +992,7 @@ var wpcf7_recaptcha = {"sitekey":"6Ld-VeoZAAAAAAIrNW74N2EYnEvFeWZSgJeomQT5","act
 </script>
 <script type='text/javascript' src='/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.4.2' id='wpcf7-recaptcha-js'></script>
 <style id="et-builder-module-design-tb-217-3882-cached-inline-styles">.et_pb_section_0_tb_footer.et_pb_section{padding-top:64px;padding-bottom:34px;background-color:#55237c!important}.et_pb_row_0_tb_footer{min-height:105px}.et_pb_row_0_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_text_0_tb_footer.et_pb_text{color:#f1ece7!important}.et_pb_text_0_tb_footer{line-height:145%;font-weight:700;line-height:145%;min-height:30px;margin-bottom:16px!important}.et_pb_text_0_tb_footer h1{color:#FFFFFF!important}.et_pb_text_0_tb_footer h4{color:#FFFFFF!important}.et_pb_blurb_1_tb_footer.et_pb_blurb{color:#d8c3e9!important}.et_pb_text_1_tb_footer.et_pb_text{color:#d8c3e9!important}.et_pb_text_2_tb_footer.et_pb_text{color:#d8c3e9!important}.et_pb_blurb_0_tb_footer.et_pb_blurb{color:#d8c3e9!important}.et_pb_text_1_tb_footer{line-height:32px;line-height:32px;min-height:26px;margin-bottom:48px!important}.et_pb_divider_0_tb_footer{height:0px;margin-right:-16px!important;margin-left:-16px!important}.et_pb_divider_0_tb_footer:before{border-top-color:#6f4d89;border-top-width:4px;width:auto;top:0px;right:0px;left:0px}.et_pb_row_1_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-top:42px!important;margin-bottom:64px!important;padding-top:0px;padding-bottom:0px}.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_module_header a{font-weight:700;color:#FFFFFF!important}.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_module_header a{font-weight:700;color:#FFFFFF!important}.et_pb_blurb_0_tb_footer .et_pb_main_blurb_image .et_pb_image_wrap{width:22px}.et_pb_row_2_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-right:auto!important;margin-bottom:-2px!important;margin-left:auto!important;padding-top:0px;padding-bottom:0px}.et_pb_column_3_tb_footer{margin:auto}.et_pb_image_0_tb_footer .et_pb_image_wrap img{height:48px;width:auto}.et_pb_image_0_tb_footer{text-align:right;margin-right:0}@media only screen and (min-width:981px){.et_pb_blurb_0_tb_footer.et_pb_blurb{width:430px}}@media only screen and (min-width:768px) and (max-width:980px){.et_pb_column_4_tb_footer{display:none!important}}@media only screen and (max-width:767px){.et_pb_section_0_tb_footer.et_pb_section{padding-top:40px;padding-bottom:24px}.et_pb_text_0_tb_footer{margin-bottom:7px!important}.et_pb_text_1_tb_footer{margin-bottom:32px!important}.et_pb_row_1_tb_footer.et_pb_row{margin-top:32px!important;margin-bottom:40px!important}.et_pb_column_4_tb_footer{display:none!important}}.et_pb_section_0.et_pb_section{padding-top:72px;padding-bottom:80px}.et_pb_column_0{margin:auto}.et_pb_text_4{margin-bottom:0px!important}.et_pb_text_5{margin-bottom:0px!important}.et_pb_text_0{margin-bottom:0px!important}.et_pb_text_1{margin-bottom:32px!important;max-width:550px}.et_pb_text_3{margin-bottom:24px!important}.et_pb_text_2{margin-bottom:24px!important}.et_pb_image_0{text-align:left;margin-left:0}.et_pb_image_0 .et_pb_image_wrap{display:block}.et_pb_image_0 .et_pb_image_wrap img{width:auto}.et_pb_section_1.et_pb_section{padding-top:80px;padding-bottom:80px;background-color:#F1ECE7!important}.et_pb_row_1.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-bottom:32px!important;padding-top:0px;padding-bottom:0px}.et_pb_row_2.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_blurb_2.et_pb_blurb{background-color:#FFFFFF}.et_pb_blurb_4.et_pb_blurb{background-color:#FFFFFF}.et_pb_blurb_3.et_pb_blurb{background-color:#FFFFFF}.et_pb_blurb_0.et_pb_blurb{background-color:#FFFFFF}.et_pb_blurb_1.et_pb_blurb{background-color:#FFFFFF}.et_pb_blurb_1 .et_pb_main_blurb_image .et_pb_image_wrap{width:100%}.et_pb_blurb_0 .et_pb_main_blurb_image .et_pb_image_wrap{width:100%}.et_pb_blurb_2 .et_pb_main_blurb_image .et_pb_image_wrap{width:100%}.et_pb_blurb_3 .et_pb_main_blurb_image .et_pb_image_wrap{width:100%}.et_pb_blurb_4 .et_pb_main_blurb_image .et_pb_image_wrap{width:100%}.et_pb_section_2.et_pb_section{background-color:#F1ECE7!important}.et_pb_counter_0 .et_pb_counter_amount{background-color:#55237c}.et_pb_counter_0 .et_pb_counter_amount.overlay{color:#55237c}.et_pb_column_1{padding-top:60px;margin:auto}.et_pb_row_0.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-left:auto!important;margin-right:auto!important;padding-top:0px;padding-bottom:0px}@media only screen and (max-width:980px){.et_pb_section_0.et_pb_section{padding-top:72px;padding-bottom:80px}}@media only screen and (min-width:768px) and (max-width:980px){.et_pb_column_1{display:none!important}}@media only screen and (max-width:767px){.et_pb_section_0.et_pb_section{padding-top:56px;padding-bottom:72px}.et_pb_column_1{display:none!important}.et_pb_section_1.et_pb_section{padding-top:64px;padding-bottom:64px}}</style>
-<script type="text/javascript" src='/wp-content/uploads/custom-css-js/3454.js?v=5009'></script>
+<script type="text/javascript" src='/wp-content/uploads/custom-css-js/3454.js?v=9345'></script>
 		
 			<span class="et_pb_scroll_top et-pb-icon"></span>
 	</body>
