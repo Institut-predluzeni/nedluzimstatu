@@ -4,7 +4,7 @@ var el = wp.element.createElement;
     var PluginPostStatusInfo = wp.editPost.PluginPostStatusInfo;
     var buttonControl = wp.components.Button;
 
-    function MyPostStatusInfoPlugin({}) {
+    function dpGutenButton({}) {
         return el(
             PluginPostStatusInfo,
             {
@@ -23,5 +23,5 @@ var el = wp.element.createElement;
     }
 
     registerPlugin( 'dt-duplicate-post-status-info-plugin', {
-        render: MyPostStatusInfoPlugin
+        render: dpGutenButton
     } );

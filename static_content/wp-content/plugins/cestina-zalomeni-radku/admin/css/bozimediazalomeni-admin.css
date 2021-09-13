@@ -1,0 +1,92 @@
+/**
+ * All of the CSS for admin-specific functionality
+ */
+ 
+  .bozimediazalomeniOptionPage {
+    margin: 0 20px 20px 0;
+  }
+ .bozimediazalomeniOptionPage .color{
+    	color: red;
+    	font-weight: bold;
+    	text-transform: uppercase;
+  }   
+
+  .bozimediazalomeniOptionPage .wp-heading-inline {
+    margin: 20px 0 0 0;
+    padding: 12px 0 10px 0;
+  }
+
+  .bozimediazalomeniOptionPage__columns {
+    overflow: hidden;
+    margin: 0 -10px;
+  }
+
+  .bozimediazalomeniOptionPage__column {
+    float: left;
+    margin: 0 10px;
+  }
+
+  .bozimediazalomeniOptionPage__column:first-child {
+    width: calc(100% - 440px);
+  }
+
+  .bozimediazalomeniOptionPage__column:last-child {
+    width: 400px;
+  }
+
+  .bozimediazalomeniOptionPage__column table + table,
+  .bozimediazalomeniOptionPage__column input[type=submit] {
+    margin-top: 20px;
+  }
+
+  .bozimediazalomeniOptionPage__column input[type=text] {
+  	width: 100%;
+  }
+
+
+  .bozimediazalomeniOptionPage__column table thead th {
+    font-weight: bold;
+  }
+
+  .bozimediazalomeniOptionPage__column table td {
+    width: 50%;
+  }
+
+  .bozimediazalomeniOptionPage__column table td p {
+    margin-top: 10px;;
+  }
+
+  .bozimediazalomeniOptionPage__column table td p + p {
+    margin-top: 20px;
+  }
+
+  .bozimediazalomeniOptionPage__button {
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  .bozimediazalomeniOptionPage__column table td img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  @media screen and (max-width: 1366px) {
+
+    .bozimediazalomeniOptionPage__column table td:first-child {
+      width: 75%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+
+    .bozimediazalomeniOptionPage__column:first-child,
+    .bozimediazalomeniOptionPage__column:last-child {
+      width: calc(100% - 20px);
+    }
+
+    .bozimediazalomeniOptionPage__column:last-child {
+      margin-top: 40px;
+    }
+  }

@@ -1,7 +1,7 @@
 /*!
 Theme Name: Divi
 Theme URI: http://www.elegantthemes.com/gallery/divi/
-Version: 4.9.11
+Version: 4.9.10
 Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
 Author: Elegant Themes
 Author URI: http://www.elegantthemes.com
@@ -2058,10 +2058,10 @@ img#about-image {
   margin: 3px 8px 8px 0px; }
 
 /* Search Widget */
-.widget_search .screen-reader-text, .et_pb_widget .wp-block-search__label {
+.widget_search .screen-reader-text {
   display: none; }
 
-.widget_search input#s, .widget_search input#searchsubmit, .et_pb_widget .wp-block-search__input, .et_pb_widget .wp-block-search__button {
+.widget_search input#s, .widget_search input#searchsubmit {
   padding: .7em;
   height: 40px !important;
   margin: 0;
@@ -2070,14 +2070,14 @@ img#about-image {
   border: 1px solid #ddd;
   color: #666; }
 
-.widget_search #s, .et_pb_widget .wp-block-search__input {
+.widget_search #s {
   width: 100%;
   border-radius: 3px; }
 
-.widget_search #searchform, .et_pb_widget .wp-block-search {
+.widget_search #searchform {
   position: relative; }
 
-.widget_search #searchsubmit, .et_pb_widget .wp-block-search__button {
+.widget_search #searchsubmit {
   background-color: #ddd;
   width: 70px;
   -webkit-border-top-right-radius: 3px;
@@ -2090,7 +2090,7 @@ img#about-image {
   right: 0;
   top: 0; }
 
-#searchsubmit, .et_pb_widget .wp-block-search__button {
+#searchsubmit {
   cursor: pointer; }
 
 /* WordPress Calendar */
@@ -2134,18 +2134,8 @@ img#about-image {
   padding-left: 10px;
   text-align: left; }
 
-.et_pb_widget .wp-block-calendar th, .et_pb_widget .wp-block-calendar td {
-  border: 0; }
-
-.et_pb_widget .wp-block-calendar table th {
-  font-weight: bold;
-  background: none; }
-
-.et_pb_widget .wp-block-calendar {
-  text-align: left; }
-
 /* Tag Cloud */
-.tagcloud a, .wp-block-tag-cloud a {
+.tagcloud a {
   font-size: 12px !important;
   padding: 2px 8px;
   background: rgba(0, 0, 0, 0.05);
@@ -2155,20 +2145,8 @@ img#about-image {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
 
-.tagcloud a:hover, .wp-block-tag-cloud a:hover {
+.tagcloud a:hover {
   background: rgba(0, 0, 0, 0.15); }
-
-/* Block-Based Widgets */
-.et_pb_widget {
-  /* Widget Title (Heading in Group) */ }
-  .et_pb_widget .wp-block-group__inner-container > h2,
-  .et_pb_widget .wp-block-group__inner-container > h3 {
-    font-size: 18px; }
-    .footer-widget .et_pb_widget .wp-block-group__inner-container > h2, .footer-widget
-    .et_pb_widget .wp-block-group__inner-container > h3 {
-      color: #2ea3f2; }
-  .et_pb_widget .wp-block-latest-comments__comment {
-    line-height: 1.7em; }
 
 /* Color Schemes */
 .et_color_scheme_green a {
@@ -8586,10 +8564,10 @@ body #main-content .et_builder_inner_content > p {
 .et_pb_widget li a:hover {
   color: #82c0c7; }
 
-.et_pb_widget ul li, .et_pb_widget ol li {
+.et_pb_widget ul li {
   margin-bottom: .5em; }
 
-.et_pb_widget ul li ul li, .et_pb_widget ol li ol li {
+.et_pb_widget ul li ul li {
   margin-left: 15px; }
 
 .et_pb_widget select {
