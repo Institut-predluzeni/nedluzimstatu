@@ -13,6 +13,28 @@ const defaultHeaders = {
     "Accept": "application/pdf"
 }
 
+const pojistovny = {
+    "Všeobecná zdravotní pojišťovna": "VZP",
+    "Oborová zdravotní pojišťovna zaměstnanců bank, pojišťoven a stavebnictví": "OZP",
+    "Česká průmyslová zdravotní pojišťovna": "CPZP",
+    "Vojenská zdravotní pojišťovna České republiky": "VoZP",
+    "Zaměstnanecká pojišťovna Škoda": "ZPS",
+    "RBP, zdravotní pojišťovna": "RBP-ZP",
+    "Zdravotní pojišťovna ministerstva vnitra České republiky": "ZP MV CR"
+}
+
+
+const pojistovnaShortName = (longName) => {
+    if (longName == null) {
+        return 'zdravotni pojistovna'
+    }
+    const shortName = pojistovny[longName]
+    if (shortName) {
+        return shortName
+    }
+    return longName
+}
+
 /**
  * Funkce realizující samotné odeslání e-mailu. Volá se při každém zavolání tohoto endpointu
  * a jako vstup dostane objekt z HTTP požadavku.
@@ -34,7 +56,7 @@ function sendMail(data) {
                         reason: data.reason
                     })
                 }, {
-                    filename: "celni-sprava.pdf",
+                    filename: "Bezdluznost - Celni sprava.pdf",
                     type: "application/pdf"
                 })
         );
@@ -52,7 +74,7 @@ function sendMail(data) {
                         reason: data.reason
                     })
                 }, {
-                    filename: "financni-urad.pdf",
+                    filename: "Bezdluznost - Financni urad.pdf",
                     type: "application/pdf"
                 })
         );
@@ -71,7 +93,7 @@ function sendMail(data) {
                         reason: data.reason
                     })
                 }, {
-                    filename: "obec.pdf",
+                    filename: "Bezdluznost - obec.pdf",
                     type: "application/pdf"
                 })
         );
@@ -89,7 +111,7 @@ function sendMail(data) {
                         reason: data.reason
                     })
                 }, {
-                    filename: "ossz.pdf",
+                    filename: "Bezdluznost - CSSZ.pdf",
                     type: "application/pdf"
                 })
         );
@@ -108,7 +130,7 @@ function sendMail(data) {
                             reason: data.reason
                         })
                     }, {
-                        filename: `${pojistovna.name}.pdf`,
+                        filename: `Bezdluznost - ${pojistovnaShortName(pojistovna.name)}.pdf`,
                         type: "application/pdf"
                     })
             );
@@ -128,7 +150,7 @@ function sendMail(data) {
         },
         to: {
             email: data.recipientEmail,
-	    name: data.recipientName
+            name: data.recipientName
         },
         subject: "Žádosti o potvrzení bezdlužnosti",
         content: [
