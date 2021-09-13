@@ -152,7 +152,7 @@ function sendMail(data) {
             email: data.recipientEmail,
             name: data.recipientName
         },
-        subject: "Žádosti o potvrzení bezdlužnosti",
+        subject: "Nedlužím státu: Vygenerovali jsme Vaše žádosti pro ověření bezdlužnosti",
         content: [
             File.read("zadost.txt", "text/plain"),
             File.read("zadost.html", "text/html")
