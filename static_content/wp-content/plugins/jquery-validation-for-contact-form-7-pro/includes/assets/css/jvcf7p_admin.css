@@ -1,0 +1,29 @@
+.dcform{}
+.dclisttable{ margin-top: 20px;}
+.dclisttable th{ font-weight: 600; }
+.dclisttable td.yes-show span{ font-weight: 600;}
+.dclisttable td.no-show span{ display: none;}
+.dcform .capitalizse{ text-transform: capitalize; }
+.dcform p span.right{ display: inline-block; }
+.dcform p label.error{ color: #900; padding-left: 5px; }
+.dcform p label .required{ color: #900; font-weight: bold; }
+.dcform p label{ width: 300px; display: inline-block;vertical-align: top;padding-top: 4px;}
+.dcform p input.large, .dcform p textarea.large{ max-width: 500px; width: 100%;}
+.dcform p input.medium, .dcform p textarea.medium{ max-width: 300px; width: 100%;}
+
+.dcinstructions{border:1px solid #ccd0d4;background: #fff;margin-top: 20px; }
+.dcinstructions .instruct-head{border-bottom:1px solid #ccd0d4; font-size: 14px; padding: 10px; font-weight: 600; cursor: pointer;}
+.dcinstructions .instruct-content{padding: 10px; font-size: 14px; line-height: 1.5em; color: #555;}
+.dcinstructions .instruct-content img{width: 100%; max-width: 650px; }
+.dcinstructions .instruct-content.hidden{display: none;}
+.dcinstructions .instruct-content p{ font-size: inherit; }
+.dcinstructions .instruct-content ul{ padding-left: 10px; }
+.dcinstructions .instruct-content ul li{ list-style: square; margin-left: 10px;}
+
+.dcsidebar{border:1px solid #ccd0d4;background: #fff;margin-top: 20px; }
+.dcsidebar .sidebar-head{border-bottom:1px solid #ccd0d4; font-size: 14px; padding: 10px; font-weight: 600; cursor: pointer;}
+.dcsidebar .sidebar-content{line-height: 1.5em; color: #555; padding: 0px 10px 0px 10px;}
+.dcsidebar .sidebar-content ul{ padding-left: 10px; }
+.dcsidebar .sidebar-content ul li{ list-style: square; margin-left: 10px }
+.dcsidebar .sidebar-content ul li a{ text-decoration: none; }
+@media ( max-width: 768px) { .dchideMobile { display : none; } }

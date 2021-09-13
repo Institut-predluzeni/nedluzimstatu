@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://staging.nedluzimstatu.cz/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	
+	<meta name='robots' content='noindex, nofollow' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v17.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Víte jistě, že nedlužíte státu? &ndash; Nedlužím státu</title>
+	<meta name="description" content="Díky přehledným návodům vám pomůžeme zjistit, zda nedlužíte státu. Také poradíme, co dělat, pokud dluh objevíte. Srozumitelně, anonymně a zdarma." />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Víte jistě, že nedlužíte státu? &ndash; Nedlužím státu" />
+	<meta property="og:description" content="Díky přehledným návodům vám pomůžeme zjistit, zda nedlužíte státu. Také poradíme, co dělat, pokud dluh objevíte. Srozumitelně, anonymně a zdarma." />
+	<meta property="og:url" content="https://staging.nedluzimstatu.cz/" />
+	<meta property="og:site_name" content="Nedlužím státu" />
+	<meta property="article:modified_time" content="2021-09-08T17:03:33+00:00" />
+	<meta property="og:image" content="https://staging.nedluzimstatu.cz/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="628" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://staging.nedluzimstatu.cz/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://staging.nedluzimstatu.cz/#organization","name":"Nedlu\u017e\u00edm st\u00e1tu","url":"https://staging.nedluzimstatu.cz/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://staging.nedluzimstatu.cz/#logo","inLanguage":"cs","url":"/wp-content/uploads/2020/10/logo.svg","contentUrl":"/wp-content/uploads/2020/10/logo.svg","caption":"Nedlu\u017e\u00edm st\u00e1tu"},"image":{"@id":"https://staging.nedluzimstatu.cz/#logo"}},{"@type":"WebSite","@id":"https://staging.nedluzimstatu.cz/#website","url":"https://staging.nedluzimstatu.cz/","name":"Nedlu\u017e\u00edm st\u00e1tu","description":"","publisher":{"@id":"https://staging.nedluzimstatu.cz/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://staging.nedluzimstatu.cz/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"cs"},{"@type":"ImageObject","@id":"https://staging.nedluzimstatu.cz/#primaryimage","inLanguage":"cs","url":"/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg","contentUrl":"/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg","width":1200,"height":628,"caption":"Nedlu\u017e\u00edm st\u00e1tu"},{"@type":"WebPage","@id":"https://staging.nedluzimstatu.cz/#webpage","url":"https://staging.nedluzimstatu.cz/","name":"V\u00edte jist\u011b, \u017ee nedlu\u017e\u00edte st\u00e1tu? &ndash; Nedlu\u017e\u00edm st\u00e1tu","isPartOf":{"@id":"https://staging.nedluzimstatu.cz/#website"},"about":{"@id":"https://staging.nedluzimstatu.cz/#organization"},"datePublished":"2021-07-09T13:20:24+00:00","dateModified":"2021-09-08T17:03:33+00:00","description":"D\u00edky p\u0159ehledn\u00fdm n\u00e1vod\u016fm v\u00e1m pom\u016f\u017eeme zjistit, zda nedlu\u017e\u00edte st\u00e1tu. Tak\u00e9 porad\u00edme, co d\u011blat, pokud dluh objev\u00edte. Srozumiteln\u011b, anonymn\u011b a zdarma.","breadcrumb":{"@id":"https://staging.nedluzimstatu.cz/#breadcrumb"},"inLanguage":"cs","potentialAction":[{"@type":"ReadAction","target":["https://staging.nedluzimstatu.cz/"]}]},{"@type":"BreadcrumbList","@id":"https://staging.nedluzimstatu.cz/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Dom\u016f"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS zdroj" href="https://staging.nedluzimstatu.cz/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Nedlužím státu &raquo; RSS komentářů" href="https://staging.nedluzimstatu.cz/comments/feed/" />
+<meta content="Divi Child v.1.0.0" name="generator"/><link rel='stylesheet' id='wp-block-library-css'  href='https://staging.nedluzimstatu.cz/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='/wp-content/themes/Divi/style.css?ver=5.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='/wp-content/themes/divi-child/style.css?ver=4.9.10' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-breadcrumbs-styles-css'  href='/wp-content/plugins/breadcrumbs-divi-module/styles/style.min.css?ver=1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css'  href='/wp-content/plugins/popup-maker/assets/css/pum-site.min.css?ver=1.16.2' type='text/css' media='all' />
+<style id='popup-maker-site-inline-css' type='text/css'>
+/* Popup Google Fonts */
+@import url('//fonts.googleapis.com/css?family=Montserrat:100');
+
+/* Popup Theme 3853: Nedluzim statu */
+.pum-theme-3853, .pum-theme-nedluzim { background-color: rgba( 51, 51, 51, 0.35 ) } 
+.pum-theme-3853 .pum-container, .pum-theme-nedluzim .pum-container { padding: 24px; border-radius: 8px; border: 1px none #000000; box-shadow: 1px 1px 3px 0px rgba( 255, 255, 255, 0.23 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-3853 .pum-title, .pum-theme-nedluzim .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; line-height: 36px } 
+.pum-theme-3853 .pum-content, .pum-theme-nedluzim .pum-content { color: #161616; font-family: inherit; font-weight: 400 } 
+.pum-theme-3853 .pum-content + .pum-close, .pum-theme-nedluzim .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: 24px; bottom: auto; top: 16px; padding: 0px; color: #4d98a0; font-family: inherit; font-weight: 400; font-size: 14px; line-height: 24px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 1.00 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.30 ) } 
+
+/* Popup Theme 3839: Light Box */
+.pum-theme-3839, .pum-theme-lightbox { background-color: rgba( 0, 0, 0, 0.60 ) } 
+.pum-theme-3839 .pum-container, .pum-theme-lightbox .pum-container { padding: 18px; border-radius: 3px; border: 8px solid #000000; box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 1.00 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-3839 .pum-title, .pum-theme-lightbox .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-3839 .pum-content, .pum-theme-lightbox .pum-content { color: #000000; font-family: inherit; font-weight: 100 } 
+.pum-theme-3839 .pum-content + .pum-close, .pum-theme-lightbox .pum-content + .pum-close { position: absolute; height: 26px; width: 26px; left: auto; right: -13px; bottom: auto; top: -13px; padding: 0px; color: #ffffff; font-family: Arial; font-weight: 100; font-size: 24px; line-height: 24px; border: 2px solid #ffffff; border-radius: 26px; box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 1.00 ) } 
+
+/* Popup Theme 3840: Enterprise Blue */
+.pum-theme-3840, .pum-theme-enterprise-blue { background-color: rgba( 0, 0, 0, 0.70 ) } 
+.pum-theme-3840 .pum-container, .pum-theme-enterprise-blue .pum-container { padding: 28px; border-radius: 5px; border: 1px none #000000; box-shadow: 0px 10px 25px 4px rgba( 2, 2, 2, 0.50 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-3840 .pum-title, .pum-theme-enterprise-blue .pum-title { color: #315b7c; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 34px; line-height: 36px } 
+.pum-theme-3840 .pum-content, .pum-theme-enterprise-blue .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-3840 .pum-content + .pum-close, .pum-theme-enterprise-blue .pum-content + .pum-close { position: absolute; height: 28px; width: 28px; left: auto; right: 8px; bottom: auto; top: 8px; padding: 4px; color: #ffffff; font-family: Times New Roman; font-weight: 100; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 42px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 49, 91, 124, 1.00 ) } 
+
+/* Popup Theme 3841: Hello Box */
+.pum-theme-3841, .pum-theme-hello-box { background-color: rgba( 0, 0, 0, 0.75 ) } 
+.pum-theme-3841 .pum-container, .pum-theme-hello-box .pum-container { padding: 30px; border-radius: 80px; border: 14px solid #81d742; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-3841 .pum-title, .pum-theme-hello-box .pum-title { color: #2d2d2d; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Montserrat; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-3841 .pum-content, .pum-theme-hello-box .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-3841 .pum-content + .pum-close, .pum-theme-hello-box .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: -30px; bottom: auto; top: -30px; padding: 0px; color: #2d2d2d; font-family: Times New Roman; font-weight: 100; font-size: 32px; line-height: 28px; border: 1px none #ffffff; border-radius: 28px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+
+/* Popup Theme 3842: Cutting Edge */
+.pum-theme-3842, .pum-theme-cutting-edge { background-color: rgba( 0, 0, 0, 0.50 ) } 
+.pum-theme-3842 .pum-container, .pum-theme-cutting-edge .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 10px 25px 0px rgba( 2, 2, 2, 0.50 ); background-color: rgba( 30, 115, 190, 1.00 ) } 
+.pum-theme-3842 .pum-title, .pum-theme-cutting-edge .pum-title { color: #ffffff; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Sans-Serif; font-weight: 100; font-size: 26px; line-height: 28px } 
+.pum-theme-3842 .pum-content, .pum-theme-cutting-edge .pum-content { color: #ffffff; font-family: inherit; font-weight: 100 } 
+.pum-theme-3842 .pum-content + .pum-close, .pum-theme-cutting-edge .pum-content + .pum-close { position: absolute; height: 24px; width: 24px; left: auto; right: 0px; bottom: auto; top: 0px; padding: 0px; color: #1e73be; font-family: Times New Roman; font-weight: 100; font-size: 32px; line-height: 24px; border: 1px none #ffffff; border-radius: 0px; box-shadow: -1px 1px 1px 0px rgba( 2, 2, 2, 0.10 ); text-shadow: -1px 1px 1px rgba( 0, 0, 0, 0.10 ); background-color: rgba( 238, 238, 34, 1.00 ) } 
+
+/* Popup Theme 3843: Framed Border */
+.pum-theme-3843, .pum-theme-framed-border { background-color: rgba( 255, 255, 255, 0.50 ) } 
+.pum-theme-3843 .pum-container, .pum-theme-framed-border .pum-container { padding: 18px; border-radius: 0px; border: 20px outset #dd3333; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.97 ) inset; background-color: rgba( 255, 251, 239, 1.00 ) } 
+.pum-theme-3843 .pum-title, .pum-theme-framed-border .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-3843 .pum-content, .pum-theme-framed-border .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-3843 .pum-content + .pum-close, .pum-theme-framed-border .pum-content + .pum-close { position: absolute; height: 20px; width: 20px; left: auto; right: -20px; bottom: auto; top: -20px; padding: 0px; color: #ffffff; font-family: Tahoma; font-weight: 700; font-size: 16px; line-height: 18px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 0.55 ) } 
+
+/* Popup Theme 3844: Floating Bar - Soft Blue */
+.pum-theme-3844, .pum-theme-floating-bar { background-color: rgba( 255, 255, 255, 0.00 ) } 
+.pum-theme-3844 .pum-container, .pum-theme-floating-bar .pum-container { padding: 8px; border-radius: 0px; border: 1px none #000000; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 238, 246, 252, 1.00 ) } 
+.pum-theme-3844 .pum-title, .pum-theme-floating-bar .pum-title { color: #505050; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; line-height: 36px } 
+.pum-theme-3844 .pum-content, .pum-theme-floating-bar .pum-content { color: #505050; font-family: inherit; font-weight: 400 } 
+.pum-theme-3844 .pum-content + .pum-close, .pum-theme-floating-bar .pum-content + .pum-close { position: absolute; height: 18px; width: 18px; left: auto; right: 5px; bottom: auto; top: 50%; padding: 0px; color: #505050; font-family: Sans-Serif; font-weight: 700; font-size: 15px; line-height: 18px; border: 1px solid #505050; border-radius: 15px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.00 ); background-color: rgba( 255, 255, 255, 0.00 ); transform: translate(0, -50%) } 
+
+/* Popup Theme 3845: Content Only - For use with page builders or block editor */
+.pum-theme-3845, .pum-theme-content-only { background-color: rgba( 0, 0, 0, 0.70 ) } 
+.pum-theme-3845 .pum-container, .pum-theme-content-only .pum-container { padding: 0px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ) } 
+.pum-theme-3845 .pum-title, .pum-theme-content-only .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; line-height: 36px } 
+.pum-theme-3845 .pum-content, .pum-theme-content-only .pum-content { color: #8c8c8c; font-family: inherit; font-weight: 400 } 
+.pum-theme-3845 .pum-content + .pum-close, .pum-theme-content-only .pum-content + .pum-close { position: absolute; height: 18px; width: 18px; left: auto; right: 7px; bottom: auto; top: 7px; padding: 0px; color: #000000; font-family: inherit; font-weight: 700; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 15px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.00 ); background-color: rgba( 255, 255, 255, 0.00 ) } 
+
+#pum-3863 {z-index: 1999999999}
+#pum-3861 {z-index: 1999999999}
+#pum-3862 {z-index: 1999999999}
+#pum-3864 {z-index: 1999999999}
+#pum-3859 {z-index: 1999999999}
+#pum-3858 {z-index: 1999999999}
+#pum-3847 {z-index: 1999999999}
+#pum-3860 {z-index: 1999999999}
+
+</style>
+<link rel='stylesheet' id='cf7cf-style-css'  href='/wp-content/plugins/cf7-conditional-fields/style.css?ver=2.0.4' type='text/css' media='all' />
+<link rel='stylesheet' id='jvcf7p_client_css-css'  href='/wp-content/plugins/jquery-validation-for-contact-form-7-pro/includes/assets/css/jvcf7p_client.css?ver=5.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://staging.nedluzimstatu.cz/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://staging.nedluzimstatu.cz/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.13.1' id='gtm4wp-form-move-tracker-js'></script>
+<link rel="https://api.w.org/" href="https://staging.nedluzimstatu.cz/wp-json/" /><link rel="alternate" type="application/json" href="https://staging.nedluzimstatu.cz/wp-json/wp/v2/pages/3419" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://staging.nedluzimstatu.cz/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 5.8.1" />
+<link rel='shortlink' href='https://staging.nedluzimstatu.cz/' />
+<link rel="alternate" type="application/json+oembed" href="https://staging.nedluzimstatu.cz/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstaging.nedluzimstatu.cz%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://staging.nedluzimstatu.cz/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fstaging.nedluzimstatu.cz%2F&#038;format=xml" />
+<!-- start Simple Custom CSS and JS -->
+<script type="text/javascript">
+jQuery(function($){
+	zobrazitKrok(1);
+  	$('#krok-1-checked').click(function(e) {
+       zobrazitKrok(1);
+    });
+  	$('#btnVyberInstituci').click(function () {
+        /* function for validation of choosen institution of checkboxes in step 01 - runs only at page GENEROVANI DOKUMENTU */
+        //Reference the Group of CheckBoxes and verify whether at-least one CheckBox is checked.
+        var checked = $("#pdf-dotaznik-01 input[type=checkbox]:checked").length;
+        //Set the Valid Flag to True if at-least one CheckBox is checked.
+        var isValid = checked > 0;
+        //Display error message if no CheckBox is checked and scroll there
+        $("#instituce-error")[0].style.display = isValid ? "none" : "block";
+      	document.getElementById('instituce-error').scrollIntoView({behavior: 'smooth'});
+		if (!isValid) return;
+      
+        // valid selection, show next step
+        zobrazitKrok(2);     
+      
+        jQuery('input[name="pojistovny[]"').each(function(index) {
+        if (this.checked) {
+           // load and store selected detail info before final submit
+           detailOvm2(zdravotniPojistovny[this.value], this.value);
+        }});
+          
+        // prefill form with test data - devel only
+        var testEmail = new URL(location.href).searchParams.get('test-data');
+        var testEmail2 = new URL(location.href).searchParams.get('test-data-pobocky');
+        if (testEmail || testEmail2) {
+     	    $('#pdf-dotaznik-02 input[name="jmeno"]').val('Jméno');
+            $('#pdf-dotaznik-02 input[name="prijmeni"]').val('Příjmení');
+			$('#pdf-dotaznik-02 input[name="rodne-cislo"]').val('000718/1746');
+            $('#pdf-dotaznik-02 input[name="ulice-cislo"]').val('Ulice č.p. 1');
+            $('#pdf-dotaznik-02 input[name="cast-obce"]').val('Část obce');
+            $('#pdf-dotaznik-02 input[name="mesto-obec"]').val('Obec');
+            $('#pdf-dotaznik-02 input[name="psc"]').val('12345');
+            $('#pdf-dotaznik-02 input[name="email"]').val(testEmail ?? testEmail2);
+            $('#pdf-dotaznik-02 input[name="telefon"]').val('123456789');
+            $('#pdf-dotaznik-02 input[name="checkbox-adresa[]"')[0].checked = true;          
+		}
+    });
+});
+
+var pscUrl = 'https://www.nedluzimstatu.cz/public/psc2ovm/psc_obce_2021.json';
+var apiUrl = 'https://tools.cesko.dev/api/nedluzimstatu/';
+
+// formatted from OVM api
+var detailObce = {};
+var detailUradu = {};
+// fix OVM IDs
+var zdravotniPojistovny = { 
+  'Všeobecná zdravotní pojišťovna': '8dd393b5-d3d3-4862-92d3-ea47f91977b7',
+  'Oborová zdravotní pojišťovna':'15e4cbeb-37bd-48d6-a5aa-5b404978692f',
+  'Česká průmyslová zdravotní pojišťovna':'4f7900cd-f49c-43f0-8d4c-0c0cf31137da',
+  'Vojenská zdravotní pojišťovna': '3dffefe3-ed94-4781-83e7-f876a14ecc87',
+  'Zaměstnanecká pojišťovna Škoda': '87a305f7-8063-42e3-83ea-4d5352c3c9f0',
+  'Revírní bratrská pokladna – zdravotní pojišťovna': '90511a52-10e3-4952-8a2e-5c2691640644',
+  'Zdravotní pojišťovna Ministerstva vnitra ČR': '80cf8802-65c3-47f5-8668-7d74b3233aea',
+};
+// checkbox -> mail service
+var prekladInstituci = {
+    'Finanční úřad': 'financni-urad',
+    'Česká správa sociálního zabezpečení': 'ossz',
+    'Celní správa / Policie ČR': 'celni-sprava',
+    'Obec': 'obec',
+    };
+
+function odeslatFormular(pdfDotaznik) {
+  if (!jQuery(pdfDotaznik).valid()) {
+        console.log('pdfdotaznik invalid');
+    	return false;
+  }
+  jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = true;
+  jQuery('#pdf-dotaznik-02 .button-pdf-form').addClass('et_pb_preload');
+  jQuery('#pdf-dotaznik-error').addClass('d-none');
+  console.log('submit pdfdotaznik via js');
+  
+  var testEmail = new URL(location.href).searchParams.get('test-data');
+  var testEmail2 = new URL(location.href).searchParams.get('test-data-pobocky');
+  var data1 = jQuery('#pdf-dotaznik-01 form').serializeArray();
+  var data2 = Object.fromEntries(new FormData(jQuery('#pdf-dotaznik-02 form')[0]));
+  var apiData = {
+     "recipientEmail": data2.email,
+     "recipients": {
+     },
+     "applicant": {
+       "name": data2.jmeno,
+       "surname": data2.prijmeni,
+       "phone": data2.telefon,
+       "email": data2.email,
+       "personal_identification_number": data2['rodne-cislo'],
+       "address": {
+         "lines": [data2['ulice-cislo'], data2['cast-obce']],
+         "city": data2['mesto-obec'],
+         "zip_code": data2.psc,
+       },
+     },
+     "reply_to": {
+    	"reply_to": {
+    	}
+  	 },
+  	 "reason": {
+     	"other": data2['ucel-vydavani'],
+  	 },
+  };
+  // detect selected institutions
+  jQuery('input[name="statni-instituce[]"').each(function(index) {
+    if (this.checked && prekladInstituci[this.value]) {
+        if (prekladInstituci[this.value] in detailUradu) {
+          // store detail info if loaded
+          apiData['recipients'][prekladInstituci[this.value]] = urad2api(detailUradu[prekladInstituci[this.value]]);
+        } else {      
+          apiData['recipients'][prekladInstituci[this.value]] = {"name":this.value};
+        }
+        console.log(this.value);
+      	if (testEmail) {// debug for direct pdf call, only last value is used
+        	apiData['recipient'] = {"name":this.value};
+        }
+    }
+  });
+  jQuery('input[name="pojistovny[]"').each(function(index) {
+    if (this.checked) {
+        if (!('pojistovna' in apiData['recipients'])) {
+          apiData['recipients']['pojistovna'] = [];
+        }
+        // store selected detail info if loaded
+        if (this.value in detailUradu) {
+          // store detail info if loaded
+          apiData['recipients']['pojistovna'].push(urad2api(detailUradu[this.value]));
+      	  if (testEmail2) {// debug for direct pdf call, only last value is used
+        	apiData['recipient'] = urad2api(detailUradu[this.value]);;
+          }  
+        } else {
+          apiData['recipients']['pojistovna'].push({"name":this.value});
+        }
+
+        console.log(this.value);
+    }    
+  });
+  if (data2['ucel-vydavani'] == 'Jiný účel (prosím uveďte)')  {
+    apiData['reason']['other'] = data2['jiny-ucel-popis'];
+  }
+
+  if (data2['doruceni-odpovedi'] == 'Českou poštou') {
+    if (data2['checkbox-adresa[]']) {
+      apiData['reply_to']['reply_to']['permanent_addres'] = true;
+    } else {
+      apiData['reply_to']['reply_to']['contact_address'] = {
+         "lines": [data2['dorucovaci-ulice-cislo'], data2['dorucovaci-cast-obce']],
+         "city": data2['dorucovaci-mesto-obec'],
+         "zip_code": data2['dorucovaci-psc'],
+      }
+    }
+  } else if (data2['doruceni-odpovedi'] == 'Do datové schránky') {
+    apiData['reply_to']['reply_to']['data_box'] = data2['datova-schranka'];
+  } else if (data2['doruceni-odpovedi'] == 'Odpověď si vyzvednu osobně na pobočce') {
+    apiData['reply_to']['reply_to']['in_person'] = true;
+  }
+  console.log(data1);
+  console.log(data2);
+  console.log(apiData);
+    // tmp, remove! Set up AJAX settings for binary files:
+    var xhrOverride = new XMLHttpRequest();
+    xhrOverride.responseType = 'arraybuffer';
+
+  jQuery.ajax({
+    url: 'https://iprp.nedluzimstatu.cz/mail-service/zadosti',
+    //dev:
+    //url: 'https://nedluzimstatu.cz/transformation-service/financni-urad',
+    type: 'POST',
+	//dataType:"json",
+    // tmp dev:
+    dataType: 'binary',
+    processData: false,
+    xhr: function() {
+        return xhrOverride;
+    },
+    data: JSON.stringify(apiData),
+    contentType: 'application/json',
+    //success: function(data){
+    statusCode: {
+        200: function(data) {
+             zobrazitKrok(3);
+          	 jQuery('.et_pb_blurb_description #odeslanyEmail')[0].textContent = data2.email;
+        },
+      // dev:
+        201: function(data){
+          jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = false;
+          jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('et_pb_preload');
+          var blob = new Blob([data], {type: 'application/pdf'});
+          var fileName = 'output.pdf';
+          var link=document.createElement('a');
+          link.href=window.URL.createObjectURL(blob);
+          link.download=fileName;
+          link.click();
+        },
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+    	jQuery('#pdf-dotaznik-error').removeClass('d-none');
+      	document.getElementById('seznam-kroku-02').scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = false;
+    	jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('et_pb_preload');
+    },
+  });
+	return false; // do not submit form via html
+}
+
+// load detail from api
+function detailOvm2(uid, typUradu) {
+  var $ = jQuery;
+  if (uid == null) {
+    console.log('detailOvm: null nelze nacist');
+    return;
+  }
+  $.ajax({
+  	url: apiUrl + 'ovm/'+uid,
+  }).done(function( data ) {
+    if (typeof data.id !=='undefined') {
+      detailUradu[typUradu] = data;
+    }
+  });
+}
+
+function urad2api (urad) {
+  var apiData = {};
+  if ('IdDS' in urad) {
+    apiData['data_box'] = urad['IdDS'];
+  }
+  if ('Nazev' in urad) {
+    apiData['name'] = urad['Nazev'];
+  }
+  if ('AdresaUradu' in urad) {
+    var adresaPole = {'UliceNazev':'', 'CisloDomovni': ' ', 'CisloOrientacni': '/'};
+    var adresaUlice = '';
+    if (!urad.AdresaUradu.hasOwnProperty('UliceNazev')) {
+      // chybi info o ulici, kopie obce
+      	adresaUlice = adresaUlice.concat(urad.AdresaUradu.ObecNazev);
+    }
+    for (key in adresaPole) {
+      if (urad.AdresaUradu.hasOwnProperty(key)) {
+        adresaUlice = adresaUlice.concat(adresaPole[key]+urad.AdresaUradu[key]);
+      }
+    }
+
+    apiData['address'] = {
+      'lines': [adresaUlice],
+      'city': urad.AdresaUradu.ObecNazev,
+      'zip_code': urad.AdresaUradu.PSC,
+    };
+  }
+  return apiData;
+}
+
+function zobrazitKrok(cislo) {
+  console.log('krok:'+cislo);
+  if (cislo == 1) {
+    jQuery('#sekce-krok-01').removeClass('d-none');   
+    jQuery('#sekce-krok-02').addClass('d-none');    
+    jQuery('#sekce-krok-03').addClass('d-none');
+    jQuery('#pdf-dotaznik-error').addClass('d-none');
+  } else if (cislo == 2) {
+    jQuery('#sekce-krok-01').addClass('d-none');
+    jQuery('#sekce-krok-02').removeClass('d-none');    
+    jQuery('#sekce-krok-03').addClass('d-none');
+    jQuery('#seznam-kroku-02')[0].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+  } else if (cislo == 3) {
+    jQuery('#sekce-krok-01').addClass('d-none');
+    jQuery('#sekce-krok-02').addClass('d-none');     
+    jQuery('#sekce-krok-03').removeClass('d-none');
+    jQuery('#seznam-kroku-03')[0].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+  } // else nothing
+}</script>
+<!-- end Simple Custom CSS and JS -->
+
+<link rel='stylesheet' id='3362-css' href='/wp-content/uploads/custom-css-js/3362.css?v=1965' type="text/css" media='all' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>//<![CDATA[
+	var dataLayer_content = {"pagePostType":"frontpage","pagePostType2":"single-page","pagePostAuthor":"David Němec"};
+	dataLayer.push( dataLayer_content );//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HPRZ4D');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link rel="preload" href="/wp-content/themes/Divi/core/admin/fonts/modules.ttf" as="font" crossorigin="anonymous"><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&amp;display=swap" rel="stylesheet"><link rel="icon" href="/wp-content/uploads/2020/10/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2020/10/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/2020/10/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="/wp-content/uploads/2020/10/cropped-favicon-270x270.png" />
+<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:16px}.et_pb_slide_content,.et_pb_best_value{font-size:18px}body{color:#161616}h1,h2,h3,h4,h5,h6{color:}body{line-height:1.5em}.woocommerce #respond input#submit,.woocommerce-page #respond input#submit,.woocommerce #content input.button,.woocommerce-page #content input.button,.woocommerce-message,.woocommerce-error,.woocommerce-info{background:#55237c!important}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et_pb_pricing li a,.et_pb_pricing_table_button,.et_overlay:before,.entry-summary p.price ins,.woocommerce div.product span.price,.woocommerce-page div.product span.price,.woocommerce #content div.product span.price,.woocommerce-page #content div.product span.price,.woocommerce div.product p.price,.woocommerce-page div.product p.price,.woocommerce #content div.product p.price,.woocommerce-page #content div.product p.price,.et_pb_member_social_links a:hover,.woocommerce .star-rating span:before,.woocommerce-page .star-rating span:before,.et_pb_widget li a:hover,.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.tagged_as a,.posted_in a{color:#55237c}.et_pb_contact_submit,.et_password_protected_form .et_submit_button,.et_pb_bg_layout_light .et_pb_newsletter_button,.comment-reply-link,.form-submit .et_pb_button,.et_pb_bg_layout_light .et_pb_promo_button,.et_pb_bg_layout_light .et_pb_more_button,.woocommerce a.button.alt,.woocommerce-page a.button.alt,.woocommerce button.button.alt,.woocommerce button.button.alt.disabled,.woocommerce-page button.button.alt,.woocommerce-page button.button.alt.disabled,.woocommerce input.button.alt,.woocommerce-page input.button.alt,.woocommerce #respond input#submit.alt,.woocommerce-page #respond input#submit.alt,.woocommerce #content input.button.alt,.woocommerce-page #content input.button.alt,.woocommerce a.button,.woocommerce-page a.button,.woocommerce button.button,.woocommerce-page button.button,.woocommerce input.button,.woocommerce-page input.button,.et_pb_contact p input[type="checkbox"]:checked+label i:before,.et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#55237c}.footer-widget h4{color:#55237c}.et-search-form,.nav li ul,.et_mobile_menu,.footer-widget li:before,.et_pb_pricing li:before,blockquote{border-color:#55237c}.et_pb_counter_amount,.et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et_link_content,.et_audio_content,.et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#55237c}a{color:#4d98a0}.nav li ul{border-color:}#top-header,#et-secondary-nav li ul{background-color:#289aa2}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:#161616}.et_search_form_container input::-moz-placeholder{color:#161616}.et_search_form_container input::-webkit-input-placeholder{color:#161616}.et_search_form_container input:-ms-input-placeholder{color:#161616}#main-header .nav li ul a{color:}#top-menu li a{font-size:16px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:16px!important}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a,.et_color_scheme_red #top-menu li.current-menu-ancestor>a,.et_color_scheme_red #top-menu li.current-menu-item>a,.et_color_scheme_red #top-menu li.current_page_item>a,.et_color_scheme_pink #top-menu li.current-menu-ancestor>a,.et_color_scheme_pink #top-menu li.current-menu-item>a,.et_color_scheme_pink #top-menu li.current_page_item>a,.et_color_scheme_orange #top-menu li.current-menu-ancestor>a,.et_color_scheme_orange #top-menu li.current-menu-item>a,.et_color_scheme_orange #top-menu li.current_page_item>a,.et_color_scheme_green #top-menu li.current-menu-ancestor>a,.et_color_scheme_green #top-menu li.current-menu-item>a,.et_color_scheme_green #top-menu li.current_page_item>a{color:#161616}#footer-widgets .footer-widget a,#footer-widgets .footer-widget li a,#footer-widgets .footer-widget li a:hover{color:#ffffff}.footer-widget{color:#ffffff}#main-footer .footer-widget h4{color:#55237c}.footer-widget li:before{border-color:#55237c}#footer-widgets .footer-widget li:before{top:10.6px}body .et_pb_button,.woocommerce a.button.alt,.woocommerce-page a.button.alt,.woocommerce button.button.alt,.woocommerce button.button.alt.disabled,.woocommerce-page button.button.alt,.woocommerce-page button.button.alt.disabled,.woocommerce input.button.alt,.woocommerce-page input.button.alt,.woocommerce #respond input#submit.alt,.woocommerce-page #respond input#submit.alt,.woocommerce #content input.button.alt,.woocommerce-page #content input.button.alt,.woocommerce a.button,.woocommerce-page a.button,.woocommerce button.button,.woocommerce-page button.button,.woocommerce input.button,.woocommerce-page input.button,.woocommerce #respond input#submit,.woocommerce-page #respond input#submit,.woocommerce #content input.button,.woocommerce-page #content input.button,.woocommerce-message a.button.wc-forward{border-width:0px!important;border-color:;border-radius:4px;font-weight:bold;font-style:normal;text-transform:none;text-decoration:none;}body.et_pb_button_helper_class .et_pb_button,body.et_pb_button_helper_class .et_pb_module.et_pb_button,.woocommerce.et_pb_button_helper_class a.button.alt,.woocommerce-page.et_pb_button_helper_class a.button.alt,.woocommerce.et_pb_button_helper_class button.button.alt,.woocommerce.et_pb_button_helper_class button.button.alt.disabled,.woocommerce-page.et_pb_button_helper_class button.button.alt,.woocommerce-page.et_pb_button_helper_class button.button.alt.disabled,.woocommerce.et_pb_button_helper_class input.button.alt,.woocommerce-page.et_pb_button_helper_class input.button.alt,.woocommerce.et_pb_button_helper_class #respond input#submit.alt,.woocommerce-page.et_pb_button_helper_class #respond input#submit.alt,.woocommerce.et_pb_button_helper_class #content input.button.alt,.woocommerce-page.et_pb_button_helper_class #content input.button.alt,.woocommerce.et_pb_button_helper_class a.button,.woocommerce-page.et_pb_button_helper_class a.button,.woocommerce.et_pb_button_helper_class button.button,.woocommerce-page.et_pb_button_helper_class button.button,.woocommerce.et_pb_button_helper_class input.button,.woocommerce-page.et_pb_button_helper_class input.button,.woocommerce.et_pb_button_helper_class #respond input#submit,.woocommerce-page.et_pb_button_helper_class #respond input#submit,.woocommerce.et_pb_button_helper_class #content input.button,.woocommerce-page.et_pb_button_helper_class #content input.button{}body .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover{background-color:;border-color:!important}.woocommerce a.button.alt:hover,.woocommerce-page a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce button.button.alt.disabled:hover,.woocommerce-page button.button.alt:hover,.woocommerce-page button.button.alt.disabled:hover,.woocommerce input.button.alt:hover,.woocommerce-page input.button.alt:hover,.woocommerce #respond input#submit.alt:hover,.woocommerce-page #respond input#submit.alt:hover,.woocommerce #content input.button.alt:hover,.woocommerce-page #content input.button.alt:hover,.woocommerce a.button:hover,.woocommerce-page a.button:hover,.woocommerce button.button:hover,.woocommerce-page button.button:hover,.woocommerce input.button:hover,.woocommerce-page input.button:hover,.woocommerce #respond input#submit:hover,.woocommerce-page #respond input#submit:hover,.woocommerce #content input.button:hover,.woocommerce-page #content input.button:hover{background-color:!important;border-color:!important}.et_slide_in_menu_container,.et_slide_in_menu_container .et-search-field{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-moz-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field::-webkit-input-placeholder{letter-spacing:px}.et_slide_in_menu_container .et-search-field:-ms-input-placeholder{letter-spacing:px}@media only screen and (min-width:981px){.et_pb_section{padding:0% 0}.et_pb_fullwidth_section{padding:0}.et_pb_row{padding:0% 0}.et_header_style_left #et-top-navigation,.et_header_style_split #et-top-navigation{padding:38px 0 0 0}.et_header_style_left #et-top-navigation nav>ul>li>a,.et_header_style_split #et-top-navigation nav>ul>li>a{padding-bottom:38px}.et_header_style_split .centered-inline-logo-wrap{width:76px;margin:-76px 0}.et_header_style_split .centered-inline-logo-wrap #logo{max-height:76px}.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo{height:76px}.et_header_style_centered #top-menu>li>a{padding-bottom:14px}.et_header_style_slide #et-top-navigation,.et_header_style_fullscreen #et-top-navigation{padding:29px 0 29px 0!important}.et_header_style_centered #main-header .logo_container{height:76px}.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:13.68px}.et_header_style_left .et-fixed-header #et-top-navigation,.et_header_style_split .et-fixed-header #et-top-navigation{padding:38px 0 0 0}.et_header_style_left .et-fixed-header #et-top-navigation nav>ul>li>a,.et_header_style_split .et-fixed-header #et-top-navigation nav>ul>li>a{padding-bottom:38px}.et_header_style_centered header#main-header.et-fixed-header .logo_container{height:76px}.et_header_style_split #main-header.et-fixed-header .centered-inline-logo-wrap{width:76px;margin:-76px 0}.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{max-height:76px}.et_pb_svg_logo.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{height:76px}.et_header_style_slide .et-fixed-header #et-top-navigation,.et_header_style_fullscreen .et-fixed-header #et-top-navigation{padding:29px 0 29px 0!important}.et-fixed-header#top-header,.et-fixed-header#top-header #et-secondary-nav li ul{background-color:#289aa2}.et-fixed-header #top-menu a,.et-fixed-header #et_search_icon:before,.et-fixed-header #et_top_search .et-search-form input,.et-fixed-header .et_search_form_container input,.et-fixed-header .et_close_search_field:after,.et-fixed-header #et-top-navigation .et-cart-info{color:!important}.et-fixed-header .et_search_form_container input::-moz-placeholder{color:!important}.et-fixed-header .et_search_form_container input::-webkit-input-placeholder{color:!important}.et-fixed-header .et_search_form_container input:-ms-input-placeholder{color:!important}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:!important}}@media only screen and (min-width:1350px){.et_pb_row{padding:0px 0}.et_pb_section{padding:0px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:0px}.et_pb_fullwidth_section{padding:0}}@media only screen and (max-width:980px){.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_mobile_menu li a,.mobile_menu_bar:before,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,#et_search_icon:before,#et_top_search .et-search-form input,.et_search_form_container input,#et-top-navigation .et-cart-info{color:#4d98a0}.et_close_search_field:after{color:#4d98a0!important}.et_search_form_container input::-moz-placeholder{color:#4d98a0}.et_search_form_container input::-webkit-input-placeholder{color:#4d98a0}.et_search_form_container input:-ms-input-placeholder{color:#4d98a0}}</style></head>
+<body data-rsssl=1 class="home paged page-template-default page page-id-3419 custom-background paged-5 page-paged-5 et-tb-has-template et-tb-has-footer et_button_no_icon et_pb_button_helper_class et_fullwidth_nav et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_cover_background et_pb_gutter et_pb_gutters2 et_pb_pagebuilder_layout et_smooth_scroll et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css">
+	
+<!-- Google Tag Manager (noscript) --><div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		
+
+	<header id="main-header" data-height-onload="76">
+		<div class="container clearfix et_menu_container">
+					<div class="logo_container">
+				<span class="logo_helper"></span>
+				<a href="https://staging.nedluzimstatu.cz/">
+				<img src="https://staging.nedluzimstatu.cz/wp-content/uploads/2020/10/logo.svg" width="93" height="43" alt="Nedlužím státu" id="logo" data-height-percentage="54" />
+				</a>
+			</div>
+					<div id="et-top-navigation" data-height="76" data-fixed-height="76">
+									<nav id="top-menu-nav">
+					<ul id="top-menu" class="nav"><li class="gtm-menu-home-topmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3419 current_page_item menu-item-3510"><a href="https://staging.nedluzimstatu.cz/" aria-current="page">Hlavní stránka</a></li>
+<li class="menu-cta gtm-menu-ctaMenu-topmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-3513"><a href="https://staging.nedluzimstatu.cz/kde-muzu-dluzit/">Kde můžu dlužit?</a></li>
+<li class="gtm-menu-cotedMenu-topmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-3884"><a href="https://staging.nedluzimstatu.cz/dluzim-co-ted/">Dlužím, co teď</a></li>
+<li class="gtm-menu-oprojektuMenu-topmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-3656"><a href="https://staging.nedluzimstatu.cz/o-projektu/">O projektu</a></li>
+</ul>					</nav>
+				
+				
+				
+				
+				<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>			</div> <!-- #et-top-navigation -->
+		</div> <!-- .container -->
+		<div class="et_search_outer">
+			<div class="container et_search_form_container">
+				<form role="search" method="get" class="et-search-form" action="https://staging.nedluzimstatu.cz/">
+				<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />				</form>
+				<span class="et_close_search_field"></span>
+			</div>
+		</div>
+	</header> <!-- #main-header -->
+<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-3419" class="post-3419 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters2">
+		<div class="et_pb_section et_pb_section_0 et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_0 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><h1 class="homepage">Nedlužíte státu?<br />
+Možná o&nbsp;dluhu jen nevíte</h1></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_1 perex  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner">Získejte <strong>zdarma a&nbsp;anonymně</strong> seznam státních institucí, kterým můžete dlužit. Pro každou instituci nabízíme návod, jak případné dluhy ověřit.</div>
+			</div> <!-- .et_pb_text --><div class="et_pb_button_module_wrapper et_pb_button_0_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 button-size-L gtm-buttons-CTAmain-homepage et_pb_bg_layout_light" href="/kde-muzu-dluzit/">Zjistit, kde můžu dlužit</a>
+			</div>
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				<span class="et_pb_image_wrap "><img src="/wp-content/uploads/2021/07/ilustrace-nedluzite-statu.svg" alt="Ilustrace - zmatený muž" title="Ilustrace - zmatený muž" /></span>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_1 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_2_5 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1 et_pb_image_sticky">
+				
+				
+				<span class="et_pb_image_wrap "><img src="/wp-content/uploads/2021/08/ilustrace-zena-bile-pozadi.svg" alt="Ilustrace - žena, bílé pozadí" title="Ilustrace - žena, bílé pozadí" /></span>
+			</div><div class="et_pb_module et_pb_blurb et_pb_blurb_0 sdileni-projektu et_pb_sticky_module  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></div>
+					<div class="et_pb_blurb_container">
+						<h5 class="et_pb_module_header"><span>Znáte někoho, komu by náš web mohl pomoci?</span></h5>
+						<div class="et_pb_blurb_description"><p class="pb-16">Dejte mu o nás vědět nebo stránky sdílejte na sociálních sítích.</p>
+<p class="pb-8"><a href="https://www.facebook.com/nedluzimstatu/" class="facebook gtm-link-facebook-homepage" target="_blank" rel="noopener">Facebook</a></p>
+<p class="pb-8"><a href="https://twitter.com/intent/tweet?hashtags=nedluzimstatu&amp;original_referer=https%3A%2F%2Fnedluzimstatu.cz%2F&amp;ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&amp;text=Vyzkou%C5%A1ejte%2C%20zda%20nedlu%C5%BE%C3%ADte%20st%C3%A1tu&amp;url=https%3A%2F%2Fnedluzimstatu.cz%2F" class="twitter gtm-link-twitter-homepage" data-text="Vyzkoušejte, zda nedlužíte státu" data-hashtags="nedluzimstatu" data-show-count="false" target="_blank" rel="noopener">Twitter</a></p>
+<p><a href="mailto:podnety@nedluzimstatu.cz" class="e-mail gtm-link-email-homepage" target="_blank" rel="noopener">E-mail</a></p></div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_3_5 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><h2>Co dělat, když dlužíte?</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_3 perex  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner">Především situaci <strong>řešte co nejdříve</strong>. Finančně zvládnutelný dluh bezodkladně zaplaťte. Jestli je ale&nbsp;dluh nad vaše síly, můžete ho řešit 3 způsoby, které se navzájem nevylučují:</div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_cta_0 hp-advice hp-advice-01 et_pb_promo  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Požádejte o&nbsp;splátkový kalendář</h4><div><p>Nemáte peníze na zaplacení celého dluhu? Splátkový kalendář vám ho umožní splatit postupně a v menších částkách.</p></div></div>
+				<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_promo_button" href="/dluzim-co-ted/zadost-o-splatkovy-kalendar/">Jak požádat o&nbsp;splátkový kalendář</a></div>
+			</div><div class="et_pb_module et_pb_cta_1 hp-advice hp-advice-02 et_pb_promo  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Požádejte o&nbsp;odpuštění penále</h4><div><p>Narostl vám dluh o penále, které nejste schopni zaplatit? Můžete požádat o jeho odpuštění nebo snížení.</p></div></div>
+				<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_promo_button" href="/dluzim-co-ted/zadost-o-odpusteni-penale/">Jak požádat o&nbsp;odpuštění penále</a></div>
+			</div><div class="et_pb_module et_pb_cta_2 hp-advice hp-advice-03 et_pb_promo  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_promo_description"><h4 class="et_pb_module_header">Obraťte se na bezplatné dluhové poradny</h4><div>Nevíte si s&nbsp;dluhy a&nbsp;splácením rady? Využijte bezplatné dluhové poradenství. Vybrané poradny a&nbsp;kontakty na ně najdete i&nbsp;přímo na našem webu.</div></div>
+				<div class="et_pb_button_wrapper"><a class="et_pb_button et_pb_promo_button" href="/dluzim-co-ted/#dluhove-poradny">Seznam dluhových poraden</a></div>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section --><div class="et_pb_section et_pb_section_2 et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_2 et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><h2>Chceme pomoci oddlužit Česko</h2></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_5 perex  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner">Jen samotná státní správa eviduje statisíce dluhů a&nbsp;exekucí v&nbsp;celkové výši přes 50 miliard korun. Naším cílem je tato čísla dlouhodobě snížit. Jak?</div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_blurb et_pb_blurb_1 hp-zlepseni  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-zelena-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description"><p><a href="/kde-muzu-dluzit/" class="gtm-link-dluhy-homepage">Pomáháme lidem zjistit, jakým státním institucím mohou dlužit</a></p></div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_2 hp-zlepseni  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-zelena-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description"><a href="/generovani-zadosti/" class="gtm-link-formulare-homepage">Pomáháme s&nbsp;vyplněním a&nbsp;odesláním formulářů pro ověření bezdlužnosti</a></div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_3 hp-zlepseni  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-zelena-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description"><a href="/dluzim-co-ted/" class="gtm-link-reseni-homepage">Radíme, jak existující dluhy řešit</a></div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_4">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				<a href="https://www.institut-predluzeni.cz/" target="_blank"><span class="et_pb_image_wrap "><img src="/wp-content/uploads/2020/11/logo-institut-prevence.png" alt="Logo - Institut prevence a řešení předlužení" title="Logo - Institut prevence a řešení předlužení" /></span></a>
+			</div><div class="et_pb_module et_pb_blurb et_pb_blurb_4 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Usilujeme o&nbsp;prosazení klíčových legislativních změn.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_5 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Jsme spoluautory interaktivního webu <a href="http://mapaexekuci.cz/" targer="_blank" class="link gtm-link-mapaExekuci-homepage">Mapa exekucí</a>.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_6 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Naším cílem je společnost bez nemravného obchodu s&nbsp;dluhy.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				<a href="https://cesko.digital/" target="_blank"><span class="et_pb_image_wrap "><img src="/wp-content/uploads/2021/07/logo-cesko-digital-modre.png" alt="Logo - Česko Digital" title="Logo - Česko Digital" /></span></a>
+			</div><div class="et_pb_module et_pb_blurb et_pb_blurb_7 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Jako komunita expertních dobrovolníků měníme Česko k&nbsp;lepšímu.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_8 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Máme za sebou projekty úspěšné doma i&nbsp;ve světě.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_9 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Víme, že pomocí IT dokážeme dosáhnout velkých věcí, které stojí méně a&nbsp;fungují lépe.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_6 et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_4">
+				
+				
+				<a href="https://www.hellichovka.cz/" target="_blank"><span class="et_pb_image_wrap "><img src="/wp-content/uploads/2021/08/logo-vosg.svg" alt="Logo - VOŠG a SPŠG" title="Logo - VOŠG a SPŠG" /></span></a>
+			</div><div class="et_pb_module et_pb_blurb et_pb_blurb_10 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Jsme pražská uměleckoprůmyslová škola se stoletou tradicí.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_11 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Kombinujeme ve výuce tradiční techniky i&nbsp;moderní technologie a&nbsp;zaměřujeme se na praktické znalosti absolventů.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb --><div class="et_pb_module et_pb_blurb et_pb_blurb_12 hp-instituce  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="/"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2021/07/ikona-cerna-sipka.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></a></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description">Vychováváme studující ke společenské odpovědnosti.</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
+	</div><!-- .et-l -->
+						</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+					<div class="et_pb_row et_pb_row_0_tb_footer">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner"><h4>Máte nápad, jak web vylepšit?</h4></div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_text et_pb_text_1_tb_footer perex  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner">Napište nám na <a href="mailto:podnety@nedluzimstatu.cz">podnety@nedluzimstatu.cz</a>. Děkujeme!</div>
+			</div> <!-- .et_pb_text --><div class="et_pb_module et_pb_divider et_pb_divider_0_tb_footer et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_1_tb_footer cookie-notice">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_0_tb_footer  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><img src="/wp-content/uploads/2020/11/ikona-cookie.svg" alt="" class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone" /></span></div>
+					<div class="et_pb_blurb_container">
+						<h5 class="et_pb_module_header"><span>Používáme cookies</span></h5>
+						<div class="et_pb_blurb_description"><p>Pomohou nám zjistit, jestli je pro vás stránka přehledná a jak ji můžeme zlepšit. Cookies v žádném případě neslouží ke shromažďování citlivých údajů.</p>
+<p><a href="/wp-content/uploads/2021/06/nedluzim-statu-cookies.pdf" target="_blank" rel="noopener" class="gtm-link-cookies-footer">Více o tom, jak cookies používáme</a></div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_2 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_1_tb_footer blurb-no-padding-left  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_blurb_content">
+					
+					<div class="et_pb_blurb_container">
+						<h5 class="et_pb_module_header"><span>Institut prevence a řešení předlužení, z.ú.</span></h5>
+						<div class="et_pb_blurb_description"><a href="mailto:info@institut-predluzeni.cz">info@institut-predluzeni.cz</a><br />
+Jičínská 226, 130 00 Praha 3<br />
+IČ 07753268</div>
+					</div>
+				</div> <!-- .et_pb_blurb_content -->
+			</div> <!-- .et_pb_blurb -->
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row --><div class="et_pb_row et_pb_row_2_tb_footer et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_3_4 et_pb_column_3_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				<div class="et_pb_text_inner">© 2020 Institut prevence a řešení předlužení. Všechna práva vyhrazena. Webdesign © 2020 VOŠG a SPŠG</div>
+			</div> <!-- .et_pb_text -->
+			</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_4 et_pb_column_4_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+				
+				
+				<a href="https://www.institut-predluzeni.cz/" target="_blank"><span class="et_pb_image_wrap "><img src="/wp-content/uploads/2020/11/logo-institut-prevence-bile.png" alt="Logo - Institut prevence a řešení předlužení" title="Logo - Institut prevence a řešení předlužení" /></span></a>
+			</div>
+			</div> <!-- .et_pb_column -->
+				
+				
+			</div> <!-- .et_pb_row -->
+				
+				
+			</div> <!-- .et_pb_section -->		</div><!-- .et_builder_inner_content -->
+	</footer><!-- .et-l -->
+	    </div> <!-- #et-main-area -->
+
+			
+		</div><!-- #et-boc -->
+		</div> <!-- #page-container -->
+
+			<div id="pum-3863" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3863,&quot;slug&quot;:&quot;napoveda-otazka-c-5&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-05\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3863" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Podnikáte nebo podáváte daňové přiznání z&nbsp;jiného důvodu? Dlužit můžete nejen za pozdní nebo špatné podání daňového přiznání, ale i&nbsp;za nedoplatek daně z&nbsp;příjmu.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<div id="pum-3861" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3861,&quot;slug&quot;:&quot;napoveda-otazka-c-7&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-07\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3861" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Mohl vám vzniknout dluh na zdravotním pojištění, a&nbsp;to zejména tehdy, pokud jste během své nezaměstnanosti nebyl/a přihlášený/á na Úřadu práce. Pokud máte status studenta, tento poplatek za vás během studia do 26 let platí stát.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<div id="pum-3862" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3862,&quot;slug&quot;:&quot;napoveda-otazka-c-6&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-06\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3862" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Pak jste měli povinnost platit sociální a&nbsp;zdravotní pojištění. Také můžete dlužit finančnímu úřadu za nedoplatek daně z&nbsp;příjmu.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<div id="pum-3864" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3864,&quot;slug&quot;:&quot;napoveda-otazka-c-4&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-04\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3864" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Pak vám mohl vzniknout dluh u&nbsp;finančního úřadu kvůli nedoplatku na dani z&nbsp;nemovitosti.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<div id="pum-3859" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3859,&quot;slug&quot;:&quot;napoveda-otazka-c-3&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-03\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3859" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Možná dlužíte obci na nájmu. Ale pozor, v&nbsp;daném bytě musíte být opravdu nájemce, tedy stále jste, nebo jste byl/a uvedený/á v&nbsp;nájemní smlouvě.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<div id="pum-3858" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3858,&quot;slug&quot;:&quot;napoveda-otazka-c-2&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-02\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3858" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Dluh může vzniknout například tehdy, když zapomenete zaplatit pokutu, kterou jste dostali od městské nebo státní policie.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<div id="pum-3847" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3847,&quot;slug&quot;:&quot;napoveda-otazka-c-1&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-01\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3847" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p>Můžete dlužit obci poplatek za psa. Pes však musí být opravdu váš –&nbsp;to znamená, že ho máte zaregistrovaného na úřadě a&nbsp;platíte za něj roční poplatky.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<div id="pum-3860" class="pum pum-overlay pum-theme-3853 pum-theme-nedluzim popmake-overlay pum-click-to-close click_open" data-popmake="{&quot;id&quot;:3860,&quot;slug&quot;:&quot;napoveda-otazka-c-8&quot;,&quot;theme_id&quot;:3853,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;a[href^=\&quot;#napoveda-08\&quot;]&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;450px&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;24&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;Zav\u0159\u00edt&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-3860" class="pum-container popmake theme-3853 pum-responsive pum-responsive-normal responsive size-normal">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content" tabindex="0">
+			<p><strong>VZP</strong> – Všeobecná zdravotní pojišťovna<br />
+<strong>OZP</strong> – Oborová zdravotní pojišťovna<br />
+<strong>ČPZP</strong> – Česká průmyslová zdravotní pojišťovna<br />
+<strong>VoZP</strong> – Vojenská zdravotní pojišťovna<br />
+<strong>ZPŠ</strong> – Zaměstnanecká pojišťovna Škoda<br />
+<strong>RBP</strong> – Revírní bratrská pokladna – zdravotní pojišťovna<br />
+<strong>ZP MV ČR</strong> – Zdravotní pojišťovna Ministerstva vnitra ČR</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			Zavřít            </button>
+		
+	</div>
+
+</div>
+<script type='text/javascript' src='https://staging.nedluzimstatu.cz/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://staging.nedluzimstatu.cz/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/staging.nedluzimstatu.cz\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4.2' id='contact-form-7-js'></script>
+<script type='text/javascript' id='divi-custom-script-js-extra'>
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_shortcodes_strings = {"previous":"Previous","next":"Next"};
+var et_pb_custom = {"ajaxurl":"https:\/\/staging.nedluzimstatu.cz\/wp-admin\/admin-ajax.php","images_uri":"\/wp-content\/themes\/Divi\/images","builder_images_uri":"\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"418d464658","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"e32ad9f9cc","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"3419","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":""}; var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"}; var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_box_shadow_elements = [];
+var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
+var et_pb_sticky_elements = {"et_pb_blurb_0":{"id":"et_pb_blurb_0","selector":".et_pb_blurb_0","position":{"desktop":"top","tablet":"none","phone":"none"},"topOffset":"24px","bottomOffset":"0px","topLimit":"none","bottomLimit":"row","offsetSurrounding":"on","transition":"on","styles":{"module_alignment":{"desktop":"","tablet":"","phone":""}}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/themes/Divi/js/custom.unified.js?ver=4.9.10' id='divi-custom-script-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/breadcrumbs-divi-module/scripts/frontend-bundle.min.js?ver=1.2' id='divi-breadcrumbs-frontend-bundle-js'></script>
+<script type='text/javascript' src='https://staging.nedluzimstatu.cz/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' id='popup-maker-site-js-extra'>
+/* <![CDATA[ */
+var pum_vars = {"version":"1.16.2","pm_dir_url":"\/wp-content\/plugins\/popup-maker\/","ajaxurl":"https:\/\/staging.nedluzimstatu.cz\/wp-admin\/admin-ajax.php","restapi":"https:\/\/staging.nedluzimstatu.cz\/wp-json\/pum\/v1","rest_nonce":null,"default_theme":"3853","debug_mode":"","disable_tracking":"","home_url":"\/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"analytics_route":"analytics","analytics_api":"https:\/\/staging.nedluzimstatu.cz\/wp-json\/pum\/v1"};
+var pum_sub_vars = {"ajaxurl":"https:\/\/staging.nedluzimstatu.cz\/wp-admin\/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-3863":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-05\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3863,"slug":"napoveda-otazka-c-5"},"pum-3861":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-07\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3861,"slug":"napoveda-otazka-c-7"},"pum-3862":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-06\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3862,"slug":"napoveda-otazka-c-6"},"pum-3864":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-04\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3864,"slug":"napoveda-otazka-c-4"},"pum-3859":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-03\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3859,"slug":"napoveda-otazka-c-3"},"pum-3858":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-02\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3858,"slug":"napoveda-otazka-c-2"},"pum-3847":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-01\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3847,"slug":"napoveda-otazka-c-1"},"pum-3860":{"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":"a[href^=\"#napoveda-08\"]"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"3853","size":"normal","responsive_min_width":"%","responsive_max_width":"450px","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"24","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"nedluzim","id":3860,"slug":"napoveda-otazka-c-8"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/popup-maker/assets/js/site.min.js?defer&#038;ver=1.16.2' id='popup-maker-site-js'></script>
+<script type='text/javascript' src='/wp-content/themes/Divi/core/admin/js/common.js?ver=4.9.10' id='et-core-common-js'></script>
+<script type='text/javascript' id='wpcf7cf-scripts-js-extra'>
+/* <![CDATA[ */
+var wpcf7cf_global_settings = {"ajaxurl":"https:\/\/staging.nedluzimstatu.cz\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/cf7-conditional-fields/js/scripts.js?ver=2.0.4' id='wpcf7cf-scripts-js'></script>
+<script type='text/javascript' src='/wp-content/plugins/jquery-validation-for-contact-form-7-pro/includes/assets/js/jquery.validate.min.js?ver=5.2' id='jvcf7p_jquery_validate-js'></script>
+<script type='text/javascript' id='jvcf7p_validation-js-extra'>
+/* <![CDATA[ */
+var scriptData = {"jvcf7p_default_settings":{"jvcf7p_show_label_error":"errorMsgshow","jvcf7p_invalid_field_design":"theme_4","jvcf7p_verify_code_field_placeholder":"Verification Code","jvcf7p_email_verify_subject":"Your Verification Code","jvcf7p_email_verify_body":"Hi, \r\n\r\nYour Verification Code is [CODE] . \r\n\r\nPlease keep the code in Verification Code input box to verify.\r\n\r\nThanks","jvcf7p_msg_email_verify":"Verification Code didn't matched."},"jvcf7p_default_error_msgs":{"required":"Toto pole je povinn\u00e9.","email":"Zadejte e-mailovou adresu ve spr\u00e1vn\u00e9m form\u00e1tu.","url":"Please enter a valid URL.","date":"Please enter a valid date.","dateISO":"Please enter a valid date (ISO).","number":"Please enter a valid number.","digits":"Please enter only digits.","alphanumeric":"Letters, numbers, and underscores only.","lettersonly":"Letters only please.","letters_space":"Letters and space only.","creditcard":"Please enter a valid credit card number.","phoneUS":"Please specify a valid US phone number","phoneUK":"Please specify a valid UK phone number","mobileUK":"Please specify a valid UK mobile number","stateUS":"Please specify a valid US state","ipv4":"Please specify a valid IP v4 Address","ipv6":"Please specify a valid IP v6 Address","equalTo":"Please enter the same value again.","extension":"Please enter a file with a valid extension.","require_from_group":"Please fill at least {0} of these fields.","maxlength":"Please enter no more than {0} characters.","minlength":"Please enter at least {0} characters.","rangelength":"Please enter a value between {0} and {1} characters long.","range":"Please enter a value between {0} and {1}.","max":"Please enter a value less than or equal to {0}.","min":"Please enter a value greater than or equal to {0}.","iban":"Please specify a valid IBAN.","bic":"Please specify a valid BIC code.","custom_code":"Please enter valid code.","check_username":"Username doesn't exists.","email_verification":"Email verification code doesn't match"},"jvcf7p_ajax_url":"https:\/\/staging.nedluzimstatu.cz\/wp-admin\/admin-ajax.php?action=jvcf7p_ajax_validation","jvcf7p_regexs":{"5437":{"id":5437,"regex":"^([a-z0-9]{7})$","error_mg":"Zadejte platn\u00e9 ID datov\u00e9 schr\u00e1nky (p\u0159esn\u011b 7 znak\u016f)."},"3660":{"id":3660,"regex":"^([A-\u017da-\u017e0-9. \\-\\\/]+)$","error_mg":"M\u011bsto \/ Obec obsahuje nepovolen\u00e9 znaky."},"3633":{"id":3633,"regex":"^([A-\u017da-\u017e0-9. \\-\\\/]+)$","error_mg":"Ulice obsahuje nepovolen\u00e9 znaky."},"3659":{"id":3659,"regex":"^([A-\u017da-\u017e0-9. \\-\\\/]+)$","error_mg":"\u010c\u00e1st obce obsahuje nepovolen\u00e9 znaky."},"3631":{"id":3631,"regex":"^([A-\u017da-\u017e \\-]+)$","error_mg":"K\u0159estn\u00ed jm\u00e9no obsahuje nepovolen\u00e9 znaky."},"3632":{"id":3632,"regex":"^([A-\u017da-\u017e \\-]+)$","error_mg":"P\u0159\u00edjmen\u00ed obsahuje nepovolen\u00e9 znaky."},"3630":{"id":3630,"regex":"^[0-9]{2}([0257][1-9]|[1368][012])(0[1-9]|[12][0-9]|3[01])\/[0-9]{3,4}$","error_mg":"Zadejte platn\u00e9 rodn\u00e9 \u010d\u00edslo s lom\u00edtkem."},"3629":{"id":3629,"regex":"^((?!(0))[0-9]{5})$","error_mg":"Zadejte platn\u00e9 sm\u011brovac\u00ed \u010d\u00edslo (p\u011bt \u010d\u00edslic)."},"3628":{"id":3628,"regex":"([+]?\\d{1,3}[. \\s]?)?(\\d{9}?)","error_mg":"Zadejte platn\u00e9 telefonn\u00ed \u010d\u00edslo."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/jquery-validation-for-contact-form-7-pro/includes/assets/js/jvcf7p_validation.js?ver=5.2' id='jvcf7p_validation-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Ld-VeoZAAAAAAIrNW74N2EYnEvFeWZSgJeomQT5&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6Ld-VeoZAAAAAAIrNW74N2EYnEvFeWZSgJeomQT5","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.4.2' id='wpcf7-recaptcha-js'></script>
+<style id="et-builder-module-design-tb-217-3419-cached-inline-styles">.et_pb_section_0_tb_footer.et_pb_section{padding-top:64px;padding-bottom:34px;background-color:#55237c!important}.et_pb_row_0_tb_footer{min-height:105px}.et_pb_row_0_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_text_0_tb_footer.et_pb_text{color:#f1ece7!important}.et_pb_text_0_tb_footer{line-height:145%;font-weight:700;line-height:145%;min-height:30px;margin-bottom:16px!important}.et_pb_text_0_tb_footer h1{color:#FFFFFF!important}.et_pb_text_0_tb_footer h4{color:#FFFFFF!important}.et_pb_blurb_1_tb_footer.et_pb_blurb{color:#d8c3e9!important}.et_pb_text_1_tb_footer.et_pb_text{color:#d8c3e9!important}.et_pb_text_2_tb_footer.et_pb_text{color:#d8c3e9!important}.et_pb_blurb_0_tb_footer.et_pb_blurb{color:#d8c3e9!important}.et_pb_text_1_tb_footer{line-height:32px;line-height:32px;min-height:26px;margin-bottom:48px!important}.et_pb_divider_0_tb_footer{height:0px;margin-right:-16px!important;margin-left:-16px!important}.et_pb_divider_0_tb_footer:before{border-top-color:#6f4d89;border-top-width:4px;width:auto;top:0px;right:0px;left:0px}.et_pb_row_1_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-top:42px!important;margin-bottom:64px!important;padding-top:0px;padding-bottom:0px}.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_module_header a{font-weight:700;color:#FFFFFF!important}.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_module_header a{font-weight:700;color:#FFFFFF!important}.et_pb_blurb_0_tb_footer .et_pb_main_blurb_image .et_pb_image_wrap{width:22px}.et_pb_row_2_tb_footer.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-right:auto!important;margin-bottom:-2px!important;margin-left:auto!important;padding-top:0px;padding-bottom:0px}.et_pb_column_3_tb_footer{margin:auto}.et_pb_image_0_tb_footer .et_pb_image_wrap img{height:48px;width:auto}.et_pb_image_0_tb_footer{text-align:right;margin-right:0}@media only screen and (min-width:981px){.et_pb_blurb_0_tb_footer.et_pb_blurb{width:430px}}@media only screen and (min-width:768px) and (max-width:980px){.et_pb_column_4_tb_footer{display:none!important}}@media only screen and (max-width:767px){.et_pb_section_0_tb_footer.et_pb_section{padding-top:40px;padding-bottom:24px}.et_pb_text_0_tb_footer{margin-bottom:7px!important}.et_pb_text_1_tb_footer{margin-bottom:32px!important}.et_pb_row_1_tb_footer.et_pb_row{margin-top:32px!important;margin-bottom:40px!important}.et_pb_column_4_tb_footer{display:none!important}}.et_pb_section_0.et_pb_section{padding-top:56px;padding-bottom:80px}.et_pb_row_1.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_row_6.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_row_0.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_column_4{margin:auto}.et_pb_column_0{margin:auto}.et_pb_text_0{margin-bottom:0px!important}.et_pb_text_1{margin-bottom:48px!important}.et_pb_button_0_wrapper .et_pb_button_0,.et_pb_button_0_wrapper .et_pb_button_0:hover{padding-top:16px!important;padding-right:32px!important;padding-bottom:16px!important;padding-left:32px!important}.et_pb_button_0,.et_pb_button_0:after{transition:all 300ms ease 0ms}.et_pb_image_0{text-align:right;margin-right:0}.et_pb_image_0 .et_pb_image_wrap{display:block}.et_pb_image_1 .et_pb_image_wrap{display:block}.et_pb_image_4 .et_pb_image_wrap{display:block}.et_pb_image_0 .et_pb_image_wrap img{width:auto}.et_pb_image_1 .et_pb_image_wrap img{width:auto}.et_pb_section_1.et_pb_section{padding-top:64px;padding-bottom:96px;background-color:#F1ECE7!important}.et_pb_row_1{display:flex;flex-wrap:wrap}.et_pb_image_1{text-align:left;margin-left:0}.et_pb_blurb_0.et_pb_blurb .et_pb_module_header,.et_pb_blurb_0.et_pb_blurb .et_pb_module_header a{font-weight:700;color:#55237C!important}.et_pb_blurb_0.et_pb_blurb{color:#90867B!important;margin-top:40px!important}.et_pb_blurb_0 .et_pb_main_blurb_image .et_pb_image_wrap{width:32px}.et_pb_blurb_0 .et_pb_blurb_content{max-width:324px}.et_pb_text_2{margin-top:16px!important;margin-right:16px!important;margin-bottom:0px!important;margin-left:16px!important}.et_pb_text_3{margin-right:16px!important;margin-bottom:40px!important;margin-left:16px!important;max-width:508px}.et_pb_cta_0.et_pb_promo{padding-top:32px!important;padding-right:40px!important;padding-bottom:40px!important;padding-left:40px!important;margin-bottom:24px!important}.et_pb_cta_1.et_pb_promo{padding-top:32px!important;padding-right:40px!important;padding-bottom:40px!important;padding-left:40px!important;margin-bottom:24px!important}.et_pb_cta_2.et_pb_promo{padding-top:32px!important;padding-right:40px!important;padding-bottom:40px!important;padding-left:40px!important}.et_pb_section_2.et_pb_section{padding-top:80px;padding-bottom:120px}.et_pb_row_2.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-bottom:64px!important;padding-top:0px;padding-bottom:0px}.et_pb_row_4.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-bottom:64px!important;padding-top:0px;padding-bottom:0px}.et_pb_blurb_6.et_pb_blurb{margin-bottom:0px!important;max-width:600px}.et_pb_text_4{margin-bottom:0px!important;max-width:600px}.et_pb_blurb_9.et_pb_blurb{margin-bottom:0px!important;max-width:600px}.et_pb_blurb_12.et_pb_blurb{margin-bottom:0px!important;max-width:600px}.et_pb_text_5{margin-bottom:24px!important;max-width:600px}.et_pb_blurb_8.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_7.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_11.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_2.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_10.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_1.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_4.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_5.et_pb_blurb{margin-bottom:16px!important;max-width:600px}.et_pb_blurb_2 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_8 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_12 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_9 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_6 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_4 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_5 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_11 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_1 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_10 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_3 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_7 .et_pb_main_blurb_image .et_pb_image_wrap{width:24px}.et_pb_blurb_2 .et_pb_blurb_content{max-width:100%}.et_pb_blurb_3 .et_pb_blurb_content{max-width:100%}.et_pb_blurb_1 .et_pb_blurb_content{max-width:100%}.et_pb_blurb_3.et_pb_blurb{max-width:600px}.et_pb_row_3.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;margin-bottom:64px!important}.et_pb_image_2 .et_pb_image_wrap img{max-height:64px;width:auto}.et_pb_image_4 .et_pb_image_wrap img{max-height:64px;width:auto}.et_pb_image_3{margin-bottom:24px!important;text-align:left;margin-left:0}.et_pb_image_2{margin-bottom:24px!important;text-align:left;margin-left:0}.et_pb_image_4{margin-bottom:24px!important;text-align:left;margin-left:0}.et_pb_image_3 .et_pb_image_wrap img{min-height:auto;max-height:46px;width:auto}.et_pb_row_5.et_pb_row{padding-top:0px!important;padding-bottom:0px!important}.et_pb_column_2{padding-left:16px}.et_pb_column_5{padding-right:100px;margin-bottom:0px}.et_pb_column_6{padding-right:100px}.et_pb_column_7{padding-right:100px}.et_pb_column_8{padding-right:100px}@media only screen and (min-width:981px){.et_pb_image_3{height:64px;display:flex;align-items:flex-end}}@media only screen and (max-width:980px){.et_pb_column_3{order:1}.et_pb_text_2{margin-top:0px!important;margin-right:0px!important;margin-left:0px!important}.et_pb_text_3{margin-right:0px!important;margin-left:0px!important}.et_pb_row_3.et_pb_row{margin-bottom:48px!important}.et_pb_row_4.et_pb_row{margin-bottom:48px!important}.et_pb_blurb_6.et_pb_blurb{margin-bottom:48px!important}.et_pb_blurb_12.et_pb_blurb{margin-bottom:48px!important}.et_pb_image_2 .et_pb_image_wrap img{max-height:48px}.et_pb_image_4 .et_pb_image_wrap img{max-height:48px}.et_pb_image_3 .et_pb_image_wrap img{min-height:auto;max-height:32px}.et_pb_image_3{height:auto}.et_pb_column_2{padding-left:0px;order:2}.et_pb_column_5{padding-right:0px}.et_pb_column_7{padding-right:0px}}@media only screen and (min-width:768px) and (max-width:980px){.et_pb_column_1{display:none!important}.et_pb_image_1{display:none!important}}@media only screen and (max-width:767px){.et_pb_section_0.et_pb_section{padding-top:56px;padding-bottom:72px}.et_pb_text_3{margin-bottom:32px!important}.et_pb_text_1{margin-bottom:32px!important}.et_pb_text_5{margin-bottom:32px!important}.et_pb_button_0_wrapper .et_pb_button_0,.et_pb_button_0_wrapper .et_pb_button_0:hover{padding-top:12px!important;padding-right:24px!important;padding-bottom:12px!important;padding-left:24px!important}.et_pb_column_1{display:none!important}.et_pb_image_1{display:none!important}.et_pb_section_1.et_pb_section{padding-top:56px;padding-bottom:34px}.et_pb_text_2{margin-bottom:0px!important}.et_pb_cta_0.et_pb_promo{padding-right:32px!important;padding-left:32px!important;margin-bottom:16px!important}.et_pb_cta_1.et_pb_promo{padding-right:32px!important;padding-left:32px!important;margin-bottom:16px!important}.et_pb_cta_2.et_pb_promo{padding-right:32px!important;padding-left:32px!important}.et_pb_section_2.et_pb_section{padding-top:56px;padding-bottom:80px}.et_pb_blurb_6.et_pb_blurb{margin-bottom:48px!important}.et_pb_blurb_12.et_pb_blurb{margin-bottom:48px!important}.et_pb_row_4.et_pb_row{margin-bottom:48px!important}.et_pb_row_3.et_pb_row{margin-bottom:48px!important}.et_pb_image_4 .et_pb_image_wrap img{max-height:48px}.et_pb_image_2 .et_pb_image_wrap img{max-height:48px}.et_pb_image_3 .et_pb_image_wrap img{min-height:auto;max-height:32px}.et_pb_image_3{height:auto}.et_pb_column_5{padding-right:0px}.et_pb_column_6{padding-right:0px}.et_pb_column_7{padding-right:0px}.et_pb_column_8{padding-right:0px}}</style>
+<script type="text/javascript" src='/wp-content/uploads/custom-css-js/3454.js?v=5009'></script>
+		
+			<span class="et_pb_scroll_top et-pb-icon"></span>
+	</body>
+</html>
