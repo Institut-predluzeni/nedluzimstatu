@@ -73,7 +73,9 @@ function odeslatFormular(pdfDotaznik) {
     	return false;
   }
   jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = true;
-  jQuery('#pdf-dotaznik-02 .button-pdf-form').addClass('et_pb_preload');
+  jQuery('#pdf-dotaznik-02 .button-pdf-form').addClass('btn-loading');
+  jQuery('#pdf-dotaznik-02 .button-pdf-form .desktop-label').text('Generujeme žádosti');
+  jQuery('#pdf-dotaznik-02 .button-pdf-form .mobile-label').text('Generujeme žádosti');  
   jQuery('#pdf-dotaznik-error').addClass('d-none');
   console.log('submit pdfdotaznik via js');
   
@@ -166,7 +168,7 @@ function odeslatFormular(pdfDotaznik) {
     xhrOverride.responseType = 'arraybuffer';
 
   jQuery.ajax({
-    url: 'https://iprp.nedluzimstatu.cz/mail-service/zadosti',
+    url: 'https://www.nedluzimstatu.cz/mail-service/zadosti',
     //dev:
     //url: 'https://nedluzimstatu.cz/transformation-service/financni-urad',
     type: 'POST',
@@ -188,7 +190,9 @@ function odeslatFormular(pdfDotaznik) {
       // dev:
         201: function(data){
           jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = false;
-          jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('et_pb_preload');
+          jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('btn-loading');
+  	      jQuery('#pdf-dotaznik-02 .button-pdf-form .desktop-label').text('Vygenerovat a poslat na e-mail');
+  		  jQuery('#pdf-dotaznik-02 .button-pdf-form .mobile-label').text('Vygenerovat žádosti');           
           var blob = new Blob([data], {type: 'application/pdf'});
           var fileName = 'output.pdf';
           var link=document.createElement('a');
@@ -201,7 +205,9 @@ function odeslatFormular(pdfDotaznik) {
     	jQuery('#pdf-dotaznik-error').removeClass('d-none');
       	document.getElementById('seznam-kroku-02').scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
         jQuery('#pdf-dotaznik-02 .button-pdf-form')[0].disabled = false;
-    	jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('et_pb_preload');
+    	jQuery('#pdf-dotaznik-02 .button-pdf-form').removeClass('btn-loading');
+  	    jQuery('#pdf-dotaznik-02 .button-pdf-form .desktop-label').text('Vygenerovat a poslat na e-mail');
+  		jQuery('#pdf-dotaznik-02 .button-pdf-form .mobile-label').text('Vygenerovat žádosti');        
     },
   });
 	return false; // do not submit form via html
