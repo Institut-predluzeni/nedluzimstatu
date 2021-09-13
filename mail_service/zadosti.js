@@ -102,7 +102,7 @@ function sendMail(data) {
                     `${baseURL}/pojistovna`, {
                         headers: defaultHeaders,
                         data: JSON.stringify({
-                            recipient: pojistovnaData,
+                            recipient: pojistovna,
                             applicant: data.applicant,
                             reply_to: data.reply_to,
                             reason: data.reason
