@@ -124,7 +124,7 @@ function sendMail(data) {
     return {
         from: {
             name: "Nedlužím státu",
-            email: "notifications@cesko.digital"
+            email: "formulare@nedluzimstatu.cz"
         },
         to: {
             email: data.recipientEmail,
