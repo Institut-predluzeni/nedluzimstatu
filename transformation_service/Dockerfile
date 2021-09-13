@@ -1,4 +1,4 @@
-FROM filipjirsak/xslt-service:0.4.0 
+FROM filipjirsak/xslt-service:latest
 
 WORKDIR /home/app
 
