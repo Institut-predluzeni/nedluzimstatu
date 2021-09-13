@@ -24,6 +24,18 @@ exports.request_handler = (event, context, callback) => {
         }
     };
     return callback(null, response);
+	} else if (request.uri === "/dluhove-poradny/" || request.uri === "/dluhove-poradny") {
+        const response = {
+          status: '301',
+          statusDescription: 'Redirecting to /dluzim-co-ted',
+          headers: {
+            location: [{
+              key: 'Location',
+              value: `https://${request.headers.host[0].value}/dluzim-co-ted`
+            }]
+          }
+        };
+    	return callback(null, response);
 	}
 	request.uri = request.uri.replace(/^\/transformation-service/, "");
 	request.uri = request.uri.replace(/^\/mail-service/, "");

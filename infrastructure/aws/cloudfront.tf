@@ -64,6 +64,8 @@ resource "aws_cloudfront_distribution" "distribution" {
   default_root_object = "index.html"
 
   aliases = [
+    var.public_domain,
+    "www.${var.public_domain}",
     "iprp.${var.public_domain}"
   ]
 
@@ -87,6 +89,34 @@ resource "aws_cloudfront_distribution" "distribution" {
     max_ttl                = 86400
     compress               = true
     viewer_protocol_policy = "redirect-to-https"
+  }
+
+  ordered_cache_behavior {
+    path_pattern     = "/dluhove-poradny?"
+    allowed_methods  = [
+      "GET",
+      "HEAD"]
+    cached_methods   = [
+      "GET",
+      "HEAD"]
+    target_origin_id = "S3-Website-${aws_s3_bucket.static_content.bucket}.${aws_s3_bucket.static_content.website_domain}"
+
+    forwarded_values {
+      query_string = true
+      cookies {
+        forward = "none"
+      }
+    }
+    min_ttl                = 0
+    default_ttl            = 86400
+    max_ttl                = 86400
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+
+    lambda_function_association {
+      event_type = "viewer-request"
+      lambda_arn = aws_lambda_function.lambda_edge_request.qualified_arn
+    }
   }
 
   ordered_cache_behavior {
