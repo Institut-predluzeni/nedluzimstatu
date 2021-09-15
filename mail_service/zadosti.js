@@ -15,12 +15,17 @@ const defaultHeaders = {
 
 const pojistovny = {
     "Všeobecná zdravotní pojišťovna": "VZP",
+    "VŠEOBECNÁ ZDRAVOTNÍ POJIŠŤOVNA ČESKÉ REPUBLIKY": "VZP",
     "Oborová zdravotní pojišťovna zaměstnanců bank, pojišťoven a stavebnictví": "OZP",
+    "Oborová zdravotní pojišťovna": "OZP",
     "Česká průmyslová zdravotní pojišťovna": "CPZP",
     "Vojenská zdravotní pojišťovna České republiky": "VoZP",
+    "Vojenská zdravotní pojišťovna": "VoZP",
     "Zaměstnanecká pojišťovna Škoda": "ZPS",
     "RBP, zdravotní pojišťovna": "RBP-ZP",
-    "Zdravotní pojišťovna ministerstva vnitra České republiky": "ZP MV CR"
+    "Revírní bratrská pokladna – zdravotní pojišťovna": "RBP-ZP",
+    "Zdravotní pojišťovna ministerstva vnitra České republiky": "ZP MV CR",
+    "Zdravotní pojišťovna Ministerstva vnitra ČR": "ZP MV CR"
 }
 
 
