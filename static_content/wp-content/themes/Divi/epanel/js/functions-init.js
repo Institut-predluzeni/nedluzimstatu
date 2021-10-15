@@ -120,6 +120,33 @@
 					$checkbox.parents('.et-epanel-box').next().hide();
 				}
 			}
+
+			if ( 'divi_dynamic_css' === $checkbox.attr( 'id' ) || 'extra_dynamic_css' === $checkbox.attr( 'id' ) ) {
+				if ( ! value ) {
+					$checkbox.parents('.et-epanel-box').next().hide();
+					$checkbox.parents('.et-epanel-box').next().next().hide();
+				}
+			}
+
+			if ( 'divi_enable_jquery_body' === $checkbox.attr( 'id' ) || 'extra_enable_jquery_body' === $checkbox.attr( 'id' ) ) {
+				if ( ! value ) {
+					$checkbox.parents('.et-epanel-box').next().hide();
+					$checkbox.parents('.et-epanel-box').next().next().hide();
+				}
+			}
+
+			if ( 'divi_google_fonts_inline' === $checkbox.attr( 'id' ) || 'extra_google_fonts_inline' === $checkbox.attr( 'id' ) ) {
+				if ( ! value ) {
+					$checkbox.parents('.et-epanel-box').next().hide();
+				}
+			}
+
+			if ( 'divi_critical_css' === $checkbox.attr( 'id' ) || 'extra_critical_css' === $checkbox.attr( 'id' ) ) {
+				if ( ! value ) {
+					$checkbox.parents('.et-epanel-box').next().hide();
+				}
+			}
+
 		});
 
 		$('.et-box-content').on( 'click', '.et_pb_yes_no_button', function(e){
@@ -135,6 +162,42 @@
 			if ( $state.parent().next().hasClass( 'et_pb_clear_static_css' ) ) {
 				$state = $state.add( $state.parent() );
 
+				if ( $checkbox.is( ':checked' ) ) {
+					$box_content.parent().next().hide();
+				} else {
+					$box_content.parent().next().show();
+				}
+			}
+
+			if ( 'divi_dynamic_css' === $checkbox.attr( 'id' ) || 'extra_dynamic_css' === $checkbox.attr( 'id' ) ) {
+				if ( $checkbox.is( ':checked' ) ) {
+					$box_content.parent().next().hide();
+					$box_content.parent().next().next().hide();
+				} else {
+					$box_content.parent().next().show();
+					$box_content.parent().next().next().show();
+				}
+			}
+
+			if ( 'divi_enable_jquery_body' === $checkbox.attr( 'id' ) || 'extra_enable_jquery_body' === $checkbox.attr( 'id' ) ) {
+				if ( $checkbox.is( ':checked' ) ) {
+					$box_content.parent().next().hide();
+					$box_content.parent().next().next().hide();
+				} else {
+					$box_content.parent().next().show();
+					$box_content.parent().next().next().show();
+				}
+			}
+
+			if ( 'divi_google_fonts_inline' === $checkbox.attr( 'id' ) || 'divi_google_fonts_inline' === $checkbox.attr( 'id' ) ) {
+				if ( $checkbox.is( ':checked' ) ) {
+					$box_content.parent().next().hide();
+				} else {
+					$box_content.parent().next().show();
+				}
+			}
+
+			if ( 'divi_critical_css' === $checkbox.attr( 'id' ) || 'extra_critical_css' === $checkbox.attr( 'id' ) ) {
 				if ( $checkbox.is( ':checked' ) ) {
 					$box_content.parent().next().hide();
 				} else {

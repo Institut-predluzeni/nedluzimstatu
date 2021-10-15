@@ -69,3 +69,22 @@
 .clear {
     clear: both;
 }
+.duplicate_page_settings .saving-txt {
+    background: #fff;
+    padding: 10px 15px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+    margin-top: 20px;
+    border-radius: 3px;
+    border:1px solid #c3c4c7;
+    border-left: solid 4px #2271b1;
+}
+.duplicate_page_settings .settings-error{
+    margin-bottom: 0;
+}
+.duplicate_page_settings #poststuff{
+    padding-top: 0px;
+}
+.duplicate_page_settings .settings-error.notice{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}

@@ -110,7 +110,12 @@ jQuery(document).ready(function ($) {
     $(document).on("click", ".rsssl-close-warning, .rsssl-close-warning-x",function (event) {
         var type = $(this).closest('.rsssl-dashboard-dismiss').data('dismiss_type');
         var row = $(this).closest('tr');
-
+        row.animate({
+            position: 'relative',
+            right: '1000px'
+        }, 500, function(){
+            row.remove();
+        });
         $.ajax({
             type: "post",
             data: {
@@ -120,10 +125,16 @@ jQuery(document).ready(function ($) {
             },
             url: rsssl.ajaxurl,
             success: function (data) {
-                row.remove();
+                //row.remove();
                 if (data.percentage !== '') {
                     $('.rsssl-progress-percentage').text(data.percentage + "%");
-                    $(".progress-bar-container .progress .bar").css("width", data.percentage + '%');
+                    var bar = $(".progress-bar-container .progress .bar");
+                    bar.css("width", data.percentage + '%');
+                    if (parseInt(data.percentage)>=80){
+                        bar.removeClass('orange');
+                    } else {
+                        bar.addClass('orange');
+                    }
                 }
 
                 if (data.tasks !== '') {

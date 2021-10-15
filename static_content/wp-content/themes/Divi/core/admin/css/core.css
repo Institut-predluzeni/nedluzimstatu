@@ -31,11 +31,11 @@
 ------------------------------------------------------------------------------*/
 @font-face {
 	font-family: 'ETmodules';
-	src:url('../fonts/modules.eot');
-	src:url('../fonts/modules.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/modules.woff') format('woff'),
-		url('../fonts/modules.ttf') format('truetype'),
-		url('../fonts/modules.svg#et-modules') format('svg');
+	src:url('../fonts/modules/all/modules.eot');
+	src:url('../fonts/modules/all/modules.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/modules/all/modules.woff') format('woff'),
+		url('../fonts/modules/all/modules.ttf') format('truetype'),
+		url('../fonts/modules/all/modules.svg#et-modules') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
