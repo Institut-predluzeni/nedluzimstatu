@@ -507,7 +507,7 @@ h1#epanel-title {
 	border-radius: 3px;
 	border: none;
 	box-shadow: none;
-	background: #F1F5F9;
+	background-color: #F1F5F9;
 	padding: 13px;
 	font-size: 13px;
 	color: #4c5866;
@@ -541,6 +541,7 @@ h1#epanel-title {
 
 .et-epanel-box select {
 	width: 55%;
+	line-height: 21px;
 }
 
 /**
@@ -1505,13 +1506,13 @@ left: 0px;
 	transition: background-color 200ms ease;
 }
 .et-box-content .wp-color-result { display: none; }
-.et-box-content .iris-picker { display: block !important; }
+.et-box-content .iris-picker { display: block !important;}
 .et-box-content .colorpalette-item:last-child { margin-right: 0; }
 .et-box-content .colorpalette-colorpicker { display: none; }
 .et-box-content .colorpalette-colorpicker.active { display: block; }
 .et-box-content .wp-picker-holder { margin-top: 50px; }
 .et-box-content input.input-colorpalette-colorpicker.wp-color-picker { display: block !important; width: 316px !important; }
-
+.et-box-content .iris-picker .iris-strip { margin-left: 9px !important; }
 .et-clearfix { clear: both; }
 
 /* Portability Integration */
