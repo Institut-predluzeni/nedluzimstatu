@@ -15,6 +15,7 @@ import {
 } from '../../frontend-builder/gutenberg/utils/selectors';
 import { isTemplateEditor } from '../../frontend-builder/gutenberg/utils/conditionals';
 import {
+  getBuilderUtilsParams,
   isBFB,
   isExtraTheme,
   isFE,
@@ -47,7 +48,7 @@ const states = {
   breakpoint: 'desktop',
   extraMobileBreakpoint: false,
   isBuilderZoomed: false,
-  scrollLocation: et_builder_utils_params.onloadScrollLocation, // app|top
+  scrollLocation: getBuilderUtilsParams().onloadScrollLocation, // app|top
   scrollTop: {
     app: 0,
     top: 0,
@@ -77,12 +78,12 @@ const states = {
 // Valid values.
 // Retrieved from server, used for validating values
 const validValues = {
-  scrollLocation: [...et_builder_utils_params.scrollLocations],
+  scrollLocation: [...getBuilderUtilsParams().scrollLocations],
 };
 
 // Variables
 const builderScrollLocations = {
-  ...et_builder_utils_params.builderScrollLocations,
+  ...getBuilderUtilsParams().builderScrollLocations,
 };
 
 // @todo need to change how this works since builder already have et_screen_sizes(), unless
