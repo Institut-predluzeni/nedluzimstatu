@@ -4,10 +4,10 @@
   1.0 Base
   2.0 Fonts
   3.0 Form
-	3.1 Button
+  3.1 Button
   4.0 Modal
   5.0 Tabs
-	5.1 Secondary Tabs
+  5.1 Secondary Tabs
   6.0 Loader
   7.0 Progress Bar
   7.1 Pending AJAX Request
@@ -377,7 +377,7 @@ body.rtl.et-db:not(.et-fb-no-rtl) .et-core-modal-close {
 	overflow: scroll;
 	position: absolute;
 	top: 58px;
-    bottom: 25px;
+	bottom: 25px;
 	width: 100%;
 	box-sizing: border-box;
 	color: #4c5866;

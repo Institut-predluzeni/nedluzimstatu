@@ -851,41 +851,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/milostive-leto/</loc>
-		<lastmod>2021-10-27T17:46:47+00:00</lastmod>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/10/milostive-leto-og-image.jpg</image:loc>
-			<image:title><![CDATA[milostive-leto-og-image]]></image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
-			<image:title><![CDATA[Ilustrace - žena, béžové pozadí]]></image:title>
-			<image:caption><![CDATA[Ilustrace - žena, béžové pozadí]]></image:caption>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/10/ikona-pdf.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
-			<image:title><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:title>
-			<image:caption><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:caption>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
-			<image:title><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:title>
-			<image:caption><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:caption>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://nedluzimstatu.cz/kde-muzu-dluzit/</loc>
 		<lastmod>2021-10-28T09:57:36+00:00</lastmod>
 		<image:image>
@@ -1148,6 +1113,41 @@
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://nedluzimstatu.cz/milostive-leto/</loc>
+		<lastmod>2021-11-15T20:29:04+00:00</lastmod>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/10/milostive-leto-og-image.jpg</image:loc>
+			<image:title><![CDATA[milostive-leto-og-image]]></image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
+			<image:title><![CDATA[Ilustrace - žena, béžové pozadí]]></image:title>
+			<image:caption><![CDATA[Ilustrace - žena, béžové pozadí]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/10/ikona-pdf.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
+			<image:title><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:title>
+			<image:caption><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
+			<image:title><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:title>
+			<image:caption><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:caption>
 		</image:image>
 	</url>
 </urlset>
