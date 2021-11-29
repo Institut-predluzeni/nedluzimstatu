@@ -11,6 +11,9 @@ jQuery(document).ready(function(){
 		jQuery(this).addClass(scriptData.jvcf7p_default_settings.jvcf7p_show_label_error);
 		jQuery('.wpcf7-file').attr('accept','');
 		jQuery(this).validate({
+			onfocusout: function(element) { // ADD VALIDATION ON BLUR
+		        this.element(element);  
+		    },
 			errorPlacement: function(error, element) {
 	            if (element.is(':checkbox') || element.is(':radio')){
 	            	error.insertAfter(jQuery(element).parent().parent().parent());
@@ -23,6 +26,7 @@ jQuery(document).ready(function(){
 
 	jQuery('.wpcf7-form-control.wpcf7-submit').click(function(e){ 
 		$jvcfpValidation 	=	jQuery(this).parents('form');
+		jQuery($jvcfpValidation).valid();
 		
 		if (jQuery($jvcfpValidation).validate().pendingRequest != 0){ // is Remote Call is Pending
 			e.preventDefault();
@@ -155,7 +159,7 @@ jQuery(document).ready(function(){
 	jQuery('input.emailVerify').each(function(){		
 		elementName  	= jQuery(this).attr('name');
 		elementSize		= jQuery(this).outerWidth();
-		saveButton 		= '<span style="width:'+elementSize+'px;" class="verification_code_holder"><input type="text" name="email-verification-code" data-for="'+elementName+'" class="wpcf7-form-control wpcf7-text verifyEmailCode required" value="" placeholder="'+scriptData.jvcf7p_default_settings.jvcf7p_verify_code_field_placeholder+'" /><input type="button" class="jvcf7_verify_email_btn" value="Send Code" data-for="'+elementName+'" id="jvcf7_verify_email_btn" style="display:none;" /></span>';
+		saveButton 		= '<span style="width:'+elementSize+'px;" class="verification_code_holder"><input type="text" name="email-verification-code" data-for="'+elementName+'" class="wpcf7-form-control wpcf7-text verifyEmailCode required" value="" placeholder="'+scriptData.jvcf7p_default_settings.jvcf7p_verify_code_field_placeholder+'" /><input type="button" class="jvcf7_verify_email_btn" value="'+scriptData.jvcf7p_default_settings.jvcf7p_code_send_button_label+'" data-for="'+elementName+'" id="jvcf7_verify_email_btn" style="display:none;" /></span>';
 		jQuery(saveButton).insertAfter(this);
 
 		
