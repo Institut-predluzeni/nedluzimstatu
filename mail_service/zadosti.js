@@ -2,7 +2,7 @@
  * Základní URL transformation-service, ke které se připojují adresy konkrétních endpointů.
  * @type {string}
  */
-const baseURL = "https://nedluzimstatu.cz/transformation-service";
+const baseURL = "https://www.nedluzimstatu.cz/transformation-service";
 
 /**
  * Hlavičky posílané na endpointy transformation-service.
