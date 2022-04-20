@@ -12,36 +12,21 @@ jQuery(document).ready( function($) {
                 mode: null}]
                  };
         }
-        var options = {
-            lineNumbers: true,
-            mode: content_mode,
-            matchBrackets: true,
-            autoCloseBrackets: true,
-            styleActiveLine: true,
-            extraKeys: {
-                "F11": function(cm) {
-                    cm.setOption("fullScreen", !cm.getOption("fullScreen"));
-                    fullscreen_buttons( true );
-                },
-                "Esc": function(cm) {
-                    if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
-                    fullscreen_buttons( false );
-                },
-                "Ctrl-Space": "autocomplete",
-                "Cmd-Space": "autocomplete",
-                "Ctrl-F": "findPersistent",
-                "Cmd-F": "findPersistent",
-                "Ctrl-/": "toggleComment",
-                "Cmd-/": "toggleComment",
-                "Ctrl-J": "toMatchingTag",
-            },
-        };
+
+		CCJ.codemirror.mode = content_mode;
+		CCJ.codemirror.extraKeys.F11 = function(cm) {
+        	cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+			fullscreen_buttons( true );
+		};
+        CCJ.codemirror.extraKeys.Esc = function(cm) {
+			if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+			fullscreen_buttons( false );
+		};
 
         var cm_width = $('#title').width() + 16;
         var cm_height = 500;
 
-        var editor = CodeMirror.fromTextArea(document.getElementById("ccj_content"), options);
-
+        var editor = CodeMirror.fromTextArea(document.getElementById("ccj_content"), CCJ.codemirror);
         editor.setSize(cm_width, cm_height);
 
         $('.CodeMirror').resizable({

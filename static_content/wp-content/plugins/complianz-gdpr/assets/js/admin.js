@@ -1,5 +1,36 @@
 jQuery(document).ready(function ($) {
     'use strict';
+	$(document).on('click','.cmplz-install-burst', function(){
+		var btn =  $('button.cmplz-install-burst');
+		var loader = '<div class="cmplz-loader"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>';
+		btn.html(loader);
+		btn.attr('disabled', 'disabled');
+
+		$.ajax({
+			type: "GET",
+			url: complianz_admin.admin_url,
+			dataType: 'json',
+			data: ({
+				step: 'download',
+				action: 'cmplz_install_plugin',
+			}),
+			success: function (response) {
+				$.ajax({
+					type: "GET",
+					url: complianz_admin.admin_url,
+					dataType: 'json',
+					data: ({
+						step: 'activate',
+						action: 'cmplz_install_plugin',
+					}),
+					success: function (response) {
+						let completed_text = $('.cmplz-completed-text').html();
+						btn.html(completed_text);
+					}
+				});
+			}
+		});
+	});
 
 	// other_region_behaviour
 	$(document).on('click', '.regions .cmplz-checkbox-container input', function(){
@@ -165,21 +196,21 @@ jQuery(document).ready(function ($) {
     /*
     * open and close panels
     * */
-    $(document).on('click', '.cmplz-panel-toggle', function(){
-        var content = $(this).closest('.cmplz-slide-panel').find('.cmplz-panel-content');
-        var icon_toggle = $(this).closest('.cmplz-slide-panel').find('.cmplz-panel-toggle :first-child div');
-        //close all open panels
-
-        if (content.is(':hidden')){
-            icon_toggle.toggleClass('dashicons-arrow-down-alt2');
-            icon_toggle.toggleClass('dashicons-arrow-right-alt2');
-            content.slideDown("fast");
-        } else {
-            content.slideUp( 'fast');
-            icon_toggle.toggleClass('dashicons-arrow-right-alt2');
-            icon_toggle.toggleClass('dashicons-arrow-down-alt2');
-        }
-    });
+    // $(document).on('click', '.cmplz-panel-toggle', function(){
+    //     var content = $(this).closest('.cmplz-slide-panel').find('.cmplz-panel-content');
+    //     var icon_toggle = $(this).closest('.cmplz-slide-panel').find('.cmplz-panel-toggle :first-child div');
+    //     //close all open panels
+	//
+    //     if (content.is(':hidden')){
+    //         icon_toggle.toggleClass('dashicons-arrow-down-alt2');
+    //         icon_toggle.toggleClass('dashicons-arrow-right-alt2');
+    //         content.slideDown("fast");
+    //     } else {
+    //         content.slideUp( 'fast');
+    //         icon_toggle.toggleClass('dashicons-arrow-right-alt2');
+    //         icon_toggle.toggleClass('dashicons-arrow-down-alt2');
+    //     }
+    // });
 
     $(document).on('click', '.cmplz-help-modal span', function(e){
         $(this).closest('.cmplz-help-modal').fadeOut();
@@ -1009,18 +1040,21 @@ jQuery(document).ready(function ($) {
     function cmplz_script_save() {
         var btn = $(this);
         var btn_html = btn.html();
-        btn.html('<div class="cmplz-loader"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
 
-        var container = btn.closest('.cmplz-panel');
-        var type = btn.data('type');
-        var action = btn.data('action');
-        var id = btn.data('id');
+		var container = btn.closest('.cmplz-panel');
+		var type = btn.data('type');
+		var action = btn.data('action');
+		var id = btn.data('id');
+        if ( action == "save" || action == "remove" ) {
+			btn.html('<div class="cmplz-loader"><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
+		}
 
         // Values
         var data = {};
         container.find(':input').each(function () {
             if ($(this).attr('type') === 'button') return;
             if ( typeof $(this).attr('name') === 'undefined') return;
+			if (!$(this).data('name')) return;
             if ($(this).attr('type')==='checkbox' ) {
                 data[$(this).data('name')] = $(this).is(":checked");
             } else if ( $(this).attr('type')==='radio' ) {
@@ -1042,14 +1076,7 @@ jQuery(document).ready(function ($) {
                 data[$(this).data('name')] = $(this).val();
             }
         });
-
-        // Enable / Disable
-        if ( action === 'enable' ) {
-            data['enable'] = 1;
-        } else if ( action === 'disable' ) {
-            data['enable'] = 0;
-        }
-        $.ajax({
+		$.ajax({
             type: "POST",
             url: complianz_admin.admin_url,
             data: ({
@@ -1062,23 +1089,6 @@ jQuery(document).ready(function ($) {
             }),
             success: function (response) {
                 if (response.success) {
-
-                    if ( action === 'enable' ) {
-						btn.closest('.cmplz-multiple-field-button-footer').find('[data-action="disable"]').removeClass('cmplz-hidden');
-						btn.closest('.cmplz-multiple-field-button-footer').find('[data-action="enable"]').addClass('cmplz-hidden');
-						container.find('.cmplz_script_enabled').removeClass('cmplz-hidden');
-						container.find('.cmplz_script_disabled').addClass('cmplz-hidden');
-						container.find('input.cmplz_enable').val(1);
-						btn.html(btn_html);
-                    }
-                    if ( action === 'disable' ) {
-						btn.closest('.cmplz-multiple-field-button-footer').find('[data-action="disable"]').addClass('cmplz-hidden');
-						btn.closest('.cmplz-multiple-field-button-footer').find('[data-action="enable"]').removeClass('cmplz-hidden');
-						container.find('.cmplz_script_enabled').addClass('cmplz-hidden');
-						container.find('.cmplz_script_disabled').removeClass('cmplz-hidden');
-						container.find('input.cmplz_enable').val(0);
-						btn.html(btn_html);
-					}
                     if ( action === 'save' ) {
                         btn.html(btn_html);
                     }
@@ -1235,6 +1245,8 @@ jQuery(document).ready(function ($) {
 			data: ({
 				action: 'cmplz_export_roc_to_csv',
 				order: cmplzGetUrlParameter('order'),
+				cmplz_month_select: cmplzGetUrlParameter('cmplz_month_select'),
+				cmplz_year_select: cmplzGetUrlParameter('cmplz_year_select'),
 				orderby: cmplzGetUrlParameter('orderby'),
 				s: cmplzGetUrlParameter('s'),
 			}),

@@ -248,132 +248,136 @@
 			} );
 		},
 
-		exportFB: function( exportUrl, postId, content, fileName, importFile, page, timestamp, progress = 0, estimation = 1 ) {
-			var $this = this;
+    exportFB: function(exportUrl, postId, content, fileName, importFile, page, timestamp, progress = 0, estimation = 1, layoutId = 0) {
+      var $this     = this;
+      var context   = layoutId !== 0 ? 'et_builder_layouts' : 'et_builder';
+      var selection = layoutId !== 0 ? JSON.stringify({'id': layoutId}) : false;
 
-			// Trigger event which updates VB-UI's progress bar
-			window.et_fb_export_progress   = progress;
-			window.et_fb_export_estimation = estimation;
+      // Trigger event which updates VB-UI's progress bar
+      window.et_fb_export_progress   = progress;
+      window.et_fb_export_estimation = estimation;
 
-			var exportEvent = document.createEvent('Event');
-			exportEvent.initEvent('et_fb_layout_export_in_progress', true, true);
-			window.dispatchEvent(exportEvent);
+      var exportEvent = document.createEvent('Event');
+      exportEvent.initEvent('et_fb_layout_export_in_progress', true, true);
+      window.dispatchEvent(exportEvent);
 
-			page = typeof page === 'undefined' ? 1 : page;
+      page = typeof page === 'undefined' ? 1 : page;
 
-			$.ajax( {
-				type: 'POST',
-				url: etCore.ajaxurl,
-				dataType: 'json',
-				data: {
-					action: 'et_core_portability_export',
-					content: content.shortcode,
-					global_presets: content.global_presets,
-					global_colors: content.global_colors,
-					timestamp: timestamp !== undefined ? timestamp : 0,
-					nonce: $this.nonces.export,
-					post: postId,
-					context: 'et_builder',
-					page: page,
-				},
-				success: function( response ) {
-					var errorEvent = document.createEvent( 'Event' );
+      $.ajax({
+        type: 'POST',
+        url: etCore.ajaxurl,
+        dataType: 'json',
+        data: {
+          action: 'et_core_portability_export',
+          content: content.shortcode,
+          global_presets: content.global_presets,
+          global_colors: content.global_colors,
+          timestamp: timestamp !== undefined ? timestamp : 0,
+          nonce: $this.nonces.export,
+          post: postId,
+          context: context,
+          selection: selection,
+          page: page,
+        },
+        success: function(response) {
+          var errorEvent = document.createEvent('Event');
 
-					errorEvent.initEvent( 'et_fb_layout_export_error', true, true );
+          errorEvent.initEvent('et_fb_layout_export_error', true, true);
 
-					// The error is unknown but most of the time it would be cased by the server max size being exceeded.
-					if ( 'string' === typeof response && '0' === response ) {
-						window.et_fb_export_layout_message = $this.text.maxSizeExceeded;
-						window.dispatchEvent( errorEvent );
+          // The error is unknown but most of the time it would be cased by the server max size being exceeded.
+          if ('string' === typeof response && '0' === response) {
+            window.et_fb_export_layout_message = $this.text.maxSizeExceeded;
+            window.dispatchEvent(errorEvent);
 
-						return;
-					}
-					// Memory size set on server is exhausted.
-					else if ( 'string' === typeof response && response.toLowerCase().indexOf( 'memory size' ) >= 0 ) {
-						window.et_fb_export_layout_message = $this.text.memoryExhausted;
-						window.dispatchEvent( errorEvent );
-						return;
-					}
-					// Paginate.
-					else if ( 'undefined' !== typeof response.page ) {
-						if ( $this.cancelled ) {
-							return;
-						}
+            return;
+          }
+          // Memory size set on server is exhausted.
+          else if ('string' === typeof response && response.toLowerCase().indexOf('memory size') >= 0) {
+            window.et_fb_export_layout_message = $this.text.memoryExhausted;
+            window.dispatchEvent(errorEvent);
+            return;
+          }
+          // Paginate.
+          else if ('undefined' !== typeof response.page) {
+            if ($this.cancelled) {
+              return;
+            }
 
-						// Update progress bar
-						var updatedProgress = Math.ceil((response.page * 100) / response.total_pages);
-						var updatedEstimation = Math.ceil(((response.total_pages - response.page) * 6) / 60);
+            // Update progress bar
+            var updatedProgress   = Math.ceil((response.page * 100) / response.total_pages);
+            var updatedEstimation = Math.ceil(((response.total_pages - response.page) * 6) / 60);
 
-						// If progress param isn't empty, updated progress should continue from it
-						// because before exportFB(), shortcode should've been prepared via another
-						// ajax request first
-						if (0 < progress) {
-							const remainingProgress = (100 - progress) / 100;
-							updatedProgress = (updatedProgress * remainingProgress) + progress;
-						}
+            // If progress param isn't empty, updated progress should continue from it
+            // because before exportFB(), shortcode should've been prepared via another
+            // ajax request first
+            if (0 < progress) {
+              const remainingProgress = (100 - updatedProgress) / 100;
+              updatedProgress = (updatedProgress * remainingProgress) + progress;
+            }
 
-						// Update global variables
-						window.et_fb_export_progress   = updatedProgress;
-						window.et_fb_export_estimation = updatedEstimation;
+            // Update global variables
+            window.et_fb_export_progress   = updatedProgress;
+            window.et_fb_export_estimation = updatedEstimation;
 
-						// Dispatch event to trigger UI update
-						window.dispatchEvent(exportEvent);
+            // Dispatch event to trigger UI update
+            window.dispatchEvent(exportEvent);
 
-						return $this.exportFB(
-							exportUrl,
-							postId,
-							content,
-							fileName,
-							importFile,
-							(page + 1),
-							response.timestamp,
-							updatedProgress,
-							updatedEstimation
-						);
-					} else if ( 'undefined' !== typeof response.data && 'undefined' !== typeof response.data.message ) {
-						window.et_fb_export_layout_message = $this.text[response.data.message];
-						window.dispatchEvent( errorEvent );
-						return;
-					}
+            return $this.exportFB(
+              exportUrl,
+              postId,
+              content,
+              fileName,
+              importFile,
+              (page + 1),
+              response.timestamp,
+              updatedProgress,
+              updatedEstimation,
+              layoutId
+            );
+          } else if ('undefined' !== typeof response.data && 'undefined' !== typeof response.data.message) {
+            window.et_fb_export_layout_message = $this.text[response.data.message];
+            window.dispatchEvent(errorEvent);
+            return;
+          }
 
-					var time = ' ' + new Date().toJSON().replace( 'T', ' ' ).replace( ':', 'h' ).substring( 0, 16 ),
-						downloadURL = exportUrl,
-						query = {
-							'timestamp': response.data.timestamp,
-							'name': '' !== fileName ? fileName : encodeURIComponent( time ),
-						};
+          var time = ' ' + new Date().toJSON().replace('T', ' ').replace(':', 'h').substring(0, 16),
+            downloadURL = exportUrl,
+            query = {
+              'timestamp': response.data.timestamp,
+              'name': '' !== fileName ? fileName : encodeURIComponent(time),
+            };
 
-					$.each( query, function( key, value ) {
-						if ( value ) {
-							downloadURL = downloadURL + '&' + key + '=' + value;
-						}
-					} );
+          $.each(query, function(key, value) {
+            if (value) {
+              downloadURL = downloadURL + '&' + key + '=' + value;
+            }
+          });
 
-					// Remove confirmation popup before relocation.
-					$( window ).off( 'beforeunload' );
+          // Remove confirmation popup before relocation.
+          $(window).off('beforeunload');
 
-					// Update progress bar's global variables
-					window.et_fb_export_progress = 100;
-					window.et_fb_export_estimation = 0;
+          // Update progress bar's global variables
+          window.et_fb_export_progress = 100;
+          window.et_fb_export_estimation = 0;
 
-					// Dispatch event to trigger UI update
-					window.dispatchEvent(exportEvent);
-					window.location.assign( encodeURI( downloadURL ) );
+          // Dispatch event to trigger UI update
+          window.dispatchEvent(exportEvent);
+          window.location.assign(encodeURI(downloadURL));
 
-					// perform import if needed
-					if ( typeof importFile !== 'undefined' ) {
-						$this.importFB( importFile, postId );
-					} else {
-						var event = document.createEvent( 'Event' );
+          // perform import if needed
+          if (typeof importFile !== 'undefined') {
+            $this.importFB(importFile, postId);
+          } else {
+            var event = document.createEvent('Event');
 
-						event.initEvent( 'et_fb_layout_export_finished', true, true );
+            event.initEvent('et_fb_layout_export_finished', true, true);
 
-						// trigger event to communicate with FB
-						window.dispatchEvent( event );
-					}
-				}
-			} );
-		},
+            // trigger event to communicate with FB
+            window.dispatchEvent(event);
+          }
+        }
+      });
+    },
 
 		importFB: function(file, postId, options) {
 			var $this      = this;
@@ -401,7 +405,10 @@
 			}
 
 			options = $.extend({
-				replace: false
+				replace: false,
+				context: 'et_builder',
+				returnJson: false,
+				useTempPresets: false,
 			}, options);
 
 			var fileSize = Math.ceil( ( file.size / ( 1024 * 1024 ) ).toFixed( 2 ) ),
@@ -409,13 +416,15 @@
 				requestData = {
 					action: 'et_core_portability_import',
 					include_global_presets: options.includeGlobalPresets,
+					et_cloud_return_json: options.returnJson,
+					et_cloud_use_temp_presets: options.useTempPresets,
 					file: file,
 					content: false,
 					timestamp: 0,
 					nonce: $this.nonces.import,
 					post: postId,
 					replace: options.replace ? '1' : '0',
-					context: 'et_builder'
+					context: options.context
 				};
 
 			/**
