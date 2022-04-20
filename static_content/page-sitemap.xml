@@ -829,28 +829,6 @@
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/generovani-zadosti/</loc>
-		<lastmod>2021-10-14T09:37:45+00:00</lastmod>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-cerveny-krizek.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-anonymne.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/checkmark-green.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
-		</image:image>
-	</url>
-	<url>
 		<loc>https://nedluzimstatu.cz/kde-muzu-dluzit/</loc>
 		<lastmod>2021-10-28T09:57:36+00:00</lastmod>
 		<image:image>
@@ -1126,6 +1104,28 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
 			<image:title><![CDATA[Ilustrace - žena, béžové pozadí]]></image:title>
 			<image:caption><![CDATA[Ilustrace - žena, béžové pozadí]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://nedluzimstatu.cz/generovani-zadosti/</loc>
+		<lastmod>2022-04-20T10:17:26+00:00</lastmod>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-cerveny-krizek.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-anonymne.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/checkmark-green.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
 		</image:image>
 	</url>
 </urlset>
