@@ -1,1131 +1,998 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//nedluzimstatu.cz/main-sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://nedluzimstatu.cz/</loc>
+		<loc>https://3.67.237.174/</loc>
 		<lastmod>2021-10-28T09:13:12+00:00</lastmod>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ilustrace-nedluzite-statu.svg</image:loc>
-			<image:title><![CDATA[Ilustrace - zmatený muž]]></image:title>
-			<image:caption><![CDATA[Ilustrace - zmatený muž]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ilustrace-nedluzite-statu.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ilustrace-zena-bile-pozadi.svg</image:loc>
-			<image:title><![CDATA[Ilustrace - žena, bílé pozadí]]></image:title>
-			<image:caption><![CDATA[Ilustrace - žena, bílé pozadí]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ilustrace-zena-bile-pozadi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
-			<image:title><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:title>
-			<image:caption><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/logo-cesko-digital-modre.png</image:loc>
-			<image:title><![CDATA[Logo - Česko Digital]]></image:title>
-			<image:caption><![CDATA[Logo - Česko Digital]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/logo-cesko-digital-modre.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vosg.svg</image:loc>
-			<image:title><![CDATA[Logo - VOŠG a SPŠG]]></image:title>
-			<image:caption><![CDATA[Logo - VOŠG a SPŠG]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vosg.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/dluzim-co-ted/</loc>
+		<loc>https://3.67.237.174/dluzim-co-ted/</loc>
 		<lastmod>2021-10-14T09:36:49+00:00</lastmod>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
-			<image:title><![CDATA[Ilustrace - žena, béžové pozadí]]></image:title>
-			<image:caption><![CDATA[Ilustrace - žena, béžové pozadí]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-clovek-v-tisni.svg</image:loc>
-			<image:caption><![CDATA[Logo - Člověk v tísni]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-clovek-v-tisni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-diakonie.svg</image:loc>
-			<image:caption><![CDATA[Logo - Diakonie Českobratrské církve evangelické]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-diakonie.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-asociace-obcanskych-poraden.svg</image:loc>
-			<image:caption><![CDATA[Logo - Asociace občanských poraden]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-asociace-obcanskych-poraden.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-charita-cr.svg</image:loc>
-			<image:caption><![CDATA[Logo - Charita Česká republika]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-charita-cr.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-rubikon.svg</image:loc>
-			<image:caption><![CDATA[Logo - Rubikon centrum, z. ú.]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-rubikon.svg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/dluzim-co-ted/zadost-o-odpusteni-penale/</loc>
+		<loc>https://3.67.237.174/dluzim-co-ted/zadost-o-odpusteni-penale/</loc>
 		<lastmod>2021-10-14T09:37:33+00:00</lastmod>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/dluzim-co-ted/zadost-o-splatkovy-kalendar/</loc>
+		<loc>https://3.67.237.174/dluzim-co-ted/zadost-o-splatkovy-kalendar/</loc>
 		<lastmod>2021-10-14T09:37:37+00:00</lastmod>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/o-projektu/</loc>
+		<loc>https://3.67.237.174/o-projektu/</loc>
 		<lastmod>2021-10-14T09:37:41+00:00</lastmod>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
-			<image:title><![CDATA[Ilustrace - žena, béžové pozadí]]></image:title>
-			<image:caption><![CDATA[Ilustrace - žena, béžové pozadí]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/radek-habl.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/radek-habl.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/2019-spojka-vlevo.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/2019-spojka-vlevo.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/2020-spojka-vpravo.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/2020-spojka-vpravo.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/2021-spojka-vlevo.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/2021-spojka-vlevo.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/2021-spojka-vpravo.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/2021-spojka-vpravo.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/radek-habl.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/radek-habl.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/petra-adamovska.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/petra-adamovska.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/tomas-walek.png</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/tomas-walek.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/radek-sojka.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/radek-sojka.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/katerina-kocianova.jpeg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/katerina-kocianova.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/lucie-zajickova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/lucie-zajickova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/josef-frnka.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/josef-frnka.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/tomas-sverak.jpeg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/tomas-sverak.jpeg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/zdenek-trinkewitz.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/zdenek-trinkewitz.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/stanislav-pilatik.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/stanislav-pilatik.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/lenka-siroka.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/lenka-siroka.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/jana-kneschke.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/jana-kneschke.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/dana-beneda-1.png</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/dana-beneda-1.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/zaneta-svobodova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/zaneta-svobodova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/terezia-palascakova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/terezia-palascakova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/bara-truksova.png</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/bara-truksova.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/lucie-nemesova.png</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/lucie-nemesova.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/zuzana-srumova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/zuzana-srumova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/jiri-horvath.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/jiri-horvath.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/mila-votradovec.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/mila-votradovec.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/lukas-korous.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/lukas-korous.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/david-nemec.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/david-nemec.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/lucia-studena.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/lucia-studena.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/jan-stefanides.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/jan-stefanides.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/martin-wenisch.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/martin-wenisch.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/vladimir-smitka.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/vladimir-smitka.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/filip-jirsak.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/filip-jirsak.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/tomas-zemanec.png</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/tomas-zemanec.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/nedluzim-statu-avatar-kluk-01.png</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/nedluzim-statu-avatar-kluk-01.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/petra-triskova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/petra-triskova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/jana-moravkova-minarikova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/jana-moravkova-minarikova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/jiri-visinger.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/jiri-visinger.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/monika-visnova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/monika-visnova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/michal-jonak.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/michal-jonak.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/tomas-urban.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/tomas-urban.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/radka-horakova.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/radka-horakova.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/martina-hytychova.png</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/martina-hytychova.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/jiri-semmler.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/jiri-semmler.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/jiri-hradsky.jpg</image:loc>
-			<image:caption><![CDATA[Radek Hábl]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/jiri-hradsky.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
-			<image:title><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:title>
-			<image:caption><![CDATA[Logo - Institut prevence a řešení předlužení]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/logo-cesko-digital-modre.png</image:loc>
-			<image:title><![CDATA[Logo - Česko Digital]]></image:title>
-			<image:caption><![CDATA[Logo - Česko Digital]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/logo-cesko-digital-modre.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vosg.svg</image:loc>
-			<image:title><![CDATA[Logo - VOŠG a SPŠG]]></image:title>
-			<image:caption><![CDATA[Logo - VOŠG a SPŠG]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vosg.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-cerna-sipka.svg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/kde-muzu-dluzit/</loc>
+		<loc>https://3.67.237.174/kde-muzu-dluzit/</loc>
 		<lastmod>2021-10-28T09:57:36+00:00</lastmod>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg</image:loc>
-			<image:title><![CDATA[OG image]]></image:title>
-			<image:caption><![CDATA[Nedlužím státu]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2020/11/nedluzim-statu-og-image.jpg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-fajfka-fialova.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-fajfka-fialova.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-oznameni.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-oznameni.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-anonymne.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-anonymne.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-celni-sprava-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cssz-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-fu-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-obec-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-cpzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-ozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-rbp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vozp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-vzp-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zps-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/logo-zpmv-32.png</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-link.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/09/ikona-email-mensi.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
-			<image:caption><![CDATA[Ikona e-mail]]></image:caption>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-telefon-1.svg</image:loc>
 		</image:image>
 	</url>
 	<url>
-		<loc>https://nedluzimstatu.cz/milostive-leto/</loc>
-		<lastmod>2022-01-26T20:01:27+00:00</lastmod>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/10/milostive-leto-og-image.jpg</image:loc>
-			<image:title><![CDATA[milostive-leto-og-image]]></image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
-			<image:title><![CDATA[Ilustrace - žena, béžové pozadí]]></image:title>
-			<image:caption><![CDATA[Ilustrace - žena, béžové pozadí]]></image:caption>
-		</image:image>
-	</url>
-	<url>
-		<loc>https://nedluzimstatu.cz/generovani-zadosti/</loc>
+		<loc>https://3.67.237.174/generovani-zadosti/</loc>
 		<lastmod>2022-04-20T10:17:26+00:00</lastmod>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/08/ikona-cerveny-krizek.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ikona-cerveny-krizek.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-anonymne.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-anonymne.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/checkmark-green.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/checkmark-green.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-zelena-sipka.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://3.67.237.174/milostive-leto/</loc>
+		<lastmod>2022-07-27T12:51:45+00:00</lastmod>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/10/milostive-leto-og-image.jpg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/08/ilustrace-zena-bezove-pozadi.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/10/ikona-pdf.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://3.67.237.174/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
 		</image:image>
 	</url>
 </urlset>

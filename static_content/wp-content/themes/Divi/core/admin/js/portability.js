@@ -338,6 +338,9 @@
             window.et_fb_export_layout_message = $this.text[response.data.message];
             window.dispatchEvent(errorEvent);
             return;
+          } else if (false === response.success) {
+            window.dispatchEvent(errorEvent);
+            return;
           }
 
           var time = ' ' + new Date().toJSON().replace('T', ' ').replace(':', 'h').substring(0, 16),
@@ -409,6 +412,7 @@
 				context: 'et_builder',
 				returnJson: false,
 				useTempPresets: false,
+				includeGlobalPresets: false,
 			}, options);
 
 			var fileSize = Math.ceil( ( file.size / ( 1024 * 1024 ) ).toFixed( 2 ) ),
