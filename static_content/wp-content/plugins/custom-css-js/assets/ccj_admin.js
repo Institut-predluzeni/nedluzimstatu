@@ -2,6 +2,8 @@ jQuery(document).ready( function($) {
 
     $('.page-title-action').hide();
 
+    var postID = document.getElementById('post_ID') != null ? document.getElementById('post_ID').value : 0;
+
     // Initialize the CodeMirror editor
     if ( $('#ccj_content').length > 0 ) {
         var content_mode = $("#ccj_content").attr('mode');
@@ -17,16 +19,24 @@ jQuery(document).ready( function($) {
 		CCJ.codemirror.extraKeys.F11 = function(cm) {
         	cm.setOption("fullScreen", !cm.getOption("fullScreen"));
 			fullscreen_buttons( true );
+			var cookies = (getCookie('ccj-' + postID) || '0,0,0,0').split(',');
+			document.cookie = 'ccj-' + postID + '=' + [cookies[0], cookies[1], cookies[2], 1].join(',') + '; SameSite=Lax';
 		};
         CCJ.codemirror.extraKeys.Esc = function(cm) {
 			if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
 			fullscreen_buttons( false );
+			var cookies = (getCookie('ccj-' + postID) || '0,0,0,0').split(',');
+			document.cookie = 'ccj-' + postID + '=' + [cookies[0], cookies[1], cookies[2], 0].join(',') + '; SameSite=Lax';
 		};
 
-        var cm_width = $('#title').width() + 16;
-        var cm_height = 500;
-
         var editor = CodeMirror.fromTextArea(document.getElementById("ccj_content"), CCJ.codemirror);
+
+		// Note: ccj-postID cookie will save cursor line, cursor character, editor height and fullscreen values
+		var cookies = (getCookie('ccj-' + postID) || '0,0,0,0').split(',');
+
+        // Make the editor resizable
+        var cm_width = $('#title').width() + 16;
+		var cm_height = (parseFloat(cookies[2]) >= 200) ? parseFloat(cookies[2]) : 500;
         editor.setSize(cm_width, cm_height);
 
         $('.CodeMirror').resizable({
@@ -62,49 +72,51 @@ jQuery(document).ready( function($) {
 			});
 		}
 
-        var postID = document.getElementById('post_ID') != null ? document.getElementById('post_ID').value : 0;
-
-        var getCookie = function (name) {
-            var value = '; ' + document.cookie;
-            var parts = value.split('; ' + name + '=');
-            if (parts.length === 2) return parts.pop().split(';').shift();
-        };
-
-
         // Saving cursor state
         editor.on('cursorActivity', function () {
             var curPos = editor.getCursor();
-            document.cookie = 'hesh_plugin_pos=' + postID + ',' + curPos.line + ',' + curPos.ch + '; SameSite=Lax';
+            document.cookie = 'ccj-' + postID + '=' + [curPos.line, curPos.ch, cookies[2], cookies[3]].join(',') + '; SameSite=Lax';
         });
 
         // Restoring cursor state
-        var curPos = (getCookie('hesh_plugin_pos') || '0,0,0').split(',');
-        if (postID === curPos[0]) {
-            editor.setCursor(parseFloat(curPos[1]), parseFloat(curPos[2]));
-        }
+        editor.setCursor(parseFloat(cookies[0]), parseFloat(cookies[1]));
 
+		// Save the editor's height
+		editor.on('refresh', function() {
+			var height = ( !editor.getOption('fullScreen') ) ? $('.CodeMirror').height() : cookies[2];
+        	var curPos = editor.getCursor();
+			document.cookie = 'ccj-' + postID + '=' + [curPos.line, curPos.ch, height, Number(editor.getOption('fullScreen'))].join(',') + '; SameSite=Lax';
+		});
+
+		// Save the custom code when hitting "Ctrl-S"
+		editor.on('keydown', function(cm, event) {
+			if ( ! event.ctrlKey && ! event.metaKey || event.which !== 83 ) return;
+
+			var height = ( !editor.getOption('fullScreen') ) ? $('.CodeMirror').height() : cookies[2];
+        	var curPos = editor.getCursor();
+			document.cookie = 'ccj-' + postID + '=' + [curPos.line, curPos.ch, height, Number(editor.getOption('fullScreen'))].join(',') + '; SameSite=Lax';
+			
+			$("form#post").submit();
+            event.preventDefault();
+            return false;
+		});
+
+
+		// Restoring fullscreen 
+		editor.setOption("fullScreen", parseFloat(cookies[3]));
+        fullscreen_buttons( Boolean(parseFloat(cookies[3])) );
     }
 
     // Action for the `fullscreen` button
     $("#ccj-fullscreen-button").click( function() {
-        var toggle = editor.getOption("fullScreen");
-        editor.setOption("fullScreen", !toggle);
-        fullscreen_buttons( !toggle );
+		editor.triggerOnKeyDown({type: 'keydown', keyCode: 122});
     });
 
     $("#publish").click(function(e){
-        if ( editor.getOption("fullScreen") === true ) {
-            Cookies.set('fullScreen', 'true');
-        }
+		var cookies = (getCookie('ccj-' + postID) || '0,0,0,0').split(',');
+        var curPos = editor.getCursor();
+		document.cookie = 'ccj-' + postID + '=' + [curPos.line, curPos.ch, cookies[2], Number(editor.getOption('fullScreen'))].join(',') + '; SameSite=Lax';
     });
-
-    // Show fullscreen
-    if ( Cookies.get('fullScreen') == 'true' ) {
-        var toggle = editor.getOption("fullScreen");
-        editor.setOption("fullScreen", !toggle);
-        fullscreen_buttons( !toggle );
-        Cookies.remove('fullScreen');
-    }
 
     // Enable the tipsy 
     $('span[rel=tipsy].tipsy-no-html').tipsy({fade: true, gravity: 's'});
@@ -227,6 +239,13 @@ jQuery(document).ready( function($) {
             $('#activate-action .ccj_activate_deactivate').text(CCJ.activate);
         }
     }
+
+    function getCookie(name) {
+        var value = '; ' + document.cookie;
+        var parts = value.split('; ' + name + '=');
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
 
 
     // Permalink slug
