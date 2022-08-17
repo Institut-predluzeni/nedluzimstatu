@@ -1,5 +1,6 @@
 name: 'Deploy static_content to S3'
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -24,3 +25,4 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_IPRP }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_IPRP }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION_IPRP }}
