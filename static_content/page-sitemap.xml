@@ -966,7 +966,7 @@
 	</url>
 	<url>
 		<loc>https://nedluzimstatu.cz/milostive-leto/</loc>
-		<lastmod>2022-08-25T20:50:28+00:00</lastmod>
+		<lastmod>2022-08-31T19:16:34+00:00</lastmod>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2022/08/milostive_leto_2.jpg</image:loc>
 		</image:image>
@@ -983,9 +983,6 @@
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
 		</image:image>
 		<image:image>
-			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/07/ikona-sdileni-projektu.svg</image:loc>
-		</image:image>
-		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
 		</image:image>
 		<image:image>
@@ -993,6 +990,9 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2020/11/logo-institut-prevence.png</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://nedluzimstatu.cz/wp-content/uploads/2021/10/ikona-pdf.svg</image:loc>
 		</image:image>
 	</url>
 </urlset>
