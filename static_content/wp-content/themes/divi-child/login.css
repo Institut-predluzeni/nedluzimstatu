@@ -1,0 +1,36 @@
+:root {
+  --primary: #55237C;
+  --light-primary: #4D98A0;  
+}
+.login h1 a {
+	background-image: url(/wp-content/uploads/2020/10/logo.svg) !important; 
+	width: auto;
+}
+.login #login h1 a {
+	background-size: contain !important;
+}
+.login #login_error, .login .message, .login .success {
+	border-left: 4px solid var(--light-primary) !important;
+}
+.login input[type=text]:focus, .login input[type=password]:focus, .login input[type=checkbox]:focus, .login .button.wp-hide-pw:focus, .login.wp-core-ui select:focus {
+	border-color: var(--primary) !important;
+  	box-shadow: 0 0 0 1px var(--primary) !important;
+}
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px var(--primary) !important;
+}
+.login input[type=checkbox]:checked::before {
+	content: url(/wp-content/uploads/2022/08/check-login-icon.svg) !important;
+}
+.login.wp-core-ui .button.button-primary {
+	background: var(--primary) !important;
+ 	border-color: var(--primary) !important;
+	color: #fff !important;
+}
+.login.wp-core-ui input.button {
+	color: var(--primary) !important;
+  border-color: var(--primary) !important;			
+}
+.login .dashicons-visibility:before, .login .dashicons-hidden:before, .login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+	color: var(--primary) !important;
+}
