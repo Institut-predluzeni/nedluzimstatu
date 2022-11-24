@@ -1827,7 +1827,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 #epanel .CodeMirror {
-	padding: 13px 13px 13px 0px;
+	padding: 0 13px 13px 0px;
 	border-radius: 3px;
 }
 
@@ -1975,6 +1975,87 @@ Copyright (c) 2015 Daniel Eden
 }
 #epanel .CodeMirror .codemirror-colorview .codemirror-colorview-background {
 	border-radius: 10px;
+}
+
+#epanel .CodeMirror-vscrollbar::-webkit-scrollbar {
+	width: 10px;
+	cursor: initial;
+	top: 34px;
+}
+
+#epanel .CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+	background: #67737F !important;
+	border-radius: 3px;
+	border-right: 3px solid #4C5866;
+	border-left: 3px solid #4C5866;
+}
+
+#epanel .CodeMirror-vscrollbar {
+	top: 34px;
+}
+
+#epanel .CodeMirror-sizer {
+	padding-bottom: 34px !important;
+}
+
+.et-code-snippets-open {
+	overflow: hidden;
+	margin-right: 15px;
+}
+
+.et-code-snippets-library-btns-wrap {
+	align-items: center;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	display: flex;
+	height: 34px;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.et-code-snippets-btn {
+	border-radius: 3px;
+	height: 28px;
+	line-height: 28px;
+	list-style: none;
+	margin: auto 1px;
+	text-align: center;
+	width: 28px;
+}
+
+.et-code-snippets-btn:hover:not(.et-code-snippets-btn--disabled) {
+	background: rgba(255, 255, 255, 0.16);
+	cursor: pointer;
+}
+
+.et-code-snippets-btn span::after {
+	color: #fff;
+	font-family: 'CodeSnippet';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.et-code-snippets-btn.snippet-add span::after {
+	content: '\e900';
+	font-size: 12px;
+}
+
+.et-code-snippets-btn.snippet-save span::after {
+	content: '\e901';
+	font-size: 14px;
+}
+
+.et-code-snippets-btn.snippet-portability span::after {
+	font-family: 'ETmodules';
+}
+
+.et-code-snippets-btn .portability::after {
+	content: '\e900';
+	font-size: 14px;
+}
+
+.et-code-snippets-btn--disabled {
+	cursor: not-allowed;
 }
 
 @media only screen and ( max-width: 415px ) {

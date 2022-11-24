@@ -51,6 +51,16 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'CodeSnippet';
+	src: url('../fonts/epanel/code-snippet.woff') format('woff'),
+		url('../fonts/epanel/code-snippet.ttf') format('truetype'),
+		url('../fonts/epanel/code-snippet.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 /*-----------------------------------------------------------------------------
   3.0 - Form
 ------------------------------------------------------------------------------*/

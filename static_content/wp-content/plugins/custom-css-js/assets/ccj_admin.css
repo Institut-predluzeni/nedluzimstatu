@@ -184,7 +184,7 @@ i.ccj-i-beautifier::before {
 }
 .code-mirror-before div {
     color: #8F8F8F;
-    margin-left: 29px;
+    margin-left: 38px;
     border-left: 1px solid #ddd;
     padding: 3px 8px;
     background-color: #fff;
@@ -196,7 +196,7 @@ i.ccj-i-beautifier::before {
 }
 .code-mirror-after div {
     color: #8F8F8F;
-    margin-left: 29px;
+    margin-left: 38px;
     border-left: 1px solid #ddd;
     padding: 3px 8px;
     background-color: #fff;
