@@ -31,6 +31,13 @@ jQuery(document).ready( function($) {
 
         var editor = CodeMirror.fromTextArea(document.getElementById("ccj_content"), CCJ.codemirror);
 
+		// Code folding
+		editor.setOption("lineNumbers", true);
+		editor.setOption("lineWrapping", true);
+		editor.setOption("foldGutter", true);
+		editor.setOption("gutters", ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]);
+		CCJ.codemirror.extraKeys["Ctrl-Q"] = function(cm){ cm.foldCode(cm.getCursor()); };
+
 		// Note: ccj-postID cookie will save cursor line, cursor character, editor height and fullscreen values
 		var cookies = (getCookie('ccj-' + postID) || '0,0,0,0').split(',');
 
@@ -105,18 +112,18 @@ jQuery(document).ready( function($) {
 		// Restoring fullscreen 
 		editor.setOption("fullScreen", parseFloat(cookies[3]));
         fullscreen_buttons( Boolean(parseFloat(cookies[3])) );
+
+		// Action for the `fullscreen` button
+		$("#ccj-fullscreen-button").click( function() {
+			editor.triggerOnKeyDown({type: 'keydown', keyCode: 122});
+		});
+
+		$("#publish").click(function(e){
+			var cookies = (getCookie('ccj-' + postID) || '0,0,0,0').split(',');
+			var curPos = editor.getCursor();
+			document.cookie = 'ccj-' + postID + '=' + [curPos.line, curPos.ch, cookies[2], Number(editor.getOption('fullScreen'))].join(',') + '; SameSite=Lax';
+		});
     }
-
-    // Action for the `fullscreen` button
-    $("#ccj-fullscreen-button").click( function() {
-		editor.triggerOnKeyDown({type: 'keydown', keyCode: 122});
-    });
-
-    $("#publish").click(function(e){
-		var cookies = (getCookie('ccj-' + postID) || '0,0,0,0').split(',');
-        var curPos = editor.getCursor();
-		document.cookie = 'ccj-' + postID + '=' + [curPos.line, curPos.ch, cookies[2], Number(editor.getOption('fullScreen'))].join(',') + '; SameSite=Lax';
-    });
 
     // Enable the tipsy 
     $('span[rel=tipsy].tipsy-no-html').tipsy({fade: true, gravity: 's'});

@@ -189,6 +189,19 @@ export const getStickyStyles = (id, $module, $placeholder) => {
     return parseFloat($stickyStyleDom.css(marginPropName)) - parseFloat($normalModule.css(marginPropName));
   };
 
+  /**
+   * Equalize Column Heights :: If the parent container is an equal column(Flexbox), temporary hide
+   * the placeholder module and the original modules to restore(expand) the width of the $stickyStyleDom.
+   * We insert two clones i.e data-sticky-style-dom-id and data-sticky-placeholder-id of the module at the
+   * original location of the module which causes columns(flex items) to shrink to fit in the row 
+   * i.e .et_pb_equal_columns flex container.
+   */
+  const isEqualColumns = $module[0].parentNode.classList.contains('et_pb_equal_columns');
+  if(isEqualColumns) {
+    $module.hide();
+    $placeholder.hide();  
+  }
+
   // Measure sticky style DOM properties
   const styles = {
     height: $stickyStyleDom.outerHeight(),
@@ -197,6 +210,12 @@ export const getStickyStyles = (id, $module, $placeholder) => {
     marginLeft: getMarginStyle('Left'),
     padding: $stickyStyleDom.css('padding'),
   };
+
+  // display module and placeholder.
+  if(isEqualColumns) {
+    $module.show();
+    $placeholder.show(); 
+  }
 
   // Immediately remove the cloned DOM
   $(`.et_pb_sticky_style_dom[data-sticky-style-dom-id="${id}"]`).remove();
