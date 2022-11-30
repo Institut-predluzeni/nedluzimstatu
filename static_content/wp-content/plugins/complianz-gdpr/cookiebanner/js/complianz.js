@@ -584,7 +584,7 @@ function cmplz_enable_category(category, service) {
 		}
 
 		let tagName = obj.tagName;
-		if (tagName==='STYLE'){
+		if (tagName==='LINK'){
 			obj.classList.add('cmplz-activated' );
 			let src = obj.getAttribute('data-href');
 			cmplz_load_css( src, category);
@@ -970,6 +970,9 @@ window.show_cookie_banner = function () {
 	let pageLinks = complianz.page_links[complianz.region];
 	//get correct banner, based on banner_id
 	cmplz_banner = document.querySelector('.cmplz-cookiebanner.banner-'+complianz.user_banner_id+'.'+complianz.consenttype);
+	if ( !cmplz_banner ) {
+		return;
+	}
 	cmplz_manage_consent_button = document.querySelector('#cmplz-manage-consent .cmplz-manage-consent.manage-consent-'+complianz.user_banner_id);
 	let css_file_url = complianz.css_file.replace('{type}', complianz.consenttype ).replace('{banner_id}', complianz.user_banner_id);
 	if ( complianz.css_file.indexOf('cookiebanner/css/defaults/banner') != -1 ) {
@@ -1196,7 +1199,7 @@ function cmplz_set_service_consent( service, consented ){
 	}
 	consented_services[service] = consented;
 	cmplz_set_cookie('consented_services', JSON.stringify(consented_services) );
-	let details = new Object();
+	let details = {};
 	details.service = service;
 	details.value = consented;
 	details.region = complianz.region;
@@ -1294,9 +1297,22 @@ window.cmplz_set_consent = function (category, value){
 		cmplz_integrations_revoke();
 		//give the code some time to finish, so our track status code can send a signal to the backend.
 		setTimeout(function(){
-			location.reload()
+			cmplz_reload_browser_compatible()
 		}, 500);
 	}
+}
+
+/*
+* In some browsers, like firefox, the reload does not force reload, but keeps cached data, causing e.g. Google Maps to load anyway.
+*/
+function cmplz_reload_browser_compatible(){
+  	if( navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ){
+		const url = new URL(window.location.href);
+		url.searchParams.set('cmplz-force-reload', Date.now().toString());
+		window.location.href = url.toString();
+    } else {
+    	window.location.reload();
+    }
 }
 
 /**
@@ -1421,7 +1437,7 @@ window.cmplz_deny_all = function(){
 
 	//we need to let the iab extension handle the reload, otherwise the consent revoke might not be ready yet.
 	if ( !complianz.tcf_active && reload ) {
-		location.reload();
+		cmplz_reload_browser_compatible();
 	}
 }
 
@@ -1498,7 +1514,7 @@ cmplz_add_event('change', '.cmplz-accept-service', function(e){
 				cmplz_set_service_consent(service, false);
 				//give our track status time to finish
 				setTimeout(function(){
-					location.reload()
+					cmplz_reload_browser_compatible()
 				}, 500);
 			}
 			//if not input, it's a placeholder
@@ -1510,7 +1526,7 @@ cmplz_add_event('change', '.cmplz-accept-service', function(e){
 
 			//give our track status time to finish
 			setTimeout(function(){
-				location.reload()
+				cmplz_reload_browser_compatible()
 			}, 500);
 		}
 	}
@@ -1804,7 +1820,7 @@ function cmplz_check_cookie_policy_id() {
 	}
 }
 
-/**
+/*
  * Clear all our own cookies, to make sure path issues are resolved.
  *
  *
@@ -1820,39 +1836,47 @@ function cmplz_clear_cookies(cookie_part){
 	date.setTime(date.getTime() - (24 * 60 * 60 * 1000));
 	var expires = ";expires=" + date.toGMTString();
 	if (window.location.protocol !== "https:") secure = '';
-	(function () {
-		var cookies = document.cookie.split("; ");
-		for (var c = 0; c < cookies.length; c++) {
-			var d = window.location.hostname.split(".");
-			//if we have more than one result in the array, we can skip the last one, as it will be the .com/.org extension
-			var skip_last = d.length > 1;
-			while (d.length > 0) {
-				var cookieName = cookies[c].split(";")[0].split("=")[0];
-				var p = location.pathname;
-				p = p.replace(/^\/|\/$/g, '').split('/');
-				if ( cookieName.indexOf(cookie_part) !==-1 ) {
-					foundCookie = true;
-					var cookieBase = encodeURIComponent(cookieName) + '=;SameSite=Lax' + secure + expires +';domain=.' + d.join('.') + ';path=';
-					var cookieBaseDomain = encodeURIComponent(cookieName) + '=;SameSite=Lax' + secure + expires +';domain=;path=';
-					document.cookie = cookieBaseDomain + '/';
-					document.cookie = cookieBase+ '/';
-					while (p.length > 0) {
-						var path = p.join('/');
-						if ( path.length>0 ) {
-							document.cookie = cookieBase + '/' + path;
-							document.cookie = cookieBaseDomain + '/' + path;
-							document.cookie = cookieBase + '/' + path + '/';
-							document.cookie = cookieBaseDomain + '/' + path + '/';
-						}
-						p.pop();
-					};
+	let cookies = document.cookie.split("; ");
+	let pathname = location.pathname;
+	let pathParts = pathname.replace(/^\/|\/$/g, '').split('/');
+
+	for (var i = 0; i < cookies.length; i++) {
+		let cookieName = cookies[i].split(";")[0].split("=")[0];
+		let host = window.location.hostname;
+		var domainParts = host.split(".");
+		//if we have more than one result in the array, we can skip the last one, as it will be the .com/.org extension
+		let skip_last = domainParts.length > 1;
+		if ( cookieName.indexOf(cookie_part) !==-1 ) {
+			foundCookie = true;
+			let cookieBaseDomain = encodeURIComponent(cookieName) + '=;SameSite=Lax' + secure + expires +';domain=;path=';
+			document.cookie = cookieBaseDomain + '/';
+			//and on paths on root
+			while ( pathParts.length > 0) {
+				var path = pathParts.join('/');
+				if ( path.length>0 ) {
+					document.cookie = cookieBaseDomain + '/' + path;
+					document.cookie = cookieBaseDomain + '/' + path + '/';
 				}
-				d.shift();
+				pathParts.pop();
+			};
+			while ( domainParts.length > 0) {
+				let cookieBase 		 = encodeURIComponent(cookieName) + '=;SameSite=Lax' + secure + expires +';domain=.' + domainParts.join('.') + ';path=';
+				document.cookie = cookieBase+ '/';
+				while (pathParts.length > 0) {
+					var path = pathParts.join('/');
+					if ( path.length>0 ) {
+						document.cookie = cookieBase + '/' + path;
+						document.cookie = cookieBase + '/' + path + '/';
+					}
+					pathParts.pop();
+				};
+
+				domainParts.shift();
 				//prevents setting cookies on .com/.org
-				if (skip_last && d.length==1) d.shift();
+				if (skip_last && domainParts.length==1) domainParts.shift();
 			}
 		}
-	})();
+	}
 
 	//to prevent a double reload, we preserve the cookie policy id.
 	cmplz_set_accepted_cookie_policy_id();
@@ -2077,7 +2101,7 @@ cmplz_add_event('keypress', '.cmplz-cookiebanner .cmplz-header .cmplz-close', fu
 	}
 });
 
-/**
+/*
  * Compare two arrays
  * @param array
  * @returns {boolean}
@@ -2223,4 +2247,3 @@ if ('undefined' != typeof window.jQuery) {
 
 	});
 }
-
