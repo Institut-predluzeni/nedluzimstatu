@@ -101,6 +101,7 @@ const saveEditedContent = sequence('Save editted content', [
       {
         success: [
           ({ get, props: { content } }) => ({ snippetId: get(state`edit.item.id`), snippetContent: content }),
+          ({ get }) => ({needImageRefresh: true, item_location: get(state`edit.item.item_location`)}),
           saveEditedItemSuccess,
         ],
         error: [

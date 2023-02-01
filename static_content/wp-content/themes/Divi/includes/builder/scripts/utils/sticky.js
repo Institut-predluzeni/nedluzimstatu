@@ -196,10 +196,11 @@ export const getStickyStyles = (id, $module, $placeholder) => {
    * original location of the module which causes columns(flex items) to shrink to fit in the row 
    * i.e .et_pb_equal_columns flex container.
    */
-  const isEqualColumns = $module[0].parentNode.classList.contains('et_pb_equal_columns');
+  const isEqualColumns = $module.parent().hasClass('et_pb_equal_columns');
+
   if(isEqualColumns) {
     $module.hide();
-    $placeholder.hide();  
+    $placeholder.hide();
   }
 
   // Measure sticky style DOM properties
@@ -214,7 +215,7 @@ export const getStickyStyles = (id, $module, $placeholder) => {
   // display module and placeholder.
   if(isEqualColumns) {
     $module.show();
-    $placeholder.show(); 
+    $placeholder.show();
   }
 
   // Immediately remove the cloned DOM
