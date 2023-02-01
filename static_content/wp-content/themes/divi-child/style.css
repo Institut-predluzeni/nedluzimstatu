@@ -393,7 +393,7 @@ footer a {
 	padding-left: 12px;
 }
 /* no padding for h5 */
-.zakladatel h5, .clen-tymu h5 {
+.zakladatel h5, .clen-tymu h5, .partner h5 {
   	padding-bottom: 0px !important;
 }
 /* insert Facebook icon */
@@ -804,9 +804,12 @@ input[type="submit"] {
 }
 /* Styles for questionarre for PDF generating END */
 
-/* stranka o projektu a casova osa start */
+/* stranka o projektu, partneri a casova osa start */
 .clen-tymu .et_pb_main_blurb_image {
   	margin-bottom: 8px !important;
+}
+.partner .et_pb_main_blurb_image {
+  	margin-bottom: 16px !important;
 }
 .clen-tymu img, .zakladatel img {
   	border-radius: 50%;
@@ -817,16 +820,32 @@ input[type="submit"] {
 .zakladatel img {
 	width: 56px;
 }
-.clen-tymu h5 {
+.clen-tymu h5, .partner h5 {
   	line-height: 24px !important;
 }
 @media (max-width: 479px) {
 	.sloupec-clen-tymu {
   		width: 50% !important;
 	}
+	.partner-sloupec-1_2 {
+		width: 100% !important;
+	}
   	.vic-radku-tymu {
     	padding-bottom: 0px !important;	
   	}
+}
+@media (min-width: 480px) and (max-width: 980px) {
+	.partner-sloupec-1_2 {
+		width: 50% !important;
+	}
+}
+@media (min-width: 481px) {
+	.partner-radek {
+		display: flex;
+	}
+	.partner-sloupec-1_2 {
+		margin: auto !important;
+	}
 }
 @media (min-width: 768px) and (max-width: 980px) {
   	.vic-radku-tymu {
@@ -849,14 +868,14 @@ input[type="submit"] {
     	max-width: 552px !important;
       	transform: translateX(-497px) translateY(0px) !important;
  	}
-  .polozka-timeline-prava.et_pb_blurb {
+  	.polozka-timeline-prava.et_pb_blurb {
     	max-width: 552px !important;
-  }
+  	}
 }
 #timeline .et_pb_blurb_description {
 	direction: initial;
 }
-/* stranka o projektu a casova osa end */
+/* stranka o projektu, partneri a casova osa end */
 
 /* kde muzu dluzit stranka prepinac start */
 #prepinac-dotaznik {
