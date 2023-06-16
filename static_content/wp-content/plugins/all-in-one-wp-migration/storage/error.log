@@ -37,3 +37,9 @@ Jun 14 2023 01:01:42
 Jun 14 2023 01:02:11
 {"Number":8,"Message":"fwrite(): write of 8192 bytes failed with errno=28 No space left on device","File":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-compressor.php","Line":102}
 
+Jun 15 2023 01:00:14
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Jun 16 2023 01:05:19
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
