@@ -26,3 +26,7 @@ export const getItemTypeByContext = context => {
 
   return type;
 };
+
+export const setCodeSnippetsLibraryToken = (token) => {
+  window.globalCloudToken = token;
+};

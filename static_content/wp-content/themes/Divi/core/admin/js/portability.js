@@ -95,9 +95,10 @@
 			$( '.et-core-portability-import-placeholder' ).text( file.name );
 		},
 
-		import: function(noBackup) {
+		import: async function(noBackup) {
 			var $this = this;
 			var file = $this.instance('input[type="file"]').get(0).files[0];
+			file     = await $this.formatBuilderLayoutFile(file);
 
 			if (undefined === window.FormData) {
 				etCore.modalContent('<p>' + this.text.browserSupport + '</p>', false, 3000, '#et-core-portability-import');
@@ -534,6 +535,183 @@
 			importFBAjax(formData)
 		},
 
+		bulkImportFB: async function(files, postId, options) {
+			var $this        = this;
+			var errorEvent   = document.createEvent( 'Event' );
+			var importCount  = 0, totalFiles = files.length;
+			var importRequests = [];
+			var totalPromises = 0;
+
+			var watchImportPromises = function() {
+				totalPromises += 1;
+				var pendingPromisesLength = importRequests.length;
+				Promise.allSettled(importRequests).then(function(responses) {
+					if (totalPromises > pendingPromisesLength) {
+						return;
+					}
+
+					var success = responses.some(function(response) {
+						return 'fulfilled' === response.status;
+					});
+	
+					if (success) {
+						var successResponse = [];
+						
+						for (var i = 0; i < responses.length; i++) {
+							if ('fulfilled' === responses[i].status && responses[i].value.success) {
+								successResponse.push(responses[i].value);
+							}	
+						}
+	
+						// Allow some time for animations to animate
+						setTimeout(function() {
+							var event = document.createEvent( 'Event' );
+							event.initEvent( 'et_fb_layout_import_finished', true, true );
+							// save the data into global variable for later use in FB
+							window.et_fb_import_layout_response = successResponse;
+	
+							// trigger event to communicate with FB (again)
+							window.dispatchEvent( event );
+						}, 1300);
+					} else {
+						// Undo import porgress,
+						var event = document.createEvent( 'Event' );
+						event.initEvent( 'et_fb_layout_import_in_progress', true, true );
+						window.et_fb_import_progress = 99;
+						window.dispatchEvent( event );
+	
+						var importErrorMessages = responses.map(function(value) {
+							return value.reason;
+						});
+	
+						window.et_fb_import_layout_message = importErrorMessages;
+						window.dispatchEvent( errorEvent );
+					}
+				});
+			};
+
+			var importFBAjax = function(importData) {
+				var promise = new Promise(function(resolve, reject) {
+					var jqXHR = $.ajax( {
+						type: 'POST',
+						url: etCore.ajaxurl,
+						processData: false,
+						contentType: false,
+						data: importData,
+					});
+
+					jqXHR.done(function(response) {
+						var event = document.createEvent( 'Event' );
+						event.initEvent( 'et_fb_layout_import_in_progress', true, true );
+						var importFile = importData.get('file');
+
+						// Handle known error
+						if ( ! response.success && 'undefined' !== typeof response.data && 'undefined' !== typeof response.data.message && 'undefined' !== typeof $this.text[ response.data.message ] ) {
+							reject({file: importFile, error: $this.text[ response.data.message ]});
+							importCount++;
+						}
+						// The error is unknown but most of the time it would be cased by the server max size being exceeded.
+						else if ( 'string' === typeof response && ('0' === response || '' === response) ) {
+							reject({file: importFile.name, error: $this.text.maxSizeExceeded});
+							importCount++;
+						}
+						// Memory size set on server is exhausted.
+						else if ( 'string' === typeof response && response.toLowerCase().indexOf( 'memory size' ) >= 0 ) {
+							resolve({importFile, error: $this.text.memoryExhausted});
+							importCount++;
+
+						}
+						// Pagination
+						else if ( 'undefined' !== typeof response.page && 'undefined' !== typeof response.total_pages ) {
+							// Import data
+							var nextImportData = importData;
+							nextImportData.append( 'page', ( parseInt(response.page) + 1 ) );
+							nextImportData.append( 'timestamp', response.timestamp );
+							nextImportData.append( 'file', null );
+							importFBAjax(nextImportData);
+							return resolve(response);
+						} else {
+							resolve(response);
+							importCount++;
+						}
+
+						// Update progress bar
+						window.et_fb_import_progress = (importCount/totalFiles) * 100;
+						window.et_fb_import_estimation = 0;
+						// trigger event to communicate with FB
+						window.dispatchEvent( event );
+					}).fail(function(error) {
+						reject(error);
+					});
+				});
+				importRequests.push(promise);
+				watchImportPromises();
+			};
+
+			window.et_fb_import_progress = 0;
+			window.et_fb_import_estimation = 1;
+
+			errorEvent.initEvent( 'et_fb_layout_import_error', true, true );
+
+			if ( undefined === window.FormData ) {
+				window.et_fb_import_layout_message = this.text.browserSupport;
+				window.dispatchEvent( errorEvent );
+				return;
+			}
+
+			if ('undefined' === typeof options) {
+				options = {};
+			}
+
+			options = $.extend({
+				replace: false,
+				context: 'et_builder_layouts',
+				returnJson: false,
+				useTempPresets: false,
+				includeGlobalPresets: false,
+			}, options);
+
+			for (var i = 0; i < files.length; i++) {
+				var file = await $this.formatBuilderLayoutFile(files[i]),
+				fileSize = Math.ceil( ( file.size / ( 1024 * 1024 ) ).toFixed( 2 ) ),
+				formData = new FormData(),
+				requestData = {
+					action: 'et_core_portability_import',
+					include_global_presets: options.includeGlobalPresets,
+					et_cloud_return_json: options.returnJson,
+					et_cloud_use_temp_presets: options.useTempPresets,
+					file: file,
+					content: false,
+					timestamp: 0,
+					nonce: $this.nonces.import,
+					post: postId,
+					replace: options.replace ? '1' : '0',
+					context: options.context
+				};
+
+				if (
+					( 0 > $this.postMaxSize && fileSize >= $this.postMaxSize )
+					|| ( 0 > $this.uploadMaxSize && fileSize >= $this.uploadMaxSize )
+				) {
+					continue;
+				}
+
+
+				$.each(requestData, function(name, value) {
+					if ('file' === name) {
+					// Explicitly set the file name.
+					// Otherwise it'll be set to 'Blob' in case of Blob type, but we need actual filename here.
+						formData.append('file', value, value.name);
+					} else {
+						formData.append(name, value);
+					}
+				});
+
+				importFBAjax(formData);
+			}
+
+		},
+
 		ajaxAction: function( data, callback, fileSupport ) {
 			var $this = this;
 
@@ -753,6 +931,68 @@
 		instance: function( element ) {
 			return $( '.et-core-active[data-et-core-portability]' + ( element ? ' ' + element : '' ) );
 		},
+
+		formatBuilderLayoutFile: function(file) {
+			const reader = new FileReader();
+
+			return new Promise((resolve, reject) => {
+				reader.onloadend = (e) => {
+					var content = '';
+					try {
+						content  = JSON.parse(e.target.result);
+					} catch (e) {
+						const importFile = new File([JSON.stringify({})], file.name, { type: 'application/json' });
+						return resolve(importFile);
+					}
+
+					if('et_builder' === content.context) {
+						const name        = file.name.replace('.json', '');
+						const postId      = Object.keys(content.data)[0];
+						const postContent = content.data[postId];
+
+						const convertedFile = {
+						...content,
+						context: 'et_builder_layouts',
+						data: {
+							[postId]: {
+							ID: parseInt(postId, 10),
+							post_title: name,
+							post_name: name,
+							post_content: postContent,
+							post_excerpt: '',
+							post_status: 'publish',
+							comment_status: 'closed',
+							ping_status: 'closed',
+							post_type: 'et_pb_layout',
+							post_meta: {
+								_et_pb_built_for_post_type: ['page']
+							},
+							terms: {
+								1: {
+								name: 'layout',
+								slug: 'layout',
+								taxonomy: 'layout_type',
+								},
+							},
+							},
+						}
+						}
+
+						const importFile = new File([JSON.stringify(convertedFile)], file.name, { type: 'application/json' });
+						resolve(importFile);
+					} else {
+						resolve(file);
+					}
+				}
+	
+				reader.onerror = () => {
+					reader.abort();
+					reject();
+				};
+				
+				reader.readAsText(file);
+			});
+		  }
 
 	} );
 

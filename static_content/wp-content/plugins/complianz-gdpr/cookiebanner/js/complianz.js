@@ -56,6 +56,56 @@ function cmplz_html_decode(input) {
 	var doc = new DOMParser().parseFromString(input, "text/html");
 	return doc.documentElement.textContent;
 }
+/**
+ * Consent Area management for shortcode and block editor
+ */
+document.querySelectorAll('.cmplz-consent-area.cmplz-placeholder').forEach(cmplzConsentArea => {
+	cmplzConsentArea.addEventListener('click', e => {
+		let container = e.target;
+		if ( !container.classList.contains('cmplz-consent-area') ) {
+			container = e.target.closest('.cmplz-consent-area.cmplz-placeholder');
+		}
+		if (container) {
+			let consentedService = container.getAttribute('data-service');
+			cmplz_set_service_consent(consentedService, true);
+			cmplzLoadConsentAreaContent(false, consentedService);
+			cmplz_enable_category(null, consentedService);
+			cmplz_set_banner_status('dismissed');
+		}
+
+	});
+
+	document.addEventListener("cmplz_enable_category", function(consentData) {
+		var consentedCategory = consentData.detail.category;
+		var consentedService = consentData.detail.service;
+		cmplzLoadConsentAreaContent(consentedCategory, consentedService)
+	});
+});
+
+function cmplzLoadConsentAreaContent(consentedCategory, consentedService){
+	document.querySelectorAll('.cmplz-consent-area.cmplz-placeholder').forEach(obj => {
+		let category = obj.getAttribute('data-category');
+		let service = obj.getAttribute('data-service');
+		let postId = obj.getAttribute('data-post_id');
+		let blockId = obj.getAttribute('data-block_id');
+		if ( consentedCategory === category || consentedService === service ) {
+			//if not stored yet, load. As features in the user object can be changed on updates, we also check for the version
+			var request = new XMLHttpRequest();
+			request.open('GET', complianz.url+'consent-area/'+postId+'/'+blockId, true);
+			request.setRequestHeader('Content-type', 'application/json');
+			request.send();
+			obj.classList.remove('cmplz-placeholder');
+			request.onload = function() {
+				obj.innerHTML = JSON.parse(request.response);
+				//search for script elements and execute them
+				obj.querySelectorAll('script').forEach(scriptEl => {
+					cmplz_run_script(scriptEl.innerHTML, category, service, 'inline', scriptEl);
+				})
+			};
+		}
+	});
+}
+
 /*
  * If an anchor is passed for an element which may load only after an ajax call, make sure it will scroll into view.
  */
@@ -102,6 +152,8 @@ let cmplz_fired_scripts = [];
 let cmplz_placeholder_class_index = 0;
 let cmplz_all_scripts_hook_fired = false;
 let cmplz_consent_stored_once = false;
+let cmplz_fired_category_events = ['functional'];
+let cmplz_fired_service_events = [];
 let cmplz_categories = [
 	'functional',
 	'preferences',
@@ -115,20 +167,19 @@ let cmplz_categories = [
  * @returns {string}
  */
 
-window.cmplz_get_cookie = function(name) {
-	if (typeof document === 'undefined') {
-		return '';
+window.cmplz_get_cookie = function (name) {
+	if (typeof document === "undefined") {
+		return "";
 	}
-	name = complianz.prefix+name + "=";
-	let cArr = document.cookie.split(';');
-	for (let i = 0; i < cArr.length; i++) {
-		let c = cArr[i].trim();
-		if (c.indexOf(name) == 0)
-			return c.substring(name.length, c.length);
+	name = complianz.prefix + name;
+	const value = "; " + document.cookie;
+	const parts = value.split("; " + name + "=");
+	if ( parts.length === 2 ) {
+		return parts.pop().split(";").shift();
 	}
 
 	return "";
-}
+};
 
 /*
  * set a cookie
@@ -199,17 +250,6 @@ window.cmplz_highest_accepted_category = function() {
 }
 
 /*
- * Accept all categories
- */
-window.cmplz_accept_all = function(){
-	for (var key in cmplz_categories) {
-		if ( cmplz_categories.hasOwnProperty(key) ) {
-			cmplz_set_consent(cmplz_categories[key], 'allow');
-		}
-	}
-}
-
-/*
  * Sets all accepted categories as class in body
  */
 
@@ -268,7 +308,7 @@ function cmplz_load_css( path ) {
  * @param type
  */
 
-function cmplz_run_script( script, category, type, sourceObj ) {
+function cmplz_run_script( script, category, service, type, sourceObj ) {
 	let targetObj = document.createElement("script");
 	if ( type !== 'inline' ) {
 		targetObj.setAttribute("src", script);
@@ -278,6 +318,11 @@ function cmplz_run_script( script, category, type, sourceObj ) {
 		}
 		targetObj.innerHTML = [script, 'cmplzScriptLoaded();'].join('\n');
 	}
+
+	if ( script.includes("import") ) {
+		targetObj.setAttribute("type", "module");
+	}
+
 	//check if already fired
 	if ( cmplz_in_array( script, cmplz_fired_scripts) ) {
 		return;
@@ -288,13 +333,13 @@ function cmplz_run_script( script, category, type, sourceObj ) {
 	try {
 		if (type!=='inline') {
 			targetObj.onload = function () {
-				cmplz_run_after_all_scripts(category);
-				cmplz_maybe_run_waiting_scripts(script, category, sourceObj);
+				cmplz_run_after_all_scripts(category, service);
+				cmplz_maybe_run_waiting_scripts(script, category, service, sourceObj);
 			}
 		} else {
 			window.cmplzScriptLoaded = function() {
-				cmplz_run_after_all_scripts(category);
-				cmplz_maybe_run_waiting_scripts(script, category, sourceObj);
+				cmplz_run_after_all_scripts(category, service);
+				cmplz_maybe_run_waiting_scripts(script, category, service, sourceObj);
 			}
 		}
 		let header = document.getElementsByTagName("head")[0];
@@ -302,7 +347,7 @@ function cmplz_run_script( script, category, type, sourceObj ) {
 
 	} catch(exception) {
 		//only runs in case of error
-		cmplz_run_after_all_scripts(category);
+		cmplz_run_after_all_scripts(category, service);
 		throw "Something went wrong " + exception + " while loading "+script;
 	}
 
@@ -315,15 +360,15 @@ function cmplz_run_script( script, category, type, sourceObj ) {
  * @param category
  */
 
-function cmplz_maybe_run_waiting_scripts( script, category, sourceObj ){
+function cmplz_maybe_run_waiting_scripts( script, category, service, sourceObj ){
 	let waitingScript = cmplz_get_waiting_script(cmplz_waiting_scripts, script);
 	if ( waitingScript ) {
-		cmplz_run_script( waitingScript, category, 'src', sourceObj );
+		cmplz_run_script( waitingScript, category, service, 'src', sourceObj );
 	}
 
 	let waiting_inline_script = cmplz_get_waiting_script(cmplz_waiting_inline_scripts, script);
 	if (waiting_inline_script) {
-		cmplz_run_script(waiting_inline_script, category, 'inline', sourceObj);
+		cmplz_run_script(waiting_inline_script, category, service, 'inline', sourceObj);
 	}
 }
 
@@ -430,7 +475,7 @@ function cmplz_insert_placeholder_text(container, category, service ){
 				let btn = body.querySelector('button');
 				btn.setAttribute('data-service', service);
 				btn.setAttribute('data-category', category);
-				btn.setAttribute('aria-label', service);
+				btn.setAttribute( 'aria-label', complianz.aria_label.replace('{service}', service_nicename) );
 				let pageLinks = complianz.page_links[complianz.region];
 				let link = body.querySelector('.cmplz-links a');
 				if ( pageLinks && pageLinks.hasOwnProperty('cookie-statement') ) {
@@ -455,7 +500,7 @@ function cmplz_insert_placeholder_text(container, category, service ){
 				btn.classList.add('cmplz-accept-'+category);
 				btn.setAttribute('data-service', service );
 				btn.setAttribute('data-category', category );
-				btn.setAttribute('aria-label', service );
+				btn.setAttribute( 'aria-label', complianz.aria_label.replace('{category}', category) );
 				body=btn;
 			}
 
@@ -545,7 +590,6 @@ function cmplz_enable_category(category, service) {
 	if ( category === 'functional' ) {
 		return;
 	}
-
 	//enable cookies for integrations
 	if ( category === 'marketing' ) {
 		cmplz_set_integrations_cookies();
@@ -554,9 +598,9 @@ function cmplz_enable_category(category, service) {
 	//remove accept cookie notice overlay
 	let selector;
 	if (service !== 'do_not_match') {
-		selector = '.cmplz-blocked-content-notice [data-service='+service+']';
+		selector = '.cmplz-blocked-content-notice [data-service="'+service+'"]';
 	} else {
-		selector = complianz.clean_cookies!=1 ? '.cmplz-blocked-content-notice.cmplz-accept-'+category : '.cmplz-blocked-content-notice [data-category='+category+']';
+		selector = complianz.clean_cookies!=1 ? '.cmplz-blocked-content-notice.cmplz-accept-'+category : '.cmplz-blocked-content-notice [data-category="'+category+'"]';
 	}
 	document.querySelectorAll(selector).forEach(obj => {
 		let blockedElementService = obj.getAttribute('data-service');
@@ -569,7 +613,7 @@ function cmplz_enable_category(category, service) {
 		}
 	});
 
-	document.querySelectorAll('[data-category='+category+'], [data-service='+service+']').forEach(obj => {
+	document.querySelectorAll('[data-category="'+category+'"], [data-service="'+service+'"]').forEach(obj => {
 		//if a category is activated, but this specific service is denied, skip.
 		let elementService = obj.getAttribute('data-service');
 		if ( cmplz_is_service_denied(elementService) ) {
@@ -625,12 +669,6 @@ function cmplz_enable_category(category, service) {
 			obj.classList.remove('cmplz-blocked-content-container');
 			obj.classList.remove('cmplz-placeholder-' + cssIndex);
 		}
-
-		let details = {};
-		details.category = category;
-		details.service = service;
-		let event = new CustomEvent('cmplz_category_enabled', { detail: details });
-		document.dispatchEvent(event);
 	});
 
 	/*
@@ -638,7 +676,7 @@ function cmplz_enable_category(category, service) {
 	 */
 
 	//create list of waiting scripts
-	let scriptElements = document.querySelectorAll('script[data-category='+category+'], script[data-service='+service+']');
+	let scriptElements = document.querySelectorAll('script[data-category="'+category+'"], script[data-service="'+service+'"]');
 	scriptElements.forEach(obj => {
 		let waitfor = obj.getAttribute('data-waitfor');
 		let src = obj.getAttribute('data-cmplz-src');
@@ -680,7 +718,7 @@ function cmplz_enable_category(category, service) {
 					postscribe(psID, '<script src=' + src + '></script>');
 				}
 			} else {
-				cmplz_run_script(src, category, 'src', obj );
+				cmplz_run_script(src, category, service, 'src', obj );
 			}
 
 		} else if (obj.innerText.length > 0 ) {
@@ -689,25 +727,15 @@ function cmplz_enable_category(category, service) {
 				return;
 			}
 
-			cmplz_run_script( obj.innerText, category, 'inline', obj );
+			cmplz_run_script( obj.innerText, category, service, 'inline', obj );
 		}
 	});
 
-	//fire an event so custom scripts can hook into this.
-	let details = {};
-	details.category = category;
-	details.service = service;
-	details.categories = cmplz_accepted_categories();
-	details.services = cmplz_get_all_service_consents();
-	details.region = complianz.region;
-	let event = new CustomEvent('cmplz_enable_category', { detail: details });
-	document.dispatchEvent(event);
-	//if there are no blockable scripts at all, we still want to provide a hook
-	//in most cases, there are blocked scripts, and this code won't run yet. In that
-	//case it's run from the script activation callbacks.
-	if ( !cmplz_has_blocked_scripts() ) {
-		cmplz_run_after_all_scripts(category);
-	}
+	// if there are no blockable scripts at all, we still want to provide a hook
+	// in most cases, there are blocked scripts, and run_after_all_scripts hook won't be fired yet. In that
+	// case only the category event is fired (if activated), and this function will run
+	// again from the script activation callbacks.
+	cmplz_run_after_all_scripts(category, service);
 }
 
 /*
@@ -718,7 +746,7 @@ function cmplz_enable_category(category, service) {
 function cmplz_remove_placeholder(obj){
 	//we get the closest, not the parent, because a script could have inserted a div in the meantime.
 	let blocked_content_container = obj.closest('.cmplz-blocked-content-container');
-	if (blocked_content_container) {
+	if ( blocked_content_container ) {
 		let cssIndex = blocked_content_container.getAttribute('data-placeholder_class_index');
 		blocked_content_container.classList.remove('cmplz-blocked-content-container');
 		blocked_content_container.classList.remove('cmplz-placeholder-' + cssIndex);
@@ -745,7 +773,6 @@ function cmplz_get_waiting_script( waiting_scripts, src ) {
 			}
 		}
 	}
-
 	return false;
 }
 
@@ -754,13 +781,13 @@ function cmplz_get_waiting_script( waiting_scripts, src ) {
  * @param arr
  * @returns {boolean}
  */
+
 function cmplz_array_is_empty(arr) {
 	for (let key in arr) {
 		if (arr.hasOwnProperty(key)) {
 			return false;
 		}
 	}
-
 	return true;
 }
 
@@ -788,9 +815,30 @@ function cmplz_is_waiting_script(waiting_scripts, srcOrScript) {
  * if all scripts have been executed, fire a hook.
  */
 
-function cmplz_run_after_all_scripts(category) {
-	if (!cmplz_all_scripts_hook_fired && cmplz_array_is_empty(cmplz_waiting_inline_scripts) && cmplz_array_is_empty(cmplz_waiting_scripts) ) {
-		let event = new CustomEvent('cmplz_run_after_all_scripts', { detail: category });
+function cmplz_run_after_all_scripts(category, service) {
+	//fire an event so custom scripts can hook into this.
+	let enableService = service!=='do_not_match' && !cmplz_in_array(service, cmplz_fired_service_events );
+	let enableCategory = category!=='do_not_match' && !cmplz_in_array( category, cmplz_fired_category_events );
+	if ( enableCategory ||  enableService ) {
+		if (enableCategory) {
+			cmplz_fired_category_events.push(category);
+		}
+		if (enableService) {
+			cmplz_fired_service_events.push(service);
+		}
+		let details = {};
+		details.category = category;
+		details.service = service;
+		details.categories = cmplz_accepted_categories();
+		details.services = cmplz_get_all_service_consents();
+		details.region = complianz.region;
+
+		let event = new CustomEvent('cmplz_enable_category', { detail: details });
+		document.dispatchEvent(event);
+	}
+
+	if ( !cmplz_all_scripts_hook_fired && cmplz_array_is_empty(cmplz_waiting_inline_scripts) && cmplz_array_is_empty(cmplz_waiting_scripts) ) {
+		let event = new CustomEvent('cmplz_run_after_all_scripts', { detail: category, service:service});
 		document.dispatchEvent(event);
 		cmplz_all_scripts_hook_fired = true;
 	}
@@ -906,7 +954,7 @@ window.conditionally_show_banner = function() {
 	cmplz_set_category_as_body_class();
 	//fire cats event, but do not fire a track, as we do this on exit.
 	cmplz_fire_categories_event();
-	if (!cmplz_do_not_track()) {
+	if ( !cmplz_do_not_track() ) {
 		if (complianz.consenttype === 'optin') {
 			if (complianz.forceEnableStats) {
 				cmplz_enable_category('statistics');
@@ -920,6 +968,7 @@ window.conditionally_show_banner = function() {
 			console.log('other consent type, no cookie warning');
 			//on other consent types, all scripts are enabled by default.
 			cmplz_accept_all();
+			// cmplz_fire_categories_event();
 		}
 	} else {
 		console.log('global privacy control or do not track detected: no banner.');
@@ -1110,16 +1159,22 @@ window.cmplz_has_consent = function ( category ){
 		return true;
 	}
 
-	if ( category === 'functional' ) return true;
+	if ( category === 'functional' ) {
+		return true;
+	}
 
-	if ( cmplz_do_not_track() ) return false;
-	var has_consent, value;
+	//if consent is given on service level, this should be handled by cmplz_has_service_consent
+	if ( cmplz_do_not_track() ){
+		return false;
+	}
+
+	let has_consent, value;
 
 	/*
 	 * categories
 	 */
 	value = cmplz_get_cookie(category);
-	if (complianz.consenttype === 'optout' && value === '') {
+	if ( (complianz.consenttype === 'optout' || complianz.consenttype === 'other') && value === '') {
 		//if it's opt out and no cookie is set we should return true
 		has_consent = true;
 	} else {
@@ -1274,11 +1329,14 @@ function cmplz_get_cookie_domain(){
  */
 window.cmplz_set_consent = function (category, value){
 	cmplz_set_accepted_cookie_policy_id();
-	var previous_value = cmplz_get_cookie(category);
+
+	//functional is always allow
+	value = category==='functional' ? 'allow' : value;
+	let previous_value = cmplz_get_cookie(category);
 
 	//keep checkboxes in banner and on cookie policy in sync
 	//do this before the change check to ensure sync: https://github.com/Really-Simple-Plugins/complianz-gdpr/issues/324
-	var checked = value === 'allow';
+	let checked = value === 'allow';
 	document.querySelectorAll('input.cmplz-'+category).forEach(obj => {
 		obj.checked = checked;
 	});
@@ -1320,13 +1378,13 @@ window.cmplz_set_consent = function (category, value){
 * In some browsers, like firefox, the reload does not force reload, but keeps cached data, causing e.g. Google Maps to load anyway.
 */
 function cmplz_reload_browser_compatible(){
-  	if( navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ){
+	if( navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ){
 		const url = new URL(window.location.href);
 		url.searchParams.set('cmplz-force-reload', Date.now().toString());
 		window.location.href = url.toString();
-    } else {
-    	window.location.reload();
-    }
+	} else {
+		window.location.reload();
+	}
 }
 
 /*
@@ -2088,8 +2146,11 @@ function cmplz_clear_storage(item){
  */
 
 function cmplz_load_manage_consent_container() {
+	//don't load manage html code in the block editor
 	let manage_consent_container = document.querySelector('.cmplz-manage-consent-container');
-	if ( manage_consent_container ) {
+	let is_block_editor = false;//document.querySelector('.wp-admin .cmplz-unlinked-mode');
+	if ( manage_consent_container && !is_block_editor ) {
+
 		var request = new XMLHttpRequest();
 		request.open('GET', complianz.url+'manage_consent_html?'+complianz.locale, true);
 		request.setRequestHeader('Content-type', 'application/json');
@@ -2165,16 +2226,21 @@ function cmplz_equals (array_1, array_2) {
 * Copy all element atributes to the new element
 */
 function cmplzCopyAttributes(source, target) {
-  return Array.from(source.attributes).forEach(attribute => {
-  	//don't copy the type attribute
-  	if ( attribute.nodeName!=='type' && attribute.nodeName!=='data-service' && attribute.nodeName!=='data-category' ) {
-  	    target.setAttribute(
-          attribute.nodeName,
-          attribute.nodeValue,
-        );
-  	}
+	return Array.from(source.attributes).forEach(attribute => {
+		//don't copy the type attribute
+		let excludes = ['type', 'data-service', 'data-category', 'async'];
+		if (  attribute.nodeName === 'data-script-type' && attribute.nodeValue === 'module' ) {
+			target.setAttribute('type', 'module',);
+			target.removeAttribute('data-script-type');
+		}
 
-  });
+		if ( !excludes.includes(attribute.nodeName) ) {
+			target.setAttribute(
+				attribute.nodeName,
+				attribute.nodeValue,
+			);
+		}
+	});
 }
 
 /*
@@ -2216,7 +2282,7 @@ if ('undefined' != typeof window.jQuery) {
 					if (category==='functional') {
 						break;
 					}
-					selectorVideos.push('.cmplz-wp-video-shortcode[data-category='+category+']');
+					selectorVideos.push('.cmplz-wp-video-shortcode[data-category="'+category+'"]');
 				}
 			}
 			for (var s_key in services) {
@@ -2261,29 +2327,22 @@ if ('undefined' != typeof window.jQuery) {
 		 * Activate fitvids on the parent element if active
 		 *  a.o. Beaverbuilder
 		 */
-
-		document.querySelectorAll('.cmplz-video').forEach(obj => {
-			//turn obj into jquery object
-			let $obj = $(obj);
-			if (typeof $obj.parent().fitVids == 'function') {
-				$obj.parent().fitVids();
-			}
+		document.querySelectorAll('.cmplz-video.cmplz-activated').forEach(obj => {
+			cmplz_activate_fitvids(obj);
 		});
 
-		/*
-		 * Activate fitvids on the parent element if active
-		 *  a.o. Beaverbuilder
-		 */
-		$(document).on("cmplz_category_enabled", cmplz_enable_fitvids);
-		function cmplz_enable_fitvids(data) {
-			document.querySelectorAll('.cmplz-video').forEach(obj => {
-				//turn obj into jquery object
-				let $obj = $(obj);
-				if (typeof $obj.parent().fitVids == 'function') {
-					$obj.parent().fitVids();
-				}
+		document.addEventListener("cmplz_enable_category", function (e) {
+			document.querySelectorAll('.cmplz-video.cmplz-activated').forEach(obj => {
+				cmplz_activate_fitvids(obj);
 			});
-		}
+		});
 
+		function cmplz_activate_fitvids(obj){
+			//turn obj into jquery object
+			let $obj = $(obj);
+			if (typeof $obj.parent().fitVids === 'function') {
+				$obj.parent().fitVids();
+			}
+		}
 	});
 }
