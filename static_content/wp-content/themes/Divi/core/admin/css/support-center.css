@@ -583,3 +583,22 @@ body.rtl #et_support_center .card .et-dismiss-button {
 #et_support_center .card .et-dismiss-button .et-dismiss-button-label {
   display: none;
 }
+
+#et_support_center .et_vip_support {
+  display: flex;
+  margin-top: 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+#et_support_center .et_vip_support > div {
+  flex: 1 1 0;
+}
+
+#et_support_center .et_vip_support .et_vip_support__left img {
+  width: 100%;
+}
+
+#et_support_center #epanel .et_vip_support__right h2:first-child {
+  margin-bottom: .5em;
+}

@@ -216,13 +216,28 @@ h1#epanel-title {
 	box-shadow: none;
 }
 
-#epanel-header .et-defaults-button.epanel-reset:before {
-	font-family: 'etbuilder';
-	content: '\4d';
+#epanel-header .et-defaults-button.epanel-reset:before,
+#epanel-header .et-defaults-button.epanel-save:before,
+#epanel-header .et-defaults-button.epanel-add:before {
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
+}
+
+#epanel-header .et-defaults-button.epanel-reset:before {
+	font-family: 'etbuilder';
+	content: '\4d';
+}
+
+#epanel-header .et-defaults-button.epanel-save:before {
+	font-family: 'CodeSnippet';
+	content: '\e901';
+}
+
+#epanel-header .et-defaults-button.epanel-add:before {
+	font-family: 'CodeSnippet';
+	content: '\e900';
 }
 
 #epanel-header .et-defaults-button .label {
@@ -1523,6 +1538,24 @@ left: 0px;
 .rtl #epanel-header .epanel-portability {
 	right: auto;
 	left: 50px;
+}
+
+#epanel-header .epanel-save {
+	right: 90px;
+}
+
+.rtl #epanel-header .epanel-save {
+	right: auto;
+	left: 90px;
+}
+
+#epanel-header .epanel-add {
+	right: 130px;
+}
+
+.rtl #epanel-header .epanel-add {
+	right: auto;
+	left: 130px;
 }
 
 /* Clear Static CSS Button */

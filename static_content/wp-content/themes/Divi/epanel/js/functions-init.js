@@ -147,6 +147,28 @@
 			et_pb_center_modal( $( '.defaults-hover' ) );
 		});
 
+		$('.et-defaults-button.epanel-save').on('click', function(e) {
+			e.preventDefault();
+			var preferences = {
+				modalType: 'save',
+				sidebarLabel: ePanelSettings.i18n['Theme Option'],
+				builtFor: ePanelSettings?.currentTheme ?? 'Divi',
+			};
+
+			$(window).trigger('et_theme-options_container_ready', [preferences]);
+		});
+
+		$('.et-defaults-button.epanel-add').on('click', function(e) {
+			e.preventDefault();
+			var preferences = {
+				modalType: 'add',
+				sidebarLabel: ePanelSettings.i18n['Theme Option'],
+				builtFor: ePanelSettings?.currentTheme ?? 'Divi',
+			};
+
+			$(window).trigger('et_theme-options_container_ready', [preferences]);
+		});
+
 		$('.no').on('click', function() {
 			et_pb_close_modal( $( '.reset-popup-overlay' ), 'no_remove' );
 
