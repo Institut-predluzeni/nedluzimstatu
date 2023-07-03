@@ -11,6 +11,10 @@ jQuery(document).ready(function(){
 		jQuery(this).addClass(scriptData.jvcf7p_default_settings.jvcf7p_show_label_error);
 		jQuery('.wpcf7-file').attr('accept','');
 		jQuery(this).validate({
+			ignore: ":hidden input, :hidden textarea, :hidden select", // FOR Hidden element
+			onfocusout: function(element) { // ADD VALIDATION ON BLUR
+		        this.element(element);  
+		    },
 			onfocusout: function(element) { // ADD VALIDATION ON BLUR
 		        this.element(element);  
 		    },

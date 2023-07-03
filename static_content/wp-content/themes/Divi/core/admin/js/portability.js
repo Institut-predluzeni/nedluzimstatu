@@ -21,6 +21,10 @@
 				$this.listen( $( this ) );
 			} );
 
+			$('[data-et-core-portability-export-to-cloud]').each(function() {
+				$this.listen( $( this ) );
+			});
+
 			// Release unecessary cache.
 			etCorePortability = null;
 		},
@@ -34,6 +38,15 @@
 				if ( ! $this.actionsDisabled() ) {
 					$this.disableActions();
 					$this.export();
+				}
+			});
+
+			$el.find('[data-et-core-portability-export-to-cloud]').on('click', function(e) {
+				e.preventDefault();
+
+				if ( ! $this.actionsDisabled() ) {
+					$this.disableActions();
+					$this.exportToCloud();
 				}
 			});
 
@@ -174,7 +187,13 @@
 			}, true );
 		},
 
-		export: function( backup ) {
+		renderNoItemsToExportError: function($this = this) {
+			etCore.modalContent( '<div class="et-core-loader et-core-loader-fail"></div><h3>' + $this.text.noItemsToExport + '</h3>', false, true, '#' + $this.instance( '.ui-tabs-panel:visible' ).attr( 'id' ) );
+	
+			$this.enableActions();
+		},
+
+		export: function( backup, returnJSON = false ) {
 			var $this = this,
 				progressBarMessages = backup ? $this.text.backuping : $this.text.exporting;
 
@@ -214,39 +233,89 @@
 
 				var applyGlobalPresets = $this.instance( '[name="et-core-portability-apply-presets"]' ).is( ':checked' );
 
-				$this.ajaxAction( {
-					action: 'et_core_portability_export',
-					content: content,
-					selection: $.isEmptyObject( posts ) ? false : JSON.stringify( posts ),
-					apply_global_presets: applyGlobalPresets,
-					nonce: $this.nonces.export
-				}, function( response ) {
-					var time = ' ' + new Date().toJSON().replace( 'T', ' ' ).replace( ':', 'h' ).substring( 0, 16 ),
-						downloadURL = $this.instance( '[data-et-core-portability-export]' ).data( 'et-core-portability-export' ),
-						query = {
-							'timestamp': response.data.timestamp,
-							'name': encodeURIComponent( $this.instance( '.et-core-portability-export-form input' ).val() + ( backup ? time : '' ) ),
-						};
+				if ( returnJSON ) {
+					if (0 === $( '#posts-filter [name="post[]"]' ).length) {
+						$this.renderNoItemsToExportError();
 
-					$.each( query, function( key, value ) {
-						if ( value ) {
-							downloadURL = downloadURL + '&' + key + '=' + value;
-						}
-					} );
-
-					// Remove confirmation popup before relocation.
-					$( window ).off( 'beforeunload' );
-
-					window.location.assign( encodeURI( downloadURL ) );
-
-					if ( ! backup ) {
-						etCore.modalContent( '<div class="et-core-loader et-core-loader-success"></div>', false, 3000, '#et-core-portability-export' );
-						$this.toggleCancel();
+						// Stop the export process.
+						return;
 					}
 
-					$( $this ).trigger( 'exported' );
-				} );
+					$this.ajaxAction( {
+						action: 'et_core_portability_export',
+						content: content,
+						selection: $.isEmptyObject( posts ) ? false : JSON.stringify( posts ),
+						apply_global_presets: applyGlobalPresets,
+						nonce: $this.nonces.export,
+						return: true,
+					}, function( response ) {
+						$this.toggleCancel();
+						window.et_export_layout_response = response.data;
+
+						if ( 0 === window.et_export_layout_response.data.length ) {
+							$this.renderNoItemsToExportError();
+
+							// Stop the export process.
+							return;
+						}
+
+						$('#et-cloud-app--layouts').empty();
+
+						var preferences = {
+							containerId: 'et-cloud-app--layouts',
+							context: 'et_pb_layouts',
+							codeMirrorId: '#',
+							modalType: 'headless',
+							content: '',
+							selectedContent: '',
+						};
+						var container   = window.document;
+
+						$this.removeProgressBar();
+
+						$(window).trigger('et_code_snippets_container_ready', [preferences, container]);
+					} );
+				} else {
+					$this.ajaxAction( {
+						action: 'et_core_portability_export',
+						content: content,
+						selection: $.isEmptyObject( posts ) ? false : JSON.stringify( posts ),
+						apply_global_presets: applyGlobalPresets,
+						nonce: $this.nonces.export
+					}, function( response ) {
+						var time        = ' ' + new Date().toJSON().replace( 'T', ' ' ).replace( ':', 'h' ).substring( 0, 16 );
+						var downloadURL = $this.instance( '[data-et-core-portability-export]' ).data( 'et-core-portability-export' );
+						var query       = {
+								'timestamp': response.data.timestamp,
+								'name': encodeURIComponent( $this.instance( '.et-core-portability-export-form input' ).val() + ( backup ? time : '' ) ),
+							};
+
+						$.each( query, function( key, value ) {
+							if ( value ) {
+								downloadURL = downloadURL + '&' + key + '=' + value;
+							}
+						} );
+
+						// Remove confirmation popup before relocation.
+						$( window ).off( 'beforeunload' );
+
+						window.location.assign( encodeURI( downloadURL ) );
+
+						if ( ! backup ) {
+							etCore.modalContent( '<div class="et-core-loader et-core-loader-success"></div>', false, 3000, '#et-core-portability-export' );
+							$this.toggleCancel();
+						}
+
+						$( $this ).trigger( 'exported' );
+					} );
+				}
 			} );
+		},
+
+		exportToCloud: function() {
+			var $this = this;
+
+			$this.export( false, true );
 		},
 
     exportFB: function(exportUrl, postId, content, fileName, importFile, page, timestamp, progress = 0, estimation = 1, layoutId = 0) {
@@ -880,6 +949,13 @@
 			etCore.modalContent( '<div class="et-core-progress et-core-progress-striped et-core-active"><div class="et-core-progress-bar" style="width: 10%;">1%</div><span class="et-core-progress-subtext">' + message + '</span></div>', false, false, '#' + this.instance( '.ui-tabs-panel:visible' ).attr( 'id' ) );
 		},
 
+		removeProgressBar: function() {
+			const $overlay = $('.et-core-modal-overlay.et-core-active');
+			$overlay.find('.et-core-modal-temp-content').remove();
+			$overlay.find('[name="et-core-portability-posts"]').prop('checked', false);
+			$overlay.find('.et-core-modal-content').removeAttr('style');
+		},
+
 		actionsDisabled: function() {
 			if ( this.instance( '.et-core-modal-action' ).hasClass( 'et-core-disabled' ) ) {
 				return true;
@@ -899,11 +975,16 @@
 		toggleCancel: function( cancel ) {
 			var $target = this.instance( '.ui-tabs-panel:visible [data-et-core-portability-cancel]' );
 
+			var $duringAction = this.instance('.et-core-action-buttons-container__during_action');
+
 			if ( cancel && ! $target.is( ':visible' ) ) {
-				$target.show().animate( { opacity: 1 }, 600 );
+				$target.show().animate( { opacity: 1 }, 600, 'swing', function() {
+					$duringAction.show();
+				} );
 			} else if ( ! cancel && $target.is( ':visible' ) ) {
 				$target.animate( { opacity: 0 }, 600, function() {
-					$( this ).hide();
+					$target.hide();
+					$duringAction.hide();
 				} );
 			}
 		},
@@ -1000,4 +1081,28 @@
 		window.etCore.portability.boot();
 	});
 
+	$(window).on('et_export_to_cloud_cancel', function() {
+		etCore.modalContent( '<div class="et-core-loader et-core-loader-fail"></div>', false, 3000, '#et-core-portability-export' );
+
+		window.etCore.portability.toggleCancel();
+	});
+
+	if (pagenow && 'edit-et_pb_layout' === pagenow) {
+		$(window).on('et_code_snippets_library_close', function() {
+			var preferences = {
+				containerId: 'et-cloud-app--layouts',
+				context: 'et_pb_layouts',
+				codeMirrorId: '#',
+				modalType: '',
+				content: '',
+				selectedContent: '',
+			};
+			var container   = window.document;
+
+			$(window).trigger('et_code_snippets_container_ready', [preferences, container]);
+
+			etCore.modalContent( '', false, 0, '#et-core-portability-export' );
+			$('.et-core-modal-close:visible').click();
+		});
+	}
 })( jQuery );
