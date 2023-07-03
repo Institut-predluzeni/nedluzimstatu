@@ -49,6 +49,10 @@ body {
 p {
   padding-bottom: 16px; 
 }
+p.small {
+	font-size: 12px;
+	line-height: 16px;
+}
 .et_pb_text ol, .et_pb_text ul {
   padding-bottom: 16px;
 }
@@ -196,7 +200,10 @@ h4, h5 {
   	margin-bottom: 16px;
 }
 .mb-8 {
-  	margin-bottom: 8px;
+  margin-bottom: 8px;
+}
+.mb-0 {
+  	margin-bottom: 0px !important;
 }
 .pb-32 {
   	padding-bottom: 32px;
@@ -939,14 +946,15 @@ input[type="submit"] {
 #dotaznik-sekce, #instituce-sekce {
   animation: fade-in 1.5s;
 }
+/* Solved via JS
 #instituce-sekce, #instituce-sekce-penale, #instituce-sekce-splatkac, #podminky {
-	scroll-margin: 96px; /* normálně */
-	/* scroll-margin: 228px; během milostivého léta */ 
+	scroll-margin: 96px;  
+	scroll-margin: 228px; 
 }
 #seznam-kroku-02, #seznam-kroku-03 {
-	scroll-margin: 128px; /* normálně */
-	/* scroll-margin: 184px; během milostivého léta */ 
-}
+	scroll-margin: 128px;
+	scroll-margin: 184px; 
+}*/ 
 #dotaznik-sloupec {
     margin-bottom: 0px;
     overflow: visible;
@@ -1285,7 +1293,7 @@ label {
 	background-image: url(/wp-content/uploads/2021/08/ikonka-plus.svg);
     width: 24px;
     height: 24px;
-  	top: 0px !important;
+  	top: calc(50% - 12px) !important;
   	margin-top: 0px !important;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1295,7 +1303,7 @@ label {
 	background-image: url(/wp-content/uploads/2021/08/ikonka-krizek.svg);
     width: 24px;
     height: 24px;
-  	top: 0px !important;
+  	top: calc(50% - 12px) !important;
   	margin-top: 0px !important;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1508,31 +1516,47 @@ h1.milostive-leto {
 .accordion-seznam ul {
   	padding-bottom: 0px !important;
 }
+.accordion-seznam.milostive-leto .et_pb_toggle_content {
+	padding-bottom: 0px !important;
+}
+.accordion-seznam.milostive-leto .et_pb_toggle_content .pb-16 {
+	padding-bottom: 16px !important;
+}
+.accordion-seznam.milostive-leto ol {
+	padding-bottom: 0px !important;
+}
+.accordion-seznam.milostive-leto ol li {
+	padding-bottom: 16px !important;
+}
 
 /* fixing jumping top bar during ML */
 @media (max-width: 373px) {
-	body.et_fixed_nav.et_secondary_nav_enabled #main-header {
+	body.et_fixed_nav.et_secondary_nav_enabled + #main-header {
 		top: 104px !important;
 	}
-	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled #page-container {
+	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled + #page-container {
 		padding-top: 191px !important;
 	}
 }
 @media (min-width: 374px) and (max-width: 855px) {
-	body.et_fixed_nav.et_secondary_nav_enabled #main-header {
+	body.et_fixed_nav.et_secondary_nav_enabled + #main-header {
 		top: 80px !important;
 	}
-	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled #page-container {
+	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled + #page-container {
 		padding-top: 167px !important;
 	}
 }
 @media (min-width: 856px) {
-	body.et_fixed_nav.et_secondary_nav_enabled #main-header {
+	body.et_fixed_nav.et_secondary_nav_enabled + #main-header {
 		top: 56px !important;
 	}
-	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled #page-container {
+	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled + #page-container {
 		padding-top: 143px !important;
 	}
+}
+/* hidding top header on ML pages */
+.page-id-6248 #top-header, .page-id-6100 #top-header {
+	display: none;
 }
 /* STYLY MILOSTIVÉ LÉTO END */
 

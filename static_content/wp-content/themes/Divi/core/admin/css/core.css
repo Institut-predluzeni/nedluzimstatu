@@ -201,6 +201,10 @@ body.rtl.et-db:not(.et-fb-no-rtl) button.et-core-button {
 	background: #D22902 !important;
 }
 
+.et-core-button-secondary {
+	background: #29C4A9;
+}
+
 /* Safe Mode Indicator */
 .et-safe-mode-indicator,
 .et-safe-mode-indicator:hover,
@@ -551,7 +555,8 @@ body.rtl.et-db:not(.et-fb-no-rtl) .et-core-modal-two-buttons .et-core-modal-acti
 	bottom: 0;
 }
 
-.et-core-modal-action-secondary {
+.et-core-modal-action-secondary,
+.et-core-modal-action.et-core-button-secondary {
 	background: #00c3aa;
 }
 
@@ -564,8 +569,32 @@ body.rtl.et-db:not(.et-fb-no-rtl) .et-core-modal-two-buttons .et-core-modal-acti
 
 .et-core-modal-action-secondary:hover,
 .et-core-modal-action-secondary:focus,
-.et-core-modal-action-secondary:active {
+.et-core-modal-action-secondary:active,
+.et-core-modal-action.et-core-button-secondary:hover,
+.et-core-modal-action.et-core-button-secondary:focus,
+.et-core-modal-action.et-core-button-secondary:active {
 	background: #00bba3;
+}
+
+.et-core-action-buttons-container {
+	display: flex;
+}
+
+.et-core-action-buttons-container .et-core-modal-action {
+	width: 50%;
+	padding: 0 5px;
+	position: relative;
+}
+
+.et-core-action-buttons-container .et-core-modal-action.et-core-button-danger {
+	width: 100%;
+}
+
+.et-core-action-buttons-container,
+.et-core-action-buttons-container__during_action {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 .et-core-confirmation-dialog-overlay {
