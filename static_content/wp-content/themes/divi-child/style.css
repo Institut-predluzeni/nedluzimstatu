@@ -1531,28 +1531,41 @@ h1.milostive-leto {
 
 /* fixing jumping top bar during ML */
 @media (max-width: 373px) {
-	body.et_fixed_nav.et_secondary_nav_enabled + #main-header {
+	body.et_fixed_nav.et_secondary_nav_enabled #main-header {
 		top: 104px !important;
 	}
-	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled + #page-container {
+	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled #page-container {
 		padding-top: 191px !important;
 	}
 }
 @media (min-width: 374px) and (max-width: 855px) {
-	body.et_fixed_nav.et_secondary_nav_enabled + #main-header {
+	body.et_fixed_nav.et_secondary_nav_enabled #main-header {
 		top: 80px !important;
 	}
-	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled + #page-container {
+	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled #page-container {
 		padding-top: 167px !important;
 	}
 }
 @media (min-width: 856px) {
-	body.et_fixed_nav.et_secondary_nav_enabled + #main-header {
+	body.et_fixed_nav.et_secondary_nav_enabled #main-header {
 		top: 56px !important;
 	}
-	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled + #page-container {
+	.et_fixed_nav.et_show_nav.et_secondary_nav_enabled #page-container {
 		padding-top: 143px !important;
 	}
+}
+body.et_fixed_nav.et_secondary_nav_enabled.page-id-6100 #main-header {
+	top: 0px !important;
+}
+@media (max-width: 980px) {
+	body.et_fixed_nav.et_show_nav.et_secondary_nav_enabled.page-id-6100 #page-container {
+		padding-top: 87px !important;
+	}
+}
+@media (min-width: 981px) {
+	body.et_fixed_nav.et_show_nav.et_secondary_nav_enabled.page-id-6100 #page-container {
+		padding-top: 100px !important;
+	}	
 }
 /* hidding top header on ML pages */
 .page-id-6248 #top-header, .page-id-6100 #top-header {
