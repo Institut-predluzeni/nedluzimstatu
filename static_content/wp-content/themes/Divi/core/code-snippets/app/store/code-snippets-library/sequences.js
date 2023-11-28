@@ -1,11 +1,10 @@
 // External dependencies.
 import {
-  path,
   props,
   sequence,
   state,
 } from 'cerebral';
-import { set, when } from 'cerebral/factories';
+import { set } from 'cerebral/factories';
 import { isEmpty } from 'lodash';
 
 // Internal dependencies.

@@ -91,11 +91,13 @@ $(window).on('et_code_snippets_container_ready', (event, preferences, container 
   $(window).on('et_code_snippets_library_close', () => {
     const appContainer = container.getElementById(containerId);
 
-    if (appContainer) {
-      unmountComponentAtNode(appContainer);
-      appContainer.remove();
-    }
-
-    $('body.et-admin-page').removeClass('et-code-snippets-open');
+    setTimeout(() => {
+      if (appContainer) {
+        unmountComponentAtNode(appContainer);
+        appContainer.remove();
+      }
+  
+      $('body.et-admin-page').removeClass('et-code-snippets-open');
+    });
   });
 });

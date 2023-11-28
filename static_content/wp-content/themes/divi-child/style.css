@@ -96,7 +96,7 @@ h4, .clovek-v-tisni {
 	line-height: 32px !important;
   	letter-spacing: 0px !important;  
 }
-.body-text, #dotaznik-sloupec, #pdf-dotaznik-01, #pdf-dotaznik-02, .accordion-instituce h5, #vysledky-dotazniku h5, .accordion-seznam h5 {
+.body-text, #dotaznik-sloupec, #pdf-dotaznik-01, #pdf-dotaznik-02, .accordion-instituce h5, #vysledky-dotazniku h5, .accordion-seznam h5, .accordion-powerbi h5 {
 	font-size: 16px !important;
 	line-height: 24px !important;
  	letter-spacing: 0px !important;
@@ -147,7 +147,7 @@ h4, .clovek-v-tisni {
         line-height: 28px !important;
         letter-spacing: 0px !important;  
     }
-    body, .accordion-instituce h5, #vysledky-dotazniku h5, .accordion-seznam h5 {
+    body, .accordion-instituce h5, #vysledky-dotazniku h5, .accordion-seznam h5, .accordion-powerbi h5 {
         font-size: 14px !important;
         line-height: 24px !important;
         letter-spacing: 0px !important;
@@ -226,6 +226,9 @@ h4, h5 {
 .d-none, #nadpis-vysledky.d-none {
   	display: none !important;
 }
+.column-vertical-middle {
+	margin: auto;
+}
 button {
   	border-color: transparent !important;
   	cursor: pointer;
@@ -276,7 +279,7 @@ button:disabled, button:disabled:hover {
 /*** Responsive Styles Smartphone Only ***/
 @media all and (max-width: 767px) {
   	/*smaller text size*/
-	.button-size-L {
+	.button-size-L, .button-size-L-secondary {
     	font-size: 18px !important;
       	padding: 12px 24px !important;
   	} 
@@ -337,8 +340,8 @@ footer a {
 /* button-size-M */
 .button-size-M {
   	background-color: var(--blue);
-	box-shadow: 0px 2px 0px var(--dark-blue);
-  	border-bottom: 2px var(--dark-blue);
+	/*box-shadow: 0px 2px 0px var(--dark-blue);*/
+	border: 2px solid var(--blue) !important;
 	border-radius: 4px !important;
   	color: #FFFFFF;
   	font-size: 16px;
@@ -347,9 +350,9 @@ footer a {
 /* button-size-L */
 .button-size-L {
   	background-color: var(--blue);
-	box-shadow: 0px 2px 0px var(--dark-blue);
-  	border-bottom: 2px var(--dark-blue);
-	border-radius: 4px !important;
+	/*box-shadow: 0px 2px 0px var(--dark-blue);*/
+	border: 2px solid var(--blue) !important;
+	border-radius: 4px !important;	
   	color: #FFFFFF;
   	font-size: 20px;
   	line-height: 24px !important;
@@ -358,7 +361,43 @@ footer a {
 }
 /* button-size-M & L hover */
 .button-size-M:hover, .button-size-L:hover {
-	background-color: var(--dark-blue) !important;  
+	background-color: var(--dark-blue) !important;
+	border: 2px solid var(--dark-blue) !important;	
+}
+.button-size-L-secondary {
+	background-color: #ffffff;
+	/*box-shadow: 0px 2px 0px var(--dark-blue);*/	
+	border: 2px solid var(--blue) !important;
+	border-radius: 4px !important;	
+    color: var(--grey);	
+   	font-size: 20px;
+  	line-height: 24px !important;
+  	padding: 16px 32px;
+	font-weight: 700;     	
+}
+.button-size-L-secondary:hover {
+  	color: #FFFFFF;	
+	background-color: var(--dark-blue) !important;
+	border: 2px solid var(--dark-blue) !important;	
+}
+
+@media (min-width: 510px) {
+	body.home .et_pb_button_0_wrapper {
+		margin-right: 16px;
+		margin-bottom: 0px !important;
+	}
+	body.home .et_pb_button_0_wrapper, body.home .et_pb_button_1_wrapper {
+		display: inline-flex;
+	}	
+}
+@media (max-width: 509px) {
+	body.home .et_pb_button_0_wrapper {
+		margin-bottom: 16px !important;
+	}
+	body.home .et_pb_button_0_wrapper .et_pb_button, body.home .et_pb_button_1_wrapper .et_pb_button {
+		width: 100%;
+    	text-align: center;
+	}	
 }
 /* button PDF generation */
 .button-pdf-form {
@@ -581,8 +620,8 @@ footer a {
 /* cta menu */
 .menu-cta {
   	background-color: var(--blue);
-	box-shadow: 0px 2px 0px var(--dark-blue);
-  	border-bottom: 2px var(--dark-blue);
+	/*box-shadow: 0px 2px 0px var(--dark-blue);*/
+  	border: 2px solid var(--blue);
 	border-radius: 4px !important;
   	padding-right: 0px !important;
 }
@@ -597,9 +636,19 @@ footer a {
 #mobile_menu .menu-cta a {
   	padding: 12px 16px !important;
 }
+/*adjust Divi Menu module breakpoint*/
+@media only screen and (max-width: 1149px) {
+	#top-menu-nav {
+		display: none;
+	}
+	#et_mobile_nav_menu {
+		display: block;
+	}
+}
 /* cta menu hover */
 .menu-cta:hover {
-	background-color: var(--dark-blue) !important;    
+	background-color: var(--dark-blue) !important;
+  	border: 2px solid var(--dark-blue);	
 }
 /* cta menu text */
 .menu-cta a {
@@ -894,7 +943,8 @@ input[type="submit"] {
     font-size: 18px;
     line-height: 24px;
     color: var(--dark-yellow);
-    background: rgb(240, 236, 232);
+    /*background: rgb(240, 236, 232);*/
+	background: var(--light-yellow);
     border-radius: 8px;
     padding: 4px;
 }
@@ -1208,14 +1258,14 @@ label {
 	background-repeat: no-repeat;
 	content: ""; 	
 }
-/*BE AVARE - IT'S ALSO FOR MOBILE TABS*/
-.tabs-instituce .et_pb_tabs_controls .et_pb_tab_0 a:before, .accordion-instituce .et_pb_accordion_item_0.et_pb_toggle {
+/* BE AVARE - IT'S ALSO FOR MOBILE TABS */
+.tabs-instituce .et_pb_tabs_controls .et_pb_tab_0 a:before, .accordion-instituce .et_pb_accordion_item_0.et_pb_toggle, .accordion-powerbi .et_pb_accordion_item_1.et_pb_toggle {
 	background-image: url(/wp-content/uploads/2021/08/logo-celni-sprava-24.png);
 }
-.tabs-instituce .et_pb_tabs_controls .et_pb_tab_1 a:before, .accordion-instituce .et_pb_accordion_item_1.et_pb_toggle {
+.tabs-instituce .et_pb_tabs_controls .et_pb_tab_1 a:before, .accordion-instituce .et_pb_accordion_item_1.et_pb_toggle, .accordion-powerbi .et_pb_accordion_item_3.et_pb_toggle {
     background-image: url(/wp-content/uploads/2021/08/logo-cssz-24.png);
 }
-.tabs-instituce .et_pb_tabs_controls .et_pb_tab_2 a:before, .accordion-instituce .et_pb_accordion_item_2.et_pb_toggle {
+.tabs-instituce .et_pb_tabs_controls .et_pb_tab_2 a:before, .accordion-instituce .et_pb_accordion_item_2.et_pb_toggle, .accordion-powerbi .et_pb_accordion_item_2.et_pb_toggle {
     background-image: url(/wp-content/uploads/2021/08/logo-fu-24.png);
 }
 .tabs-instituce .et_pb_tabs_controls .et_pb_tab_3 a:before, .accordion-instituce .et_pb_accordion_item_3.et_pb_toggle {
@@ -1233,7 +1283,7 @@ label {
 .tabs-instituce .et_pb_tabs_controls .et_pb_tab_8 a:before, .accordion-instituce .et_pb_accordion_item_8.et_pb_toggle {
     background-image: url(/wp-content/uploads/2021/08/logo-vozp-24.png);
 }
-.tabs-instituce .et_pb_tabs_controls .et_pb_tab_9 a:before, .accordion-instituce .et_pb_accordion_item_9.et_pb_toggle {
+.tabs-instituce .et_pb_tabs_controls .et_pb_tab_9 a:before, .accordion-instituce .et_pb_accordion_item_9.et_pb_toggle, .accordion-powerbi .et_pb_accordion_item_4.et_pb_toggle {
     background-image: url(/wp-content/uploads/2021/08/logo-vzp-24.png);
 }
 .tabs-instituce .et_pb_tabs_controls .et_pb_tab_10 a:before, .accordion-instituce .et_pb_accordion_item_10.et_pb_toggle {
@@ -1268,7 +1318,7 @@ label {
 /* kde muzu dluzit taby desktop end */
 
 /* kde muzu dluzit taby mobile start */
-.accordion-instituce .et_pb_accordion_item, .accordion-seznam .et_pb_accordion_item {
+.accordion-instituce .et_pb_accordion_item, .accordion-seznam .et_pb_accordion_item, .accordion-powerbi .et_pb_accordion_item {
 	background: #FFFFFF;
 	box-shadow: 0px 2px 4px #DFD5CC;
   	padding: 20px 16px !important;
@@ -1276,19 +1326,22 @@ label {
   	background-repeat: no-repeat;
 	background-size: 24px;
   	background-position: 16px 20px;
+	border-radius: 8px;	
+    border-width: 0px;
+    overflow: hidden;	
 }
 .accordion-instituce .et_pb_toggle_content, .accordion-seznam .et_pb_toggle_content {
   	padding-top: 24px;
   	padding-bottom: 20px;
 }
-.accordion-instituce .et_pb_toggle_title {
+.accordion-instituce .et_pb_toggle_title, .accordion-powerbi .et_pb_toggle_title {
   	padding-left: 36px !important;
   	color: var(--blue) !important;
 }
 .accordion-seznam .et_pb_toggle_title {
     color: var(--blue) !important;
 }
-.accordion-instituce .et_pb_toggle_title:before, .accordion-seznam .et_pb_toggle_title:before {
+.accordion-instituce .et_pb_toggle_title:before, .accordion-seznam .et_pb_toggle_title:before, .accordion-powerbi .et_pb_toggle_title:before {
 	content: "" !important;
 	background-image: url(/wp-content/uploads/2021/08/ikonka-plus.svg);
     width: 24px;
@@ -1298,7 +1351,7 @@ label {
     background-repeat: no-repeat;
     background-position: center center;
 }
-.accordion-instituce .et_pb_toggle_open .et_pb_toggle_title:before, .accordion-seznam .et_pb_toggle_open .et_pb_toggle_title:before {
+.accordion-instituce .et_pb_toggle_open .et_pb_toggle_title:before, .accordion-seznam .et_pb_toggle_open .et_pb_toggle_title:before, .accordion-powerbi .et_pb_toggle_open .et_pb_toggle_title:before {
 	content: "" !important;
 	background-image: url(/wp-content/uploads/2021/08/ikonka-krizek.svg);
     width: 24px;
@@ -1587,8 +1640,7 @@ body.et_fixed_nav.et_secondary_nav_enabled.page-id-6100 #main-header {
 }
 .cmplz-accept {
   	background-color: var(--blue) !important;
-	box-shadow: 0px 2px 0px var(--dark-blue) !important;
-  	border: 2px var(--dark-blue) !important;
+	border: 2px var(--dark-blue) !important;
 	font-weight: 700;  
 } 
 .cmplz-accept:hover {
@@ -1625,3 +1677,127 @@ body.et_fixed_nav.et_secondary_nav_enabled.page-id-6100 #main-header {
   	display: none;
 }
 /* Cookies notice END */
+
+.tabs-powerbi .et_pb_tab_content {
+	background-color: #eaeaea;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0px 8px 8px 8px;
+    box-shadow: 0px 2px 4px #DFD5CC;
+    border-width: 32px 24px;
+}
+.iframe-powerbi {
+	height: 640px;
+    margin-bottom: 0px;
+    /* padding-top: 40px; */	
+}
+.iframe-powerbi-description {
+	background-color: #fff;
+	padding-bottom: 16px;
+	font-size: 12px;
+	line-height: 16px;	
+}
+.iframe-powerbi iframe {
+	width: 100%;
+	height: 640px;
+}
+@media (min-width: 340px) and (max-width: 569px) {
+	.iframe-powerbi iframe {
+		clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% calc(100% - 36px), 100% calc(100% - 36px), 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0%);
+		background: white;
+	}
+	.accordion-powerbi .et_pb_toggle_content {
+		margin-bottom: -36px;
+	}
+}
+@media (min-width: 570px) {
+	.iframe-powerbi iframe {
+		clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% calc(100% - 36px), 80% calc(100% - 36px), 80% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0%);
+		background: white;
+	}	
+}
+@media (display-mode: fullscreen) {
+	.iframe-powerbi iframe {
+		clip-path: none;
+	}
+}
+.tabs-powerbi {
+	border: 0px !important;
+}
+.tabs-powerbi .et_pb_tab {
+	padding: 0px;
+}
+.tabs-powerbi .et_pb_tab_0.et_pb_tab_active .iframe-powerbi {
+	border-radius: 0px 8px;
+}
+.tabs-powerbi ul.et_pb_tabs_controls {
+	/*margin-bottom: 8px;*/
+	background: var(--light-yellow);
+}
+.tabs-powerbi ul.et_pb_tabs_controls:after {
+	border: 0px !important;
+}
+.tabs-powerbi .et_pb_tabs_controls li.et_pb_tab_active {
+	/*box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;*/
+	border-radius: 4px 4px 0px 0px;
+}
+.tabs-powerbi .et_pb_tab_active a {
+	color: var(--blue) !important;	
+}
+.tabs-powerbi .et_pb_tabs_controls li:not(.et_pb_tab_active) a:hover {
+	background: #F4F4F4;
+    border-radius: 4px 4px 0px 0px;
+    color: var(--dark-blue);
+}
+.tabs-powerbi .et_pb_tabs_controls li {
+	border-right: 0px !important;
+    margin-right: 4px;	
+}
+.tabs-powerbi .et_pb_tabs_controls li:after {
+	border-right: 1px solid #d9d9d9;
+}
+.tabs-powerbi .et_pb_tabs_controls li a {
+	padding: 8px 24px;
+    font-size: 18px;
+    color: var(--dark-yellow);
+    line-height: 24px;	
+	font-weight: 700;
+	display: flex;
+    align-items: center;
+}
+.tabs-powerbi .et_pb_tabs_controls li a:before {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    padding-right: 8px;
+}
+.tabs-powerbi .et_pb_tabs_controls li.et_pb_tab_0 a:before {
+	background-image: url(/wp-content/uploads/2023/11/ikona-graf.svg);
+}
+.tabs-powerbi .et_pb_tabs_controls li.et_pb_tab_1 a:before {
+	background-image: url(/wp-content/uploads/2021/08/logo-celni-sprava-24.png);
+}
+.tabs-powerbi .et_pb_tabs_controls li.et_pb_tab_2 a:before {
+	background-image: url(/wp-content/uploads/2021/08/logo-fu-24.png);
+}
+.tabs-powerbi .et_pb_tabs_controls li.et_pb_tab_3 a:before {
+	background-image: url(/wp-content/uploads/2021/08/logo-cssz-24.png);
+}
+.tabs-powerbi .et_pb_tabs_controls li.et_pb_tab_4 a:before {
+	background-image: url(/wp-content/uploads/2021/08/logo-vzp-24.png);
+}
+
+.accordion-powerbi .et_pb_toggle_content {
+  	padding-top: 24px;
+}
+.accordion-powerbi .et_pb_toggle_content .iframe-powerbi {
+	height: 640px;
+    border-width: 0px;
+	border-radius: 0;
+    box-shadow: none;	
+}
+.accordion-powerbi .et_pb_accordion_item_0.et_pb_toggle {
+    background-image: url(/wp-content/uploads/2023/11/ikona-graf.svg);
+}

@@ -254,6 +254,24 @@ WPMailSMTP.Admin.Settings = WPMailSMTP.Admin.Settings || ( function( document, w
 				$button.find( 'span' ).hide();
 				$button.find( '.wp-mail-smtp-loading' ).show();
 			} );
+
+			$( '.email_test_tab_removal_notice' ).on( 'click', '.notice-dismiss', function() {
+				var $button = $( this );
+
+				$.ajax( {
+					url: ajaxurl,
+					dataType: 'json',
+					type: 'POST',
+					data: {
+						action: 'wp_mail_smtp_ajax',
+						nonce: wp_mail_smtp.nonce,
+						task: 'email_test_tab_removal_notice_dismiss',
+					},
+					beforeSend: function() {
+						$button.prop( 'disabled', true );
+					},
+				} );
+			} );
 		},
 
 		education: {
@@ -417,21 +435,15 @@ WPMailSMTP.Admin.Settings = WPMailSMTP.Admin.Settings || ( function( document, w
 			// Special case: "from email" (group settings).
 			var $mainSettingInGroup = $( '.js-wp-mail-smtp-setting-from_email' );
 
-			$mainSettingInGroup.closest( '.wp-mail-smtp-setting-row' ).toggle(
+			$mainSettingInGroup.toggle(
 				mailerSupportedSettings['from_email'] || mailerSupportedSettings['from_email_force']
-			);
-			$mainSettingInGroup.siblings( '.wp-mail-smtp-setting-mid-row-sep' ).toggle(
-				mailerSupportedSettings['from_email'] && mailerSupportedSettings['from_email_force']
 			);
 
 			// Special case: "from name" (group settings).
 			$mainSettingInGroup = $( '.js-wp-mail-smtp-setting-from_name' );
 
-			$mainSettingInGroup.closest( '.wp-mail-smtp-setting-row' ).toggle(
+			$mainSettingInGroup.toggle(
 				mailerSupportedSettings['from_name'] || mailerSupportedSettings['from_name_force']
-			);
-			$mainSettingInGroup.siblings( '.wp-mail-smtp-setting-mid-row-sep' ).toggle(
-				mailerSupportedSettings['from_name'] && mailerSupportedSettings['from_name_force']
 			);
 		},
 

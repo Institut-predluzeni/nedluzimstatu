@@ -125,6 +125,10 @@ th.column-published, th.column-modified {
 	padding-left: 7px;
 	line-height: 1.25;
 }
+.CodeMirror-matchingbracket {
+	outline: 1px solid grey !important;
+	color: #000 !important;
+}
 .code-mirror-buttons {
     margin-top: 15px;
     width: calc(100% - 2px);

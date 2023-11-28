@@ -581,7 +581,6 @@ body.rtl.et-db:not(.et-fb-no-rtl) .et-core-modal-two-buttons .et-core-modal-acti
 }
 
 .et-core-action-buttons-container .et-core-modal-action {
-	width: 50%;
 	padding: 0 5px;
 	position: relative;
 }
