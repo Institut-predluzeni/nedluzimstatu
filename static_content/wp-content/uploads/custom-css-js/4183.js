@@ -6,7 +6,7 @@ jQuery(function($){
        zobrazitKrok(1);
     });
   	$('#btnVyberInstituci').click(function () {
-        /* function for validation of choosen institution of checkboxes in step 01 - runs only at page GENEROVANI DOKUMENTU */
+        
         //Reference the Group of CheckBoxes and verify whether at-least one CheckBox is checked.
         var checked = $("#pdf-dotaznik-01 input[type=checkbox]:checked").length;
         //Set the Valid Flag to True if at-least one CheckBox is checked.
@@ -260,7 +260,7 @@ function urad2api (urad) {
 }
 
 function zobrazitKrok(cislo) {
-  console.log('krok:'+cislo);
+  //console.log('krok:'+cislo);
   if (cislo == 1) {
     jQuery('#sekce-krok-01').removeClass('d-none');   
     jQuery('#sekce-krok-02').addClass('d-none');    

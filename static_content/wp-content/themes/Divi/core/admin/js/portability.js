@@ -1087,7 +1087,7 @@
 		window.etCore.portability.toggleCancel();
 	});
 
-	if (pagenow && 'edit-et_pb_layout' === pagenow) {
+	if ('undefined' !== typeof pagenow && 'edit-et_pb_layout' === pagenow) {
 		$(window).on('et_code_snippets_library_close', function() {
 			var preferences = {
 				containerId: 'et-cloud-app--layouts',
