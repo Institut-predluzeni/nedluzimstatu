@@ -170,3 +170,6 @@ Nov 29 2023 01:14:27
 Nov 30 2023 01:07:59
 {"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
 
+Dec 01 2023 01:10:00
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
