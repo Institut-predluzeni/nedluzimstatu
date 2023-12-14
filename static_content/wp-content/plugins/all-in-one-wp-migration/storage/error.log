@@ -173,3 +173,45 @@ Nov 30 2023 01:07:59
 Dec 01 2023 01:10:00
 {"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
 
+Dec 02 2023 01:09:23
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 02 2023 01:10:31
+{"Number":8,"Message":"fwrite(): write of 8192 bytes failed with errno=28 No space left on device","File":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-content\/plugins\/all-in-one-wp-migration\/lib\/vendor\/servmask\/archiver\/class-ai1wm-compressor.php","Line":102}
+
+Dec 03 2023 01:08:22
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 04 2023 01:09:18
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 05 2023 01:00:58
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 06 2023 01:12:43
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 07 2023 01:02:03
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 08 2023 01:01:05
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 09 2023 01:06:36
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 10 2023 01:19:31
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 11 2023 01:05:28
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 12 2023 01:15:27
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 13 2023 01:00:42
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
+Dec 14 2023 01:03:56
+{"type":2,"message":"ini_set(): Headers already sent. You cannot change the session module's ini settings at this time","file":"\/opt\/bitnami\/apps\/wordpress\/htdocs\/wp-config.php","line":6}
+
