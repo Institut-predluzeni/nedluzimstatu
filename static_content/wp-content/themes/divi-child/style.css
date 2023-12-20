@@ -178,6 +178,9 @@ h4, h5 {
 .bold {
   	font-weight: 700;
 }
+.ol-pb-0 ol, .ul-pb-0 ul {
+	padding-bottom: 0px !important;
+}
 .ml-32	{
 	margin-left: 32px;
 }
