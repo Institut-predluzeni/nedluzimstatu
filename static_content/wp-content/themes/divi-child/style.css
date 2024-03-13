@@ -1261,6 +1261,9 @@ label {
 	background-repeat: no-repeat;
 	content: ""; 	
 }
+.tabs-instituce .et_pb_tabs_controls li.no-tab-item a:before {
+	display: none !important;	
+}
 /* BE AVARE - IT'S ALSO FOR MOBILE TABS */
 .tabs-instituce .et_pb_tabs_controls .et_pb_tab_0 a:before, .accordion-instituce .et_pb_accordion_item_0.et_pb_toggle, .accordion-powerbi .et_pb_accordion_item_1.et_pb_toggle {
 	background-image: url(/wp-content/uploads/2021/08/logo-celni-sprava-24.png);
