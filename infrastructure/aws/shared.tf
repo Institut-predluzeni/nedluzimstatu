@@ -172,28 +172,6 @@ resource "aws_security_group" "private-default-sg" {
   }
 }
 
-resource "aws_security_group" "transformation-service-sg" {
-  name        = "${var.codename}-transformation-service-sg"
-  description = "Security group for Transformation Service"
-  vpc_id      = aws_vpc.vpc.id
-
-  ingress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = [
-      "0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = [
-      "0.0.0.0/0"]
-  }
-}
-
 resource "aws_security_group" "development-sg" {
   name        = "${var.codename}-wordpress-sg"
   description = "Security group for Wordpress"
