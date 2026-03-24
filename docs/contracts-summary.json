@@ -1,0 +1,726 @@
+{
+  "externalEndpoint": {
+    "path": {
+      "value": "/zadosti",
+      "status": "confirmed",
+      "evidence": [
+        "mail_service/README.md:2-4"
+      ]
+    },
+    "method": {
+      "value": "POST",
+      "status": "confirmed",
+      "evidence": [
+        "mail_service/zadosti.js:45-47"
+      ]
+    },
+    "requestContentType": {
+      "value": "application/json",
+      "status": "inferred",
+      "evidence": [
+        "mail_service/zadosti.js:50-166"
+      ],
+      "notes": "The repo shows a structured request object but no external HTTP parser or controller configuration."
+    },
+    "response": {
+      "value": "unknown external HTTP response; repository only shows the internal mail description returned by sendMail",
+      "status": "inferred",
+      "evidence": [
+        "mail_service/README.md:3-6",
+        "mail_service/zadosti.js:151-166"
+      ]
+    },
+    "requestShape": {
+      "recipientEmail": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:156-159"
+        ]
+      },
+      "recipientName": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:156-159"
+        ]
+      },
+      "applicant": {
+        "type": "Applicant",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:57-62",
+          "mail_service/zadosti.js:75-80",
+          "mail_service/zadosti.js:93-99",
+          "mail_service/zadosti.js:112-117",
+          "mail_service/zadosti.js:131-136"
+        ]
+      },
+      "reply_to": {
+        "type": "ReplyToEnvelope",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:60-61",
+          "mail_service/zadosti.js:78-79",
+          "mail_service/zadosti.js:97-98",
+          "mail_service/zadosti.js:115-116",
+          "mail_service/zadosti.js:134-135"
+        ]
+      },
+      "reason": {
+        "type": "Reason",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:60-61",
+          "mail_service/zadosti.js:78-79",
+          "mail_service/zadosti.js:98-99",
+          "mail_service/zadosti.js:116-117",
+          "mail_service/zadosti.js:135-136"
+        ]
+      },
+      "recipients": {
+        "type": "RecipientsMap",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:52-149"
+        ]
+      },
+      "items": {
+        "type": "ObecItems",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:93-99"
+        ],
+        "notes": "Only forwarded to /obec; optionality is inferred because obec.xsl handles missing items."
+      }
+    }
+  },
+  "transformationEndpoints": {
+    "/celni-sprava": {
+      "status": "caller-confirmed template-binding-inferred",
+      "requestPayload": {
+        "recipient": "Recipient",
+        "applicant": "Applicant",
+        "reply_to": "ReplyToEnvelope",
+        "reason": "Reason"
+      },
+      "responseContentType": {
+        "value": "application/pdf",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:11-14",
+          "transformation_service/templates/celni-sprava.xsl:4"
+        ]
+      },
+      "template": {
+        "file": "transformation_service/templates/celni-sprava.xsl",
+        "status": "inferred",
+        "evidence": [
+          "mail_service/zadosti.js:55",
+          "transformation_service/Dockerfile:5-6"
+        ]
+      },
+      "usedFields": [
+        "/json/applicant/name",
+        "/json/applicant/surname",
+        "/json/applicant/address/lines",
+        "/json/applicant/address/zip_code",
+        "/json/applicant/address/city",
+        "/json/applicant/personal_identification_number",
+        "/json/applicant/company_registration_number",
+        "/json/applicant/phone",
+        "/json/applicant/email",
+        "/json/applicant/data_box",
+        "/json/recipient/name",
+        "/json/recipient/address/lines",
+        "/json/recipient/address/zip_code",
+        "/json/recipient/address/city",
+        "/json/recipient/phone",
+        "/json/recipient/email",
+        "/json/recipient/data_box",
+        "/json/reason/*",
+        "/json/reply_to/reply_to/*"
+      ],
+      "evidence": [
+        "transformation_service/templates/celni-sprava.xsl:8-13",
+        "transformation_service/templates/common.xsl:3-154"
+      ]
+    },
+    "/financni-urad": {
+      "status": "caller-confirmed template-binding-inferred",
+      "requestPayload": {
+        "recipient": "Recipient",
+        "applicant": "Applicant",
+        "reply_to": "ReplyToEnvelope",
+        "reason": "Reason"
+      },
+      "responseContentType": {
+        "value": "application/pdf",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:11-14",
+          "transformation_service/templates/financni-urad.xsl:3"
+        ]
+      },
+      "template": {
+        "file": "transformation_service/templates/financni-urad.xsl",
+        "status": "inferred",
+        "evidence": [
+          "mail_service/zadosti.js:73",
+          "transformation_service/Dockerfile:5-6"
+        ]
+      },
+      "usedFields": [
+        "/json/applicant/name",
+        "/json/applicant/surname",
+        "/json/applicant/address/lines",
+        "/json/applicant/address/zip_code",
+        "/json/applicant/address/city",
+        "/json/applicant/personal_identification_number",
+        "/json/applicant/company_registration_number",
+        "/json/applicant/phone",
+        "/json/applicant/email",
+        "/json/applicant/data_box",
+        "/json/recipient/name",
+        "/json/recipient/address/lines",
+        "/json/recipient/address/zip_code",
+        "/json/recipient/address/city",
+        "/json/recipient/phone",
+        "/json/recipient/email",
+        "/json/recipient/data_box",
+        "/json/reason/*",
+        "/json/reply_to/reply_to/*"
+      ],
+      "evidence": [
+        "transformation_service/templates/financni-urad.xsl:7-13",
+        "transformation_service/templates/common.xsl:3-154"
+      ]
+    },
+    "/obec": {
+      "status": "caller-confirmed template-binding-inferred",
+      "requestPayload": {
+        "recipient": "Recipient",
+        "items": "ObecItems",
+        "applicant": "Applicant",
+        "reply_to": "ReplyToEnvelope",
+        "reason": "Reason"
+      },
+      "responseContentType": {
+        "value": "application/pdf",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:11-14",
+          "transformation_service/templates/obec.xsl:4"
+        ]
+      },
+      "template": {
+        "file": "transformation_service/templates/obec.xsl",
+        "status": "inferred",
+        "evidence": [
+          "mail_service/zadosti.js:91",
+          "transformation_service/Dockerfile:5-6"
+        ]
+      },
+      "usedFields": [
+        "/json/applicant/name",
+        "/json/applicant/surname",
+        "/json/applicant/address/lines",
+        "/json/applicant/address/zip_code",
+        "/json/applicant/address/city",
+        "/json/applicant/personal_identification_number",
+        "/json/applicant/company_registration_number",
+        "/json/applicant/phone",
+        "/json/applicant/email",
+        "/json/applicant/data_box",
+        "/json/recipient/name",
+        "/json/recipient/address/lines",
+        "/json/recipient/address/zip_code",
+        "/json/recipient/address/city",
+        "/json/recipient/phone",
+        "/json/recipient/email",
+        "/json/recipient/data_box",
+        "/json/reason/*",
+        "/json/reply_to/reply_to/*",
+        "/json/items/dog",
+        "/json/items/bins",
+        "/json/items/offenses",
+        "/json/items/flat",
+        "/json/items/reason"
+      ],
+      "evidence": [
+        "transformation_service/templates/obec.xsl:8-56",
+        "transformation_service/templates/common.xsl:3-154"
+      ]
+    },
+    "/ossz": {
+      "status": "caller-confirmed template-binding-inferred",
+      "requestPayload": {
+        "recipient": "Recipient",
+        "applicant": "Applicant",
+        "reply_to": "ReplyToEnvelope",
+        "reason": "Reason"
+      },
+      "responseContentType": {
+        "value": "application/pdf",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:11-14",
+          "transformation_service/templates/ossz.xsl:4"
+        ]
+      },
+      "template": {
+        "file": "transformation_service/templates/ossz.xsl",
+        "status": "inferred",
+        "evidence": [
+          "mail_service/zadosti.js:110",
+          "transformation_service/Dockerfile:5-6"
+        ]
+      },
+      "usedFields": [
+        "/json/applicant/name",
+        "/json/applicant/surname",
+        "/json/applicant/address/lines",
+        "/json/applicant/address/zip_code",
+        "/json/applicant/address/city",
+        "/json/applicant/personal_identification_number",
+        "/json/applicant/company_registration_number",
+        "/json/applicant/phone",
+        "/json/applicant/email",
+        "/json/applicant/data_box",
+        "/json/recipient/name",
+        "/json/recipient/address/lines",
+        "/json/recipient/address/zip_code",
+        "/json/recipient/address/city",
+        "/json/recipient/phone",
+        "/json/recipient/email",
+        "/json/recipient/data_box",
+        "/json/reason/*",
+        "/json/reply_to/reply_to/*"
+      ],
+      "evidence": [
+        "transformation_service/templates/ossz.xsl:8-13",
+        "transformation_service/templates/common.xsl:3-154"
+      ]
+    },
+    "/pojistovna": {
+      "status": "caller-confirmed template-binding-inferred",
+      "requestPayload": {
+        "recipient": "Recipient",
+        "applicant": "Applicant",
+        "reply_to": "ReplyToEnvelope",
+        "reason": "Reason"
+      },
+      "responseContentType": {
+        "value": "application/pdf",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:11-14",
+          "transformation_service/templates/pojistovna.xsl:4"
+        ]
+      },
+      "template": {
+        "file": "transformation_service/templates/pojistovna.xsl",
+        "status": "inferred",
+        "evidence": [
+          "mail_service/zadosti.js:129",
+          "transformation_service/Dockerfile:5-6"
+        ]
+      },
+      "usedFields": [
+        "/json/applicant/name",
+        "/json/applicant/surname",
+        "/json/applicant/address/lines",
+        "/json/applicant/address/zip_code",
+        "/json/applicant/address/city",
+        "/json/applicant/personal_identification_number",
+        "/json/applicant/company_registration_number",
+        "/json/applicant/phone",
+        "/json/applicant/email",
+        "/json/applicant/data_box",
+        "/json/recipient/name",
+        "/json/recipient/address/lines",
+        "/json/recipient/address/zip_code",
+        "/json/recipient/address/city",
+        "/json/recipient/phone",
+        "/json/recipient/email",
+        "/json/recipient/data_box",
+        "/json/reason/*",
+        "/json/reply_to/reply_to/*"
+      ],
+      "evidence": [
+        "transformation_service/templates/pojistovna.xsl:8-13",
+        "transformation_service/templates/common.xsl:3-154",
+        "mail_service/zadosti.js:125-149"
+      ],
+      "notes": "Caller may fan out one external recipients.pojistovna array into multiple internal /pojistovna requests."
+    }
+  },
+  "models": {
+    "Address": {
+      "lines": {
+        "type": "string",
+        "status": "confirmed-field-inferred-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:84-99"
+        ]
+      },
+      "zip_code": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:84-93"
+        ]
+      },
+      "city": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:16",
+          "transformation_service/templates/common.xsl:84-93"
+        ]
+      }
+    },
+    "Applicant": {
+      "name": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:3"
+        ]
+      },
+      "surname": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:3"
+        ]
+      },
+      "address": {
+        "type": "Address",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:56-67",
+          "transformation_service/templates/common.xsl:84-99"
+        ]
+      },
+      "personal_identification_number": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:43-47"
+        ]
+      },
+      "company_registration_number": {
+        "type": "string",
+        "status": "confirmed-field-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:48-53"
+        ]
+      },
+      "phone": {
+        "type": "string",
+        "status": "confirmed-field-inferred-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:64",
+          "transformation_service/templates/common.xsl:101-108"
+        ]
+      },
+      "email": {
+        "type": "string",
+        "status": "confirmed-field-inferred-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:65",
+          "transformation_service/templates/common.xsl:110-115"
+        ]
+      },
+      "data_box": {
+        "type": "string",
+        "status": "confirmed-field-inferred-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:66",
+          "transformation_service/templates/common.xsl:117-122"
+        ]
+      }
+    },
+    "Recipient": {
+      "name": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:70-76"
+        ]
+      },
+      "address": {
+        "type": "Address",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:70-81",
+          "transformation_service/templates/common.xsl:84-99"
+        ]
+      },
+      "phone": {
+        "type": "string",
+        "status": "confirmed-field-inferred-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:78",
+          "transformation_service/templates/common.xsl:101-108"
+        ]
+      },
+      "email": {
+        "type": "string",
+        "status": "confirmed-field-inferred-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:79",
+          "transformation_service/templates/common.xsl:110-115"
+        ]
+      },
+      "data_box": {
+        "type": "string",
+        "status": "confirmed-field-inferred-optional",
+        "evidence": [
+          "transformation_service/templates/common.xsl:80",
+          "transformation_service/templates/common.xsl:117-122"
+        ]
+      }
+    },
+    "ReplyToEnvelope": {
+      "reply_to": {
+        "type": "ReplyToMode",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:32"
+        ]
+      }
+    },
+    "ReplyToMode": {
+      "data_box": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:137-139"
+        ]
+      },
+      "in_person": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/common.xsl:140-142"
+        ]
+      },
+      "permanent_addres": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/common.xsl:143-145"
+        ],
+        "notes": "Typo preserved exactly as in source."
+      },
+      "contact_address": {
+        "type": "Address",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:146-153",
+          "transformation_service/templates/common.xsl:84-99"
+        ]
+      }
+    },
+    "Reason": {
+      "job_office": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/common.xsl:124-126"
+        ]
+      },
+      "regional_office": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/common.xsl:127-129"
+        ]
+      },
+      "bank": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/common.xsl:130-132"
+        ]
+      },
+      "other": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/common.xsl:133-135"
+        ]
+      }
+    },
+    "ObecItems": {
+      "dog": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/obec.xsl:27-31"
+        ]
+      },
+      "bins": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/obec.xsl:33-37"
+        ]
+      },
+      "offenses": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/obec.xsl:39-43"
+        ]
+      },
+      "flat": {
+        "type": "boolean|string|number|null",
+        "status": "confirmed-name-inferred-type",
+        "evidence": [
+          "transformation_service/templates/obec.xsl:45-49"
+        ]
+      },
+      "reason": {
+        "type": "string",
+        "status": "confirmed",
+        "evidence": [
+          "transformation_service/templates/obec.xsl:51-56"
+        ]
+      }
+    }
+  },
+  "emailContract": {
+    "from": {
+      "name": "Nedlužím státu",
+      "email": "formulare@nedluzimstatu.cz",
+      "status": "confirmed",
+      "evidence": [
+        "mail_service/zadosti.js:151-155"
+      ]
+    },
+    "to": {
+      "email": {
+        "source": "recipientEmail",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:156-159"
+        ]
+      },
+      "name": {
+        "source": "recipientName",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:156-159"
+        ]
+      }
+    },
+    "subject": {
+      "value": "Nedlužím státu: Vygenerovali jsme Vaše žádosti pro ověření bezdlužnosti",
+      "status": "confirmed",
+      "evidence": [
+        "mail_service/zadosti.js:160"
+      ]
+    },
+    "content": [
+      {
+        "file": "mail_service/zadost.txt",
+        "mimeType": "text/plain",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:161-163"
+        ]
+      },
+      {
+        "file": "mail_service/zadost.html",
+        "mimeType": "text/html",
+        "status": "confirmed",
+        "evidence": [
+          "mail_service/zadosti.js:162-163"
+        ]
+      }
+    ],
+    "attachments": {
+      "type": "TransformationAttachment[]",
+      "status": "confirmed-array-inferred-runtime-shape",
+      "evidence": [
+        "mail_service/zadosti.js:51-149",
+        "mail_service/zadosti.js:165"
+      ],
+      "mapping": {
+        "celni-sprava": {
+          "endpoint": "/celni-sprava",
+          "filename": "Bezdluznost - Celni sprava.pdf"
+        },
+        "financni-urad": {
+          "endpoint": "/financni-urad",
+          "filename": "Bezdluznost - Financni urad.pdf"
+        },
+        "obec": {
+          "endpoint": "/obec",
+          "filename": "Bezdluznost - obec.pdf"
+        },
+        "ossz": {
+          "endpoint": "/ossz",
+          "filename": "Bezdluznost - CSSZ.pdf"
+        },
+        "pojistovna": {
+          "endpoint": "/pojistovna",
+          "filename": "Bezdluznost - ${pojistovnaShortName(pojistovna.name)}.pdf"
+        }
+      }
+    }
+  },
+  "ambiguities": [
+    {
+      "issue": "Transformation routing implementation is absent from the repo",
+      "missing": "No server code shows how endpoint names map to XSL templates",
+      "verify": "Inspect filipjirsak/xslt-service source or run the container and hit known routes",
+      "risk": "high"
+    },
+    {
+      "issue": "External HTTP response contract of POST /zadosti is absent",
+      "missing": "Status codes, response body, and error semantics",
+      "verify": "Inspect filipjirsak/mail-service source or run the service and capture responses",
+      "risk": "high"
+    },
+    {
+      "issue": "No validation schema is present",
+      "missing": "Which fields are hard-required by the runtime versus merely used by templates",
+      "verify": "Inspect frontend payload generator or base service DTO/validation logic",
+      "risk": "high"
+    },
+    {
+      "issue": "reply_to.reply_to double nesting may be accidental or required",
+      "missing": "Source of the upstream payload builder",
+      "verify": "Inspect frontend code or captured production requests",
+      "risk": "medium"
+    },
+    {
+      "issue": "Key permanent_addres is likely a typo",
+      "missing": "Whether any alternative spelling is accepted upstream",
+      "verify": "Inspect real payloads or frontend serializer",
+      "risk": "high"
+    },
+    {
+      "issue": "Template metadata file names are inconsistent",
+      "missing": "Whether x:file-name affects runtime behavior",
+      "verify": "Run the transformation service and inspect headers/logs/output metadata",
+      "risk": "medium"
+    },
+    {
+      "issue": "pdf.xsl references missing financni-urad-json.xsl",
+      "missing": "Meaning of x:previous-templates in the deployed base image",
+      "verify": "Inspect xslt-service implementation or base image contents",
+      "risk": "medium"
+    },
+    {
+      "issue": "Scalar types of presence-only fields are unclear",
+      "missing": "Whether upstream sends booleans, strings, or another shape for reason/reply_to/items flags",
+      "verify": "Replay captured requests or inspect frontend code",
+      "risk": "medium"
+    }
+  ]
+}

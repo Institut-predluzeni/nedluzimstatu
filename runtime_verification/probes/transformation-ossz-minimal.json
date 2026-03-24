@@ -1,0 +1,28 @@
+{
+  "recipient": {
+    "name": "Mestska sprava socialniho zabezpeceni Brno",
+    "address": {
+      "lines": "Veveří 7",
+      "zip_code": "60200",
+      "city": "Brno"
+    }
+  },
+  "applicant": {
+    "name": "Petr",
+    "surname": "Svoboda",
+    "address": {
+      "lines": "Masarykova 45",
+      "zip_code": "60200",
+      "city": "Brno 2"
+    },
+    "personal_identification_number": "810212/5678"
+  },
+  "reply_to": {
+    "reply_to": {
+      "data_box": "ab12cd3"
+    }
+  },
+  "reason": {
+    "bank": true
+  }
+}
