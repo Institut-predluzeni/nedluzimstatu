@@ -158,6 +158,26 @@ MAIL_FROM_NAME="Custom Sender"
 
 If `MAIL_PROVIDER=sendgrid` and `SENDGRID_API_KEY` is missing, the service fails fast on startup.
 
+## Environment variables
+
+Required:
+
+- `MAIL_PROVIDER=sendgrid` requires `SENDGRID_API_KEY`
+
+Optional:
+
+- `PORT`
+  Default: `3000`
+- `MAIL_PROVIDER`
+  Default: `log`
+  Supported: `log`, `memory`, `sendgrid`
+- `MAIL_FROM_EMAIL`
+  Default: `formulare@nedluzimstatu.cz`
+- `MAIL_FROM_NAME`
+  Default: `Nedlužím státu`
+- `SENDGRID_API_BASE_URL`
+  Default: `https://api.sendgrid.com/v3`
+
 ## Run tests
 
 ```bash
@@ -177,6 +197,64 @@ npm run build
 
 The mail-provider failure response is explicit and simple, but it is still a compatibility decision that should be rechecked before cutover.
 
+## Docker
+
+The service is dockerized as a single image / single service deployment. The container runs the built Node.js app directly and does not depend on a second internal transformation or mail container.
+
+### Build the image
+
+From [rewrite_service](/Users/mila/code/playground/nedluzimstatu/rewrite_service):
+
+```bash
+docker build -t rewrite-service .
+```
+
+### Run locally in safe mode
+
+```bash
+docker run --rm \
+  --name rewrite-service \
+  -p 3000:3000 \
+  -e MAIL_PROVIDER=log \
+  rewrite-service
+```
+
+### Verify the healthcheck endpoint
+
+From another terminal:
+
+```bash
+curl http://localhost:3000/health
+```
+
+To inspect the container health status:
+
+```bash
+docker ps
+docker inspect --format='{{json .State.Health}}' rewrite-service
+```
+
+### Example production-style run
+
+```bash
+docker run --rm \
+  --name rewrite-service \
+  -p 3000:3000 \
+  -e PORT=3000 \
+  -e MAIL_PROVIDER=sendgrid \
+  -e SENDGRID_API_KEY=your-key \
+  -e MAIL_FROM_EMAIL=formulare@nedluzimstatu.cz \
+  -e MAIL_FROM_NAME="Nedlužím státu" \
+  rewrite-service
+```
+
+### Notes for Render / Fly.io / Railway / generic hosts
+
+- The container listens on `0.0.0.0` and respects `PORT`.
+- No secrets are baked into the image.
+- Default startup command is the image `CMD`, so a separate custom start command is usually not needed.
+- For local-safe deploy previews, keep `MAIL_PROVIDER=log`.
+
 ## What phase 3 should implement next
 
 1. verify real SendGrid delivery against a controlled mailbox
@@ -189,7 +267,6 @@ The mail-provider failure response is explicit and simple, but it is still a com
 
 - production cutover
 - infrastructure packaging
-- Dockerization
 - tightening validation beyond the legacy-compatible minimum
 - redesigning the external payload contract
 
@@ -200,3 +277,4 @@ The mail-provider failure response is explicit and simple, but it is still a com
 - real PDF generation is in place
 - real SendGrid-backed mail delivery is implemented behind env-based provider selection
 - local and test execution remain safe by default because `MAIL_PROVIDER=log`
+- the service can be packaged as a single production container image

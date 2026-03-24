@@ -11,15 +11,7 @@ interface RenderPdfOptions {
 }
 
 function getDefaultFontPath(fileName: string): string {
-  return path.resolve(
-    process.cwd(),
-    "..",
-    "transformation_service",
-    "templates",
-    ".fop",
-    "fonts",
-    fileName,
-  );
+  return path.resolve(process.cwd(), "assets", "fonts", fileName);
 }
 
 function renderBlock(doc: PDFKit.PDFDocument, block: LetterSection): void {
