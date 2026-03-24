@@ -1,12 +1,12 @@
 import { LoggingMailProvider } from "./adapters/mail/loggingMailProvider.js";
-import { StubTransformationAdapter } from "./adapters/transformation/stubTransformationAdapter.js";
+import { PdfTransformationAdapter } from "./adapters/transformation/pdfTransformationAdapter.js";
 import { buildApp } from "./app.js";
 
 const port = Number(process.env.PORT ?? "3000");
 
 async function main(): Promise<void> {
   const app = buildApp({
-    transformationAdapter: new StubTransformationAdapter(),
+    transformationAdapter: new PdfTransformationAdapter(),
     mailProvider: new LoggingMailProvider(),
   });
 

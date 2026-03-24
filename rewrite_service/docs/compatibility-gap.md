@@ -1,154 +1,119 @@
 # Compatibility Gap
 
-This document compares the current `rewrite_service` phase-1 skeleton against:
+This document compares the current `rewrite_service` phase-2 state against:
 
 - reconstructed source contracts in [contracts-reconstruction.md](/Users/mila/code/playground/nedluzimstatu/docs/contracts-reconstruction.md)
 - rewrite readiness notes in [rewrite-readiness.md](/Users/mila/code/playground/nedluzimstatu/docs/rewrite-readiness.md)
-- fixture-driven rewrite tests in [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts)
+- rewrite-local tests in [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts) and [pdfTransformationAdapter.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/pdfTransformationAdapter.test.ts)
 - runtime verification captures in [2026-03-24T11-09-39.232Z-mail-fixtures/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-09-39.232Z-mail-fixtures/summary.json), [2026-03-24T11-18-51.314Z-mail-probes/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/summary.json), and [2026-03-24T10-54-22.769Z-transformation-probes/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T10-54-22.769Z-transformation-probes/summary.json).
 
-The goal here is compatibility, not architecture purity.
+The goal remains compatibility, not redesign.
 
 ## What Legacy Behaviors Are Already Matched
-
-These behaviors are already implemented in the rewrite skeleton and are either covered by rewrite tests or directly visible in the current code.
 
 ### HTTP boundary for `POST /zadosti`
 
 - Success returns `200` with an empty body.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L37),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/routes/zadosti.ts#L18),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L203).
 - Missing `recipientEmail` returns `400`.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L58),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L98),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L199).
 - Malformed JSON returns `500`.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L77),
-  [app.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/app.ts#L13).
+Evidence:
+[app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L37),
+[app.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/app.ts#L13),
+[zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L199).
 
-### Attachment planning and recipient fan-out
+### Attachment planning and naming
 
-- The rewrite supports all five legacy institution types:
+- All five legacy document types are supported:
   - `celni-sprava`
   - `financni-urad`
   - `obec`
   - `ossz`
   - `pojistovna`
-  Evidence:
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L22).
-- `pojistovna` supports both a single object and an array.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L115),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L146).
-- Attachment order matches the legacy orchestration order reconstructed from source:
-  - `celni-sprava`
-  - `financni-urad`
-  - `obec`
-  - `ossz`
-  - `pojistovna`
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L91),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L22).
-- `obec` payload includes `items`, and missing `items` does not hard-fail.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L184),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L134).
+- `pojistovna` supports single object and array fan-out.
+- Attachment order matches the reconstructed legacy orchestration order.
+- Attachment filenames match the legacy naming rules, including `Bezdluznost - CSSZ.pdf` and insurance short-name mapping.
+Evidence:
+[app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L91),
+[zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L22),
+[zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L69).
 
-### Legacy attachment filenames and mail metadata
+### Permissive payload handling
+
+- `reply_to.reply_to` is preserved.
+- direct `reply_to` shapes are also tolerated.
+- `permanent_addres` is preserved.
+- `permanent_address` is also tolerated.
+- optional `company_registration_number` is rendered when present.
+- missing `items` for `obec` does not hard-fail.
+Evidence:
+[buildLetterDocument.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/pdf/buildLetterDocument.ts#L193),
+[pdfTransformationAdapter.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/pdfTransformationAdapter.test.ts#L77),
+[2026-03-24T11-18-51.314Z-mail-probes/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/summary.json).
+
+### Real PDF generation now exists
+
+- The rewrite now returns real PDF buffers, not placeholder `%PDF` text blobs.
+- Generated output is non-empty, PDF-like, and rendered in-process without internal HTTP calls.
+- Institution-specific body content is built explicitly from the reconstructed contract.
+Evidence:
+[pdfTransformationAdapter.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/pdfTransformationAdapter.ts),
+[renderPdf.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/pdf/renderPdf.ts),
+[buildLetterDocument.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/pdf/buildLetterDocument.ts),
+[pdfTransformationAdapter.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/pdfTransformationAdapter.test.ts#L45).
+
+### Mail composition still matches the reconstructed contract
 
 - Fixed legacy `from` is preserved.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L162),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L14),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L181).
 - Fixed legacy `subject` is preserved.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L162),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L19),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L184).
-- Current filename mapping matches the reconstructed legacy naming, including `Bezdluznost - CSSZ.pdf` and known insurance short names.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L91),
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L115),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L69).
-- Text and HTML mail bodies are wired into the outgoing mail object.
-  Evidence:
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L185),
-  [zadostText.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/templates/zadostText.ts),
-  [zadostHtml.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/templates/zadostHtml.ts).
+- Text and HTML mail bodies are still wired into the outgoing mail object.
+Evidence:
+[app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L162),
+[zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L172),
+[zadostText.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/templates/zadostText.ts),
+[zadostHtml.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/templates/zadostHtml.ts).
 
-### Permissive request handling that aligns with runtime findings
+## What Is Intentionally Still Stubbed
 
-- The current rewrite keeps permissive pass-through behavior for:
-  - `reply_to.reply_to`
-  - `permanent_addres`
-  - optional `company_registration_number`
-  - missing `items` for `obec`
-- This is directionally aligned with observed runtime behavior where many partial inputs still returned `200`.
-  Evidence:
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L89),
-  [2026-03-24T11-18-51.314Z-mail-probes/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/summary.json).
-
-## What Is Intentionally Stubbed
-
-These are deliberate phase-1 omissions, not accidental gaps.
-
-- PDF rendering is stubbed behind `TransformationAdapter`.
-  The current adapter returns deterministic PDF-like buffers for stable tests, not real XSL/XSL-FO output.
-  Evidence:
-  [stubTransformationAdapter.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/stubTransformationAdapter.ts).
-- Mail delivery is stubbed behind `MailProvider`.
-  The current rewrite uses test and logging providers, not SendGrid.
+- Real mail delivery is still behind `MailProvider`.
+  The rewrite currently uses test and logging providers, not SendGrid.
   Evidence:
   [inMemoryMailProvider.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail/inMemoryMailProvider.ts),
   [loggingMailProvider.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail/loggingMailProvider.ts).
-- The rewrite currently implements only the new app boundary:
-  - `GET /health`
-  - `POST /zadosti`
-  It does not expose standalone HTTP transformation endpoints returning `201` + PDF.
+- Standalone HTTP transformation endpoints are still not exposed.
+  The rewrite generates attachments internally through the adapter instead of exposing `/celni-sprava`, `/financni-urad`, `/obec`, `/ossz`, `/pojistovna`.
 
 ## What Still Differs From Legacy Runtime
 
-These are real differences relative to the observed legacy runtime and should be treated as open compatibility gaps.
+### Error response bodies and content types still differ
 
-### Error response bodies and content types differ
-
-- Legacy runtime returned JSON error bodies for at least these cases:
-  - malformed JSON => `500` with JSON body
-  - missing `recipientEmail` => `400` with JSON body
+- Legacy runtime returned JSON error bodies for at least:
+  - malformed JSON => `500`
+  - missing `recipientEmail` => `400`
   Evidence:
   [rv-zad-101/meta.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/rv-zad-101/meta.json),
   [rv-zad-101/response-body.txt](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/rv-zad-101/response-body.txt),
   [rv-zad-201/meta.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/rv-zad-201/meta.json),
   [rv-zad-201/response-body.txt](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/rv-zad-201/response-body.txt).
-- The rewrite currently returns empty bodies for those errors.
-  Evidence:
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L58),
-  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L77),
-  [app.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/app.ts#L29),
-  [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L199).
+- The rewrite still returns empty bodies for those errors.
 
-### Real transformation output is not yet matched
+### Generated PDFs are real, but not legacy-equivalent yet
 
-- Legacy transformation endpoints return `201` and PDF bodies.
+- Legacy transformation endpoints returned `201` plus PDF bodies through the old runtime.
   Evidence:
   [2026-03-24T10-54-22.769Z-transformation-probes/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T10-54-22.769Z-transformation-probes/summary.json).
-- The rewrite currently produces placeholder PDF-like buffers only inside the app; it does not reproduce legacy PDF bytes, headers, or status codes.
+- The rewrite now generates real PDFs, but they are newly rendered with `pdfkit`, not the old XSL/XSL-FO layout.
+- This means the remaining gap is now document fidelity, not the absence of PDF generation.
 
-### Real mail delivery behavior is not yet matched
+### Real mail-provider behavior is still unmatched
 
-- Legacy `/zadosti` was verified against a running service and returned `200` for the real-email happy path to `mila@shrug.cz`.
+- Legacy `/zadosti` was verified against a running service, including a dedicated real-email happy path to `mila@shrug.cz`.
   Evidence:
   [2026-03-24T11-19-54.064Z-real-email-happy-path/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-19-54.064Z-real-email-happy-path/summary.json).
-- The rewrite currently does not send real mail, so delivery behavior, provider error propagation, and any SendGrid-specific constraints remain unmatched.
+- The rewrite still does not send real mail, so delivery semantics and provider failure propagation remain open.
 
-### Negative-case parity is only partial
+### Negative-case parity is still only partially frozen in rewrite-local tests
 
-- Runtime findings show permissive `200` behavior for:
+- Runtime findings showed permissive `200` behavior for:
   - missing `applicant`
   - empty `recipients`
   - malformed `pojistovna`
@@ -157,69 +122,67 @@ These are real differences relative to the observed legacy runtime and should be
   - missing `reply_to.reply_to` nesting
   - single vs array `pojistovna`
   - `company_registration_number` present
-  Evidence:
-  [2026-03-24T11-18-51.314Z-mail-probes/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-18-51.314Z-mail-probes/summary.json).
-- The rewrite code is intentionally permissive, but not all of those runtime cases are yet frozen by rewrite-local tests.
+- The rewrite is intentionally permissive, but rewrite-local tests still do not freeze every one of those runtime-observed cases.
 
-### Transformation HTTP API surface is absent
+### Transformation HTTP API surface is still absent
 
-- The legacy service pair had directly reachable transformation endpoints used during runtime verification.
-- The rewrite currently inlines document generation behind an adapter and does not expose `/celni-sprava`, `/financni-urad`, `/obec`, `/ossz`, or `/pojistovna` as HTTP routes.
-- This is only compatible if those endpoints are purely internal and no external caller depends on them.
+- The legacy service pair exposed direct transformation endpoints used during runtime verification.
+- The rewrite currently has no direct HTTP equivalent for those endpoints.
+- This is only acceptable if nothing external depends on them.
 
-## Which Differences Are Acceptable In Phase 1
+## Which Differences Are Acceptable Right Now
 
-These differences are acceptable for a rewrite skeleton, but not automatically acceptable for production cutover.
+- Using a new in-process PDF renderer is acceptable now because the rewrite no longer depends on the legacy black-box transformation runtime and already produces real attachments for compatibility work.
+- Remaining PDF differences are acceptable at this stage as long as they are treated as fidelity gaps, not ignored.
+- Fake/logging mail providers are still acceptable until delivery semantics are implemented.
+- Missing standalone transformation HTTP endpoints are acceptable only if the replacement is intended to collapse the legacy pair into one deployable service.
+- Empty error bodies for `400` and `500` remain acceptable only as a temporary simplification for the rewrite branch, not as an assumed cutover-safe behavior.
 
-- Stub PDF generation is acceptable in phase 1 because the current goal is orchestration shape, not final document fidelity.
-- Fake/logging mail providers are acceptable in phase 1 because phase 1 explicitly avoids real SendGrid integration.
-- Missing standalone transformation HTTP endpoints are acceptable in phase 1 if the target cutover architecture is a single service and there is no external dependency on the old internal endpoint surface.
-- Empty error bodies for `400` and `500` are acceptable in phase 1 only as a temporary simplification for local development and tests.
-  They are not yet proven safe for cutover because runtime evidence shows different response bodies and content types.
-- Partial negative-case coverage in rewrite-local tests is acceptable in phase 1 because the runtime behavior is already captured separately, but those cases should be frozen before cutover.
+## What Must Happen Before Cutover
 
-## What Phase 2 Must Implement Before Cutover
+### Required implementation work
 
-### Required for compatibility cutover
-
-- Replace `StubTransformationAdapter` with a real implementation that reproduces legacy documents closely enough for operational use.
-- Replace the fake/logging mail provider with a real provider implementation and verify successful end-to-end delivery.
-- Decide and implement the cutover policy for error responses:
-  - either match legacy JSON error bodies and content types for known failure cases
-  - or explicitly accept a documented compatibility break
-- Freeze the runtime-verified permissive cases in rewrite-local tests:
-  - missing `applicant`
-  - empty `recipients`
-  - malformed `pojistovna`
-  - `permanent_address` variant
-  - missing `reply_to.reply_to`
-  - `company_registration_number`
-- Verify failure propagation semantics for:
-  - transformation failure
+- Implement a real mail provider adapter and verify successful end-to-end delivery.
+- Decide and implement the final compatibility policy for error responses:
+  - match legacy JSON error bodies and content types
+  - or accept an explicit compatibility break
+- Freeze the runtime-observed permissive cases in rewrite-local tests.
+- Verify failure propagation for:
   - mail provider failure
+  - PDF generation failure
 
-### Decision needed before cutover
+### Required comparison work for PDFs
 
-- Decide whether the replacement architecture must expose standalone transformation HTTP endpoints.
-  If yes, phase 2 must implement them with the observed legacy behavior:
-  - `201`
-  - PDF body
-  - endpoint names matching the legacy set
-- Decide whether exact email body content must remain byte-for-byte stable or whether semantic equivalence is sufficient.
-- Decide whether attachment bytes need golden-file comparison against legacy output for a representative fixture set.
+- Compare rewrite-generated PDFs against legacy runtime output for a representative fixture set.
+- Review:
+  - body wording
+  - presence of key fields
+  - handling of `reason`
+  - handling of `reply_to`
+  - handling of `company_registration_number`
+  - handling of `obec.items`
+- Decide whether semantic equivalence is sufficient or whether closer visual/layout parity is required.
+
+### Architectural decision still needed
+
+- Decide whether standalone transformation endpoints must exist after cutover.
+  If yes, the rewrite still needs an HTTP surface for:
+  - `/celni-sprava`
+  - `/financni-urad`
+  - `/obec`
+  - `/ossz`
+  - `/pojistovna`
 
 ## Bottom Line
 
-The phase-1 rewrite is already a reasonable compatibility skeleton for the `/zadosti` orchestration path:
+The largest phase-1 gap is now closed:
 
-- success `200` behavior matches
-- recipient fan-out matches
-- naming rules match
-- permissive request handling direction matches
+- the rewrite no longer uses placeholder PDF buffers
+- the rewrite generates real attachments in-process
 
-It is not cutover-ready yet because the largest legacy-visible gaps are still open:
+The main cutover blockers are now narrower and clearer:
 
-- real PDF generation
 - real mail delivery
-- error response body parity
-- explicit decision on transformation endpoint exposure
+- error response parity
+- PDF fidelity review against legacy output
+- decision on standalone transformation endpoint compatibility

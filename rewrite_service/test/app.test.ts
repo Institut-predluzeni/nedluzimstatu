@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, test } from "vitest";
 
 import { InMemoryMailProvider } from "../src/adapters/mail/inMemoryMailProvider.js";
-import { RecordingTransformationAdapter } from "../src/adapters/transformation/stubTransformationAdapter.js";
+import { RecordingTransformationAdapter } from "../src/adapters/transformation/pdfTransformationAdapter.js";
 import { buildApp } from "../src/app.js";
 import type { ZadostiRequest } from "../src/domain/types.js";
 import { loadFixture } from "./fixtures.js";
@@ -12,7 +12,9 @@ describe("rewrite_service phase 1", () => {
   let app: ReturnType<typeof buildApp>;
 
   beforeEach(() => {
-    transformationAdapter = new RecordingTransformationAdapter();
+    transformationAdapter = new RecordingTransformationAdapter({
+      now: () => new Date("2026-03-24T00:00:00.000Z"),
+    });
     mailProvider = new InMemoryMailProvider();
     app = buildApp({
       transformationAdapter,
