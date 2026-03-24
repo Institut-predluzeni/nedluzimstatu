@@ -1,4 +1,4 @@
-# rewrite_service phase 2
+# rewrite_service phase 3
 
 This is the first compatibility-focused rewrite skeleton for the legacy `mail_service` + `transformation_service` flow behind `nedluzimstatu.cz`.
 
@@ -8,9 +8,9 @@ Current phase goal:
 
 - preserve the legacy-visible HTTP boundary for `/zadosti`
 - keep the code small and understandable
-- keep only the seams that matter for phase 2 replacement
-- replace the PDF stub with explicit in-process document generation
-- keep later mail-provider replacement straightforward
+- keep only the seams that matter for cutover work
+- keep explicit in-process PDF generation
+- add real mail delivery behind an optional environment-driven provider
 
 ## Stack
 
@@ -43,7 +43,8 @@ Fastify was chosen because it keeps the HTTP layer compact and gives simple in-p
 - fixed legacy sender and subject
 - text and HTML templates wired into composed email objects
 - real PDF generation behind a `TransformationAdapter`
-- fake/logging mail providers behind a `MailProvider`
+- SendGrid-backed real delivery behind a `MailProvider`
+- fake/logging mail providers remain available for tests and local development
 - most `/zadosti` compatibility logic kept in one module so it can be read in one pass
 - explicit institution-specific document builders for:
   - `celni-sprava`
@@ -55,9 +56,8 @@ Fastify was chosen because it keeps the HTTP layer compact and gives simple in-p
 
 ## Intentionally still stubbed
 
-- real SendGrid integration
 - direct reuse of legacy base images
-- production mail delivery
+- production delivery verification against a real mailbox
 
 The current PDF implementation renders real PDF buffers in-process. It does not reuse the legacy XSLT/FOP runtime and does not try to match legacy PDF bytes exactly.
 
@@ -67,6 +67,17 @@ The only deliberate interfaces in the rewrite are:
 - `MailProvider`
 
 Everything else is kept as plain functions and constants to reduce indirection.
+
+## Mail provider modes
+
+Supported values for `MAIL_PROVIDER`:
+
+- `log`
+  Local-safe default. Does not send mail. Logs a compact summary only.
+- `memory`
+  Test-oriented provider. Keeps sent messages in memory only.
+- `sendgrid`
+  Real delivery via the SendGrid HTTP API. Requires `SENDGRID_API_KEY`.
 
 ## Compatibility assumptions currently preserved
 
@@ -80,6 +91,7 @@ Everything else is kept as plain functions and constants to reduce indirection.
 - missing `items` for `obec` does not hard-fail in phase 1
 - no internal HTTP calls are made between mail and transformation logic
 - document text is built explicitly from the reconstructed contract, not through a black-box transformation container
+- default sender stays at legacy values unless overridden by environment config
 
 ## Project layout
 
@@ -90,7 +102,10 @@ Everything else is kept as plain functions and constants to reduce indirection.
 - [src/services/zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts): compatibility logic for normalization, attachment planning, naming, and mail composition
 - [src/adapters/transformation/pdfTransformationAdapter.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/pdfTransformationAdapter.ts): real PDF adapter
 - [src/adapters/transformation/pdf](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/pdf): content builders and shared PDF renderer
+- [src/adapters/mail/createMailProvider.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail/createMailProvider.ts): provider selection
+- [src/adapters/mail/sendGridMailProvider.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail/sendGridMailProvider.ts): SendGrid-backed provider
 - [src/adapters/mail](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail): mail-provider seam
+- [src/config.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/config.ts): env-based runtime config
 - [src/templates](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/templates): legacy email body content
 - [test](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test): rewrite-skeleton tests
 
@@ -103,12 +118,45 @@ npm run dev
 ```
 
 Default port is `3000`.
+Default mail mode is `log`, so local runs do not send real email unless you opt in.
 
 Health check:
 
 ```bash
 curl http://localhost:3000/health
 ```
+
+### Run locally without sending mail
+
+```bash
+cd rewrite_service
+MAIL_PROVIDER=log npm run dev
+```
+
+### Run locally with in-memory mail provider
+
+```bash
+cd rewrite_service
+MAIL_PROVIDER=memory npm run dev
+```
+
+### Run with SendGrid
+
+```bash
+cd rewrite_service
+MAIL_PROVIDER=sendgrid \
+SENDGRID_API_KEY=your-key \
+npm run dev
+```
+
+Optional sender override:
+
+```bash
+MAIL_FROM_EMAIL=custom@example.com
+MAIL_FROM_NAME="Custom Sender"
+```
+
+If `MAIL_PROVIDER=sendgrid` and `SENDGRID_API_KEY` is missing, the service fails fast on startup.
 
 ## Run tests
 
@@ -119,13 +167,23 @@ npm test
 npm run build
 ```
 
-## What phase 2 should implement next
+## Failure behavior
 
-1. implement a real mail provider adapter
+- malformed JSON => `500` with empty body
+- missing `recipientEmail` => `400` with empty body
+- mail provider failure => `500` with JSON body
+  Current shape:
+  `{"message":"Mail provider send failed"}`
+
+The mail-provider failure response is explicit and simple, but it is still a compatibility decision that should be rechecked before cutover.
+
+## What phase 3 should implement next
+
+1. verify real SendGrid delivery against a controlled mailbox
 2. compare generated PDFs against legacy runtime outputs for representative fixtures
-3. decide whether legacy error JSON bodies must be preserved
+3. decide whether legacy error JSON bodies must be preserved more closely
 4. decide whether standalone transformation HTTP endpoints are needed at cutover
-5. add end-to-end verification for real delivery and failure propagation
+5. freeze more runtime-observed permissive edge cases in rewrite-local tests
 
 ## Non-goals in the current step
 
@@ -140,4 +198,5 @@ npm run build
 - `npm test` passes
 - `npm run build` passes
 - real PDF generation is in place
-- real mail delivery is not implemented yet
+- real SendGrid-backed mail delivery is implemented behind env-based provider selection
+- local and test execution remain safe by default because `MAIL_PROVIDER=log`

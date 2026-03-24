@@ -1,13 +1,15 @@
 import Fastify, { type FastifyInstance } from "fastify";
 
-import type { MailProvider } from "./adapters/mail/types.js";
+import { MailProviderError, type MailProvider } from "./adapters/mail/types.js";
 import type { TransformationAdapter } from "./adapters/transformation/types.js";
+import type { MailAddress } from "./domain/types.js";
 import { registerHealthRoute } from "./routes/health.js";
 import { registerZadostiRoute } from "./routes/zadosti.js";
 
 export interface AppDeps {
   transformationAdapter: TransformationAdapter;
   mailProvider: MailProvider;
+  mailFrom?: Required<MailAddress>;
 }
 
 function configureLegacyJsonParsing(app: FastifyInstance): void {
@@ -29,6 +31,14 @@ function configureLegacyJsonParsing(app: FastifyInstance): void {
   app.setErrorHandler((error, _request, reply) => {
     if (error instanceof Error && error.message === "LEGACY_INVALID_JSON") {
       void reply.code(500).type("text/plain; charset=utf-8").send("");
+      return;
+    }
+
+    if (error instanceof MailProviderError) {
+      void reply
+        .code(500)
+        .type("application/json; charset=utf-8")
+        .send({ message: "Mail provider send failed" });
       return;
     }
 

@@ -1,17 +1,18 @@
-import { LoggingMailProvider } from "./adapters/mail/loggingMailProvider.js";
+import { createMailProvider } from "./adapters/mail/createMailProvider.js";
 import { PdfTransformationAdapter } from "./adapters/transformation/pdfTransformationAdapter.js";
 import { buildApp } from "./app.js";
-
-const port = Number(process.env.PORT ?? "3000");
+import { loadConfig } from "./config.js";
 
 async function main(): Promise<void> {
+  const config = loadConfig();
   const app = buildApp({
     transformationAdapter: new PdfTransformationAdapter(),
-    mailProvider: new LoggingMailProvider(),
+    mailProvider: createMailProvider(config),
+    mailFrom: config.mailFrom,
   });
 
   await app.listen({
-    port,
+    port: config.port,
     host: "0.0.0.0",
   });
 }

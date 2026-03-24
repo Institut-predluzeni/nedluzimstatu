@@ -39,20 +39,19 @@ export interface GeneratedAttachment {
   content: Buffer;
 }
 
+export interface MailAddress {
+  email: string;
+  name?: string;
+}
+
 export interface OutgoingEmailContentPart {
   contentType: "text/plain" | "text/html";
   value: string;
 }
 
 export interface OutgoingEmail {
-  from: {
-    name: string;
-    email: string;
-  };
-  to: {
-    email: string;
-    name?: string;
-  };
+  from: MailAddress;
+  to: MailAddress;
   subject: string;
   content: OutgoingEmailContentPart[];
   attachments: GeneratedAttachment[];

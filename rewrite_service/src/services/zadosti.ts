@@ -3,6 +3,7 @@ import type { FastifyReply } from "fastify";
 import type {
   AttachmentPlan,
   GeneratedAttachment,
+  MailAddress,
   NormalizedZadostiRequest,
   OutgoingEmail,
   RecipientEndpoint,
@@ -172,6 +173,9 @@ export function planAttachments(input: NormalizedZadostiRequest): AttachmentPlan
 export function composeMail(
   input: NormalizedZadostiRequest,
   attachments: GeneratedAttachment[],
+  options: {
+    from?: Required<MailAddress>;
+  } = {},
 ): OutgoingEmail {
   const to =
     input.recipientName === undefined
@@ -179,7 +183,7 @@ export function composeMail(
       : { email: input.recipientEmail, name: input.recipientName };
 
   return {
-    from: { ...LEGACY_FROM },
+    from: { ...(options.from ?? LEGACY_FROM) },
     to,
     subject: LEGACY_SUBJECT,
     content: [

@@ -1,12 +1,19 @@
 import { afterEach, beforeEach, describe, expect, test } from "vitest";
 
 import { InMemoryMailProvider } from "../src/adapters/mail/inMemoryMailProvider.js";
+import { MailProviderError, type MailProvider } from "../src/adapters/mail/types.js";
 import { RecordingTransformationAdapter } from "../src/adapters/transformation/pdfTransformationAdapter.js";
 import { buildApp } from "../src/app.js";
 import type { ZadostiRequest } from "../src/domain/types.js";
 import { loadFixture } from "./fixtures.js";
 
-describe("rewrite_service phase 1", () => {
+class FailingMailProvider implements MailProvider {
+  async send(): Promise<void> {
+    throw new MailProviderError("MAIL_PROVIDER_SEND_FAILED");
+  }
+}
+
+describe("rewrite_service phase 3", () => {
   let transformationAdapter: RecordingTransformationAdapter;
   let mailProvider: InMemoryMailProvider;
   let app: ReturnType<typeof buildApp>;
@@ -183,6 +190,63 @@ describe("rewrite_service phase 1", () => {
     );
   });
 
+  test("mail from can be overridden by app config", async () => {
+    await app.close();
+    app = buildApp({
+      transformationAdapter,
+      mailProvider,
+      mailFrom: {
+        email: "custom@example.com",
+        name: "Custom Sender",
+      },
+    });
+
+    await app.inject({
+      method: "POST",
+      url: "/zadosti",
+      payload: loadFixture<ZadostiRequest>("zadosti-simple-financni-urad"),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+
+    expect(mailProvider.sent[0]?.from).toEqual({
+      email: "custom@example.com",
+      name: "Custom Sender",
+    });
+  });
+
+  test("mail provider receives to, content, and generated attachments", async () => {
+    const payload = loadFixture<ZadostiRequest>("zadosti-multi-instituce");
+
+    await app.inject({
+      method: "POST",
+      url: "/zadosti",
+      payload,
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+
+    expect(mailProvider.sent).toHaveLength(1);
+    expect(mailProvider.sent[0]?.to).toEqual({
+      email: payload.recipientEmail,
+      name: payload.recipientName,
+    });
+    expect(mailProvider.sent[0]?.content.map((part) => part.contentType)).toEqual([
+      "text/plain",
+      "text/html",
+    ]);
+    expect(mailProvider.sent[0]?.attachments.map((attachment) => attachment.filename)).toEqual([
+      "Bezdluznost - Celni sprava.pdf",
+      "Bezdluznost - Financni urad.pdf",
+      "Bezdluznost - CSSZ.pdf",
+    ]);
+    expect(mailProvider.sent[0]?.attachments.every((attachment) => attachment.content.byteLength > 1000)).toBe(
+      true,
+    );
+  });
+
   test("obec payload includes items and permits missing items without hard failure", async () => {
     const payload = loadFixture<ZadostiRequest>("zadosti-obec-items");
 
@@ -217,5 +281,27 @@ describe("rewrite_service phase 1", () => {
 
     expect(response.statusCode).toBe(200);
     expect(transformationAdapter.plans[0]?.endpoint).toBe("obec");
+  });
+
+  test("mail provider failure returns 500", async () => {
+    await app.close();
+    app = buildApp({
+      transformationAdapter,
+      mailProvider: new FailingMailProvider(),
+    });
+
+    const response = await app.inject({
+      method: "POST",
+      url: "/zadosti",
+      payload: loadFixture<ZadostiRequest>("zadosti-simple-financni-urad"),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+
+    expect(response.statusCode).toBe(500);
+    expect(response.json()).toEqual({
+      message: "Mail provider send failed",
+    });
   });
 });

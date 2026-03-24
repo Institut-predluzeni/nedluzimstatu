@@ -2,6 +2,7 @@ import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { MailProvider } from "../adapters/mail/types.js";
 import type { TransformationAdapter } from "../adapters/transformation/types.js";
+import type { MailAddress } from "../domain/types.js";
 import {
   composeMail,
   normalizeZadostiRequest,
@@ -13,6 +14,7 @@ import {
 interface ZadostiRouteDeps {
   transformationAdapter: TransformationAdapter;
   mailProvider: MailProvider;
+  mailFrom?: Required<MailAddress>;
 }
 
 export function registerZadostiRoute(app: FastifyInstance, deps: ZadostiRouteDeps): void {
@@ -27,7 +29,9 @@ export function registerZadostiRoute(app: FastifyInstance, deps: ZadostiRouteDep
     const attachments = await Promise.all(
       attachmentPlans.map((plan) => deps.transformationAdapter.generateAttachment(plan)),
     );
-    const mail = composeMail(normalized, attachments);
+    const mail = deps.mailFrom
+      ? composeMail(normalized, attachments, { from: deps.mailFrom })
+      : composeMail(normalized, attachments);
 
     await deps.mailProvider.send(mail);
 

@@ -1,6 +1,6 @@
 # Compatibility Gap
 
-This document compares the current `rewrite_service` phase-2 state against:
+This document compares the current `rewrite_service` phase-3 state against:
 
 - reconstructed source contracts in [contracts-reconstruction.md](/Users/mila/code/playground/nedluzimstatu/docs/contracts-reconstruction.md)
 - rewrite readiness notes in [rewrite-readiness.md](/Users/mila/code/playground/nedluzimstatu/docs/rewrite-readiness.md)
@@ -61,24 +61,25 @@ Evidence:
 [buildLetterDocument.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/transformation/pdf/buildLetterDocument.ts),
 [pdfTransformationAdapter.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/pdfTransformationAdapter.test.ts#L45).
 
-### Mail composition still matches the reconstructed contract
+### Mail composition and provider seam now exist
 
 - Fixed legacy `from` is preserved.
 - Fixed legacy `subject` is preserved.
 - Text and HTML mail bodies are still wired into the outgoing mail object.
+- A real SendGrid-backed provider now exists behind the existing `MailProvider` abstraction.
+- Default local behavior is still safe because provider selection defaults to `log`.
 Evidence:
 [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts#L162),
+[mailProviderFactory.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/mailProviderFactory.test.ts#L39),
+[sendGridMailProvider.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail/sendGridMailProvider.ts),
 [zadosti.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/services/zadosti.ts#L172),
 [zadostText.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/templates/zadostText.ts),
 [zadostHtml.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/templates/zadostHtml.ts).
 
 ## What Is Intentionally Still Stubbed
 
-- Real mail delivery is still behind `MailProvider`.
-  The rewrite currently uses test and logging providers, not SendGrid.
-  Evidence:
-  [inMemoryMailProvider.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail/inMemoryMailProvider.ts),
-  [loggingMailProvider.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/adapters/mail/loggingMailProvider.ts).
+- Real delivery verification is still outstanding.
+  The rewrite can now send via SendGrid, but that path is not exercised in automated tests and still needs runtime verification against a controlled mailbox.
 - Standalone HTTP transformation endpoints are still not exposed.
   The rewrite generates attachments internally through the adapter instead of exposing `/celni-sprava`, `/financni-urad`, `/obec`, `/ossz`, `/pojistovna`.
 
@@ -104,12 +105,21 @@ Evidence:
 - The rewrite now generates real PDFs, but they are newly rendered with `pdfkit`, not the old XSL/XSL-FO layout.
 - This means the remaining gap is now document fidelity, not the absence of PDF generation.
 
-### Real mail-provider behavior is still unmatched
+### Real mail-provider behavior is only partially matched
 
 - Legacy `/zadosti` was verified against a running service, including a dedicated real-email happy path to `mila@shrug.cz`.
   Evidence:
   [2026-03-24T11-19-54.064Z-real-email-happy-path/summary.json](/Users/mila/code/playground/nedluzimstatu/runtime_verification/captures/2026-03-24T11-19-54.064Z-real-email-happy-path/summary.json).
-- The rewrite still does not send real mail, so delivery semantics and provider failure propagation remain open.
+- The rewrite can now send through SendGrid, but actual delivery, SendGrid account configuration, and provider failure propagation still need runtime verification.
+
+### Mail failure behavior is now explicit, but still a compatibility choice
+
+- If the selected mail provider throws `MailProviderError`, the rewrite returns `500` with a small JSON body:
+  - `{"message":"Mail provider send failed"}`
+- This is simple and testable, but it is not yet confirmed to match the most useful cutover behavior.
+  Evidence:
+  [app.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/src/app.ts),
+  [app.test.ts](/Users/mila/code/playground/nedluzimstatu/rewrite_service/test/app.test.ts).
 
 ### Negative-case parity is still only partially frozen in rewrite-local tests
 
@@ -134,7 +144,8 @@ Evidence:
 
 - Using a new in-process PDF renderer is acceptable now because the rewrite no longer depends on the legacy black-box transformation runtime and already produces real attachments for compatibility work.
 - Remaining PDF differences are acceptable at this stage as long as they are treated as fidelity gaps, not ignored.
-- Fake/logging mail providers are still acceptable until delivery semantics are implemented.
+- Default `log` mode remains acceptable for local development and safe test execution.
+- The new SendGrid provider is acceptable for runtime verification and staging-style validation, but not yet enough by itself to claim cutover readiness.
 - Missing standalone transformation HTTP endpoints are acceptable only if the replacement is intended to collapse the legacy pair into one deployable service.
 - Empty error bodies for `400` and `500` remain acceptable only as a temporary simplification for the rewrite branch, not as an assumed cutover-safe behavior.
 
@@ -142,7 +153,7 @@ Evidence:
 
 ### Required implementation work
 
-- Implement a real mail provider adapter and verify successful end-to-end delivery.
+- Verify the SendGrid provider end-to-end against a controlled mailbox.
 - Decide and implement the final compatibility policy for error responses:
   - match legacy JSON error bodies and content types
   - or accept an explicit compatibility break
@@ -182,7 +193,7 @@ The largest phase-1 gap is now closed:
 
 The main cutover blockers are now narrower and clearer:
 
-- real mail delivery
+- runtime verification of real mail delivery
 - error response parity
 - PDF fidelity review against legacy output
 - decision on standalone transformation endpoint compatibility
