@@ -3,3 +3,4 @@
 .terraform.lock.hcl
 runtime_verification/captures/**
 **/node_modules/**
+**/dist/**
