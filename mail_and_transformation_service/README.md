@@ -209,6 +209,12 @@ From [rewrite_service](/Users/mila/code/playground/nedluzimstatu/rewrite_service
 docker build -t rewrite-service .
 ```
 
+From the repo root, use:
+
+```bash
+docker build -f mail_and_transformation_service/Dockerfile -t rewrite-service mail_and_transformation_service
+```
+
 ### Run locally in safe mode
 
 ```bash
