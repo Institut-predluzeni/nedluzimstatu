@@ -9,12 +9,13 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@fastify/cors": "^11.2.0",
     "fastify": "^5.2.1",
     "pdfkit": "^0.18.0"
   },
   "devDependencies": {
-    "@types/pdfkit": "^0.17.5",
     "@types/node": "^24.0.0",
+    "@types/pdfkit": "^0.17.5",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4"

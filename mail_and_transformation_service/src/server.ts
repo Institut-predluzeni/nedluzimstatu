@@ -9,6 +9,7 @@ async function main(): Promise<void> {
     transformationAdapter: new PdfTransformationAdapter(),
     mailProvider: createMailProvider(config),
     mailFrom: config.mailFrom,
+    corsOrigins: config.corsOrigins,
   });
 
   await app.listen({

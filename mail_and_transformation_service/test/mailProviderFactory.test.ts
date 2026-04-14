@@ -49,6 +49,7 @@ describe("mail provider configuration", () => {
       email: "formulare@nedluzimstatu.cz",
       name: "Nedlužím státu",
     });
+    expect(config.corsOrigins).toBe(true);
   });
 
   test("loadConfig supports sender and provider overrides", () => {
@@ -56,6 +57,7 @@ describe("mail provider configuration", () => {
       MAIL_PROVIDER: "sendgrid",
       MAIL_FROM_EMAIL: "custom@example.com",
       MAIL_FROM_NAME: "Custom Sender",
+      CORS_ORIGINS: "https://www.nedluzimstatu.cz, https://nedluzimstatu.cz",
       SENDGRID_API_KEY: "sg-key",
     });
 
@@ -65,6 +67,10 @@ describe("mail provider configuration", () => {
       name: "Custom Sender",
     });
     expect(config.sendGridApiKey).toBe("sg-key");
+    expect(config.corsOrigins).toEqual([
+      "https://www.nedluzimstatu.cz",
+      "https://nedluzimstatu.cz",
+    ]);
   });
 
   test("createMailProvider selects logging, memory, and sendgrid providers", () => {
@@ -76,6 +82,7 @@ describe("mail provider configuration", () => {
           email: "formulare@nedluzimstatu.cz",
           name: "Nedlužím státu",
         },
+        corsOrigins: true,
         sendGridApiBaseUrl: "https://api.sendgrid.com/v3",
       }),
     ).toBeInstanceOf(LoggingMailProvider);
@@ -88,6 +95,7 @@ describe("mail provider configuration", () => {
           email: "formulare@nedluzimstatu.cz",
           name: "Nedlužím státu",
         },
+        corsOrigins: true,
         sendGridApiBaseUrl: "https://api.sendgrid.com/v3",
       }),
     ).toBeInstanceOf(InMemoryMailProvider);
@@ -100,6 +108,7 @@ describe("mail provider configuration", () => {
           email: "formulare@nedluzimstatu.cz",
           name: "Nedlužím státu",
         },
+        corsOrigins: true,
         sendGridApiKey: "test-key",
         sendGridApiBaseUrl: "https://api.sendgrid.com/v3",
       }),
@@ -115,6 +124,7 @@ describe("mail provider configuration", () => {
           email: "formulare@nedluzimstatu.cz",
           name: "Nedlužím státu",
         },
+        corsOrigins: true,
         sendGridApiBaseUrl: "https://api.sendgrid.com/v3",
       }),
     ).toThrow("SENDGRID_API_KEY is required when MAIL_PROVIDER=sendgrid");

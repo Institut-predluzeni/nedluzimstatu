@@ -177,6 +177,9 @@ Optional:
   Default: `Nedlužím státu`
 - `SENDGRID_API_BASE_URL`
   Default: `https://api.sendgrid.com/v3`
+- `CORS_ORIGINS`
+  Default: `*`
+  Use a comma-separated list such as `https://www.nedluzimstatu.cz,https://nedluzimstatu.cz` to restrict browser callers.
 
 ## Run tests
 

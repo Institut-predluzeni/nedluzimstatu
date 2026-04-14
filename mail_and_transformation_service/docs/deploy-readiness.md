@@ -25,6 +25,9 @@
   Default: `Nedlužím státu`
 - `SENDGRID_API_BASE_URL`
   Default: `https://api.sendgrid.com/v3`
+- `CORS_ORIGINS`
+  Default: `*`
+  Use a comma-separated origin list to restrict browser callers.
 
 ## Recommended healthcheck path
 

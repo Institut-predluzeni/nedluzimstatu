@@ -6,6 +6,7 @@ export interface AppConfig {
   port: number;
   mailProvider: MailProviderName;
   mailFrom: Required<MailAddress>;
+  corsOrigins: boolean | string[];
   sendGridApiKey?: string;
   sendGridApiBaseUrl: string;
 }
@@ -33,6 +34,23 @@ function parseMailProvider(value: string | undefined): MailProviderName {
   }
 }
 
+function parseCorsOrigins(value: string | undefined): boolean | string[] {
+  const normalized = value?.trim();
+
+  if (!normalized || normalized === "*" || normalized.toLowerCase() === "true") {
+    return true;
+  }
+
+  if (normalized.toLowerCase() === "false") {
+    return false;
+  }
+
+  return normalized
+    .split(",")
+    .map((origin) => origin.trim())
+    .filter(Boolean);
+}
+
 export function loadConfig(env: NodeJS.ProcessEnv = process.env): AppConfig {
   const sendGridApiKey = env.SENDGRID_API_KEY?.trim() || undefined;
 
@@ -43,6 +61,7 @@ export function loadConfig(env: NodeJS.ProcessEnv = process.env): AppConfig {
       email: env.MAIL_FROM_EMAIL?.trim() || DEFAULT_MAIL_FROM.email,
       name: env.MAIL_FROM_NAME?.trim() || DEFAULT_MAIL_FROM.name,
     },
+    corsOrigins: parseCorsOrigins(env.CORS_ORIGINS),
     sendGridApiBaseUrl: env.SENDGRID_API_BASE_URL?.trim() || "https://api.sendgrid.com/v3",
     ...(sendGridApiKey ? { sendGridApiKey } : {}),
   };

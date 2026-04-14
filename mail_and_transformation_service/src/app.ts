@@ -1,3 +1,4 @@
+import cors from "@fastify/cors";
 import Fastify, { type FastifyInstance } from "fastify";
 
 import { MailProviderError, type MailProvider } from "./adapters/mail/types.js";
@@ -10,6 +11,7 @@ export interface AppDeps {
   transformationAdapter: TransformationAdapter;
   mailProvider: MailProvider;
   mailFrom?: Required<MailAddress>;
+  corsOrigins?: boolean | string[];
 }
 
 function configureLegacyJsonParsing(app: FastifyInstance): void {
@@ -52,6 +54,11 @@ export function buildApp(deps: AppDeps): FastifyInstance {
   });
 
   configureLegacyJsonParsing(app);
+  void app.register(cors, {
+    origin: deps.corsOrigins ?? true,
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Accept"],
+  });
 
   registerHealthRoute(app);
   registerZadostiRoute(app, deps);

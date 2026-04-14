@@ -43,6 +43,44 @@ describe("rewrite_service phase 3", () => {
     expect(response.json()).toEqual({ status: "ok" });
   });
 
+  test("OPTIONS /zadosti handles browser CORS preflight", async () => {
+    const response = await app.inject({
+      method: "OPTIONS",
+      url: "/zadosti",
+      headers: {
+        origin: "https://www.nedluzimstatu.cz",
+        "access-control-request-method": "POST",
+        "access-control-request-headers": "content-type",
+      },
+    });
+
+    expect(response.statusCode).toBe(204);
+    expect(response.headers["access-control-allow-origin"]).toBe(
+      "https://www.nedluzimstatu.cz",
+    );
+    expect(response.headers["access-control-allow-methods"]).toContain("POST");
+  });
+
+  test("POST /zadosti includes CORS headers for browser callers", async () => {
+    const response = await app.inject({
+      method: "POST",
+      url: "/zadosti",
+      payload: {
+        recipientEmail: "mila@example.com",
+        recipients: {},
+      },
+      headers: {
+        origin: "https://www.nedluzimstatu.cz",
+        "content-type": "application/json",
+      },
+    });
+
+    expect(response.statusCode).toBe(200);
+    expect(response.headers["access-control-allow-origin"]).toBe(
+      "https://www.nedluzimstatu.cz",
+    );
+  });
+
   test.each([
     "zadosti-simple-financni-urad",
     "zadosti-multi-instituce",
