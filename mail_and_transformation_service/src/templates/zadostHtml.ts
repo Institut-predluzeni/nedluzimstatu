@@ -1,0 +1,21 @@
+export const zadostHtmlTemplate = `<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Nedlužím státu: Vygenerovali jsme Vaše žádosti pro ověření bezdlužnosti</title>
+</head>
+<body>
+<p>Děkujeme za Váš zájem využít službu generování žádostí pro ověření bezdlužnosti na stránce Nedlužím státu.</p>
+<p><strong>V příloze zasíláme vyplněné žádosti pro Vámi zvolené instituce.</strong> Obsahují Vaše údaje, které jste zadali v druhém kroku generování.</p>
+
+<p>Kam žádosti rozposlat? Pomohou Vám návody, které najdete <a href="https://nedluzimstatu.cz/kde-muzu-dluzit/">v seznamu institucí</a> na naší stránce.</p>
+
+<p>V případě nejasností nás kontaktujte na <a href="mailto:podnety@nedluzimstatu.cz">podnety@nedluzimstatu.cz</a>.</p>
+
+<p>S pozdravem</p>
+<p>tým Nedlužím státu</p>
+
+<hr>
+<p>Máte zájem o novinky ze světa dluhové problematiky a připomínky, kdy například končí podání daňového přiznání? Sledujte nás na <a href="https://www.facebook.com/nedluzimstatu">Facebooku</a>!</p>
+</body>
+</html>`;

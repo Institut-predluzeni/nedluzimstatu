@@ -1,0 +1,28 @@
+{
+  "recipient": {
+    "name": "Celni urad pro hlavni mesto Prahu",
+    "address": {
+      "lines": "Washingtonova 7",
+      "zip_code": "11000",
+      "city": "Praha 1"
+    }
+  },
+  "applicant": {
+    "name": "Jana",
+    "surname": "Novakova",
+    "address": {
+      "lines": "Kvetna 12",
+      "zip_code": "11000",
+      "city": "Praha 1"
+    },
+    "personal_identification_number": "845101/1234"
+  },
+  "reply_to": {
+    "reply_to": {
+      "in_person": true
+    }
+  },
+  "reason": {
+    "job_office": true
+  }
+}

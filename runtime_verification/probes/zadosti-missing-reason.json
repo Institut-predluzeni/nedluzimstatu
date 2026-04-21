@@ -1,0 +1,29 @@
+{
+  "recipientEmail": "jana.novakova@example.com",
+  "recipientName": "Jana Novakova",
+  "applicant": {
+    "name": "Jana",
+    "surname": "Novakova",
+    "address": {
+      "lines": "Kvetna 12",
+      "zip_code": "11000",
+      "city": "Praha 1"
+    },
+    "personal_identification_number": "845101/1234"
+  },
+  "reply_to": {
+    "reply_to": {
+      "in_person": true
+    }
+  },
+  "recipients": {
+    "financni-urad": {
+      "name": "Financni urad pro hlavni mesto Prahu",
+      "address": {
+        "lines": "Stepanska 28",
+        "zip_code": "11121",
+        "city": "Praha 1"
+      }
+    }
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "scope": "source-grounded-only",
+  "notes": [
+    "This artifact freezes only expectations directly supported by the current source tree and reconstructed docs.",
+    "It intentionally excludes hidden runtime response semantics and hidden helper object shapes from the base images."
+  ],
+  "fixtures": [
+    {
+      "fixtureName": "zadosti-simple-financni-urad",
+      "classification": "source-grounded",
+      "selectedRecipients": [
+        "financni-urad"
+      ],
+      "expectedTransformationCalls": [
+        {
+          "endpoint": "/financni-urad",
+          "url": "https://www.nedluzimstatu.cz/transformation-service/financni-urad",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/pdf"
+          },
+          "payload": {
+            "recipient": {
+              "name": "Financni urad pro hlavni mesto Prahu",
+              "address": {
+                "lines": "Stepanska 28",
+                "zip_code": "11121",
+                "city": "Praha 1"
+              },
+              "data_box": "pxmnyqw"
+            },
+            "applicant": {
+              "name": "Jana",
+              "surname": "Novakova",
+              "address": {
+                "lines": "Kvetna 12",
+                "zip_code": "11000",
+                "city": "Praha 1"
+              },
+              "personal_identification_number": "845101/1234",
+              "email": "jana.novakova@example.cz",
+              "phone": "+420777888999"
+            },
+            "reply_to": {
+              "reply_to": {
+                "in_person": true
+              }
+            },
+            "reason": {
+              "job_office": true
+            }
+          },
+          "attachmentFilename": "Bezdluznost - Financni urad.pdf",
+          "attachmentType": "application/pdf"
+        }
+      ],
+      "expectedAttachmentFilenames": [
+        "Bezdluznost - Financni urad.pdf"
+      ]
+    },
+    {
+      "fixtureName": "zadosti-multi-instituce",
+      "classification": "source-grounded",
+      "selectedRecipients": [
+        "celni-sprava",
+        "financni-urad",
+        "ossz"
+      ],
+      "expectedTransformationCalls": [
+        {
+          "endpoint": "/celni-sprava",
+          "url": "https://www.nedluzimstatu.cz/transformation-service/celni-sprava",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/pdf"
+          },
+          "payload": {
+            "recipient": {
+              "name": "Celni urad pro Jihomoravsky kraj",
+              "address": {
+                "lines": "Krenova 17",
+                "zip_code": "60200",
+                "city": "Brno"
+              }
+            },
+            "applicant": {
+              "name": "Petr",
+              "surname": "Svoboda",
+              "address": {
+                "lines": "Masarykova 45",
+                "zip_code": "60200",
+                "city": "Brno 2"
+              },
+              "personal_identification_number": "810212/5678",
+              "company_registration_number": "12345678",
+              "email": "petr.svoboda@example.cz",
+              "phone": "777666555",
+              "data_box": "ab12cd3"
+            },
+            "reply_to": {
+              "reply_to": {
+                "data_box": "ab12cd3"
+              }
+            },
+            "reason": {
+              "bank": true
+            }
+          },
+          "attachmentFilename": "Bezdluznost - Celni sprava.pdf",
+          "attachmentType": "application/pdf"
+        },
+        {
+          "endpoint": "/financni-urad",
+          "url": "https://www.nedluzimstatu.cz/transformation-service/financni-urad",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/pdf"
+          },
+          "payload": {
+            "recipient": {
+              "name": "Financni urad pro Jihomoravsky kraj",
+              "address": {
+                "lines": "Namesti Svobody 4",
+                "zip_code": "60200",
+                "city": "Brno"
+              }
+            },
+            "applicant": {
+              "name": "Petr",
+              "surname": "Svoboda",
+              "address": {
+                "lines": "Masarykova 45",
+                "zip_code": "60200",
+                "city": "Brno 2"
+              },
+              "personal_identification_number": "810212/5678",
+              "company_registration_number": "12345678",
+              "email": "petr.svoboda@example.cz",
+              "phone": "777666555",
+              "data_box": "ab12cd3"
+            },
+            "reply_to": {
+              "reply_to": {
+                "data_box": "ab12cd3"
+              }
+            },
+            "reason": {
+              "bank": true
+            }
+          },
+          "attachmentFilename": "Bezdluznost - Financni urad.pdf",
+          "attachmentType": "application/pdf"
+        },
+        {
+          "endpoint": "/ossz",
+          "url": "https://www.nedluzimstatu.cz/transformation-service/ossz",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/pdf"
+          },
+          "payload": {
+            "recipient": {
+              "name": "Mestska sprava socialniho zabezpeceni Brno",
+              "address": {
+                "lines": "Veveří 7",
+                "zip_code": "60200",
+                "city": "Brno"
+              }
+            },
+            "applicant": {
+              "name": "Petr",
+              "surname": "Svoboda",
+              "address": {
+                "lines": "Masarykova 45",
+                "zip_code": "60200",
+                "city": "Brno 2"
+              },
+              "personal_identification_number": "810212/5678",
+              "company_registration_number": "12345678",
+              "email": "petr.svoboda@example.cz",
+              "phone": "777666555",
+              "data_box": "ab12cd3"
+            },
+            "reply_to": {
+              "reply_to": {
+                "data_box": "ab12cd3"
+              }
+            },
+            "reason": {
+              "bank": true
+            }
+          },
+          "attachmentFilename": "Bezdluznost - CSSZ.pdf",
+          "attachmentType": "application/pdf"
+        }
+      ],
+      "expectedAttachmentFilenames": [
+        "Bezdluznost - Celni sprava.pdf",
+        "Bezdluznost - Financni urad.pdf",
+        "Bezdluznost - CSSZ.pdf"
+      ]
+    },
+    {
+      "fixtureName": "zadosti-multi-pojistovny",
+      "classification": "source-grounded",
+      "selectedRecipients": [
+        "pojistovna"
+      ],
+      "expectedTransformationCalls": [
+        {
+          "endpoint": "/pojistovna",
+          "url": "https://www.nedluzimstatu.cz/transformation-service/pojistovna",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/pdf"
+          },
+          "payload": {
+            "recipient": {
+              "name": "Všeobecná zdravotní pojišťovna",
+              "address": {
+                "lines": "Orlicka 4",
+                "zip_code": "13000",
+                "city": "Praha 3"
+              }
+            },
+            "applicant": {
+              "name": "Martina",
+              "surname": "Dvorakova",
+              "address": {
+                "lines": "Smetanova 8",
+                "zip_code": "30100",
+                "city": "Plzen 3"
+              },
+              "personal_identification_number": "905303/4321",
+              "email": "martina.dvorakova@example.cz"
+            },
+            "reply_to": {
+              "reply_to": {
+                "contact_address": {
+                  "lines": "P. O. Box 12",
+                  "zip_code": "30100",
+                  "city": "Plzen"
+                }
+              }
+            },
+            "reason": {
+              "regional_office": true
+            }
+          },
+          "attachmentFilename": "Bezdluznost - VZP.pdf",
+          "attachmentType": "application/pdf"
+        },
+        {
+          "endpoint": "/pojistovna",
+          "url": "https://www.nedluzimstatu.cz/transformation-service/pojistovna",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/pdf"
+          },
+          "payload": {
+            "recipient": {
+              "name": "Oborová zdravotní pojišťovna",
+              "address": {
+                "lines": "Roskotova 1",
+                "zip_code": "14000",
+                "city": "Praha 4"
+              }
+            },
+            "applicant": {
+              "name": "Martina",
+              "surname": "Dvorakova",
+              "address": {
+                "lines": "Smetanova 8",
+                "zip_code": "30100",
+                "city": "Plzen 3"
+              },
+              "personal_identification_number": "905303/4321",
+              "email": "martina.dvorakova@example.cz"
+            },
+            "reply_to": {
+              "reply_to": {
+                "contact_address": {
+                  "lines": "P. O. Box 12",
+                  "zip_code": "30100",
+                  "city": "Plzen"
+                }
+              }
+            },
+            "reason": {
+              "regional_office": true
+            }
+          },
+          "attachmentFilename": "Bezdluznost - OZP.pdf",
+          "attachmentType": "application/pdf"
+        }
+      ],
+      "expectedAttachmentFilenames": [
+        "Bezdluznost - VZP.pdf",
+        "Bezdluznost - OZP.pdf"
+      ]
+    },
+    {
+      "fixtureName": "zadosti-obec-items",
+      "classification": "source-grounded",
+      "selectedRecipients": [
+        "obec"
+      ],
+      "expectedTransformationCalls": [
+        {
+          "endpoint": "/obec",
+          "url": "https://www.nedluzimstatu.cz/transformation-service/obec",
+          "headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/pdf"
+          },
+          "payload": {
+            "recipient": {
+              "name": "Magistrat mesta Ceske Budejovice",
+              "address": {
+                "lines": "nam. Premysla Otakara II. 1/1",
+                "zip_code": "37092",
+                "city": "Ceske Budejovice"
+              },
+              "email": "posta@c-budejovice.cz"
+            },
+            "items": {
+              "dog": true,
+              "bins": true,
+              "offenses": false,
+              "flat": true,
+              "reason": "mistni poplatek z pobytu"
+            },
+            "applicant": {
+              "name": "Lukas",
+              "surname": "Havel",
+              "address": {
+                "lines": "Hlavni 99",
+                "zip_code": "37001",
+                "city": "Ceske Budejovice 1"
+              },
+              "personal_identification_number": "780707/1111",
+              "phone": "604123456"
+            },
+            "reply_to": {
+              "reply_to": {
+                "permanent_addres": true
+              }
+            },
+            "reason": {
+              "other": "zadost o socialni bydleni"
+            }
+          },
+          "attachmentFilename": "Bezdluznost - obec.pdf",
+          "attachmentType": "application/pdf"
+        }
+      ],
+      "expectedAttachmentFilenames": [
+        "Bezdluznost - obec.pdf"
+      ]
+    }
+  ]
+}

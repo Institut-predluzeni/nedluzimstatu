@@ -1,0 +1,47 @@
+{
+  "recipientEmail": "martina.dvorakova@example.cz",
+  "recipientName": "Martina Dvorakova",
+  "applicant": {
+    "name": "Martina",
+    "surname": "Dvorakova",
+    "address": {
+      "lines": "Smetanova 8",
+      "zip_code": "30100",
+      "city": "Plzen 3"
+    },
+    "personal_identification_number": "905303/4321",
+    "email": "martina.dvorakova@example.cz"
+  },
+  "reply_to": {
+    "reply_to": {
+      "contact_address": {
+        "lines": "P. O. Box 12",
+        "zip_code": "30100",
+        "city": "Plzen"
+      }
+    }
+  },
+  "reason": {
+    "regional_office": true
+  },
+  "recipients": {
+    "pojistovna": [
+      {
+        "name": "Všeobecná zdravotní pojišťovna",
+        "address": {
+          "lines": "Orlicka 4",
+          "zip_code": "13000",
+          "city": "Praha 3"
+        }
+      },
+      {
+        "name": "Oborová zdravotní pojišťovna",
+        "address": {
+          "lines": "Roskotova 1",
+          "zip_code": "14000",
+          "city": "Praha 4"
+        }
+      }
+    ]
+  }
+}

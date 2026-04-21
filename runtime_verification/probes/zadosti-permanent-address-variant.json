@@ -1,0 +1,35 @@
+{
+  "recipientEmail": "lukas.havel@example.com",
+  "recipientName": "Lukas Havel",
+  "applicant": {
+    "name": "Lukas",
+    "surname": "Havel",
+    "address": {
+      "lines": "Hlavni 99",
+      "zip_code": "37001",
+      "city": "Ceske Budejovice 1"
+    },
+    "personal_identification_number": "780707/1111"
+  },
+  "reply_to": {
+    "reply_to": {
+      "permanent_address": true
+    }
+  },
+  "reason": {
+    "other": "zadost o socialni bydleni"
+  },
+  "recipients": {
+    "obec": {
+      "name": "Magistrat mesta Ceske Budejovice",
+      "address": {
+        "lines": "nam. Premysla Otakara II. 1/1",
+        "zip_code": "37092",
+        "city": "Ceske Budejovice"
+      }
+    }
+  },
+  "items": {
+    "dog": true
+  }
+}

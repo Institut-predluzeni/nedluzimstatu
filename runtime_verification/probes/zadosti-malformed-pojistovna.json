@@ -1,0 +1,27 @@
+{
+  "recipientEmail": "martina.dvorakova@example.com",
+  "recipientName": "Martina Dvorakova",
+  "applicant": {
+    "name": "Martina",
+    "surname": "Dvorakova",
+    "address": {
+      "lines": "Smetanova 8",
+      "zip_code": "30100",
+      "city": "Plzen 3"
+    },
+    "personal_identification_number": "905303/4321"
+  },
+  "reply_to": {
+    "reply_to": {
+      "in_person": true
+    }
+  },
+  "reason": {
+    "regional_office": true
+  },
+  "recipients": {
+    "pojistovna": {
+      "bad": "shape"
+    }
+  }
+}

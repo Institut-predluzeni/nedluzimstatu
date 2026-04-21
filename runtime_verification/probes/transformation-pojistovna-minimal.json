@@ -1,0 +1,32 @@
+{
+  "recipient": {
+    "name": "Všeobecná zdravotní pojišťovna",
+    "address": {
+      "lines": "Orlicka 4",
+      "zip_code": "13000",
+      "city": "Praha 3"
+    }
+  },
+  "applicant": {
+    "name": "Martina",
+    "surname": "Dvorakova",
+    "address": {
+      "lines": "Smetanova 8",
+      "zip_code": "30100",
+      "city": "Plzen 3"
+    },
+    "personal_identification_number": "905303/4321"
+  },
+  "reply_to": {
+    "reply_to": {
+      "contact_address": {
+        "lines": "P. O. Box 12",
+        "zip_code": "30100",
+        "city": "Plzen"
+      }
+    }
+  },
+  "reason": {
+    "regional_office": true
+  }
+}
